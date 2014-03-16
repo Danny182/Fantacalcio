@@ -1,0 +1,29 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+div#cont{
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	border: 1px solid;
+	left: 0px;
+	top: 0px;
+	background-image:url(../img/sfondo.jpg);
+	
+
+}
+
+
+div#error{
+	height:30%;
+	width:20%;
+	position:absolute;
+	left:30%;
+	top:20%;
+	border:1px solid;
+	
+
+}
+
+

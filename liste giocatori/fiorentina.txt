@@ -1,0 +1,31 @@
+NORBERTO MURARA NETO|19.07.1989|Araxá|brasile|Porta|destro|2.000.000 €|30.06.2015|
+CRISTIANO LUPATELLI|21.06.1978|Perugia|italia|Porta|sinistro|300.000|30.06.2014|
+LUCA LAZZERINI|24.03.1995|Roma|italia|Porta|destro|250.000|?|
+Gustavo Adolfo Munúa Vera|27.01.1978|Montevideo|uruguay|Porta|destro|400.000|30.06.2015|
+Gonzalo Javier Rodríguez|10.04.1984|Buenos Aires|ARGENTINA|Difensore centrale|destro|7.000.000|30.06.2015|
+Facundo Sebastián Roncaglia|10.02.1987|Chajarí|argentina|Difensore centrale|destro|5.500.000|30.06.2016|
+MARVIN COMPPER|14.06.1985|Tübingen|germania|Difensore centrale|sinistro|2.800.000|30.06.2015|
+AHMED HEGAZY|25.01.1991|Ismailia|egitto|Difensore centrale|destro|1.300.000|30.06.2016|
+Stefan Savic|08.01.1991|montenegro|Mojkovac|Difensore centrale|destro|10.000.000|30.06.2016|
+NENAD TOMOVIC|30.08.1987|serbia|Kragujevac|Difensore centrale|destro|4.500.000|?|
+MANUEL PASQUAL|13.03.1982|San Donà di Piave|italia|Terzino sinistro|sinistro|4.400.000|30.06.2014|
+MASSIMO AMBROSINI|29.05.1977|Pesaro|italia|Mediano|destro|500.000|30.06.2014|
+David Marcelo Pizarro Cortés|11.09.1979|Valparaíso|cile|Centrocampo - Centrale|destro|3.000.000|30.06.2014|
+ALBERTO AQUILANI|07.07.1984|Roma|italia|Centrocampo - Centrale|destro|10.000.000|30.06.2015|
+Borja Valero Iglesias|12.01.1985|Madrid|spagna|Centrocampo - Centrale|destro|19.000.000 |30.06.2016|
+Juan Guillermo Cuadrado Bello|26.05.1988|Necoclí|colombia|Centrocampo - Centrocampista di destra|destro|15.000.000 |30.06.2017|
+Marcos Alonso Mendoza|28.12.1990|Madrid|spagna|Centrocampo - Centrocampista di sinistra|sinistro|2.000.000|30.06.2016|
+Marko Bakic|01.11.1993|Budva|montenegro|Centrocampo - Trequartista|destro|2.000.000|?|
+Matías Ariel Fernández Fernández|15.05.1986|Caballito|argentina|Centrocampo - Trequartista|destro|5.000.000|30.06.2016|
+Matías Vecino Falero|24.08.1991|Canelones|Uruguay|Centrocampo - Trequartista|destro|2.300.000|30.06.2016|
+Rafal Wolski|10.11.1992|Kozienice|Polonia|Centrocampo - Trequartista|destro|3.600.000|30.06.2017|
+Josip Ilicic|29.01.1988|Prijedor|Slovenia|Centrocampo - Trequartista|sinistro|9.500.000|30.06.2018|
+Rubén Ariel Olivera da Rosa|04.05.1983|Montevideo|Uruguay|Centrocampo - Trequartista|destro|1.000.000 |30.06.2014|
+OLEKSANDR IAKOVENKO|23.07.1987|Kiew|Ucraina|Centrocampo - Ala sinistra|entrambi|2.000.000 |30.06.2016|
+JOAQUÍN SÁNCHEZ RODRÍGUEZ|21.07.1981|El Puerto de Santa María|Spagna|Centrocampo - Ala destra|destro|3.000.000|30.06.2016|
+juan Manuel Vargas Risco|05.10.1983|Lima|Perù|Attacco - Ala sinistra|sinistro|5.000.000|30.06.2014|
+RYDER MATOS SANTOS|27.02.1993|Seabra|Brasile|Attacco - Seconda punta|destro|150.000|?|
+Ante Rebic|21.09.1993|Split|Croazia|Attacco - Punta centrale|destro|1.000.000 |30.06.2018|
+Mario Gómez García|10.07.1985|Riedlingen|Germania|Attacco - Punta centrale|entrambi|24.000.000 |30.06.2017|
+GIUSEPPE ROSSI|01.02.1987|Clifton, New Jersey|Italia |Attacco - Punta centrale|sinistro|11.000.000|30.06.2017|
+

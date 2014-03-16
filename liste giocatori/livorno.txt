@@ -1,0 +1,29 @@
+ALFONSO DE LUCIA|11.11.1983|Nola |Italia|Porta|destro|200.000|30.06.2014|
+FRANCESCO BARDI|18.01.1992|Livorno|Italia|Porta|destro|6.000.000|30.06.2017|
+GABRIELE ALDEGANI|10.05.1976|Venezia| Italia|Porta|destro|50.000|30.06.2014|
+LUCA MAZZONI|29.03.1984|Livorno|Italia|Porta|destro|250.000 |?|
+ALESSANDRO BERNARDINI|21.01.1987|Domodossola|Italia|Difesa - Difensore centrale|destro|650.000|30.06.2015|
+SAULO DECARLI|04.02.1992|Brione Sopra Minusio|Svizzera|Difesa - Difensore centrale|destro|700.000|30.06.2016|
+RICCARDO REGNO|12.08.1992|Bologna|Italia|Difesa - Difensore centrale|destro|125.000|?|
+ALESSANDRO LAMBRUGHI|19.05.1987|Cernusco sul Naviglio|Italia|Difesa - Difensore centrale|sinistro|600.000|30.06.2014|
+IBRAHIMA MBAYE|19.11.1994|Guédiawaye|Senegal|Difesa - Difensore centrale|destro|1.000.000|30.06.2016|
+FEDERICO CECCHERINI|11.05.1992|Livorno| Italia|Difesa - Difensore centrale|destro|400.000|30.06.2015|
+RAMOS BORGES ÉMERSON|16.08.1980|Joinville| Brasile |Difesa - Difensore centrale|entrambi|600.000|30.06.2013|
+LEANDRO RINAUDO|09.05.1983|Palermo|Italia|Difesa - Difensore centrale|destro|300.000|?|
+ANDREA CODA|25.04.1985|Massa|Italia|Difesa - Difensore centrale|destro|	1.000.000| ?|
+GIUSEPPE GEMITI|03.05.1981|Frankfurt am Main| Italia|Difesa - Terzino sinistro|sinistro|300.000|30.06.2015|
+CRISTIANO PICCINI|26.09.1992|Firenze|Italia|Difesa - Terzino destro|destro|750.000|30.06.2014|
+NAHUEL VALENTINI|19.09.1989|Rosario|Argentina |Difesa - Terzino destro|destro|600.000 |?|
+ANDREA LUCI|30.03.1985|Piombino|Italia|Centrocampo - Mediano|sinistro|1.400.000|30.06.2014|
+Jhonny Ferney Mosquera Mena|17.02.1991|Medellín|Colombia|Centrocampo - Mediano|destro|400.000|30.06.2014|
+MARCO BIAGIANTI|19.04.1984|Firenze | Italia|Centrocampo - Mediano|destro|2.300.000 |?|
+Joseph Alfred Duncan|10.03.1993|Accra|Ghana |Centrocampo - Mediano|sinistro|5.000.000|30.06.2016|
+LEANDRO GRECO|19.07.1986|Roma|Italia|Centrocampo - Centrale|sinistro|2.500.000|30.06.2016|
+MARCO BENASSI|05.05.1994|Modena |Italia|Centrocampo - Centrale|destro|2.200.000| 30.06.2017|
+PASQUALE SCHIATTARELLA|30.05.1987|Mugnano di Napoli|Italia|Centrocampo - Centrocampista di destra|destro|1.000.000 |30.06.2013|
+LUCA BELINGHERI|06.04.1983|Costa Volpino| Italia|Centrocampo - Trequartista|destro|1.200.000|30.06.2013|
+Rubén Alejandro Botta Montero|31.01.1990|San Juan|Argentina|Centrocampo - Trequartista|sinistro|5.000.000|01.07.2014|
+PAULO SÉRGIO BETANIN|10.01.1986|Caxias do Sul| Brasile |Attacco - Seconda punta|destro|6.000.000|30.06.2018|
+FEDERICO DIONISI|16.06.1987|Rieti| Italia|Attacco - Punta centrale|destro|1.500.000|30.06.2015|
+Innocent Nkasiobi Emeghara|27.05.1989|Lagos |Svizzera |Attacco - Punta centrale|destro|5.000.000| 30.06.2014|
+LUCA SILIGARDI|26.01.1988|Correggio| Italia|Attacco - Punta centrale|sinistro|3.000.000|30.06.2016|

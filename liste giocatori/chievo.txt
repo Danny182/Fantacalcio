@@ -1,0 +1,31 @@
+CHRISTIAN PUGGIONI|17.01.1981|Genova|Italia|Porta|destro|1.200.000|30.06.2016|
+LORENZO SQUIZZI|20.06.1974|domodossola|Italia|Porta|destro|50.000|?|
+MARCO SILVESTRI|02.03.1991|Castelnovo né Monti|Italia|Porta|500.000|30.06.2014|
+SIMONE ALDROVANDI|02.04.1994|Carpi|Italia|Difesa - Difensore centrale|100.000|?|
+DARIO DAINELLI|09.06.1979|Pontedera|Italia|Difesa - Difensore centrale|destro|600.000|30.06.2014|
+CLAITON MACHADO DOS SANTOS|07.09.1984|Santa Helena|Brasile|Difesa - Difensore centrale|sinistro|500.000|?|
+BOSTJAN CESAR|09.07.1982|Ljubljana|Slovenia|Difesa - Difensore centrale|sinistro|1.500.000|?|
+PAUL PAPP|11.11.1989|Dej |Romania|Difesa - Difensore centrale|destro|1.800.000 |30.06.2017|
+Manuel Pamic|20.08.1986|Zminj|Croazia|Difesa - Terzino sinistro|entrambi|1.200.000|30.06.2014|
+BOUKARY DRAMÉ|22.07.1985|Villepinte |Senegal |Difesa - Terzino sinistro|sinistro|2.600.000|30.06.2014|
+Gennaro Sardo|08.05.1979|Pozzuoli|Italia|Difesa - Terzino destro|destro|300.000|30.06.2014|
+Nicolas Sébastien Frey|06.03.1984|Thonon-les-Bains |Francia|Difesa - Terzino destro|destro|900.000|?|
+Nicolò Brighenti|Bussolengo|Italia|Difesa - Terzino destro|destro|300.000|?|
+IVAN RADOVANOVIC|29.08.1988|Kosovska Mitrovica|Serbia|Centrocampo - Mediano|destro|600.000|30.06.2016|
+Adrián Daniel Calello|14.05.1987|Buenos Aires|Argentina|Centrocampo - Mediano|destro|	900.000|?|
+ROBERTO GUANA|21.01.1981|Brescia|Italia|Centrocampo - Centrale|destro|900.000|30.06.2014|
+SIMONE BENTIVOGLIO|29.05.1985|Pinerolo|Italia|Centrocampo - Centrale|destro|300.000|?|
+LUCA RIGONI|07.12.1984|Schio|Italia|Centrocampo - Centrale|destro|3.800.000 |30.06.2015|
+Përparim Hetemaj|12.12.1986|Skënderaj|Finlandia |Centrocampo - Centrale|destro|2.500.000|30.06.2014|
+ALESSIO SESTU|29.09.1983|Roma|italia|Centrocampo - Centrocampista di destra|destro|800.000|30.06.2015|
+Dejan Lazarevic|Dejan Lazarevic|15.02.1990|Ljubljana|Slovenia|Centrocampo - Ala sinistra|destro|1.600.000|30.06.2017|
+Marcelo Alejandro Estigarribia Balmori|21.09.1987|Fernando de la Mora|Paraguay |Centrocampo - Ala sinistra|sinistro|2.500.000|?|
+RICCARDO IMPROTA|19.12.1993|Pozzuoli| Italia|Centrocampo - Ala destra|destro|1.000.000|30.06.2014|
+Boadu Maxwell Acosty|10.09.1991|Accra|Ghana|Centrocampo - Ala destra|destro|1.000.000| 30.06.2014|
+Adrian Marius Stoian|11.02.1991|Craiova|Romania|Attacco - Seconda punta|entrambi|1.600.000|?|
+MAMADOU SAMASSA|01.05.1986|Montfermeil|Francia|Attacco - Punta centrale|destro|1.200.000|30.06.2014|
+ROBERTO INGLESE|12.11.1991|Lucera|Italia|Attacco - Punta centrale|destro|300.000|30.06.2014|
+SERGIO PELLISSIER|12.04.1979|Aosta|Italia|Attacco - Punta centrale|destro|600.000|30.06.2015|
+ALBERTO PALOSCHI|04.01.1990|Chiari| Italia|Attacco - Punta centrale|destro|5.000.000|?|
+CYRIL THÉRÉAU|24.04.1983|Privas|Francia|Attacco - Punta centrale|destro|3.000.000|30.06.2014|
+

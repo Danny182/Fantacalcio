@@ -1,0 +1,284 @@
+@charset "utf-8";
+/* CSS Document */
+div#cont{
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	border: none;
+	left: 0px;
+	top: 0px;
+	background: #ededf0;
+	background: -moz-linear-gradient(left,  #ededf0 0%, #dbdbdd 30%, #dbdbdd 70%, #ededf0 100%);
+	background: -webkit-gradient(linear, left top, right top, color-stop(0%,#ededf0), color-stop(30%,#dbdbdd), color-stop(70%,#dbdbdd), color-stop(100%,#ededf0));
+	background: -webkit-linear-gradient(left,  #ededf0 0%,#dbdbdd 30%,#dbdbdd 70%,#ededf0 100%);
+	background: -o-linear-gradient(left,  #ededf0 0%,#dbdbdd 30%,#dbdbdd 70%,#ededf0 100%);
+	background: -ms-linear-gradient(left,  #ededf0 0%,#dbdbdd 30%,#dbdbdd 70%,#ededf0 100%);
+	background: linear-gradient(to right,  #ededf0 0%,#dbdbdd 30%,#dbdbdd 70%,#ededf0 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ededf0', endColorstr='#ededf0',GradientType=1 );
+
+	
+	font-family:'WOL_Reg','Segoe UI',Tahoma,Helvetica,sans-serif;
+	padding:0;
+	overflow:auto;	
+	font-size:14px;
+
+}
+
+
+#form label.error{
+	color: #f33;
+	padding: 0;
+	font-size: 0.8em;
+	display:block;
+	}
+
+div#top-insize{
+	position:relative;
+	size:auto;
+	margin:0 auto;
+	width:960px;
+	height:100%;
+}
+
+div#top{
+	height:100px;
+	width:100%;
+	background-color:#1a1a1a;
+	position:absolute;
+	border:none;
+}
+
+div#top-logo{
+	top:12%;
+	left:0%;
+	position:absolute;
+	border:none;
+}
+
+div#top-border{
+	top:100px;
+	width:100%;
+	background-color:#2a2a2a;
+	opacity:0.9;
+	height:10px;
+	position:absolute;
+}
+
+
+div#windows{
+	height: 600px;
+	width: 600px;
+	border: none;
+	position: relative;
+	margin:0 auto;
+	top: 150px;
+	padding: 0;
+	color:#000000;
+	
+}
+
+div#sotto-wind{
+width: 100%;
+height: 100%;
+border:none;
+margin-top:8px;
+position:relative;
+}
+
+
+
+
+div#wind1{
+	top: 0;
+	background-color:#0C0;
+	position: absolute;
+	border: none;
+	width: 98%;
+	height: 7%;
+	left: 0;
+	color:#fff;
+	padding-top:5px;
+	padding-left:10px;
+	padding-bottom:15px;
+}
+
+
+div#cont-label{	
+	background-color: #E8E8E9;
+	border:1px solid;
+    border-color:#CECED0;
+    color:#000000;
+  /*  -moz-border-radius:5px 5px 5px 5px;
+    -webkit-border-radius:5px 5px 5px 5px;
+    border-radius:5px 5px 5px 5px;*/
+    height: 10%;
+    width: 47%;
+}
+div#cont-label.nome{
+	position: absolute;
+	top: 12%;
+	left: 0;
+	text-align: center;
+}
+
+div#cont-label.cognome{
+
+	position: absolute;
+
+	top: 12%;
+	left: 51%;
+	text-align: center;
+}
+
+div#cont-label.data{
+
+	position: absolute;
+	top: 26%;
+	left: 0;
+	text-align: center;
+
+}
+
+div#cont-label.citta{
+
+	position: absolute;
+	top: 26%;
+	left: 51%;
+	text-align: center;
+}
+
+div#cont-label.user{
+
+	position: absolute;
+	top: 40%;
+	left: 51%;
+	text-align: center;
+	
+}
+
+div#cont-label.password{
+
+	position: absolute;
+	top: 54%;
+	left: 0;
+	text-align: center;
+}
+
+div#cont-label.password2{
+
+	position: absolute;
+	top: 54%;
+	left: 51%;
+	text-align: center;
+}
+
+div#cont-label.email{
+
+	position: absolute;
+	top: 40%;
+	left: 0;
+	text-align: center;
+}
+
+div#cont-label.risposta{
+
+	position: absolute;
+	top: 68%;
+	left: 51%;
+	text-align: center;
+	
+}
+
+div#cont-label.domanda{
+	
+	position: absolute;
+	top: 68%;
+	left: 0;
+	text-align: center;
+}
+
+input{
+	background:white;
+	border: 1px solid #CCC;
+	clear: both;
+	height: 20px;
+	font-size: 14px;
+
+
+}
+
+
+.reg{
+	text-align: center;
+	width: 100%;
+	height: 6%;
+	font-size: 16px;
+	font-family:'WOL_Reg','Segoe UI',Tahoma,Helvetica,sans-serif;
+	border: none;
+	position: absolute;
+	left: 0;
+	top: 82%;
+	background-color: #00D2FF;
+	color: #fff;
+	font-weight:600;
+	cursor: pointer;
+}
+
+.reg-campionato{
+	text-align: center;
+	width: 100%;
+	height: 6%;
+	font-size: 16px;
+	font-family:'WOL_Reg','Segoe UI',Tahoma,Helvetica,sans-serif;
+	border: none;
+	position: absolute;
+	left: 0;
+	top: 26%;
+	background-color: #00D2FF;
+	color: #fff;
+	font-weight:600;
+	cursor: pointer;
+}
+
+
+
+
+div#nome{
+	position:absolute;
+	border-color:balck;
+	height:30%;
+	width:20%;
+	top:63.5%;
+	left:18.5%;
+	color:#00DFFF;
+}
+
+div#contatti{
+	position:absolute;
+	border-color:white;
+	height:30%;
+	width:30%;
+	top:63.5%;
+	left:70%;
+	color:#00DFFF;
+}
+
+.reg:hover{
+-webkit-box-shadow:0px 1px 1px rgba(255,255,255,0.8) inset, 1px 1px 5px rgba(0,0,0,0.4);
+    -moz-box-shadow:0px 1px 1px rgba(255,255,255,0.8) inset, 1px 1px 5px rgba(0,0,0,0.4);
+    box-shadow:0px 1px 1px rgba(255,255,255,0.8) inset, 1px 1px 5px rgba(0,0,0,0.4);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+	

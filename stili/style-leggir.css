@@ -1,0 +1,90 @@
+@charset "utf-8";
+/* CSS Document */
+div#cont{
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	border: 1px solid;
+	left: 0px;
+	top: 0px;
+	background-color:#1a1a1a;
+	font-family:'WOL_Reg','Segoe UI',Tahoma,Helvetica,sans-serif;	
+}
+
+div#window{
+	height:120px;
+	width:450px;
+	top:20%;
+	left:50%;
+	margin-left:-200px;	
+	border:none;
+	position:absolute;
+	text-align:center;
+	background-color:#00CCFF;
+	color:#ffffff;
+	line-height:35px;
+	font-size:18px;
+	padding-top:15px;
+}
+
+div#window1{
+	height:25%;
+	width:30%;
+	top:20%;
+	left:50%;
+	margin-left:-200px;	
+	border:none;
+	position:absolute;
+	text-align:center;
+	background-color:#00CCFF;
+	color:#ffffff;
+	line-height:35px;
+	font-size:18px;
+	padding-top:15px;
+	line-height:20px;
+}
+
+input{
+background:white;
+clear: both;
+width: 40%;
+height: 20px;
+font-size: 14px;
+border:0;
+text-align:center;
+
+
+
+}
+
+
+.reg{
+	text-align:center;
+	width: 100px;	
+	height: 50px;
+	
+	font-size: 16px;
+	background:#00D2FF;
+	border:1px solid white;
+	color:#fff;
+	font-weight:400;
+	/*cursor: pointer;*/
+}
+
+.reg:hover{
+	-webkit-box-shadow:0px 1px 1px rgba(255,255,255,0.8) inset, 1px 1px 5px rgba(0,0,0,0.4);
+    -moz-box-shadow:0px 1px 1px rgba(255,255,255,0.8) inset, 1px 1px 5px rgba(0,0,0,0.4);
+    box-shadow:0px 1px 1px rgba(255,255,255,0.8) inset, 1px 1px 5px rgba(0,0,0,0.4);
+}
+
+
+
+
+
+
+
+
+
+
+
+

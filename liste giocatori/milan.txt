@@ -1,0 +1,31 @@
+MARCO AMELIA|02.04.1982|Frascati|Italia|porta|destro|1.800.000|30.06.2015|
+CHRISTIAN ABBIATI|08.07.1977|Abbiategrasso|Italia|Porta|destro|1.000.000|30.06.2014|
+FERDINANDO COPPOL|10.06.1978|Napoli|Italia|Porta|destro|100.000 |30.06.2014|
+GABRIEL VASCONCELOS FERREIRA|27.09.1992|Unaí|Brasile|Porta|destro|800.000|30.06.2017|
+PHILIPPE MEXÈS|30.03.1982|Toulouse|Francia|Difesa - Difensore centrale|destro|5.000.000 |30.06.2015|
+Cristian Eduardo Zapata Valencia|30.09.1986|Padilla|Colombia|Difesa - Difensore centrale|destro|6.000.000|30.06.2016|
+Daniele Bonera|31.05.1981|Brescia|Italia|Difesa - Difensore centrale|destro|2.000.000|30.06.2015|
+Matías Agustín Silvestre|25.09.1984|Mercedes |Argentina|Difesa - Difensore centrale|destro|6.000.000| 30.06.2015|
+Jherson Vergara Amú|26.05.1994|Florida|Colombia|Difesa - Difensore centrale|destro|2.000.000|?|
+KÉVIN CONSTANT|15.05.1987|Fréjus|Guinea|Difesa - Terzino sinistro|sinistro|6.000.000|30.06.2017|
+MATTIA DE SCIGLIO|20.10.1992|Milano| Italia|Difesa - Terzino destro|destro|12.000.000|30.05.2016|
+IGNAZIO ABATE|12.11.1986|Sant'Agata dè Goti|Italia|Difesa - Terzino destro|destro|11.000.000|30.06.2014|
+CRISTIAN ZACCARDO|21.12.1981|Formigine|Italia|Difesa - Terzino destro|destro|2.300.000|30.06.2016|
+NIGEL DE JONG|30.11.1984|Amsterdam|Paesi Bassi|Centrocampo - Mediano|destro|7.000.000|30.06.2015|
+Sulleyman Ali Muntari|27.08.1984|Konongo|Ghana|Centrocampo - Centrale|sinistro|4.500.000|30.06.2015|
+BAKAYE TRAORÉ|06.03.1985|Bondy|Mali |Centrocampo - Centrale|destro|1.200.000 |30.06.2015|
+ANDREA POLI|29.09.1989|Vittorio Veneto|Italia|Centrocampo - Centrale|destro|8.000.000 |30.06.2017|
+RICCARDO MONTOLIVO|18.01.1985|Caravaggio|Italia|Centrocampo - Centrale|destro|18.500.000|30.06.2016|
+ANTONIO NOCERINO|09.04.1985|Napoli|Italia|Centrocampo - Centrale|destro|6.500.000 |30.06.2016|
+BRYAN CRISTANTE|San Vito al Tagliamento| Italia|Centrocampo - Centrale|destro|1.000.000|30.06.2018|
+RICCARDO SAPONARA|21.12.1991|Forlì|Centrocampo - Trequartista|destro|7.000.000|30.06.2018|
+URBY EMANUELSON|16.06.1986|Amsterdam|Paesi Bassi|Centrocampo - Trequartista|sinistro|6.500.000|30.06.2014|
+Stephan Kareem El Shaarawy|27.10.1992|Savona|Italia|Attacco - Ala sinistra|27.000.000|30.06.2018|
+M'BAYE NIANG|19.12.1994|Meulan |Senegal |Attacco - Ala destra|destro|5.000.000|30.06.2017|
+ROBINHO - RÓBSON DE SOUZA|25.01.1984|São Vicente|Brasile |Attacco - Seconda punta|7.500.000|30.06.2016|
+ALESSANDRO MATRI|19.08.1984|Sant`Angelo Lodigiano|Italia|Attacco - Punta centrale|destro|11.000.000|30.06.2017|
+GIAMPAOLO PAZZINI|02.08.1984|Pescia|Italia|Attacco - Punta centrale|destro|14.500.000 |30.06.2015|
+Mario Barwuah Balotelli|12.08.1990|Palermo|Italia |Attacco - Punta centrale|destro|30.000.000 |30.06.2017|
+
+
+

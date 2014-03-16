@@ -1,0 +1,630 @@
+@charset "utf-8";
+/* CSS Document */
+div#cont{
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	border: none;
+	left: 0px;
+	top: 0px;
+	background-size:contain;
+	background: #ededf0;
+	background: -moz-linear-gradient(left,  #ededf0 0%, #dbdbdd 30%, #dbdbdd 70%, #ededf0 100%);
+	background: -webkit-gradient(linear, left top, right top, color-stop(0%,#ededf0), color-stop(30%,#dbdbdd), color-stop(70%,#dbdbdd), color-stop(100%,#ededf0));
+	background: -webkit-linear-gradient(left,  #ededf0 0%,#dbdbdd 30%,#dbdbdd 70%,#ededf0 100%);
+	background: -o-linear-gradient(left,  #ededf0 0%,#dbdbdd 30%,#dbdbdd 70%,#ededf0 100%);
+	background: -ms-linear-gradient(left,  #ededf0 0%,#dbdbdd 30%,#dbdbdd 70%,#ededf0 100%);
+	background: linear-gradient(to right,  #ededf0 0%,#dbdbdd 30%,#dbdbdd 70%,#ededf0 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ededf0', endColorstr='#ededf0',GradientType=1 );
+	overflow:auto;
+	font-family:'WOL_Reg','Segoe UI',Tahoma,Helvetica,sans-serif;
+	font-size:13.5px;
+}
+
+div#top{
+	height:100px;
+	width:100%;
+	background-color:#1a1a1a;
+	position:absolute;
+	border:none;
+	border-bottom: 10px solid #4d4d4d;
+}
+
+div#top-logo{
+	top:12%;
+	left:0%;
+	position:absolute;
+	border:none;
+}
+
+div#top-insize{
+	position:relative;
+	margin:0 auto;
+	width: 960px;	
+	height:100%;
+}
+
+div#nome{
+	position:relative;
+	color:#00DFFF;
+	top:68px;
+	right:0px;
+	float:right;
+	height:auto;	
+	font-size:15px;
+}
+div#nome-inside {
+	bottom:0px;
+	position:relative;
+	float:left;
+	padding-right:3px;
+}
+
+div#notifiche{
+	position:relative;
+	color:#D42222;
+	top:68px;
+	right:0px;
+	float:right;
+	margin-right:10px;
+	font-size:15px;
+}
+
+div#contatti{
+	position:relative;
+	border-color:white;
+	height:30%;
+	width:30%;
+	top:63.5%;
+	left:70%;
+	color:#00DFFF;
+}
+
+
+
+div#header{
+	height: 15%;
+	width: 35%;
+	top: 10%;
+	left: 10%;
+	position: relative;
+	border:none;
+	
+
+}
+
+div#window{
+	height: 550px;
+	width: 960px;
+	position: relative;
+	border: none;
+    margin: 0 auto;
+	background-color: transparent;
+	top: 150px;
+    overflow-x: hidden;
+	overflow-y: auto;
+	z-index:0;
+}
+
+div#gallery{
+	height: 179px;
+	width: 365px;
+	position: absolute;
+	border: 1px solid;
+	top: 8px;
+	left: 356px;
+}
+
+.none{
+	text-align:center;
+}	
+input{
+background:white;
+border: 1px solid black;
+width: 250px;
+height: 20px;
+font-size: 14px;
+}
+.reg{
+	text-align: center;
+	width: 196px;
+	height: 30px;
+	margin-left: 100px;
+	margin-top: -30px;
+	font-size: 16px;
+	border: 1px solid white;
+	background: #FFBF00;
+	-moz-border-radius: 5px 5px 5px15px;
+	-webkit-border-radius: 5px 5px 5px 5px;
+}
+
+
+
+
+div#crea-campionato:hover{
+	-webkit-box-shadow:0px 1px 1px rgba(255,255,255,0.8) inset, 1px 1px 5px rgba(0,0,0,0.4);
+    -moz-box-shadow:0px 1px 1px rgba(255,255,255,0.8) inset, 1px 1px 5px rgba(0,0,0,0.4);
+    box-shadow:0px 1px 1px rgba(255,255,255,0.8) inset, 1px 1px 5px rgba(0,0,0,0.4);
+}
+div#ul-notizie{
+	position:relative;
+	left:16%;
+    height: 41.5%;
+	width: 83%;
+	border: 2px solid rgb(238, 238, 238);
+	color:#2a2a2a;	
+	font-size: 18px;
+	-moz-border-radius: 2px 2px 2px 2px;
+	-webkit-border-radius: 2px 2px 2px 2px;
+	text-align: center;
+	background-image: repeating-linear-gradient(90deg,rgb(50,168,0),rgb(116,219,43) 25px,rgb(50,168,0) 50px);
+	z-index:0;
+}
+
+
+
+
+
+
+div#errore-ricerca{
+	height: 150px;
+	width: 200px;
+	position: absolute;
+	left: 60px;
+	top: 150px;
+	border: 1px solid;
+	color:white;
+	font-size:18px;
+	-moz-border-radius: 3px 3px 3px 3px;
+	-webkit-border-radius: 3px 3px 3px 3px;
+	text-align:center;
+	background-color:#D49F55;
+}
+
+
+.cerca{
+	text-align: center;
+	width: 100px;
+	height: 30px;
+	margin-left: 70px;
+	margin-top: 7px;
+	font-size: 16px;
+	border: 1px solid white;
+	background: #FFBF00;
+	-moz-border-radius: 5px 5px 5px15px;
+	-webkit-border-radius: 5px 5px 5px 5px;
+}
+
+a:hover{
+
+color:#D42222;
+cursor:pointer;
+text-decoration: none;
+
+}
+
+a{ 
+
+text-decoration:none;
+color:#D42222;
+}
+a.no-color{
+color:#0098BF;
+
+}
+a.no-color:hover{
+color:#0098BF;
+text-decoration:underline;
+}
+
+/*menu arancione\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\*/
+div#cont-campionati{  
+	position:absolute;
+	left:16%;
+    height:auto;
+    width:17%;
+    border:none;
+    background-color:transparent;   
+    -moz-border-radius: 2px 2px 2px 2px;
+	-webkit-border-radius: 2px 2px 2px 2px;
+	margin-top:1%;
+	list-style-type: none;
+	font-size:16px;
+	line-height:25px;
+}
+
+div#cont-campionati.squadre{
+	margin-top:1%;
+}
+
+div#cont-campionati.no-camp{
+position:relative;
+height:auto;
+color: white;
+background-color:#F96706;
+padding: 6px;
+margin:0px;
+left:0%;
+width:auto;
+}
+
+div#cont-campionati.esempio{
+position:relative;
+height:auto;
+color: white;
+background-color:#F96706;
+padding: 6px;
+left:0%;
+margin:0px; 
+margin-top:6%;
+
+width:auto;
+}
+
+
+ul.camp{
+    height:auto;
+	list-style-type: none;
+	text-align:left;
+	/*background-color:#F96706;*/
+	background-color:#34BFE2;
+	padding:0;
+	margin:0;
+		-moz-border-radius: 2px 2px 2px 2px;
+	-webkit-border-radius: 2px 2px 2px 2px;
+    }
+
+ul.camp-squadra{
+    margin-top:10%;
+    height:auto;
+	list-style-type: none;
+	text-align:left;
+	background-color:#34BFE2;
+	padding:0;
+	margin:0;
+    }
+
+li.camp{
+
+position: relative;
+height: auto;
+border:none;
+border-bottom:1px solid white;
+color: white;
+padding:6px;
+}
+
+ul.squadre{/*nella pagina "iscrivi-squadra"*/
+    position:absolute;
+    height:auto;
+    width:15%;
+	list-style-type: none;
+	text-align:left;
+	background-color:trasparent
+	padding:0;
+	margin:0;
+    margin-left:12%;
+    margin-top:2%;
+    border:none;
+    }
+
+li.squadre{/*nella pagina "iscrivi-squadra"*/
+
+position: relative;
+height: auto;
+border:none;
+color: white;
+padding:6px;
+margin-top:5px;
+background-color:#F96706;
+width:auto;
+
+}
+
+li.squadre-crea{/*nella pagina "iscrivi-squadra"*/
+
+position: relative;
+height: auto;
+border:none;
+color: white;
+padding:6px;
+margin-top:20px;
+background-color:#F96706;
+width:auto;
+cursor:pointer;
+
+
+}
+
+li.squadre:hover{
+/*-webkit-box-shadow:0px 1px 1px rgba(255,255,255,0.8) inset, 1px 1px 5px rgba(0,0,0,0.4);
+moz-box-shadow:0px 1px 1px rgba(255,255,255,0.8) inset, 1px 1px 5px rgba(0,0,0,0.4);
+box-shadow:0px 1px 1px rgba(255,255,255,0.8) inset, 1px 1px 5px rgba(0,0,0,0.4);*/
+background-color:#68D0EB;
+}
+
+li.squadre-crea:hover{
+/*-webkit-box-shadow:0px 1px 1px rgba(255,255,255,0.8) inset, 1px 1px 5px rgba(0,0,0,0.4);
+moz-box-shadow:0px 1px 1px rgba(255,255,255,0.8) inset, 1px 1px 5px rgba(0,0,0,0.4);
+box-shadow:0px 1px 1px rgba(255,255,255,0.8) inset, 1px 1px 5px rgba(0,0,0,0.4);*/
+background-color:#68D0EB;
+}
+
+li.camp:hover{
+/*-webkit-box-shadow:0px 1px 1px rgba(255,255,255,0.8) inset, 1px 1px 5px rgba(0,0,0,0.4);
+moz-box-shadow:0px 1px 1px rgba(255,255,255,0.8) inset, 1px 1px 5px rgba(0,0,0,0.4);
+box-shadow:0px 1px 1px rgba(255,255,255,0.8) inset, 1px 1px 5px rgba(0,0,0,0.4);*/
+background-color:#68D0EB;
+}
+div#tool{
+position:relative;
+height:200px;
+width:100%;
+border:none
+left:0%;
+background-color:trasparent;
+color: white;
+margin-top:8%;
+-moz-border-radius: 2px 2px 2px 2px;
+-webkit-border-radius: 2px 2px 2px 2px;}
+	
+div#live{
+padding:6px;
+margin-top:5px;
+background-color:#34BFE2;
+		-moz-border-radius: 2px 2px 2px 2px;
+	-webkit-border-radius: 2px 2px 2px 2px;
+
+}
+
+div#live:hover{
+/*-webkit-box-shadow:0px 1px 1px rgba(255,255,255,0.8) inset, 1px 1px 5px rgba(0,0,0,0.4);
+moz-box-shadow:0px 1px 1px rgba(255,255,255,0.8) inset, 1px 1px 5px rgba(0,0,0,0.4);
+box-shadow:0px 1px 1px rgba(255,255,255,0.8) inset, 1px 1px 5px rgba(0,0,0,0.4);*/
+background-color:#68D0EB;
+cursor:pointer;
+}
+
+/*parte classifica\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\*/
+
+div#cont-dati{
+position:absolute;
+left:34%;
+border:none;
+height:100%;
+width:65%;
+background-color:transparent;
+margin-top:1%;
+-moz-border-radius: 2px 2px 2px 2px;
+	-webkit-border-radius: 2px 2px 2px 2px;
+}
+
+div#classifica{
+list-style-type: none;
+padding-top:3px;
+padding-left:8px;
+height:46%;
+width:auto;
+top:0;
+margin-left:0%;
+background-color:#E5E5E8;
+-moz-border-radius: 2px 2px 2px 2px;
+-webkit-border-radius: 2px 2px 2px 2px;
+border:1px solid;
+border-color:rgba(1, 159, 199, 0.61);
+
+
+}
+
+div#cont-squadre{/*nella pagine "iscrivi squadra"*/
+
+position:absolute;
+width:65%;
+height:30%;
+border:none;
+margin-top:5px;
+margin-left:33%;
+background-color:#E5E5E8;
+-moz-border-radius: 2px 2px 2px 2px;
+-webkit-border-radius: 2px 2px 2px 2px;
+border:1px solid;
+border-color:rgba(1, 159, 199, 0.61);
+padding:5px 5px;
+line-height:30px;
+font-size:17px;
+color:#D42222;
+
+}
+
+
+
+div#cla-title{
+
+height:20%;
+width:20%;
+top:0;
+left:0;
+border:none;
+font-size:20px;
+font-weight:bold;
+
+}
+
+div#cla-title.ris{
+width:100%;
+border:none;
+}
+
+div#cla-left{
+list-style-type: none;
+position:absolute;
+width:40%;
+height:170px;
+border:none;
+top:8%;
+left:1.5%;
+
+}
+
+div#cla-center{
+
+position:absolute;
+width:40%;
+height:170px;
+border:none;
+top:8%;
+left:35%;
+
+}
+
+div#cla-right{
+
+position:absolute;
+width:40%;
+height:170px;
+border:none;
+top:8%;
+left:67%;
+
+}
+
+ul.class{
+
+padding:0;
+margin:0;
+border:none;
+width:100%;
+height:170px;
+
+}
+
+li.classifica{
+
+border:none;
+left:0;
+position: relative;
+width: 100%;
+height: 34px;
+background-color:transparent;
+color: black;
+list-style-type: none;
+}
+
+
+
+div#cont-risultati{
+
+
+padding-top:3px;
+padding-left:8px;
+height:38%;
+width:auto;
+margin-left:0%;
+margin-top:1%;
+border:none;
+background-color:#E5E5E8;
+-moz-border-radius: 2px 2px 2px12px;
+-webkit-border-radius: 2px 2px 2px 2px;
+border:1px solid;
+border-color:rgba(1, 159, 199, 0.61);
+
+}
+
+div#ris-left{
+
+position:absolute;
+width:48%;
+height:132px;
+border:none;
+margin-top:0%;
+margin-left:0%;
+
+
+
+
+}
+
+div#ris-right{
+
+position:absolute;
+width:50%;
+height:130px;
+border:none;
+margin-top:0%;
+margin-left:49%;
+
+}
+
+div#prox-gio{
+
+padding-top:3px;
+padding-left:8px;
+height:40%;
+width:auto;
+margin-left:0%;
+margin-top:1%;
+
+background-color:#E5E5E8;
+-moz-border-radius: 2px 2px 2px12px;
+-webkit-border-radius: 2px 2px 2px 2px;
+border:1px solid;
+border-color:rgba(1, 159, 199, 0.61);
+
+
+}
+
+div#gio-left{
+
+position:absolute;
+width:48%;
+height:132px;
+border:none;
+margin-top:0%;
+margin-left:0%;
+
+}
+
+div#gio-right{
+
+position:absolute;
+width:50%;
+height:130px;
+border:none;
+margin-top:0%;
+margin-left:49%;
+
+}
+#button {
+	cursor: pointer;
+}
+ 
+div#dropdown {
+	border:1px solid black;
+	height: 100%;
+	width:100%;
+	display:none;
+	z-index:999;
+	position:absolute;
+	top:30px;
+	color:white;
+
+}
+
+ul#menu_utente {
+	font-size:16px;
+	background-color:transparant;
+	list-style-type: none;
+	position:relative;
+}
+li#menu_utente {
+	height:20px;
+	position:relative;
+	background-color:#454545;
+	margin:2px;
+	}
+
+a.user_color {
+color:white;
+}
+
+

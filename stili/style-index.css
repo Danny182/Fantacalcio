@@ -1,0 +1,270 @@
+@charset "utf-8";
+/* CSS Document */
+
+div#cont{
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	border: 0%;
+	left: 0%;
+	top: 0%;
+	background: #ededf0;
+	background: -moz-linear-gradient(left,  #ededf0 0%, #dbdbdd 30%, #dbdbdd 70%, #ededf0 100%);
+	background: -webkit-gradient(linear, left top, right top, color-stop(0%,#ededf0), color-stop(30%,#dbdbdd), color-stop(70%,#dbdbdd), color-stop(100%,#ededf0));
+	background: -webkit-linear-gradient(left,  #ededf0 0%,#dbdbdd 30%,#dbdbdd 70%,#ededf0 100%);
+	background: -o-linear-gradient(left,  #ededf0 0%,#dbdbdd 30%,#dbdbdd 70%,#ededf0 100%);
+	background: -ms-linear-gradient(left,  #ededf0 0%,#dbdbdd 30%,#dbdbdd 70%,#ededf0 100%);
+	background: linear-gradient(to right,  #ededf0 0%,#dbdbdd 30%,#dbdbdd 70%,#ededf0 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ededf0', endColorstr='#ededf0',GradientType=1 );
+	font-family:'WOL_Reg','Segoe UI',Tahoma,Helvetica,sans-serif;
+	overflow:auto;
+	font-size:13.5px;
+}
+img {
+  border-width: 0;
+}
+div#top{
+	height:100px;
+	width:100%;
+	background-color:#1a1a1a;
+	position:absolute;
+	border:none;
+	border-bottom: 10px solid #4d4d4d;
+}
+
+div#top-logo{
+	top:12%;
+	left:0%;
+	position:absolute;
+	border:none;
+}
+
+div#top-insize{
+	position:relative;
+	margin:0 auto;
+	width: 960px;	
+	height:100%;
+	
+}
+div#top-user{
+	position:absolute;
+	top:75%;
+	right:0px;
+	text-align:right;
+	color:#FFF;
+	a {color:#00D2FF};
+	font-weight:lighter;
+}
+
+div#windows{
+	width:960px;
+	height:420px;
+	position: relative;
+	top: 175px;
+	margin:0 auto;
+	border: none;
+
+}
+
+div#wind1{
+	height: 100%;
+	width: 32%;
+	position: absolute;
+	border: none;
+	top: 0%;
+	left: 0%;
+}
+
+div#wind2{
+	height: 100%;
+	width: 33%;
+	position: absolute;
+	top: 0%;
+	left: 33%;
+	border: none;
+	background-color:#B0B0B0;
+	
+
+}
+
+div#wind3{
+	height: 100%;
+	width: 33%;
+	position: absolute;
+	top: 0%;
+	left: 67%;
+	border: none;
+
+
+}
+
+div#wind3-1{
+	height: 26%;
+	width: 92%;
+	top: 0%;
+	left: 0%;
+	position: absolute;
+	border: none;
+	background-color: #00D2FF;
+	color: #FFF;
+	padding: 4%;
+
+
+
+}
+
+div#wind3-2{
+	height: 25.5%;
+	width: 92%;
+	top: 34%;
+	left: 0%;
+	position: absolute;
+	border: none;
+	background-color: #93F;
+	color: #FFF;
+	padding: 4%;
+
+}
+
+div#wind3-3{
+	height: 25.5%;
+	width: 40.3%;
+	top: 68%;
+	left: 0%;
+	position: absolute;
+	border: none;
+	background-color: #F96706;
+	color: #FFF;
+	padding: 4%;
+
+
+}
+
+
+div#wind3-4{
+	height: 25.5%;
+	width: 40.7%;
+	top: 68%;
+	left: 51.3%;
+	position: absolute;
+	border: none;
+	background-color: #0C0;
+	color: #FFF;
+	padding: 4%;
+}
+
+
+div#wind1-1{
+	height: 49%;
+	width: 100%;
+	position: absolute;
+	top: 0%;
+	left: 0%;
+	border: none;
+	
+	
+}
+
+div#wind1-2{
+	height: 42%;
+	width: 92%;
+	position: absolute;
+	top: 52%;
+	left: 0%;
+	border: none;
+	overflow:auto;
+	background-color:#0C0;
+	color:#FFF;
+	padding:4%;
+	padding-right:4%;
+	
+}
+
+
+div#login{
+	height: 40%;
+	width: 95%;
+	position: relative;
+	margin:0 auto;
+	border: 1px solid;
+	border-color: #00D2FF;
+	-webkit-border-radius: 0px 30px 0px 30px;
+	-moz-border-radius: 0px 30px 0px 30px;
+	background-color:#D3D3D3;
+	padding-top:5%;
+	
+}
+
+div#noreg{
+	top:67%;
+	height:auto;
+	width:100%;
+	position:absolute;
+	text-align:center;
+	border:none;
+	
+}
+	
+input{
+background:white;
+clear: both;
+width: 40%;
+height: 23px;
+border:0;
+text-align:center;
+}
+
+
+.button{	
+	width: 40%;
+	height: 23px;
+	background-color:#00D2FF;
+	color:#fff;
+	cursor: pointer;	
+}
+/*diversi tipi di pulsanti*/
+
+input#accedi.button{
+font-size: 14px;
+height:27px;
+width:45%;
+border:1px solid white;
+font-weight:400;
+}
+input#persi.button{
+font-size: 12px;
+height:22px;
+width:32%;
+margin-top:0%;
+border:none;
+}
+.button:hover{
+	-webkit-box-shadow:0px 1px 1px rgba(255,255,255,0.8) inset, 1px 1px 5px rgba(0,0,0,0.4);
+    -moz-box-shadow:0px 1px 1px rgba(255,255,255,0.8) inset, 1px 1px 5px rgba(0,0,0,0.4);
+    box-shadow:0px 1px 1px rgba(255,255,255,0.8) inset, 1px 1px 5px rgba(0,0,0,0.4);
+}
+
+
+.reg{
+	text-align:center;
+	width: auto;	
+	height: auto;
+	background:#00D2FF;
+	border:1px solid white;
+	color:#fff;
+	font-weight:200;
+	cursor: pointer;
+	font-size:18px;
+	padding:4% 6% 4%;
+}
+	
+.reg:hover{
+	-webkit-box-shadow:0px 1px 1px rgba(255,255,255,0.8) inset, 1px 1px 5px rgba(0,0,0,0.4);
+    -moz-box-shadow:0px 1px 1px rgba(255,255,255,0.8) inset, 1px 1px 5px rgba(0,0,0,0.4);
+    box-shadow:0px 1px 1px rgba(255,255,255,0.8) inset, 1px 1px 5px rgba(0,0,0,0.4);
+}
+
+
+
+a{color:#00D2FF; text-decoration:none};
+

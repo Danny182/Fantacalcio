@@ -1,0 +1,63 @@
+div#menu{
+position:absolute;
+border:none;
+width:15%;
+height:100%;
+border-right:1px solid #fff;
+margin-left:2px;
+}
+
+#menu .menu-principale-container{
+position:relative;
+height:100%;
+background-color:transparent;
+color:#353535;
+
+}
+#menu .menu-principale-container #menu-principale li {
+	display:block;
+	width:auto;
+	height:auto;
+	font-size:16px;
+	line-height:20px;
+	border:none;
+	margin-bottom:16px;
+	}
+
+#menu .menu-principale-container #menu-principale li a{
+	display:block;
+}
+ul#menu-principale.menu{
+padding:0px;
+margin:0px;
+}
+#menu a{
+color:#353535;
+padding-left:5px;}
+
+#menu a:hover{
+color:black;
+background:#E4E4E4;
+border-bottom:4px solid #00DFFF;
+}
+.home-page #menu   .style-item-1 a{
+	border-left:4px solid white;
+	}
+.crea-camp-page #menu   .style-item-3 a{
+	border-left:4px solid white;
+	}
+/*colori per i bordi inferiori di ogni voce*/
+#menu   .style-item-2 a:hover{
+border-bottom:4px solid #F96706;}
+#menu   .style-item-3 a:hover{
+border-bottom:4px solid #0c0;}
+#menu   .style-item-4 a:hover{
+border-bottom:4px solid #93f;}
+#menu   .style-item-5 a:hover{
+border-bottom:4px solid #0033FF;}
+#menu   .style-item-6 a:hover{
+border-bottom:4px solid #000000;}
+#menu   .style-item-7 a:hover{
+border-bottom:4px solid #FFFF00;}
+#menu   .style-item-8 a:hover{
+border-bottom:4px solid #6A8BFB;}

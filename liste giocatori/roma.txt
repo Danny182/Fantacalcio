@@ -1,0 +1,27 @@
+Bogdan Ionut Lobont|18.01.1978|Hunedoara|Romania|Porta|destro|300.000|30.06.2016|
+JÚLIO SÉRGIO BERTAGNOLI|08.11.1978|Ribeirão Preto|Brasile |Porta|destro|100.000 |30.06.2014|
+MORGAN DE SANCTIS|26.03.1977|Guardiagrele|Italia|Porta|destro|1.000.000 |30.06.2015|
+Lukasz Skorupski|05.05.1991|Zabrze|Polonia|Porta|destro|1.000.000|30.06.2017|
+LEANDRO CASTÁN DA SILVA|05.11.1986|Jaú|Brasile|Difesa - Difensore centrale|sinistro|6.500.000 |30.06.2016|
+Mehdi Amine El Mouttaqi Benatia|17.04.1987|Courcouronnes |Marocco |Difesa - Difensore centrale|destro|13.000.000|30.06.2018|
+Nicolás Andrés Burdisso|12.04.1981|Altos de Chipión| Argentina|Difesa - Difensore centrale|destro|2.500.000|30.06.2014|
+TIN JEDVAJ|28.11.1995|Zagreb|Croazia|Difesa - Difensore centrale|destro|5.000.000|30.06.2016|
+Alessio Romagnoli|12.01.1995|Anzio|Italia|Difesa - Difensore centrale|sinistro|900.000|30.06.2015|
+DODÔ - JOSÉ RODOLFO PIRES RIBEIRO|06.02.1992|Campinas |Brasile |Difesa - Terzino sinistro|sinistro|700.000|30.06.2017|
+FEDERICO BALZARETTI|06.12.1981|Torino| Italia|Difesa - Terzino sinistro|sinistro|3.500.000|30.06.2015|
+MAICON DOUGLAS SISENANDO|26.07.1981|Novo Hamburgo|Brasile|Difesa - Terzino destro|destro|4.000.000|30.06.2015|
+VASILIS TOROSIDIS|10.06.1985|Xanthi|Grecia|Difesa - Terzino destro|destro|6.000.000|30.06.2015|
+Michael Sheehan Bradley|31.07.1987|Princeton, New Jerse|Stati Uniti|Centrocampo - Mediano|destro|6.500.000 |30.06.2016|
+DANIELE DE ROSSI|24.07.1983|Roma|Italia|Centrocampo - Mediano|entrambi|20.000.000|30.06.2017|
+KEVIN STROOTMAN|13.02.1990|Rotterdam|Paesi Bassi|Centrocampo - Centrale|sinistro|17.000.000|30.06.2018|
+VALERIO VERRE|11.01.1994|Roma| Italia|Centrocampo - Centrale|destro|1.200.000|30.06.2017|
+Miralem Pjanic|02.04.1990|Bosnia-Erzegovina |Centrocampo - Trequartista|entrambi|14.000.000|	30.06.2015|
+ALESSANDRO FLORENZI|11.03.1991|Roma|Italia|Centrocampo - Trequartista|destro|7.500.000|30.06.2016|
+MARQUINHO - MARCO ANTÔNIO DE MATTOS FILHO|03.07.1986|Passo Fundo| Brasile|Centrocampo - Ala sinistra|sinistro|4.500.000|30.06.2016|
+RODRIGO FERRANTE TADDEI|06.03.1980|São Paulo| Brasile |Centrocampo - Ala destra|destro|300.000|30.06.2014|
+GIANLUCA CAPRARI|30.07.1993|Roma| Italia|Attacco - Ala destra|destro|1.700.000|30.06.2017|
+GERVINHO - GERVAIS YAO KOUASSI|27.05.1987|Anyama| Costa d'Avorio|Attacco - Ala destra|destro|10.000.000 |30.06.2017|
+Adem Ljajic|29.09.1991|Novi Pazar |Serbia|Attacco - Seconda punta|destro|12.000.000 |30.06.2017|
+FRANCESCO TOTTI|27.09.1976|Roma|Italia|Attacco - Seconda punta|entrambi|1.000.000|30.06.2014|
+MATTIA DESTRO|20.03.1991|Ascoli Piceno|Italia|Attacco - Punta centrale|destro|11.500.000|30.06.2017|
+MARCO BORRIELLO|18.06.1982|Napoli|Italia|Attacco - Punta centrale|sinistro|7.000.000|30.06.2015|
