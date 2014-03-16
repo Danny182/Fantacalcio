@@ -627,7 +627,7 @@ ul#menu_utente {
 li#menu_utente {
 	line-height:30px;
 	position:relative;
-	background-color:#3D3D3D;
+	background-color:#2E2E2E;
 	width:100%;
 	border:0px solid white;
 	padding:2px 4px 2px 4px;
@@ -644,5 +644,5 @@ display:block;
 li#menu_utente:hover {
 color:white;
 display:block;
-background-color:#585858;
+background-color:#484848;
 }
