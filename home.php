@@ -100,13 +100,17 @@ $(document).ready(function(){
 			<?php
 			echo'<div id = "nome"><div id="nome-inside">'.$user.'</div><img id="button" src="img/tool3.png" width="22px" height="22px">
 			<br><div id="dropdown">
-			<ul id="menu_utente">
-				<li id="menu_utente">
-					<a class="user_color" href="user/modifica.php">modifica utente</a>
-				</li>
-				<li id="menu_utente">
-					<a class="user_color" href="user/log-out.php">log out</a>
-				</li>
+			<ul id="menu_utente">				
+				<a class="user_color" href="user/modifica.php">
+					<li id="menu_utente">
+						modifica utente
+					</li>
+				</a>
+				<a class="user_color" href="user/log-out.php">
+					<li id="menu_utente">
+						log out
+					</li>
+				</a>			
 			</ul>
 		</div>
 			</div>';

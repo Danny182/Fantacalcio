@@ -597,16 +597,21 @@ margin-left:49%;
 #button {
 	cursor: pointer;
 }
- 
+#button:hover {
+    background-color: black;
+    opacity: 0.7;
+}
+
 div#dropdown {
-	border:1px solid black;
+	border:none;
 	height: 100%;
 	width:100%;
 	display:none;
 	z-index:999;
 	position:absolute;
-	top:30px;
 	color:white;
+	right:7px;
+	top:12px;
 
 }
 
@@ -615,16 +620,29 @@ ul#menu_utente {
 	background-color:transparant;
 	list-style-type: none;
 	position:relative;
+	padding-left:0px;
+	border:none;
+	display:block;
 }
 li#menu_utente {
-	height:20px;
+	line-height:30px;
 	position:relative;
-	background-color:#454545;
-	margin:2px;
+	background-color:#3D3D3D;
+	width:100%;
+	border:0px solid white;
+	padding:2px 4px 2px 4px;
+	margin-bottom:2px;
+	-moz-border-radius: 2px 2px 2px12px;
+-webkit-border-radius: 2px 2px 2px 2px;	
 	}
 
 a.user_color {
 color:white;
+display:block;
 }
 
-
+li#menu_utente:hover {
+color:white;
+display:block;
+background-color:#585858;
+}
