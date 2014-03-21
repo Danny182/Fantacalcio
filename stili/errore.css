@@ -9,9 +9,6 @@ div#cont{
 	border: 1px solid;
 	left: 0px;
 	top: 0px;
-	background-image:url(../img/sfondo.jpg);
-	
-
 }
 
 
@@ -22,7 +19,8 @@ div#errore{
 	left:30%;
 	top:20%;
 	border:1px solid;
-	
+	-moz-border-radius: 2px 2px 2px 2px;
+	-webkit-border-radius: 2px 2px 2px 2px;
 
 }
 

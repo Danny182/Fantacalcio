@@ -605,12 +605,12 @@ margin-left:49%;
 div#dropdown {
 	border:none;
 	height: 100%;
-	width:100%;
+	width:auto;
 	display:none;
 	z-index:999;
 	position:absolute;
 	color:white;
-	right:7px;
+	right:13px;
 	top:12px;
 
 }
@@ -630,10 +630,10 @@ li#menu_utente {
 	background-color:#2E2E2E;
 	width:100%;
 	border:0px solid white;
-	padding:2px 4px 2px 4px;
+	padding:2px 6px;
 	margin-bottom:2px;
-	-moz-border-radius: 2px 2px 2px12px;
--webkit-border-radius: 2px 2px 2px 2px;	
+	-moz-border-radius: 2px 2px 2px 2px;
+	-webkit-border-radius: 2px 2px 2px 2px;	
 	}
 
 a.user_color {
