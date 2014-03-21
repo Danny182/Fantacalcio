@@ -10,15 +10,11 @@
 		$query = "SELECT id_campionato FROM campionato where nome =  '$nomecamp' ";
 		$ris = mysql_query($query);
 		$vet = mysql_fetch_array($ris);
-
-		if($vet['id_campionato']>0){
-			
-			$results= true;
-		}else{
-
+		if($vet['id_campionato']>0){			
 			$results= false;
+		}else{
+			$results= true;
 		}
 		
-
 		echo json_encode($results);
 ?>	
