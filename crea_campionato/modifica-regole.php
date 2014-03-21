@@ -322,7 +322,7 @@
 			</div>
 			
 			<div id = "cont-label-modifica" class = "voto_giocatore_ss">
-				<label for="nome" class = "crea-camp-title">Voto giocatore se non ha sostituto:</label>
+				<label for="nome" class = "crea-camp-title">Voto gioc. se non ha sostituto:</label>
 				<input type = "text" name = "voto_giocatore_ss" id = "mod_n_part" class="modifica-regole-voto_giocatore_ss" onclick="this.value='';" onfocus="this.select()" onblur="this.value=!this.value?'0':this.value;"  value = "0"/>
 			</div>
 			

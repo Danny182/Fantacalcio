@@ -152,7 +152,7 @@
 			</div><!--fine cont-label -->
 
             <div id = "cont-label" class = "squadra">
-                <label for="squadra">Seleziona la tua squadra</label><br>
+                <label for="squadra">Seleziona la tua squadra</label>
 
                     <?php
                         if(!empty($user_teams)){
@@ -162,7 +162,7 @@
                             echo'</select>';
                         }
                         
-                        else echo '<select class="squadra" name = "squadra"><option value = "null" > Crea una nuova squadra </option></select>';
+                        else echo '<font color="red" size="12px">Prima di creare un campionato devi avere una squadra</font>';
                         
                     ?>
 

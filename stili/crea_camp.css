@@ -281,9 +281,10 @@ overflow:auto;
 }
 
 .reg-crea-camp:hover{
--webkit-box-shadow:0px 1px 1px rgba(255,255,255,0.8) inset, 1px 1px 5px rgba(0,0,0,0.4);
+/*-webkit-box-shadow:0px 1px 1px rgba(255,255,255,0.8) inset, 1px 1px 5px rgba(0,0,0,0.4);
 moz-box-shadow:0px 1px 1px rgba(255,255,255,0.8) inset, 1px 1px 5px rgba(0,0,0,0.4);
-box-shadow:0px 1px 1px rgba(255,255,255,0.8) inset, 1px 1px 5px rgba(0,0,0,0.4);
+box-shadow:0px 1px 1px rgba(255,255,255,0.8) inset, 1px 1px 5px rgba(0,0,0,0.4);*/
+background-color:#53E1FF;
 }
 
 .reg-regole{
@@ -320,11 +321,17 @@ box-shadow:0px 1px 1px rgba(255,255,255,0.8) inset, 1px 1px 5px rgba(0,0,0,0.4);
 }
 
 .reg-regole:hover{
--webkit-box-shadow:0px 1px 1px rgba(255,255,255,0.8) inset, 1px 1px 5px rgba(0,0,0,0.4);
+/*-webkit-box-shadow:0px 1px 1px rgba(255,255,255,0.8) inset, 1px 1px 5px rgba(0,0,0,0.4);
 moz-box-shadow:0px 1px 1px rgba(255,255,255,0.8) inset, 1px 1px 5px rgba(0,0,0,0.4);
-box-shadow:0px 1px 1px rgba(255,255,255,0.8) inset, 1px 1px 5px rgba(0,0,0,0.4);
+box-shadow:0px 1px 1px rgba(255,255,255,0.8) inset, 1px 1px 5px rgba(0,0,0,0.4);*/
+background-color:#53E1FF;
 }
-
+input.mod-regole:hover {
+background-color:#53E1FF;
+}
+input.reg-utenti:hover {
+background-color:#53E1FF;
+}
 .reg-utenti{
 	text-align: center;
 	width: 79%;
@@ -341,7 +348,8 @@ box-shadow:0px 1px 1px rgba(255,255,255,0.8) inset, 1px 1px 5px rgba(0,0,0,0.4);
 	cursor: pointer;
 }
 select.squadra {
-margin-top:-5px;
+margin-top:2px;
+position:relative
 }
 
 input.crea-camp{
@@ -693,27 +701,29 @@ div#cont-errore{
 	height: 100%;
 	width: 100%;
 	position: absolute;
-	border: 1px solid;
+	border: 0px solid;
 	left: 0px;
 	top: 0px;
 	background-color:#1a1a1a;
-	font-family:'WOL_Reg','Segoe UI',Tahoma,Helvetica,sans-serif;	
+	font-family:'WOL_Reg','Segoe UI',Tahoma,Helvetica,sans-serif;
+		
 }
 
 div#errore{
 	height:120px;
 	width:450px;
 	top:20%;
-	left:50%;
-	margin-left:-200px;	
 	border:none;
-	position:absolute;
+	position:relative;
 	text-align:center;
 	background-color:#00CCFF;
 	color:#ffffff;
 	line-height:35px;
 	font-size:15px;
 	padding-top:15px;
+	margin: 0 auto;
+	-moz-border-radius: 2px 2px 2px 2px;
+	-webkit-border-radius: 2px 2px 2px 2px;	
 }
 div#labels{
 position:relative;
@@ -842,11 +852,11 @@ label#info:hover {
 	margin: -22% 105%;
 	text-align: left;
 	padding: 5px;
-	border: 1px solid;
+	border: 0px solid;
 	position: relative;
 	border-color: #00D7FF;
-	background: #C6C6C6;	
-	color: #353535;
+	background: #484848;	
+	color: #fff;
 	display:none;	
 	width:55%;
 	height:auto;
@@ -889,3 +899,7 @@ label#info:hover {
 #evento.bonus_capitano {
 	margin:-10% -66%;	
 	}
+	
+font {
+font-size: 12px;
+}

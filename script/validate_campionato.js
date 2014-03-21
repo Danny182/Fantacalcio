@@ -11,6 +11,7 @@ $(document).ready(function() {
 				required: true,
 				minlength: 3
 			},
+			
 			n_part: {
 				required: true,
 				number: true
@@ -26,6 +27,7 @@ $(document).ready(function() {
 				required: "Inserire una password",
 				minlength: "Inserire almeno 3 caratteri"
 			},
+			
 			n_part: {
 				required: "Inserire numero dei partecipanti",
 				number: "Inserire solo valori numerici"
