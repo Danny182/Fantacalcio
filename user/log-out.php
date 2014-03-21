@@ -14,7 +14,7 @@ session_start();
 	$_SESSION["login_ok"] = false;
 	
 	echo'<div id = "cont"><div id = "window">
-				Log-out Effettuato
+				log out effettuato
 				<meta http-equiv="Refresh" content="3; URL=../index.php">
 		</div></div>';
 	
