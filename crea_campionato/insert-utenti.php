@@ -39,7 +39,7 @@
 <script type="text/javascript" src="../script/validate_users.js"></script>
 </head>
 
-<body>
+<body class="crea-camp-page">
     <div id = "cont">
         <div id="top">
             <div id="top-insize">
