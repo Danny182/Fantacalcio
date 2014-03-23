@@ -162,7 +162,7 @@
                             echo'</select>';
                         }
                         
-                        else echo '<font color="red" size="12px">Prima di creare un campionato devi avere una squadra</font>';
+                        else echo '<label id="no_team">Prima di creare un campionato devi avere una squadra</label>';
                         
                     ?>
 

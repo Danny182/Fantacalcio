@@ -903,3 +903,7 @@ label#info:hover {
 font {
 font-size: 12px;
 }
+ label#no_team {
+ font-size:12px;
+ color:red;
+ }
