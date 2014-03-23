@@ -4,10 +4,10 @@
 <link rel="shortcut icon" href="../img/favicon.ico" />
 <link rel="stylesheet" href="../stili/style-reg.css" type="text/css" media="screen" />
 	<!-- jquery validazioni //--> 
+	<script src="../librerie/jquery-1.11.0.min.js"/></script>  
 <script type="text/javascript" src="../librerie/jquery.validate.js"></script> 
-<script type="text/javascript" src="../librerie/reg_validate.js"></script>
-<link rel="stylesheet" href="../stili/form.css" type="text/css" media="screen" />
-
+<script type="text/javascript" src="../script/reg_validate.js"></script>
+<link rel="stylesheet" href="../stili/form.css" type="text/css" media="screen" /> 
 
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Registrazione</title>
@@ -35,7 +35,7 @@
    		 </div>
 
         <div id = "sotto-wind">
-        <form action = "leggir.php" method = "post" id = "form">
+        <form action = "leggir.php" method = "POST" id = "form">
 		
         <div id = "cont-label" class = "nome">
         <label for="nome">Nome:</label>
@@ -224,29 +224,29 @@
         
         <div id = "cont-label" class = "citta">
         <label for="citta">Città:</label>
-		<input type = "text" name = "citta" id = "citta" size = "16" />
+		<input type = "text" name = "citta" id = "citta" size = "16" autocomplete="off" />
           
         </div><!--fine cont-label -->
         
         <div id = "cont-label" class = "email">
         <label for="email"> E-Mail:</label>
-		<input type = "text" name = "email" id = "email" size = "18" />
+		<input type = "text" name = "email" id = "email" size = "18" autocomplete="off" />
           
         </div><!--fine cont-label -->
         
         <div id = "cont-label" class = "user">
-        <label for="user">User Name:</label>
+        <label for="user">Username:</label>
 		<input type = "text" name = "user" id = "user" size = "14" />
           
         </div><!--fine cont-label -->
         
         <div id = "cont-label" class = "password">
         <label for="password">Password:</label>
-		<input type = "password" name = "password" id = "password" size = "16" />
+		<input type = "password" name = "password" id = "password" size = "16" autocomplete="off" />
 		</div><!--fine cont-label -->
 		<div id = "cont-label" class = "password2">
         <label for="password2">Reinserisci password:</label>
-		<input type = "password" name = "password2" id = "password2" size = "16" />
+		<input type = "password" name = "password2" id = "password2" size = "16" autocomplete="off" />
           
         </div><!--fine cont-label -->
         <div id = "cont-label" class = "domanda">

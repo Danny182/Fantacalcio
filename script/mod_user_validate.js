@@ -7,7 +7,7 @@ $(document).ready(function() {
 			user: {
 				required: true,
 				minlength: 3,
-				remote : 'check_username.php'
+				remote : 'check_mod_username.php'
 			},
 			password: {
 				required: true,
@@ -52,6 +52,7 @@ $(document).ready(function() {
 });
 
 		
+
 
 
 

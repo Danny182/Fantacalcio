@@ -11,7 +11,8 @@
     $vet = mysql_fetch_array($ris);
     foreach($vet as $key => $value)
 		$$key=$value;
-	
+	setcookie("user", $user, 0);
+	setcookie("id", $id_utente, 0);
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -19,8 +20,9 @@
 <link rel="shortcut icon" href="../img/favicon.ico" />
 <link rel="stylesheet" href="../stili/style-reg.css" type="text/css" media="screen" />
 	<!-- jquery validazioni //--> 
+		<script src="../librerie/jquery-1.11.0.min.js"/></script>  
 <script type="text/javascript" src="../librerie/jquery.validate.js"></script> 
-<script type="text/javascript" src="../librerie/reg_validate.js"></script>
+<script type="text/javascript" src="../script/mod_user_validate.js"></script>
 <link rel="stylesheet" href="../stili/form.css" type="text/css" media="screen" />
 
 
@@ -44,13 +46,13 @@
 	<div id="top-border"></div>
     
   <div id = "windows"><!--fine news-->
-        <div id="wind1">
+        <div id="wind1" class="modifica">
      	<font size="+1.5">Modifica i tuoi dati</font><br />
     	 
    		 </div>
 
         <div id = "sotto-wind">
-        <form action = "leggir.php" method = "post" id = "form">
+        <form action = "leggi_modifica.php" method = "post" id = "form">
 		
         <div id = "cont-label" class = "nome">
         <label for="nome">Nome:</label>
@@ -242,38 +244,47 @@
         
         <div id = "cont-label" class = "citta">
         <label for="citta">Città:</label>
-		<input type = "text" name = "citta" id = "citta" size = "16" />
-          
+		<?php
+		echo '<input type = "text" name = "citta" id = "citta" size = "16" value="'.$citta.'"/>';
+        ?>  
         </div><!--fine cont-label -->
         
         <div id = "cont-label" class = "email">
         <label for="email"> E-Mail:</label>
-		<input type = "text" name = "email" id = "email" size = "18" />
+        <?php
+		echo '<input type = "text" name = "email" id = "email" size = "18" value="'.$email.'"/>';
+        ?>  
           
         </div><!--fine cont-label -->
         
         <div id = "cont-label" class = "user">
-        <label for="user">User Name:</label>
-		<input type = "text" name = "user" id = "user" size = "14" />
+        <label for="user">Username:</label>
+        <?php
+		echo '<input type = "text" name = "user" id = "user" size = "14" value="'.$user.'"/>';
+        ?> 
           
         </div><!--fine cont-label -->
         
         <div id = "cont-label" class = "password">
         <label for="password">Password:</label>
-		<input type = "password" name = "password" id = "password" size = "16" />
+        <?php
+		echo '<input type = "password" name = "password" id = "password" size = "16" value="'.$password.'"/>';
+        ?> 
 		</div><!--fine cont-label -->
 		<div id = "cont-label" class = "password2">
         <label for="password2">Reinserisci password:</label>
-		<input type = "password" name = "password2" id = "password2" size = "16" />
+        <?php
+		echo '<input type = "password" name = "password2" id = "password2" size = "16" value="'.$password.'"/>';
+        ?> 
           
         </div><!--fine cont-label -->
         <div id = "cont-label" class = "domanda">
           Domanda Segreta:<br />
             <select align="center" name="domanda" style="width:75%">
-              <option value="Il tuo colore preferito">Il tuo colore preferito</option>
-              <option value="Il tuo piatto preferito">Il tuo piatto preferito</option>
-              <option value="Il nome del tuo milgiore amico">Il nome del tuo milgiore amico</option>
-              <option value="La tua squadra di calcio peferita">La tua squadra di calcio peferita</option>
+              <option value="Il tuo colore preferito" <?php if ($domanda=="Il tuo colore preferito") echo 'selected="selected	"'; ?> >Il tuo colore preferito</option>
+              <option value="Il tuo piatto preferito" <?php if ($domanda=="Il tuo piatto preferito") echo 'selected="selected	"'; ?>>Il tuo piatto preferito</option>
+              <option value="Il nome del tuo milgiore amico" <?php if ($domanda=="Il nome del tuo milgiore amico") echo 'selected="selected	"'; ?>>Il nome del tuo milgiore amico</option>
+              <option value="La tua squadra di calcio peferita" <?php if ($domanda=="La tua squadra di calcio peferita") echo 'selected="selected	"'; ?>>La tua squadra di calcio peferita</option>
             </select>
           
         </div><!--fine cont-label -->
@@ -281,7 +292,9 @@
         
         <div id = "cont-label" class = "risposta">
         <label for="risposta">Risposta:</label>
-		<input type = "text" name = "risposta" id = "risposta" size = "20" />
+        <?php
+		echo '<input type = "text" name = "risposta" id = "risposta" size = "20" value="'.$risposta.'"/>';
+        ?> 
           
         </div><!--fine cont-label -->
         

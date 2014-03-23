@@ -6,7 +6,7 @@ div#cont{
 	height: 100%;
 	width: 100%;
 	position: absolute;
-	border: 1px solid;
+	border: 0px solid;
 	left: 0px;
 	top: 0px;
 }
@@ -15,10 +15,10 @@ div#cont{
 div#errore{
 	height:30%;
 	width:20%;
-	position:absolute;
-	left:30%;
+	position:relative;
+	margin:0 auto;
 	top:20%;
-	border:1px solid;
+	border:0px solid;
 	-moz-border-radius: 2px 2px 2px 2px;
 	-webkit-border-radius: 2px 2px 2px 2px;
 
