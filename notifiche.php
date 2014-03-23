@@ -10,7 +10,7 @@
 <head>
 <link rel="shortcut icon" href="/favicon.ico" />
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>home</title>
+<title>Notifiche</title>
 <link rel="stylesheet" href="stili/style-home.css" type="text/css" media="screen" />
 <link rel="stylesheet" href="stili/style-notifiche.css" type="text/css" media="screen" />
 <link rel="stylesheet" href="stili/campo-calcio.css" type="text/css" media="screen" />
@@ -22,6 +22,17 @@
 <!-- STILE DEL MENù CON SCORRIMENTO IN VERTICALE
 <script type="text/javascript" src="script/menu.js"></script>-->
 <link rel="stylesheet" type="text/css" href="stili/menu2.css" />
+
+<script type="text/javascript" >
+$(function() {
+	$("#delete").click(function(){
+		document.getElementbyId("
+		alert("ciao");
+	});
+});
+
+</script>
+
 
 </head>
 
@@ -147,13 +158,13 @@ $id = $_SESSION['id_utente'];
         }
     else{
         foreach($notifiche as $value){
-            
+            $id_notifica = $value['id_notifica'];
             $vet_mittente = get_userdates($value['mitt']);
             foreach($vet_mittente as $chiave => $valore){
                 @$mittente .= ucfirst("$valore")." ";
             }
             
-            echo'<div id = "cont-notify"> <i style="color:#018DB0;">Oggetto</i>: '.$value['tipo'].' &nbsp;&nbsp; <i style="color:#018DB0;">Mittente</i>: '.$mittente.' <br><br> '.$value['testo'].' </div>';
+            echo'<div id = "cont-notify"><a href = "#" id = "<?php echo $id_notifica; ?>"><div id = "delete"></div></a> <i style="color:#018DB0;">Oggetto</i>: '.$value['tipo'].' &nbsp;&nbsp; <i style="color:#018DB0;">Mittente</i>: '.$mittente.'  <br><br> '.$value['testo'].' </div>';
             $mittente = "";
         }
         

@@ -15,14 +15,15 @@ function get_userdates($id){
 
     function get_notify($id){
         
-        $query = "SELECT notifica.testo, notifica.tipo, notifica.id_mittente FROM notifica, utente WHERE notifica.id_utente = utente.id_utente and notifica.id_utente = '$id'";
+        $query = "SELECT notifica.testo, notifica.tipo, notifica.id_mittente, notifica.id_notifica FROM notifica, utente WHERE notifica.id_utente = utente.id_utente and notifica.id_utente = '$id' ORDER BY notifica.id_notifica DESC";
         $ris = mysql_query($query);
         $notifica = array();
         while($row = mysql_fetch_array($ris)){
             $notifica[] = array (
                                  "testo" => $row['testo'],
                                  "tipo" => $row['tipo'],
-                                 "mitt" => $row['id_mittente']
+                                 "mitt" => $row['id_mittente'],
+            					 "id_notifica" => $row['id_notifica']
                                  );
             }
         

@@ -155,6 +155,16 @@ font-size:13px;
 
 }
 
+div#delete{
+	
+	
+	border:none;
+	width:1.7%;
+	height:8%;
+	margin-top:0%;
+	margin-left:98%;
+	background-image: url(../img/cancella.png);
+}
 
 
 
