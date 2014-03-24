@@ -25,10 +25,23 @@
 
 <script type="text/javascript" >
 $(function() {
-	$("#delete").click(function(){
-		document.getElementbyId("
-		alert("ciao");
+	$(".ciao").click(function(){
+		var id = $(this);
+		var id_notifica = id.attr("id");
+		if(confirm("Sei sicuro di voler cancellare la notifica?"))
+		  {
+			$.ajax({
+				   type: "POST",
+				   url: "delete-single-notify.php",
+				   data: id_notifica,
+				   success: function(){
+				   
+				   }
+			});
+			
 	});
+});
+
 });
 
 </script>
@@ -164,7 +177,7 @@ $id = $_SESSION['id_utente'];
                 @$mittente .= ucfirst("$valore")." ";
             }
             
-            echo'<div id = "cont-notify"><a href = "#" id = "<?php echo $id_notifica; ?>"><div id = "delete"></div></a> <i style="color:#018DB0;">Oggetto</i>: '.$value['tipo'].' &nbsp;&nbsp; <i style="color:#018DB0;">Mittente</i>: '.$mittente.'  <br><br> '.$value['testo'].' </div>';
+            echo'<div id = "cont-notify"><a href = "#" id = "'.$id_notifica.'" class = "ciao"><div id = "delete"></div></a> <i style="color:#018DB0;">Oggetto</i>: '.$value['tipo'].' &nbsp;&nbsp; <i style="color:#018DB0;">Mittente</i>: '.$mittente.'  <br><br> '.$value['testo'].' </div>';
             $mittente = "";
         }
         
