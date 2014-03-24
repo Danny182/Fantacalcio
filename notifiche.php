@@ -2,6 +2,7 @@
 	include("session.php");
 	include("connect_db.php");
     include("funzioni/notify_function.php");
+   
     
 ?>
 
@@ -15,7 +16,7 @@
 <link rel="stylesheet" href="stili/style-notifiche.css" type="text/css" media="screen" />
 <link rel="stylesheet" href="stili/campo-calcio.css" type="text/css" media="screen" />
 <script src="librerie/jquery-1.9.1.min.js"/></script>
-<script src="librerie/jquery-ui-1.10.3.custom.min.js."></script>
+
 <script type="text/javascript" src="librerie/jquery.easing.1.3.js"></script>
 <script type = "text/javascript" src = "librerie/jquery.innerfade.js"> </script>
 
@@ -25,24 +26,27 @@
 
 <script type="text/javascript" >
 $(function() {
-	$(".ciao").click(function(){
+	$(".link").click(function(){
+		
 		var id = $(this);
 		var id_notifica = id.attr("id");
-		if(confirm("Sei sicuro di voler cancellare la notifica?"))
+		var info = 'id=' + id_notifica;
+		if(confirm("Vuoi davvero cancellare la notifica?"))
 		  {
 			$.ajax({
-				   type: "POST",
+				   type: "GET",
 				   url: "delete-single-notify.php",
-				   data: id_notifica,
-				   success: function(){
-				   
-				   }
-			});
+				   data: info,
+				   success: function(){}
+			}); //Ajax
 			
-	});
-});
-
-});
+			$(this).parents(".record").animate({ backgroundColor: "#fbc7c7" }, "fast").animate({ opacity: "hide" }, "slow");
+		  } //if
+			return false;
+			
+	}); //.click function
+}); //function
+	
 
 </script>
 
@@ -170,14 +174,16 @@ $id = $_SESSION['id_utente'];
         echo '<div id = "cont-notify" class = "no"> <br>Non ci sono notifiche </div>';
         }
     else{
+		
         foreach($notifiche as $value){
+			
             $id_notifica = $value['id_notifica'];
             $vet_mittente = get_userdates($value['mitt']);
             foreach($vet_mittente as $chiave => $valore){
                 @$mittente .= ucfirst("$valore")." ";
             }
             
-            echo'<div id = "cont-notify"><a href = "#" id = "'.$id_notifica.'" class = "ciao"><div id = "delete"></div></a> <i style="color:#018DB0;">Oggetto</i>: '.$value['tipo'].' &nbsp;&nbsp; <i style="color:#018DB0;">Mittente</i>: '.$mittente.'  <br><br> '.$value['testo'].' </div>';
+            echo'<div id = "cont-notify" class = "record"><a href = "#" id = "'.$id_notifica.'" class = "link"><div id = "delete"></div></a> <i style="color:#018DB0;">Oggetto</i>: '.$value['tipo'].' &nbsp;&nbsp; <i style="color:#018DB0;">Mittente</i>: '.$mittente.'  <br><br> '.$value['testo'].' </div>';
             $mittente = "";
         }
         
