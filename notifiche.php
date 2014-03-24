@@ -31,7 +31,7 @@ $(function() {
 		var id = $(this);
 		var id_notifica = id.attr("id");
 		var info = 'id=' + id_notifica;
-		if(confirm("Vuoi davvero cancellare la notifica?"))
+		if(confirm("Cancellare la notifica?"))
 		  {
 			$.ajax({
 				   type: "GET",
