@@ -85,7 +85,7 @@ $id = $_SESSION['id_utente'];
     }
 ?>
 
-<body>
+<body class="notifiche">
     <div id = "cont">
         <div id="top">
             <div id="top-insize">

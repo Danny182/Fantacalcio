@@ -49,6 +49,9 @@ border-bottom:4px solid #00DFFF;
 .crea-squadra-page #menu .style-item-4 a{
 	border-left:4px solid white;
 	}
+.notifiche #menu .style-item-6 a{
+	border-left:4px solid white;
+	}
 /*colori per i bordi inferiori di ogni voce*/
 #menu   .style-item-2 a:hover{
 border-bottom:4px solid #F96706;}
