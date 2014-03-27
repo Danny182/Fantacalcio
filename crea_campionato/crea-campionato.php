@@ -44,7 +44,7 @@
 
 <link rel="stylesheet" href="../stili/form.css" type="text/css" media="screen" />
 
-<script type="text/javascript" src="../librerie/jquery.min.js"></script> 
+<script type="text/javascript" src="../librerie/jquery-1.11.0.min.js"></script> 
 <script type="text/javascript" src="../librerie/jquery.validate.js"></script> 
 <script type="text/javascript" src="../script/validate_campionato.js"></script>
 

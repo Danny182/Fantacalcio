@@ -47,7 +47,7 @@
 <link rel="stylesheet" href="../stili/form.css" type="text/css" media="screen" />
 
 
-<script src="../librerie/jquery.min.js"></script>
+<script src="../librerie/jquery-1.11.0.min.js"></script>
 <script src="../librerie/jquery.colorbox.js"></script>
 <link rel="stylesheet" type="text/css" href="colorbox.css" />
 
@@ -108,6 +108,16 @@ $(document).ready(function(){
 
 </script>
 
+<script>
+$(document).ready(function() {
+					$('#inserire_rosa input[type=radio]').click(function(){
+                                                                   $('#inserire_rosa label').removeClass('active');
+                                                                   $(this).next('label').addClass('active');
+                                                                   });
+                    });
+                    
+                
+</script>
 
 </head>
 
@@ -289,14 +299,20 @@ Storia/Caratteristiche
 
 </textarea>
 
+<div id = "inserire_rosa" >
+	<label for="nome" class = "inserire_rosa">Inserire rosa adesso?</label>				
+	<div id="labels">
+		<input type="radio" value="si" name="inserire_rosa" id="radio00" checked = "checked" onclick="this.form.inserire_rosa.disabled=true;"/>
+		<label for="radio00" class = "crea-squadra" >Si</label>
+		<input type="radio" value="no" name="inserire_rosa" id="radio01" onclick="this.form.inserire_rosa.disabled=false;" />
+		<label for="radio01" class = "crea-squadra">No</label>
+	</div>
+</div>
 <input type = "hidden" name = "url_stadio" value = "<?php echo $url_stadio; ?>" />
 <input type = "hidden" name = "url_stemma" value = "<?php echo $url_stemma; ?>" />
 <input type = "submit" value = "Crea la Squadra!" class = "reg-squadra" />
 
 </form>
-
-
-
 
 
 </div><!--window-->
@@ -309,36 +325,5 @@ Storia/Caratteristiche
 
 
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
