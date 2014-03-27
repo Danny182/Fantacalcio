@@ -232,7 +232,7 @@ $(document).ready(function() {
 Generalità
 </div>
 
-<form action = "salva-squadra.php" method = "post" id = "form">
+<form action = "" method = "post" id = "form">
 
 <div id = "cont-input" class = "nome">
 <label for="squadra" class = "label-squadra">Nome</label>
@@ -314,6 +314,20 @@ Storia/Caratteristiche
 
 </form>
 
+	<?php
+			$nome_squadra = $_POST['nome_squadra'];
+			$nome_stadio = $_POST['stadio'];
+			$storia = $_POST['storia'];
+			$url_stadio = $_POST['url_stadio'];
+			$url_stemma = $_POST['url_stemma'];
+			@$where=0;
+			//se viene scelto di inserire rosa ora
+			if (@strcmp($_POST['inserire_rosa'],"si")==0)	
+				echo'<meta http-equiv="refresh" content="0;url=insert-rosa.php?nome_squadra='.$nome_squadra.'&nome_stadio='.$nome_stadio.'&storia='.$storia.'&url_stadio='.$url_stadio.'&url_stemma='.$url_stemma.'">';
+			//se viene scelto di inserire rosa in seguito
+			if (@strcmp($_POST['inserire_rosa'],'no')==0)	
+				echo'<meta http-equiv="refresh" content="0; url=salva-squadra.php?nome_squadra='.$nome_squadra.'&nome_stadio='.$nome_stadio.'&storia='.$storia.'&url_stadio='.$url_stadio.'&url_stemma='.$url_stemma.'">';
+		?>
 
 </div><!--window-->
 
