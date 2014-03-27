@@ -138,17 +138,17 @@ $id = $_SESSION['id_utente'];
                 <a href="crea_campionato/crea-campionato.php">Crea un Campionato</a>
             </li>
             <li id'"item-1" class="style-item-4">
-                <a href="crea_squadra.php">Crea una nuova Squadra</a>
+                <a href="crea_squadra/crea-squadra.php">Crea una nuova Squadra</a>
             </li>
 
             <li id'"item-1" class="style-item-6">
-                <a href="notifiche.php">Notifiche</a>
+                <a href="#">Notifiche</a>
             </li>
             <li id'"item-1" class="style-item-7">
                 <a href="documenti.php">Documenti di lega</a>
             </li>
             <li id'"item-1" class="style-item-7">
-                <a href="#">Le tue squadre</a>
+                <a href="squadre/squadre.php?var=o">Le tue squadre</a>
             </li>
         </ul>
     </div>
