@@ -111,7 +111,7 @@ $(document).ready(function(){
 
 </head>
 
-<body>
+<body class="crea-squadra-page">
 <div id = "cont">
     <div id="top">
         <div id="top-insize">
