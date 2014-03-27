@@ -24,6 +24,20 @@
 <script type="text/javascript" src="script/menu.js"></script>-->
 <link rel="stylesheet" type="text/css" href="stili/menu2.css" />
 
+<script>
+$(document).ready(function(){
+                  $("#button").click(function(event) {
+                                     event.stopPropagation();
+                                     
+                                     $("#dropdown").toggle();
+                                     });
+                  $(document).click( function() {
+                                    $("#dropdown").hide();
+                                    });
+                  
+                  });
+</script>
+
 <script type="text/javascript" >
 $(function() {
 	$(".link").click(function(){
@@ -72,14 +86,29 @@ $id = $_SESSION['id_utente'];
 ?>
 
 <body>
-<div id = "cont">
-<div id="top">
-<div id="top-insize">
-<div id="top-logo">
-<a href="index.php"><img src="img/4.png" width="100px" height="75px" /></a>
-</div>
+    <div id = "cont">
+        <div id="top">
+            <div id="top-insize">
+                <div id="top-logo">
+                    <a href="index.php"><img src="img/4.png" width="100px" height="75px" /></a>
+        </div>
 <?php
-    echo'<div id = "nome">'.$user.'</div>';
+    echo'<div id = "nome"><div id="nome-inside">'.$user.'</div><img id="button" src="img/tool3.png" width="22px" height="22px">
+            <br><div id="dropdown">
+                <ul id="menu_utente">
+                    <a class="user_color" href="user/modifica.php">
+                        <li id="menu_utente">
+                            modifica utente
+                        </li>
+                    </a>
+                        <a class="user_color" href="user/log-out.php">
+                        <li id="menu_utente">
+                            log out
+                        </li>
+                    </a>
+                </ul>
+            </div>
+        </div>';
     if($num_notifiche == 0) echo'<div id = "notifiche"><a href="notifiche.php"> Non hai Notifiche</a> </div>';
     
     else if($num_notifiche == 1) echo'<div id = "notifiche"><a href="notifiche.php"> Hai '.$num_notifiche.' nuova notifica</a> </div>';
@@ -100,7 +129,7 @@ $id = $_SESSION['id_utente'];
         <div class="menu-principale-container">
         <ul id="menu-principale" class="menu">
             <li id'"item-1" class="style-item-1">
-                <a href="home.php?var=0">Home</a>
+                <a href="home.php?var=0"><img src="img/site_logo/fantapv_white2.png" height="22px" width="22px" style="padding-right:2px;">Home</a>
             </li>
             <li id'"item-1" class="style-item-2">
                 <a href="inserisci_formazione.php">Inserisci la formazione</a>

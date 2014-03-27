@@ -151,7 +151,7 @@ $(document).ready(function(){
 						<a href="documenti.php">Documenti di lega</a>
 					</li>
                     <li id'"item-1" class="style-item-8">
-                        <a href="squadre/squadre.php">Le tue squadre</a>
+                        <a href="squadre/squadre.php?var=0">Le tue squadre</a>
                     </li>
 				</ul>
 			</div>

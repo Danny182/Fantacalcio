@@ -51,6 +51,21 @@
 <script src="../librerie/jquery.colorbox.js"></script>
 <link rel="stylesheet" type="text/css" href="colorbox.css" />
 
+<script type="text/javascript" src="../script/menu.js"></script>-->
+<link rel="stylesheet" type="text/css" href="../stili/menu2.css" />
+<script>
+$(document).ready(function(){
+                  $("#button").click(function(event) {
+                                     event.stopPropagation();
+                                     
+                                     $("#dropdown").toggle();
+                                     });
+                  $(document).click( function() {
+                                    $("#dropdown").hide();
+                                    });
+                  
+                  });
+</script>
 
 
 
@@ -104,7 +119,23 @@ $(document).ready(function(){
                     <a href="index.php"><img src="../img/4.png" width="100px" height="75px" /></a>
             </div>
 <?php
-    echo'<div id = "nome">'.$user.'</div>';
+    echo'<div id = "nome"><div id="nome-inside">'.$user.'</div><img id="button" src="../img/tool3.png" width="22px" height="22px">
+            <br><div id="dropdown">
+                <ul id="menu_utente">
+                    <a class="user_color" href="user/modifica.php">
+                        <li id="menu_utente">
+                            modifica utente
+                        </li>
+                    </a>
+                        <a class="user_color" href="user/log-out.php">
+                        <li id="menu_utente">
+                            log out
+                        </li>
+                    </a>
+                </ul>
+            </div>
+        </div>';
+
     if($num_notifiche == 0) echo'<div id = "notifiche"><a href="notifiche.php"> Non hai Notifiche</a> </div>';
     
     else if($num_notifiche == 1) echo'<div id = "notifiche"><a href="notifiche.php"> Hai '.$num_notifiche.' nuova notifica</a> </div>';
@@ -121,7 +152,7 @@ $(document).ready(function(){
         <div class="menu-principale-container">
             <ul id="menu-principale" class="menu">
                 <li id'"item-1" class="style-item-1">
-                    <a href="../home.php?var=0">Home</a>
+                    <a href="../home.php?var=0"><img src="../img/site_logo/fantapv_white2.png" height="22px" width="22px" style="padding-right:2px;">Home</a>
                 </li>
                 <li id'"item-1" class="style-item-2">
                     <a href="inserisci_formazione.php">Inserisci la formazione</a>
@@ -130,7 +161,7 @@ $(document).ready(function(){
                     <a href="../crea_campionato/crea-campionato.php">Crea un Campionato</a>
                 </li>
                 <li id'"item-1" class="style-item-4">
-                    <a href="crea_squadra.php">Crea una nuova Squadra</a>
+                    <a href="#">Crea una nuova Squadra</a>
                 </li>
 
                 <li id'"item-1" class="style-item-6">
@@ -140,7 +171,7 @@ $(document).ready(function(){
                     <a href="documenti.php">Documenti di lega</a>
                 </li>
                 <li id'"item-1" class="style-item-7">
-                    <a href="#">Le tue squadre</a>
+                    <a href="../squadre/squadre.php?var=0">Le tue squadre</a>
                 </li>
             </ul>
         </div>
