@@ -52,6 +52,9 @@ border-bottom:4px solid #00DFFF;
 .notifiche #menu .style-item-6 a{
 	border-left:4px solid white;
 	}
+.le-tue-squadre #menu .style-item-8 a{
+	border-left:4px solid white;
+	}
 /*colori per i bordi inferiori di ogni voce*/
 #menu   .style-item-2 a:hover{
 border-bottom:4px solid #F96706;}

@@ -118,10 +118,10 @@ $(document).ready(function(){
 						<a href="../crea_squadra/crea-squadra.php">Crea una nuova Squadra</a>
 					</li>
 
-					<li id'"item-1" class="style-item-5">
-						<a href="messaggi.php">Messaggi</a>
-					</li>
 					<li id'"item-1" class="style-item-6">
+						<a href="../notifiche.php">Notifiche</a>
+					</li>
+					<li id'"item-1" class="style-item-7">
 						<a href="documenti.php">Documenti di lega</a>
 					</li>
                     <li id'"item-1" class="style-item-8">
