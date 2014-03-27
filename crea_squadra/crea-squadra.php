@@ -225,21 +225,21 @@ Generalità
 <form action = "salva-squadra.php" method = "post" id = "form">
 
 <div id = "cont-input" class = "nome">
-<label for="squadra" class = "label-squadra">Nome  </label>
+<label for="squadra" class = "label-squadra">Nome</label>
 <input type = "text" name = "nome_squadra" id = "squadra" size = "50" class = "nome-squadra" />
 </div>
 
 <div id = "cont-input" class = "stemma">
 
     <div id = "cont-image">
-        <img src = "<?php echo $url_stemma; ?>" width = "80px" height = "50px">
+        <img src = "<?php echo $url_stemma; ?>" width = "60px" height = "50px">
     </div>
 
 
        <label for="logo" class = "label-logo">
 
-            <a href='../img/logo-squadra/fiorentina.jpg' class = "squadra" title = "Fiorentina" style="color:black"  >Foto</a>
-            <a href='../img/logo-squadra/milan.jpg' class = "squadra" title = "Milan" style="display:none;"  >Foto</a>
+            <a href='../img/logo-squadra/fiorentina.jpg' class = "squadra" title = "Fiorentina" style="color:black"  >Cambia</a>
+            <a href='../img/logo-squadra/milan.jpg' class = "squadra" title = "Milan" style="display:none;"  >Cambia</a>
             
 
         </label>
@@ -264,15 +264,15 @@ Stadio
     <div id = "cont-image">
 
         
-        <img src = "<?php echo $url_stadio; ?>" width = "80px" height = "50px">
+        <img src = "<?php echo $url_stadio; ?>" width = "60px" height = "50px">
     </div>
 
 
     <label for="nome" class = "label-logo">
 
-        <a href='../img/stadio/stadio1.png' class = "group" title = "Stadio: La fortezza" style="color:black"  >Foto</a>
-        <a href='../img/stadio/stadio2.png' class = "group" title = "Stadio: L'incandescente" style="display:none;"  >Foto</a>
-        <a href='../img/stadio/stadio3.png' class = "group" title = "Stadio: L'imperatore" style="display:none;"  >Foto</a>
+        <a href='../img/stadio/stadio1.png' class = "group" title = "Stadio: La fortezza" style="color:black"  >Cambia</a>
+        <a href='../img/stadio/stadio2.png' class = "group" title = "Stadio: L'incandescente" style="display:none;"  >Cambia</a>
+        <a href='../img/stadio/stadio3.png' class = "group" title = "Stadio: L'imperatore" style="display:none;"  >Cambia</a>
 
 
     </label>
