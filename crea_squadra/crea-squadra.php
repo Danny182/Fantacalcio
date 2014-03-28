@@ -51,8 +51,7 @@
 <script src="../librerie/jquery.colorbox.js"></script>
 <link rel="stylesheet" type="text/css" href="colorbox.css" />
 
-<script type="text/javascript" src="../script/menu.js"></script>-->
-<link rel="stylesheet" type="text/css" href="../stili/menu2.css" />
+
 <script>
 $(document).ready(function(){
                   $("#button").click(function(event) {

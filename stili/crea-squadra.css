@@ -213,3 +213,34 @@ float:left;
 .active{
 background: #8B8989;
 color:white;}
+
+
+
+div#your-team {
+	left:16%;
+	width:20%;
+	height:99%;
+	position:absolute;
+	border:1px solid black;
+	}
+	
+div#players {
+	left:37%;
+	width:62%;
+	top:0%;
+	height:99%;
+	position:absolute;
+	border:1px solid black;
+	}
+	
+div#options {
+	position:realtive;
+	top:0;
+	width:100%;
+	border:1px solid black;
+	height:80px;
+	}
+div#list {
+	position:relative;
+	height:100%;
+	width:100%;
