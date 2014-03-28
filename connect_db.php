@@ -8,6 +8,7 @@
 include("database.inc");
 	//connessione al database fantacalcio
 	$conn = mysql_connect($dbhost, $dbuser, $dbpass);
+	mysql_query("set names 'utf8'"); 
 	if(!$conn){
 		echo "Connessione a MYSQL fallita";
 		exit();

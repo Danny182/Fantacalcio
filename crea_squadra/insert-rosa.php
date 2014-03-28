@@ -113,7 +113,14 @@
 			opzioni
 		</div>
 		<div id="list">
-			lista
+			<?php
+				$query="SELECT ruolo, nome, valore FROM giocatore";
+				$ris = mysql_query($query);
+				while ($vet = mysql_fetch_array($ris)) {					
+					echo "$vet[ruolo] $vet[nome] $vet[valore]<br>";						
+					
+				}
+			?>
 		</div>
 	</div>
 </body>
