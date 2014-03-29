@@ -32,11 +32,11 @@
 <link rel="stylesheet" href="../stili/crea_camp.css" type="text/css" media="screen" />
 <link rel="stylesheet" href="../stili/style-home.css" type="text/css" media="screen" />
 <link rel="stylesheet" type="text/css" href="../stili/menu2.css" />
-
 <link rel="stylesheet" href="../stili/form.css" type="text/css" media="screen" />
 
 
 <script src="../librerie/jquery-1.11.0.min.js"></script>
+<script src="../librerie/list.js"></script>
 
 </head>
 
@@ -110,19 +110,41 @@
 	</div>
 	<div id="players">
 		<div id="options">
-			opzioni
+			<input class="search" placeholder="Search" />
+			<button class="sort" data-sort="ruolo">
+					Ordina per ruolo
+			</button>
+			<button class="sort" data-sort="nome">
+					Ordina per nome
+			</button>
+			<button class="sort" data-sort="valore">
+					Ordina per valore
+			</button>
 		</div>
 		<div id="list">
+			<ul class="list">
 			<?php
 				$query="SELECT ruolo, nome, valore FROM giocatore";
 				$ris = mysql_query($query);
 				while ($vet = mysql_fetch_array($ris)) {					
-					echo "$vet[ruolo] $vet[nome] $vet[valore]<br>";						
+					echo "<li><span class='ruolo'>$vet[ruolo]</span><span class='nome'> $vet[nome]</span><span class='valore'> $vet[valore]</span></li>";						
 					
 				}
 			?>
+			 <li>
+      
+			</ul>
 		</div>
 	</div>
 </body>
 
 </html>
+<script>
+$(document).ready(function(){
+	var options = {
+		valueNames: [ 'ruolo', 'nome', 'valore' ]
+	};
+
+	var userList = new List('players', options);
+});
+</script>
