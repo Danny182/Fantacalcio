@@ -238,11 +238,11 @@ div#options {
 	top:0;
 	width:100%;
 	border:1px solid black;
-	height:10%;
+	height:12%;
 	}
 div#list {
 	position:relative;
-	height:89%;
+	height:87%;
 	width:100%;
 	overflow:auto;
 	}

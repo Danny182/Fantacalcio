@@ -120,6 +120,10 @@
 			<button class="sort" data-sort="valore">
 					Ordina per valore
 			</button>
+			<select id="squadra">
+				<option value="atalanta">Atalanta</option>
+				<option value="bologna">Bologna</option>
+			</select>
 		</div>
 		<div id="list">
 			<ul class="list">
@@ -143,5 +147,22 @@ $(document).ready(function(){
 	};
 
 	var userList = new List('players', options);
+	
+	
+	
+	$('#squadra').click(function () {
+		var squadraFilter = $('#squadra').val();
+		console.log ( squadraFilter );
+		listObj.filter(function(item) {
+			console.log ( item.values().squadra );
+		if (item.values().squadra == 'bologna') {
+		   return true;
+	   } else {
+		   return false;
+	   }
+		});
+	});
+
+
 });
 </script>
