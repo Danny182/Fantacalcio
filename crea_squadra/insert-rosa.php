@@ -8,12 +8,12 @@
     //prendo alcuni dati dell'utente(in questo caso nome e cognome)
     $utente = get_userdates($id);    
     foreach($utente as $chiave => $valore){
-        $user .= ucfirst("$valore")." ";        
+        @$user .= ucfirst("$valore")." ";        
     }        
 	
 	//prendo i dati dal form e li metto nei cookie	
 	setcookie("crea_squadra[nome]", $_GET['nome_squadra'], 0);
-	setcookie("crea_squadra[stadio]", $_GET['stadio'], 0);
+	setcookie("crea_squadra[stadio]", $_GET['nome_stadio'], 0);
 	setcookie("crea_squadra[storia]", $_GET['storia'], 0);
 	setcookie("crea_squadra[url_stadio]", $_GET['url_stadio'], 0);
 	setcookie("crea_squadra[url_stemma]", $_GET['url_stemma'], 0);
@@ -124,18 +124,15 @@
 		<div id="list">
 			<ul class="list">
 			<?php
-				$query="SELECT ruolo, nome, valore FROM giocatore";
+				$query="SELECT ruolo, nome, valore, squadra FROM giocatore";
 				$ris = mysql_query($query);
 				while ($vet = mysql_fetch_array($ris)) {					
-					echo "<li><span class='ruolo'>$vet[ruolo]</span><span class='nome'> $vet[nome]</span><span class='valore'> $vet[valore]</span></li>";						
-					
-				}
-			?>
-			 <li>
-      
+					echo "<li><span class='ruolo'>$vet[ruolo]</span><span class='nome'> $vet[nome]</span><span class='valore'> $vet[valore]</span><span class='squadra'><img width='18px' height='18px' src='../img/logo-squadra/$vet[squadra].png'></span></li>";					
+				}			
+			?>      
 			</ul>
 		</div>
-	</div>
+		
 </body>
 
 </html>
