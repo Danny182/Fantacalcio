@@ -1,0 +1,20 @@
+
+ul.gest-regole{
+	background-color: #E8E8E9;
+	border-color:#CECED0;
+    color:#000000;
+    -moz-border-radius:2px 2px 2px 2px;
+    -webkit-border-radius:2px 2px 2px 2px;
+    border-radius:2px 2px 2px 2px;
+    list-style-type: none;
+    height: 15%;
+    width: 15%;
+}
+
+li.gest-regole{
+	position:relative;
+	margin-top:10px;
+	width:auto;
+	height:auto;
+  
+}

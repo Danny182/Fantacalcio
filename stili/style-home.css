@@ -360,7 +360,7 @@ div#tool{
 position:relative;
 height:200px;
 width:100%;
-border:none
+border:none;
 left:0%;
 background-color:trasparent;
 color: white;
@@ -372,9 +372,14 @@ div#live{
 padding:6px;
 margin-top:5px;
 background-color:#34BFE2;
-		-moz-border-radius: 2px 2px 2px 2px;
-	-webkit-border-radius: 2px 2px 2px 2px;
+-moz-border-radius: 2px 2px 2px 2px;
+-webkit-border-radius: 2px 2px 2px 2px;
+color:white;
 
+}
+
+div#live.gestione{
+	margin-top:15px;
 }
 
 div#live:hover{
@@ -397,6 +402,11 @@ background-color:transparent;
 margin-top:1%;
 -moz-border-radius: 2px 2px 2px 2px;
 	-webkit-border-radius: 2px 2px 2px 2px;
+}
+
+div#cont-dati.gest-regole{ /* pagina gest-regole */
+	width:100%;
+	left:17%;
 }
 
 div#classifica{

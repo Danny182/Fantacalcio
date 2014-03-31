@@ -12,7 +12,7 @@
     if($var == 0){//devo prendere i dati della prima squadra
         $teams = get_teams($id);
         if(empty($teams)){
-            echo ' <div id = "cont-errore"><div id = "errore"> ATTENZIONE <br> Sei già iscritto al campionato
+            echo ' <div id = "cont-errore"><div id = "errore"> ATTENZIONE <br> Sei già iscritto al campionato <br> Oppure non hai una squadra disponibile
             <meta http-equiv="Refresh" content="3; URL=../home.php?var=0"> </div></div>' ;
             die;
         }
@@ -104,26 +104,26 @@ body>
         <div class="menu-principale-container">
             <ul id="menu-principale" class="menu">
                 <li id'"item-1" class="style-item-1">
-                    <a href="home.php?var=0">Home</a>
+                    <a href="../home.php?var=0">Home</a>
                 </li>
                 <li id'"item-1" class="style-item-2">
                     <a href="inserisci_formazione.php">Inserisci la formazione</a>
                 </li>
                 <li id'"item-1" class="style-item-3">
-                    <a href="crea_campionato/crea-campionato.php">Crea un Campionato</a>
+                    <a href="../crea_campionato/crea-campionato.php">Crea un Campionato</a>
                 </li>
                 <li id'"item-1" class="style-item-4">
-                    <a href="crea_squadra.php">Crea una nuova Squadra</a>
+                    <a href="--/crea_squadra/crea_squadra.php">Crea una nuova Squadra</a>
                 </li>
 
                 <li id'"item-1" class="style-item-6">
-                    <a href="notifiche.php">Notifiche</a>
+                    <a href="../notifiche.php">Notifiche</a>
                 </li>
                 <li id'"item-1" class="style-item-7">
                     <a href="documenti.php">Documenti di lega</a>
                 </li>
                 <li id'"item-1" class="style-item-7">
-                    <a href="#">Le tue squadre</a>
+                    <a href="../squadre/squadre.php">Le tue squadre</a>
                 </li>
             </ul>
         </div>
@@ -132,9 +132,9 @@ body>
 <div id = "cont-squadre">
 
 
-Squadra: <i style="color:rgba(1, 159, 199, 0.61);"><?php echo  "$team";?></i> &nbsp;&nbsp; Allenatore:<i style="color:rgba(1, 159, 199, 0.61);"> <?php echo  "$user";?></i> <br>Campionato
+Squadra: <i style="color:rgba(1, 159, 199, 0.61);"><?php echo  $team;?></i> &nbsp;&nbsp; Allenatore:<i style="color:rgba(1, 159, 199, 0.61);"> <?php echo  "$user";?></i> <br>Campionato
 a cui partecipa: <i style="color:rgba(1, 159, 199, 0.61);"><?php if(!empty($campionato)) echo $campionato; else echo "Nessuno (puoi iscrivere la squadra)";?> </i><br>Stadio:<i style="color:rgba(1, 159, 199, 0.61);"> <?php echo  "$stadio_";?></i>
-<br><?php echo  "id = $id";?></br>
+
 
 
     

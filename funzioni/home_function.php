@@ -67,14 +67,14 @@
     
     
     function get_teams($id){
-        $query = "SELECT squadra.nome FROM squadra WHERE  squadra.id_utente = '$id' AND squadra.iscritta = false";
+        $query = "SELECT squadra.nome, squadra.nome_stadio FROM squadra WHERE  squadra.id_utente = '$id' AND squadra.iscritta = false";
         $ris = mysql_query($query);
         $teams = array();
         
         while($row = mysql_fetch_array($ris)){
             $teams[] = array(
                              "nome" => $row['nome'],
-                             "stadio" => $row['stadio']
+                             "stadio" => $row['nome_stadio']
                         );
             
             }

@@ -55,6 +55,7 @@ $(document).ready(function(){
         //nel vettore sono presenti i nome dei campionati a cui partecipa l'utente
         $leagues = get_leagues($id);
         
+        
         //numero dei campionati
         $num_camp = count($leagues);
         $nome_camp = $leagues[0];
@@ -329,9 +330,18 @@ $(document).ready(function(){
 									<div id = "live">Live del campionato</div>
 									
                                     <div id = "live" >Regole</div>
-                                    <div id = "live" >Giocatori</div>
-                                    
+                                    <div id = "live" >Giocatori</div>';
+ 									//controllo se l'utente è l'amministratore del campionato corrente
+ 									$query = "SELECT campionato.id_admin FROM campionato WHERE campionato.nome = '$nome_camp'";
+ 									$ris = mysql_query($query);
+ 									$row = mysql_fetch_array($ris);
+ 									$id_admin = $row['id_admin'];
+ 									
+ 									if($id_admin == $id){ //se è vero l'utente è l'amministratore
+ 									echo'<a href = "gest_campionato/gest-campionato.php"><div id = "live" class = "gestione">Gestione Campionato</div></a>
+                                    <a href = "#"><div id = "live">Operazioni</div></a>
 								</div>';
+ 									}
                            
                         
                         
