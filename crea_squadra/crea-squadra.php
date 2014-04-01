@@ -24,7 +24,7 @@
     	$url_stemma = get_url($stemma);
     }
     else
-    $url_stemma = "../img/logo-squadra/fiorentina.jpg";
+    $url_stemma = "../img/logo-squadra/fiorentina.png";
     
     
     
@@ -247,8 +247,8 @@ Generalità
 
        <label for="logo" class = "label-logo">
 
-            <a href='../img/logo-squadra/fiorentina.jpg' class = "squadra" title = "Fiorentina" style="color:black"  >Cambia</a>
-            <a href='../img/logo-squadra/milan.jpg' class = "squadra" title = "Milan" style="display:none;"  >Cambia</a>
+            <a href='../img/logo-squadra/fiorentina.png' class = "squadra" title = "Fiorentina" style="color:black"  >Cambia</a>
+            <a href='../img/logo-squadra/milan.png' class = "squadra" title = "Milan" style="display:none;"  >Cambia</a>
             
 
         </label>

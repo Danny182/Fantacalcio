@@ -106,7 +106,7 @@
         </div>
     </div>
 	<div id="your-team">
-	your team
+		your team
 	</div>
 	<div id="players">
 		<div id="options">
@@ -119,11 +119,10 @@
 			</button>
 			<button class="sort" data-sort="valore">
 					Ordina per valore
-			</button>
-			<select id="squadra">
-				<option value="atalanta">Atalanta</option>
-				<option value="bologna">Bologna</option>
-			</select>
+			</button>			
+		</div>
+		<div class="filter">
+				<button class="btn" id="filter-milan" >Milan</button>
 		</div>
 		<div id="list">
 			<ul class="list">
@@ -131,11 +130,13 @@
 				$query="SELECT ruolo, nome, valore, squadra FROM giocatore";
 				$ris = mysql_query($query);
 				while ($vet = mysql_fetch_array($ris)) {					
-					echo "<li><span class='ruolo'>$vet[ruolo]</span><span class='nome'> $vet[nome]</span><span class='valore'> $vet[valore]</span><span class='squadra'><img width='18px' height='18px' src='../img/logo-squadra/$vet[squadra].png'></span></li>";					
+					echo "<li><span class='ruolo'>$vet[ruolo]</span><span class='nome'> $vet[nome]</span><span class='valore'> $vet[valore]</span><span class='squadra'><img width='18px' height='18px' src='../img/logo-squadra/$vet[squadra].png'></span><span class='team' style='display:none;'>$vet[squadra]</span></li>";					
 				}			
 			?>      
 			</ul>
 		</div>
+	</div>
+</div>
 		
 </body>
 
@@ -143,24 +144,25 @@
 <script>
 $(document).ready(function(){
 	var options = {
-		valueNames: [ 'ruolo', 'nome', 'valore' ]
+		valueNames: [ 'ruolo', 'nome', 'valore', 'team' ]
 	};
 
 	var userList = new List('players', options);
 	
 	
 	
-	$('#squadra').click(function () {
-		var squadraFilter = $('#squadra').val();
-		console.log ( squadraFilter );
-		listObj.filter(function(item) {
-			console.log ( item.values().squadra );
-		if (item.values().squadra == 'bologna') {
-		   return true;
-	   } else {
-		   return false;
-	   }
-		});
+	$('#filter-milan').click(function() {
+		console.log('ciao');
+	  userList.filter(function(item) {
+		if (item.values().team == "milan") {
+			console.log ( 'entrotrue' );
+		  return true;
+		} else {
+			console.log ( 'ef' );
+		  return false;
+		}
+	  });
+	  return false;
 	});
 
 
