@@ -122,7 +122,29 @@
 			</button>			
 		</div>
 		<div class="filter">
-				<button class="btn" id="filter-milan" >Milan</button>
+				<select id="teams">
+					<option value="tutte" selected>Squadre</option>
+					<option value="atalanta">Atalanta</option>
+					<option value="bologna">Bologna</option>
+					<option value="cagliari">Cagliari</option>
+					<option value="catania">Catania</option>
+					<option value="chievo">Chievo</option>
+					<option value="fiorentina">Fiorentina</option>
+					<option value="genoa">Genoa</option>
+					<option value="verona">Hella Verona</option>
+					<option value="inter">Inter</option>
+					<option value="juventus">Juventus</option>
+					<option value="lazio">Lazio</option>
+					<option value="livorno">Livorno</option>
+					<option value="milan">Milan</option>
+					<option value="napoli">Napoli</option>
+					<option value="parma">Parma</option>
+					<option value="roma">Roma</option>				
+					<option value="sampdoria">Sampdoria</option>
+					<option value="sassuolo">Sassuolo</option>
+					<option value="torino">Torino</option>				
+					<option value="udinese">Udinese</option>
+				</select>
 		</div>
 		<div id="list">
 			<ul class="list">
@@ -149,22 +171,35 @@ $(document).ready(function(){
 
 	var userList = new List('players', options);
 	
+	//filtro su button
 	
-	
-	$('#filter-milan').click(function() {
+	/*$('#filter-milan').click(function() {
 		console.log('ciao');
 	  userList.filter(function(item) {
 		if (item.values().team == "milan") {
-			console.log ( 'entrotrue' );
 		  return true;
 		} else {
-			console.log ( 'ef' );
+		  return false;
+		}
+	  });
+	  return false;
+	});*/
+	
+	$('#teams').change(function () {
+		var selection = this.value; 
+		if (selection == "tutte") {
+			userList.filter();
+			return false;
+		}
+		userList.filter(function(item) {
+		
+		if (item.values().team == selection) {
+		  return true;
+		} else {
 		  return false;
 		}
 	  });
 	  return false;
 	});
-
-
 });
 </script>
