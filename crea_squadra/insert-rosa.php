@@ -110,7 +110,34 @@
 	</div>
 	<div id="players">
 		<div id="options">
-			<input class="search" placeholder="Search" />
+			<input class="search" placeholder="Cerca"/>
+			<div class="filter">
+					<select id="teams">
+						<option value="tutte" selected>Squadre</option>
+						<option value="atalanta">Atalanta</option>
+						<option value="bologna">Bologna</option>
+						<option value="cagliari">Cagliari</option>
+						<option value="catania">Catania</option>
+						<option value="chievo">Chievo</option>
+						<option value="fiorentina">Fiorentina</option>
+						<option value="genoa">Genoa</option>
+						<option value="verona">Hella Verona</option>
+						<option value="inter">Inter</option>
+						<option value="juventus">Juventus</option>
+						<option value="lazio">Lazio</option>
+						<option value="livorno">Livorno</option>
+						<option value="milan">Milan</option>
+						<option value="napoli">Napoli</option>
+						<option value="parma">Parma</option>
+						<option value="roma">Roma</option>				
+						<option value="sampdoria">Sampdoria</option>
+						<option value="sassuolo">Sassuolo</option>
+						<option value="torino">Torino</option>				
+						<option value="udinese">Udinese</option>
+					</select>
+			</div>
+		</div>
+		<div id="list">
 			<button class="sort" data-sort="ruolo">
 					Ordina per ruolo
 			</button>
@@ -119,40 +146,13 @@
 			</button>
 			<button class="sort" data-sort="valore">
 					Ordina per valore
-			</button>			
-		</div>
-		<div class="filter">
-				<select id="teams">
-					<option value="tutte" selected>Squadre</option>
-					<option value="atalanta">Atalanta</option>
-					<option value="bologna">Bologna</option>
-					<option value="cagliari">Cagliari</option>
-					<option value="catania">Catania</option>
-					<option value="chievo">Chievo</option>
-					<option value="fiorentina">Fiorentina</option>
-					<option value="genoa">Genoa</option>
-					<option value="verona">Hella Verona</option>
-					<option value="inter">Inter</option>
-					<option value="juventus">Juventus</option>
-					<option value="lazio">Lazio</option>
-					<option value="livorno">Livorno</option>
-					<option value="milan">Milan</option>
-					<option value="napoli">Napoli</option>
-					<option value="parma">Parma</option>
-					<option value="roma">Roma</option>				
-					<option value="sampdoria">Sampdoria</option>
-					<option value="sassuolo">Sassuolo</option>
-					<option value="torino">Torino</option>				
-					<option value="udinese">Udinese</option>
-				</select>
-		</div>
-		<div id="list">
+			</button>
 			<ul class="list">
 			<?php
 				$query="SELECT ruolo, nome, valore, squadra FROM giocatore";
 				$ris = mysql_query($query);
 				while ($vet = mysql_fetch_array($ris)) {					
-					echo "<li><span class='ruolo'>$vet[ruolo]</span><span class='nome'> $vet[nome]</span><span class='valore'> $vet[valore]</span><span class='squadra'><img width='18px' height='18px' src='../img/logo-squadra/$vet[squadra].png'></span><span class='team' style='display:none;'>$vet[squadra]</span></li>";					
+					echo "<li class='player'><span class='ruolo'>$vet[ruolo]</span><span class='squadra'><img width='18px' height='18px' src='../img/logo-squadra/$vet[squadra].png'><span class='nome'> $vet[nome]</span><span class='valore'> $vet[valore]</span></span><span class='team' style='display:none;'>$vet[squadra]</span></li>";					
 				}			
 			?>      
 			</ul>
