@@ -2,6 +2,7 @@
 	include("../session.php");
 	include("../connect_db.php");
     include("../funzioni/home_function.php");
+    include("../funzioni/gest_campionato_function.php");
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -13,6 +14,8 @@
 <link rel="stylesheet" href="../stili/gest_campionato.css" type="text/css" media="screen" />
 <link rel="stylesheet" href="../stili/campo-calcio.css" type="text/css" media="screen" />
 <script src="../librerie/jquery-1.11.0.min.js"/></script> 
+<script type="text/javascript" src="../librerie/jquery-1.9.1.min.js"/></script>
+<script type="text/javascript" src="../script/crea-camp.js"/></script>
 <!--
  <script src="librerie/jquery-1.9.1.min.js"/></script> 
 <script src="librerie/jquery-ui-1.10.3.custom.min.js."></script>
@@ -38,6 +41,23 @@ foreach($utente as $chiave => $value ){
 }
 //prendo le notifiche dell'utente
 $num_notifiche = get_notify($id);
+
+//prendo le regole del campionato il cui amministratore è l'utente in liea
+
+//prendo l'id del campionato 
+$id_camp = get_id($id);
+if($id_camp == 0){
+		echo ' <div id = "cont-errore"><div id = "errore"> Si è verificato un problema
+        <meta http-equiv="Refresh" content="3; URL=../home.php"> </div></div>' ;
+}
+$query = "SELECT campionato.nome FROM campionato WHERE campionato.id_campionato = '$id_camp'";
+$ris = mysql_query($query);
+$row = mysql_fetch_array($ris);
+$nome_camp = $row['nome'];
+
+$regole = array();
+$regole = get_rules($id_camp);
+
 
 ?>
 
@@ -143,26 +163,47 @@ $num_notifiche = get_notify($id);
 				</div>
 			</div>
 		</div><!-- ul-notizie -->
-		
-			<div id = "cont-dati" class = "gest-regole">
-			<ul class = "gest-regole">
-				<li class = "gest-regole"> </li>
-				<li class = "gest-regole"> </li>
-				<li class = "gest-regole"> </li>
-				
-			</ul>
-			
+	<div id = "cont-campionati">
+			<div id="tool">
+				<a href = "../home.php?var=0"><div id = "live">Indietro</div></a>
 			</div>
-		
-		
-		
-		
-		
-		
-		
-</div>
-</div>
-
+	</div>
+	
+	<div id="regole">
+		<form action = "salva-regole.php?where=1" method = "post" id = "form">
+			<div id = "cont-label-modifica" class = "mod_nome">
+				<label for="nome" class = "crea-camp-title">Nome campionato:</label>
+					<?php
+					echo'<input type = "text" name = "mod_nome" id = "mod_nome" class="modifica-regole-nome"  value = '.$nome_camp.' />';
+					?>
+			</div>
+			
+			<div id = "cont-label-modifica" class = "mod_n_part">
+				<input type="button"  id="info_mod_n_part">
+				<label id="info" for="info_mod_n_part" class="info_mod_n_part"><img width="15px" height="15px" src="../img/info.png"></label>
+				
+			    <label for="nome" class = "crea-camp-title">Numero partecipanti:<br></label>
+				<?php
+					foreach($regole as $value) $n_part = $value['n_part'];
+					echo'<input type = "text" name = "mod_n_part" id = "mod_n_part" class="modifica-regole-n_part" value = '.$n_part.' disabled />';
+				?>
+				<div id="evento" class="mod_n_part">numero di partecipanti al campionato (te compreso)</div>
+			</div>
+			
+			<div id = "cont-label-modifica"  class = "mod_formazione_automatica">
+			<?php foreach($regole as $value) $form_auto = $value['formazione_automatica']?>
+				<label for="nome" class = "crea-camp-title"> Inserire formazione automaticamente?</label>				
+				<div id="labels">
+					<input type="radio" value="si" name="mod_formazione_automatica" id="radio00" checked = "checked" onclick="this.form.mod_penalita.disabled=true;"/>
+					<label for="radio00" class = "crea-camp" >Si</label>
+					<input type="radio" value="no" name="mod_formazione_automatica" id="radio01" onclick="this.form.mod_penalita.disabled=false;" />
+					<label for="radio01" class = "crea-camp">No</label>
+				</div>
+			</div>
+			
+			
+	</div>
+	
 
 </body>
 

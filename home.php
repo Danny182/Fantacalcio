@@ -337,7 +337,7 @@ $(document).ready(function(){
  									$row = mysql_fetch_array($ris);
  									$id_admin = $row['id_admin'];
  									
- 									if($id_admin == $id){ //se è vero l'utente è l'amministratore
+ 									if($id_admin == $id && $num_camp != 0){ //se è vero l'utente è l'amministratore
  									echo'<a href = "gest_campionato/gest-campionato.php"><div id = "live" class = "gestione">Gestione Campionato</div></a>
                                     <a href = "#"><div id = "live">Operazioni</div></a>
 								</div>';

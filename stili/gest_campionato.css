@@ -1,20 +1,914 @@
+label.error{
+	color: #f33;
+	padding: 0;
+	font-size: 0.8em;
+	display:block;
+	}
+div#windows{
+	height: 550px;
+	width: 960px;
+	border: none;
+	position: relative;
+	margin:0 auto;
+	top:150px;
+	padding: 0;
+	color:#000000;
+    overflow:hidden;
+	
+}
+div#spiegazione {
+position:relative;
+background-color:#0ADB05;
+margin-bottom:3%;
+left:9.5%;
+height:auto;
+width:78%;
+color:white;
+padding:8px;
+font-size:16px;
+}
+div#spiegazione.mod_regole {
+left:18.5%;
+height:auto;
+width:61%;
+}
 
-ul.gest-regole{
+
+div#regole {
+border:none;
+left:34%;
+position:relative;
+width:64%;
+height:50%;
+overflow:auto;
+border:1px solid;
+}
+
+div#sotto-wind{
+position:relative;
+left:16%;
+width:83%;
+height:58%;
+overflow:auto;
+}
+
+div#wind1{
+	top: 0;
+	background-color:#0C0;
+	position: absolute;
+	border: none;
+	width: 60%;
+	height: 7%;
+	left: 0;
+	color:#fff;
+	padding-top:5px;
+	padding-left:10px;
+	padding-bottom:15px;
+}
+
+div#cont-label{	
 	background-color: #E8E8E9;
-	border-color:#CECED0;
+	border:1px solid;
+	float:left;
+    border-color:#CECED0;
+    color:#000000;
+    height: 18%;
+    width: 27%;
     color:#000000;
     -moz-border-radius:2px 2px 2px 2px;
     -webkit-border-radius:2px 2px 2px 2px;
     border-radius:2px 2px 2px 2px;
-    list-style-type: none;
-    height: 15%;
-    width: 15%;
 }
 
-li.gest-regole{
-	position:relative;
-	margin-top:10px;
-	width:auto;
-	height:auto;
-  
+
+
+div#cont-label.nome{
+	position: relative;
+	text-align: center;
+	margin-left:2%;
+	margin-top:2%;
 }
+
+div#cont-label.password{
+
+	position: relative;
+	margin-left:5%;
+	margin-top:2%;
+	text-align: center;
+}
+
+div#cont-label.admin{
+
+	position: relative;
+	margin-top: 5%;
+	margin-left: 19%;
+	text-align: center;
+}
+select {
+margin:0px;
+
+}
+div#cont-label.n_part{
+
+	position: relative;
+	margin-top:5%;
+	margin-left:5%;
+	text-align: center;
+}
+
+div#cont-label.rigore_pa{
+
+    height:10%;
+    position: absolute;
+	top: 47%;
+	left: 0%;
+	
+}
+
+div#cont-label.rigore_sb{
+
+    height:10%;
+    position: absolute;
+	top: 47%;
+	left: 30%;
+	
+}
+
+div#cont-label.autogol{
+    
+    height:10%;
+	position: absolute;
+	top: 47%;
+	left: 60%;
+	text-align: center;
+}
+
+div#cont-label.formazione{
+    
+    height:22%;
+	position: absolute;
+	top: 38%;
+	left: 20%;
+	text-align: center;
+}
+
+div#cont-label.penalita{
+    
+    height:22%;
+	position: absolute;
+	top: 38%;
+	left: 52%;
+	text-align: center;
+}
+
+div#cont-label.squadra{
+
+	position: relative;
+	margin-top:2%;
+	margin-left: 5%;
+	text-align: center;
+}
+div#cont-label.regole{
+	height:auto;
+	position: relative;
+	margin-top:3%;
+	margin-left: 36%;
+	text-align: center;
+}
+div#cont-label-modifica{	
+	background-color: #E8E8E9;
+	border:1px solid;
+	float:left;
+    border-color:#CECED0;
+    color:#000000;
+    height: 22%;
+    width: 30%;
+    margin-left:18.5%;
+    color:#000000;
+    text-align:center;
+    -moz-border-radius:2px 2px 2px 2px;
+    -webkit-border-radius:2px 2px 2px 2px;
+    border-radius:2px 2px 2px 2px;
+    margin-top:3%;
+	position:relative;
+}
+div#cont-label-modifica.mod_n_part {
+	margin-left:4%;
+	margin-top:3%;
+	}
+div#cont-label-modifica.mod_nome {
+	margin-top:3%;
+	margin-left:0%;
+	}
+div#cont-label-modifica.mod_portiere{
+	margin-left:6%;
+	}
+div#cont-label-modifica.mod_centrocampo{
+	margin-left:6%;
+	}
+div#cont-label-modifica.mod_modulo{
+	margin-left:6%;
+	}
+div#cont-label-modifica.bonus_gol_portiere{
+	margin-left:6%;
+	}
+div#cont-label-modifica.bonus_gol_centrocampista{
+	margin-left:6%;
+	}
+div#cont-label-modifica.bonus_gol_rigore{
+	margin-left:6%;
+	}	
+div#cont-label-modifica.bonus_assist{
+	margin-left:6%;
+	}
+div#cont-label-modifica.bonus_casa{
+	margin-left:6%;
+	}
+div#cont-label-modifica.bonus_gol_pareggio{
+	margin-left:6%;
+	}
+div#cont-label-modifica.malus_gol_subito{
+	margin-left:6%;
+	}
+div#cont-label-modifica.espulsione{
+	margin-left:6%;
+	}
+div#cont-label-modifica.malus_autogol{
+	margin-left:6%;
+	}
+div#cont-label-modifica.voto_giocatore_ss{
+	margin-left:6%;
+	}
+div#cont-label-modifica.punti_range_gol{
+	margin-left:6%;
+	}
+div#cont-label-modifica.mod_penalita{
+	margin-left:6%;
+	height:12%;
+	}
+div#cont-label-modifica.mod_formazione_automatica{
+	margin-left:4%;
+	margin-top:3%;
+	}
+	
+div#cont-label-modifica.moduli_validi{
+	
+	width:61.5%;
+	height:auto;
+	}				
+div#cont-nomi{
+width:83%;
+height:100%;
+border:none;
+margin-top:0;
+margin-left:16%;
+overflow:auto;
+
+}
+
+
+.reg-crea-camp{
+	text-align: center;
+	width: 60%;
+	height: 10%;
+	font-size: 16px;
+	font-family:'WOL_Reg','Segoe UI',Tahoma,Helvetica,sans-serif;
+	border: none;
+	position: relative;
+	margin-top:5%;
+	margin-left:20%;
+	background-color: #00D2FF;
+	color: #fff;
+	font-weight:600;
+	cursor: pointer;
+	border:1px solid white;
+}
+
+.reg-crea-camp:hover{
+/*-webkit-box-shadow:0px 1px 1px rgba(255,255,255,0.8) inset, 1px 1px 5px rgba(0,0,0,0.4);
+moz-box-shadow:0px 1px 1px rgba(255,255,255,0.8) inset, 1px 1px 5px rgba(0,0,0,0.4);
+box-shadow:0px 1px 1px rgba(255,255,255,0.8) inset, 1px 1px 5px rgba(0,0,0,0.4);*/
+background-color:#53E1FF;
+}
+
+.reg-regole{
+	text-align: center;
+	width: 60.5%;
+	height: 10%;
+	font-size: 16px;
+	font-family:'WOL_Reg','Segoe UI',Tahoma,Helvetica,sans-serif;
+	border: none;
+	position: absolute;
+	margin-left: 0px;
+	margin-top: 28%;
+    left:20%;
+	background-color: #00D2FF;
+	color: #fff;
+	font-weight:600;
+	cursor: pointer;
+}
+.mod-regole{
+	text-align: center;
+	width: 63%;
+	height: 8%;
+	position:relative;
+	font-size: 16px;
+	font-family:'WOL_Reg','Segoe UI',Tahoma,Helvetica,sans-serif;
+	border: none;
+	position: relative;
+	margin-top: 3%;
+    left:18.5%;
+	background-color: #00D2FF;
+	color: #fff;
+	font-weight:600;
+	cursor: pointer;
+}
+
+.reg-regole:hover{
+/*-webkit-box-shadow:0px 1px 1px rgba(255,255,255,0.8) inset, 1px 1px 5px rgba(0,0,0,0.4);
+moz-box-shadow:0px 1px 1px rgba(255,255,255,0.8) inset, 1px 1px 5px rgba(0,0,0,0.4);
+box-shadow:0px 1px 1px rgba(255,255,255,0.8) inset, 1px 1px 5px rgba(0,0,0,0.4);*/
+background-color:#53E1FF;
+}
+input.mod-regole:hover {
+background-color:#53E1FF;
+}
+input.reg-utenti:hover {
+background-color:#53E1FF;
+}
+.reg-utenti{
+	text-align: center;
+	width: 79%;
+	height: 6%;
+	font-size: 16px;
+	font-family:'WOL_Reg','Segoe UI',Tahoma,Helvetica,sans-serif;
+	border: none;
+	position: relative;
+	margin-top: 2%;
+    left:10%;
+	background-color: #00D2FF;
+	color: #fff;
+	font-weight:600;
+	cursor: pointer;
+}
+select.squadra {
+margin-top:2px;
+position:relative
+}
+
+input.crea-camp{
+	background:white;
+	border: 1px solid #CCC;
+	clear: both;
+	height: 20px;
+    width:140px;
+	font-size: 12px;
+    margin-top:5px;
+    text-align:center;
+    color:#4d4d4d;
+}
+
+input.utenti{
+	background:white;
+	border: 1px solid #CCC;
+	clear: both;
+	height: 20px;
+    width:80%;
+	font-size: 12px;
+    margin-top:6px;
+    text-align:center;
+    color:#4d4d4d;
+}
+
+input.crea-camp-n_part{
+
+    background:white;
+	border: 1px solid #CCC;
+	clear: both;
+	height: 20px;
+    width:40px;
+	font-size: 14px;
+    text-align:center;
+    color:#4d4d4d;
+    margin-top:5px;
+
+
+
+}
+
+input.modifica-regole-nome{
+    background:white;
+	border: 1px solid #CCC;
+	clear: both;
+	height: 20px;
+    width:150px;
+	font-size: 12px;
+    text-align:center;
+    margin-top:5px;
+    color:#4d4d4d;
+}
+
+input.modifica-regole-n_part{
+    background:white;
+	border: 1px solid #CCC;
+	clear: both;
+	height: 20px;
+    width:40px;
+	font-size: 12px;
+    text-align:center;
+    margin-top:5px;
+    color:#4d4d4d;
+}
+input.modifica-regole-nome{
+    background:white;
+	border: 1px solid #CCC;
+	clear: both;
+	height: 20px;
+    width:150px;
+	font-size: 12px;
+    text-align:center;
+    margin-top:5px;
+    color:#4d4d4d;
+}
+input.modifica-regole-n_sostituzioni{
+    background:white;
+	border: 1px solid #CCC;
+	clear: both;
+	height: 20px;
+    width:30px;
+	font-size: 12px;
+    text-align:center;
+    margin-top:5px;
+    color:#4d4d4d;
+}
+input.modifica-regole-bonus_gol_portiere{
+    background:white;
+	border: 1px solid #CCC;
+	clear: both;
+	height: 20px;
+    width:30px;
+	font-size: 12px;
+    text-align:center;
+    margin-top:5px;
+    color:#4d4d4d;
+}
+input.modifica-regole-bonus_gol_difensore{
+    background:white;
+	border: 1px solid #CCC;
+	clear: both;
+	height: 20px;
+    width:30px;
+	font-size: 12px;
+    text-align:center;
+    margin-top:5px;
+    color:#4d4d4d;
+}
+input.modifica-regole-bonus_gol_centrocampista{
+    background:white;
+	border: 1px solid #CCC;
+	clear: both;
+	height: 20px;
+    width:30px;
+	font-size: 12px;
+    text-align:center;
+    margin-top:5px;
+    color:#4d4d4d;
+}
+input.modifica-regole-bonus_gol_attaccante{
+    background:white;
+	border: 1px solid #CCC;
+	clear: both;
+	height: 20px;
+    width:30px;
+	font-size: 12px;
+    text-align:center;
+    margin-top:5px;
+    color:#4d4d4d;
+}
+input.modifica-regole-bonus_gol_rigore{
+    background:white;
+	border: 1px solid #CCC;
+	clear: both;
+	height: 20px;
+    width:30px;
+	font-size: 12px;
+    text-align:center;
+    margin-top:5px;
+    color:#4d4d4d;
+}
+input.modifica-regole-bonus_rigore_parato{
+    background:white;
+	border: 1px solid #CCC;
+	clear: both;
+	height: 20px;
+    width:30px;
+	font-size: 12px;
+    text-align:center;
+    margin-top:5px;
+    color:#4d4d4d;
+}
+input.modifica-regole-bonus_assist{
+    background:white;
+	border: 1px solid #CCC;
+	clear: both;
+	height: 20px;
+    width:30px;
+	font-size: 12px;
+    text-align:center;
+    margin-top:5px;
+    color:#4d4d4d;
+}
+input.modifica-regole-bonus_portiere{
+    background:white;
+	border: 1px solid #CCC;
+	clear: both;
+	height: 20px;
+    width:30px;
+	font-size: 12px;
+    text-align:center;
+    margin-top:5px;
+    color:#4d4d4d;
+}
+input.modifica-regole-bonus_casa{
+    background:white;
+	border: 1px solid #CCC;
+	clear: both;
+	height: 20px;
+    width:30px;
+	font-size: 12px;
+    text-align:center;
+    margin-top:5px;
+    color:#4d4d4d;
+}
+input.modifica-regole-bonus_gol_vittoria{
+    background:white;
+	border: 1px solid #CCC;
+	clear: both;
+	height: 20px;
+    width:30px;
+	font-size: 12px;
+    text-align:center;
+    margin-top:5px;
+    color:#4d4d4d;
+}
+input.modifica-regole-bonus_gol_pareggio{
+    background:white;
+	border: 1px solid #CCC;
+	clear: both;
+	height: 20px;
+    width:30px;
+	font-size: 12px;
+    text-align:center;
+    margin-top:5px;
+    color:#4d4d4d;
+}
+input.modifica-regole-bonus_capitano{
+    background:white;
+	border: 1px solid #CCC;
+	clear: both;
+	height: 20px;
+    width:30px;
+	font-size: 12px;
+    text-align:center;
+    margin-top:5px;
+    color:#4d4d4d;
+}
+input.modifica-regole-malus_gol_subito{
+    background:white;
+	border: 1px solid #CCC;
+	clear: both;
+	height: 20px;
+    width:30px;
+	font-size: 12px;
+    text-align:center;
+    margin-top:5px;
+    color:#4d4d4d;
+}
+input.modifica-regole-ammonizione{
+    background:white;
+	border: 1px solid #CCC;
+	clear: both;
+	height: 20px;
+    width:30px;
+	font-size: 12px;
+    text-align:center;
+    margin-top:5px;
+    color:#4d4d4d;
+}
+input.modifica-regole-espulsione{
+    background:white;
+	border: 1px solid #CCC;
+	clear: both;
+	height: 20px;
+    width:30px;
+	font-size: 12px;
+    text-align:center;
+    margin-top:5px;
+    color:#4d4d4d;
+}
+input.modifica-regole-malus_rigore_sbagliato{
+    background:white;
+	border: 1px solid #CCC;
+	clear: both;
+	height: 20px;
+    width:30px;
+	font-size: 12px;
+    text-align:center;
+    margin-top:5px;
+    color:#4d4d4d;
+}
+input.modifica-regole-malus_autogol{
+    background:white;
+	border: 1px solid #CCC;
+	clear: both;
+	height: 20px;
+    width:30px;
+	font-size: 12px;
+    text-align:center;
+    margin-top:5px;
+    color:#4d4d4d;
+}
+input.modifica-regole-voto_giocatore_sv{
+    background:white;
+	border: 1px solid #CCC;
+	clear: both;
+	height: 20px;
+    width:30px;
+	font-size: 12px;
+    text-align:center;
+    margin-top:5px;
+    color:#4d4d4d;
+}
+input.modifica-regole-voto_giocatore_ss{
+    background:white;
+	border: 1px solid #CCC;
+	clear: both;
+	height: 20px;
+    width:30px;
+	font-size: 12px;
+    text-align:center;
+    margin-top:5px;
+    color:#4d4d4d;
+}
+input.modifica-regole-punti_primo_gol{
+    background:white;
+	border: 1px solid #CCC;
+	clear: both;
+	height: 20px;
+    width:30px;
+	font-size: 12px;
+    text-align:center;
+    margin-top:5px;
+    color:#4d4d4d;
+}
+input.modifica-regole-punti_range_gol{
+    background:white;
+	border: 1px solid #CCC;
+	clear: both;
+	height: 20px;
+    width:30px;
+	font-size: 12px;
+    text-align:center;
+    margin-top:5px;
+    color:#4d4d4d;
+}
+input.crea-camp-nome{
+
+    background:white;
+	border: 1px solid #CCC;
+	clear: both;
+	height: 20px;
+    width:150px;
+	font-size: 12px;
+    text-align:center;
+    margin-top:5px;
+    color:#4d4d4d;
+}
+
+input.crea-camp-penalita{
+
+    background:white;
+	border: 1px solid #CCC;
+	clear: both;
+	height: 20px;
+    width:40px;
+	font-size: 12px;
+    text-align:center;
+    margin-top:5px;
+    color:#4d4d4d;
+    margin-top:8px;
+}
+
+
+
+div#cont-errore{
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	border: 0px solid;
+	left: 0px;
+	top: 0px;
+	background-color:#1a1a1a;
+	font-family:'WOL_Reg','Segoe UI',Tahoma,Helvetica,sans-serif;
+		
+}
+
+div#errore{
+	height:120px;
+	width:450px;
+	top:20%;
+	border:none;
+	position:relative;
+	text-align:center;
+	background-color:#00CCFF;
+	color:#ffffff;
+	line-height:35px;
+	font-size:15px;
+	padding-top:15px;
+	margin: 0 auto;
+	-moz-border-radius: 2px 2px 2px 2px;
+	-webkit-border-radius: 2px 2px 2px 2px;	
+}
+div#labels{
+position:relative;
+left:12%;
+width:70%;}
+
+div#labels.modulil {
+left:8%;
+width:84%;
+}
+
+label.crea-camp{
+border:1px solid; 
+width:42%;
+margin-left:5%;
+font-size:13px; 
+cursor:pointer; 
+margin-top:6px;
+text-align:center;
+border-color:#CECED0;
+-moz-border-radius:2px 2px 2px 2px;
+-webkit-border-radius:2px 2px 2px 2px;
+border-radius:2px 2px 2px 2px;
+float:left;
+}
+
+label.moduli{
+
+border:1px solid; 
+width:13%;
+margin-left:5%;
+font-size:13px; 
+cursor:pointer; 
+margin-top:6px;
+text-align:center;
+border-color:#CECED0;
+-moz-border-radius:2px 2px 2px 2px;
+-webkit-border-radius:2px 2px 2px 2px;
+border-radius:2px 2px 2px 2px;
+float:left;
+}
+
+
+li.utenti {
+text-align:center;
+position:relative;
+padding-top:3px;
+}
+
+
+label.crea-camp-title {
+background-color:trasparent;
+font-size:13px;
+border:none;
+text-align:center;
+margin-top:3px;
+margin-right:4px;
+margin-left:4px;
+}
+
+label.penalita{
+border:none;
+margin-top:3px;
+font-size:13.5px;
+}
+input[type="button"]{
+display:none;
+}
+input[type="radio"]{
+display:none;
+}
+input[type="checkbox"]{
+display:none;
+}
+.active{
+background: #8B8989;
+color:white;}
+
+input[type='checkbox']:checked + label{ 
+ background: #8B8989;
+ color:white;
+}
+
+ul#utenti li{    
+    float:left;
+    margin-left:5%;
+    margin-bottom:3%;
+    list-style: none;
+    background-color: #E8E8E9;
+	border:1px solid;
+    border-color:#CECED0;
+    color:#000000;
+    height: 10%;
+    width: 24.5%;
+    color:#000000;
+    -moz-border-radius:2px 2px 2px 2px;
+    -webkit-border-radius:2px 2px 2px 2px;
+    border-radius:2px 2px 2px 2px;
+
+}
+
+
+
+input[type="text"][disabled] {
+   color: gray;
+}
+
+input[type="text"] {
+   color: black;
+}
+label#info{
+position:absolute;
+top:1px;
+right:1px;
+width:15px;
+height:15px;
+cursor:pointer;
+opacity:0.5;
+}
+label#info:hover {
+	opacity:1.0;
+	}
+#evento {
+	border-radius:4px;
+	font-size:11px;
+	margin: -22% 105%;
+	text-align: left;
+	padding: 5px;
+	border: 0px solid;
+	position: relative;
+	border-color: #00D7FF;
+	background: #484848;	
+	color: #fff;
+	display:none;	
+	width:55%;
+	height:auto;
+	z-index:99;
+	}
+#evento.penalita {
+	margin: -30% 105% ;
+	}
+
+#evento.mod_difesa_gazzetta {
+	margin:-10% -140%;	
+	}
+
+#evento.mod_portiere {
+	margin:-26% 105%;	
+	}
+#evento.mod_difesa {
+	margin:-10% -140%;	
+	}
+#evento.mod_centrocampo {
+	margin:-26% 105%;	
+	}
+#evento.mod_attacco {
+	margin:-10% -140%;	
+	}
+#evento.mod_modulo {
+	margin:-26% 105%;	
+	}
+#evento.bonus_portiere {
+	margin:-10% -66%;
+	}
+#evento.bonus_casa {
+	margin:-22% 105%;	
+	}
+#evento.bonus_gol_vittoria {
+	margin:-10% -66%;	
+	}
+#evento.bonus_gol_preggio {
+	margin:-22% 105%;	
+	}
+#evento.bonus_capitano {
+	margin:-10% -66%;	
+	}
+	
+font {
+font-size: 12px;
+}
+ label#no_team {
+ font-size:12px;
+ color:red;
+ }
