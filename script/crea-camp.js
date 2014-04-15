@@ -1,4 +1,7 @@
 $(document).ready(function() {
+	
+	
+		
 					$('#cont-label.regole input[type=radio]').click(function(){
                                                                    $('#cont-label.regole label').removeClass('active');
                                                                    $(this).next('label').addClass('active');
@@ -12,6 +15,8 @@ $(document).ready(function() {
                                                                    $('#cont-label-modifica.mod_difesa_gazzetta label').removeClass('active');
                                                                    $(this).next('label').addClass('active');
                                                                    });
+					
+                        											
                     $('#cont-label-modifica.mod_portiere input[type=radio]').click(function(){
                                                                    $('#cont-label-modifica.mod_portiere label').removeClass('active');
                                                                    $(this).next('label').addClass('active');

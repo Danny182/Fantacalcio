@@ -143,7 +143,7 @@
 					<input type="radio" value="no" name="mod_difesa_gazzetta" id="radio2"/>
 					<label for="radio2" class = "crea-camp">No</label>
 				</div>
-				<div id="evento" class="mod_difesa_gazzetta">Modificatore della difesa con la regola della Gazetta</div>
+				<div id="evento" class="mod_difesa_gazzetta">Modificatore della difesa con la regola della Gazzetta</div>
 			</div>
 			
 			<div id = "cont-label-modifica"  class = "mod_portiere">
@@ -272,7 +272,7 @@
 				<label id="info" for="info_bonus_gol_vittoria" class="info_bonus_gol_vittoria"><img width="15px" height="15px" src="../img/info.png"></label>
 				<label for="nome" class = "crea-camp-title">Bonus goal vittoria:</label>
 				<input type = "text" name = "bonus_gol_vittoria" id = "mod_n_part" class="modifica-regole-bonus_gol_vittoria" onclick="this.value='';" onfocus="this.select()" onblur="this.value=!this.value?'0':this.value;"  value = "0"/>
-				<div id="evento" class="bonus_gol_vittoria">Bonus che viene dato in caso che il giocatore segna il gol decisivo (es. se Balotelli segna il gol del 2-1 per la vittoria del Milan e è il risultato finale verrà assegnato tale bonus, se il Milan poi vince 3-1 non verrà assegnato tale Bonus a Balotelli)</div>
+				<div id="evento" class="bonus_gol_vittoria">Bonus che viene dato in caso che il giocatore segni il gol decisivo (es. se Balotelli segna il gol del 2-1 per la vittoria del Milan de è il risultato finale verrà assegnato tale bonus, se il Milan poi vince 3-1 non verrà assegnato tale Bonus a Balotelli)</div>
 			</div>
 			
 			<div id = "cont-label-modifica" class = "bonus_gol_pareggio">

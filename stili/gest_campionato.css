@@ -1,3 +1,5 @@
+
+
 label.error{
 	color: #f33;
 	padding: 0;
@@ -16,6 +18,20 @@ div#windows{
     overflow:hidden;
 	
 }
+
+div#window-gest{
+	height: 550px;
+	width: 960px;
+	position: relative;
+	border: none;
+    margin: 0 auto;
+	background-color: transparent;
+	top: 150px;
+    overflow-x: hidden;
+	overflow-y: hidden;
+	z-index:0;
+}
+
 div#spiegazione {
 position:relative;
 background-color:#0ADB05;
@@ -39,9 +55,9 @@ border:none;
 left:34%;
 position:relative;
 width:64%;
-height:50%;
+height:70%;
 overflow:auto;
-border:1px solid;
+border:none;
 }
 
 div#sotto-wind{
@@ -181,7 +197,7 @@ div#cont-label-modifica{
 	float:left;
     border-color:#CECED0;
     color:#000000;
-    height: 22%;
+    height: 18%;
     width: 30%;
     margin-left:18.5%;
     color:#000000;
@@ -200,32 +216,60 @@ div#cont-label-modifica.mod_nome {
 	margin-top:3%;
 	margin-left:0%;
 	}
+div#cont-label-modifica.mod_difesa {
+	margin-top:3%;
+	margin-left:0%;
+}
 div#cont-label-modifica.mod_portiere{
-	margin-left:6%;
+	margin-left:4%;
+	}
+div#cont-label-modifica.n_sostituzioni{
+	margin-left:4%;
 	}
 div#cont-label-modifica.mod_centrocampo{
-	margin-left:6%;
+	margin-left:4%;
+	}
+	div#cont-label-modifica.mod_attacco{
+	margin-left:4%;
 	}
 div#cont-label-modifica.mod_modulo{
-	margin-left:6%;
+	margin-left:0%;
 	}
 div#cont-label-modifica.bonus_gol_portiere{
-	margin-left:6%;
+	margin-left:4%;
+	}
+div#cont-label-modifica.bonus_gol_difensore{
+	margin-top:3%;
+	margin-left:0%;
 	}
 div#cont-label-modifica.bonus_gol_centrocampista{
-	margin-left:6%;
+	margin-left:4%;
+	}
+div#cont-label-modifica.bonus_gol_attaccante{
+	margin-left:4%;
 	}
 div#cont-label-modifica.bonus_gol_rigore{
-	margin-left:6%;
-	}	
+	margin-left:0%;
+	}
+div#cont-label-modifica.bonus_rigore_parato{
+	margin-left:4%;
+	}		
 div#cont-label-modifica.bonus_assist{
-	margin-left:6%;
+	margin-left:4%;
+	}
+div#cont-label-modifica.bonus_portiere{
+	margin-top:3%;
+	margin-left:0%;
 	}
 div#cont-label-modifica.bonus_casa{
-	margin-left:6%;
+	margin-left:4%;
 	}
 div#cont-label-modifica.bonus_gol_pareggio{
-	margin-left:6%;
+	margin-top:3%;
+	margin-left:0%;
+	}
+div#cont-label-modifica.bonus_gol_vittoria{
+	margin-left:4%;
 	}
 div#cont-label-modifica.malus_gol_subito{
 	margin-left:6%;
@@ -243,13 +287,17 @@ div#cont-label-modifica.punti_range_gol{
 	margin-left:6%;
 	}
 div#cont-label-modifica.mod_penalita{
-	margin-left:6%;
-	height:12%;
+	margin-left:0%;
+	
 	}
 div#cont-label-modifica.mod_formazione_automatica{
 	margin-left:4%;
+}
+	
+div#cont-label-modifica.mod_difesa_gazzetta{
+	margin-left:4%;
 	margin-top:3%;
-	}
+}
 	
 div#cont-label-modifica.moduli_validi{
 	
@@ -864,42 +912,42 @@ label#info:hover {
 	display:none;	
 	width:55%;
 	height:auto;
-	z-index:99;
+	z-index:9999;
 	}
 #evento.penalita {
 	margin: -30% 105% ;
 	}
 
 #evento.mod_difesa_gazzetta {
-	margin:-10% -140%;	
+	margin:-15% 100% ;	
 	}
 
 #evento.mod_portiere {
-	margin:-26% 105%;	
+	margin:-17% -50% ;		
 	}
 #evento.mod_difesa {
-	margin:-10% -140%;	
+	margin:0% 95% ;
 	}
 #evento.mod_centrocampo {
-	margin:-26% 105%;	
+	margin:-5% 105%;	
 	}
 #evento.mod_attacco {
-	margin:-10% -140%;	
+	margin:-17% -50% ;	
 	}
 #evento.mod_modulo {
 	margin:-26% 105%;	
 	}
 #evento.bonus_portiere {
-	margin:-10% -66%;
+	margin:-30% 100%;
 	}
 #evento.bonus_casa {
-	margin:-22% 105%;	
+	margin:-30% 100%;	
 	}
 #evento.bonus_gol_vittoria {
-	margin:-10% -66%;	
+	margin:-30% -60%;	
 	}
-#evento.bonus_gol_preggio {
-	margin:-22% 105%;	
+#evento.bonus_gol_pareggio {
+	margin:-30% 100%;	
 	}
 #evento.bonus_capitano {
 	margin:-10% -66%;	
@@ -912,3 +960,29 @@ font-size: 12px;
  font-size:12px;
  color:red;
  }
+ 
+#cont-label-modifica.mod_difesa_gazzetta input[type=radio]:checked + label {
+background: #8B8989;
+color:white;
+}
+
+#cont-label-modifica.mod_portiere input[type=radio]:checked + label {
+background: #8B8989;
+color:white;
+}
+#cont-label-modifica.mod_difesa input[type=radio]:checked + label {
+background: #8B8989;
+color:white;
+}
+#cont-label-modifica.mod_centrocampo input[type=radio]:checked + label {
+background: #8B8989;
+color:white;
+}
+#cont-label-modifica.mod_attacco input[type=radio]:checked + label {
+background: #8B8989;
+color:white;
+}
+#cont-label-modifica.mod_modulo input[type=radio]:checked + label {
+background: #8B8989;
+color:white;
+}
