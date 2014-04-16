@@ -19,18 +19,7 @@ div#windows{
 	
 }
 
-div#window-gest{
-	height: 550px;
-	width: 960px;
-	position: relative;
-	border: none;
-    margin: 0 auto;
-	background-color: transparent;
-	top: 150px;
-    overflow-x: hidden;
-	overflow-y: hidden;
-	z-index:0;
-}
+
 
 div#spiegazione {
 position:relative;
@@ -55,11 +44,20 @@ border:none;
 left:34%;
 position:relative;
 width:64%;
-height:70%;
-overflow:auto;
-border:none;
+height:55%;
+margin-top:2.3%;
+
 }
 
+form.gest_camp{
+	height:100%;
+	position:relative;
+	overflow-y:auto;
+	overflow-x:hidden;
+	
+	
+	
+}
 div#sotto-wind{
 position:relative;
 left:16%;
@@ -197,7 +195,7 @@ div#cont-label-modifica{
 	float:left;
     border-color:#CECED0;
     color:#000000;
-    height: 18%;
+    height: 23%;
     width: 30%;
     margin-left:18.5%;
     color:#000000;
@@ -205,19 +203,19 @@ div#cont-label-modifica{
     -moz-border-radius:2px 2px 2px 2px;
     -webkit-border-radius:2px 2px 2px 2px;
     border-radius:2px 2px 2px 2px;
-    margin-top:3%;
+    margin-bottom:3%;
 	position:relative;
 }
 div#cont-label-modifica.mod_n_part {
 	margin-left:4%;
-	margin-top:3%;
+	margin-bottom:3%;
 	}
 div#cont-label-modifica.mod_nome {
-	margin-top:3%;
+	margin-bottom:3%;
 	margin-left:0%;
 	}
 div#cont-label-modifica.mod_difesa {
-	margin-top:3%;
+	margin-bottom:3%;
 	margin-left:0%;
 }
 div#cont-label-modifica.mod_portiere{
@@ -239,7 +237,7 @@ div#cont-label-modifica.bonus_gol_portiere{
 	margin-left:4%;
 	}
 div#cont-label-modifica.bonus_gol_difensore{
-	margin-top:3%;
+	margin-bottom:3%;
 	margin-left:0%;
 	}
 div#cont-label-modifica.bonus_gol_centrocampista{
@@ -258,33 +256,51 @@ div#cont-label-modifica.bonus_assist{
 	margin-left:4%;
 	}
 div#cont-label-modifica.bonus_portiere{
-	margin-top:3%;
+	margin-bottom:3%;
 	margin-left:0%;
 	}
 div#cont-label-modifica.bonus_casa{
 	margin-left:4%;
 	}
 div#cont-label-modifica.bonus_gol_pareggio{
-	margin-top:3%;
+	margin-bottom:3%;
 	margin-left:0%;
 	}
+div#cont-label-modifica.bonus_capitano{
+	margin-left:4%;
+}
 div#cont-label-modifica.bonus_gol_vittoria{
 	margin-left:4%;
 	}
 div#cont-label-modifica.malus_gol_subito{
-	margin-left:6%;
+	margin-left:4%;
+	}
+div#cont-label-modifica.ammonizione{
+	margin-left:0%;
 	}
 div#cont-label-modifica.espulsione{
-	margin-left:6%;
+	margin-left:4%;
+	}
+div#cont-label-modifica.malus_rigore_sbagliato{
+	margin-left:4%;
 	}
 div#cont-label-modifica.malus_autogol{
-	margin-left:6%;
+	margin-left:0%;
+	}
+div#cont-label-modifica.voto_giocatore_sv{
+	margin-left:4%;
 	}
 div#cont-label-modifica.voto_giocatore_ss{
-	margin-left:6%;
+	margin-left:4%;
+	}
+div#cont-label-modifica.voto_giocatore_ss{
+	margin-left:4%;
+	}
+div#cont-label-modifica.punti_primo_gol{
+	margin-left:15%;
 	}
 div#cont-label-modifica.punti_range_gol{
-	margin-left:6%;
+	margin-left:5%;
 	}
 div#cont-label-modifica.mod_penalita{
 	margin-left:0%;
@@ -296,13 +312,14 @@ div#cont-label-modifica.mod_formazione_automatica{
 	
 div#cont-label-modifica.mod_difesa_gazzetta{
 	margin-left:4%;
-	margin-top:3%;
+	margin-bottom:3%;
 }
 	
 div#cont-label-modifica.moduli_validi{
 	
-	width:61.5%;
+	width:98%;
 	height:auto;
+	margin-left:0%;
 	}				
 div#cont-nomi{
 width:83%;
@@ -950,7 +967,7 @@ label#info:hover {
 	margin:-30% 100%;	
 	}
 #evento.bonus_capitano {
-	margin:-10% -66%;	
+	margin:-30% 100%;	
 	}
 	
 font {

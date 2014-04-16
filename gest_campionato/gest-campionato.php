@@ -55,6 +55,7 @@ $ris = mysql_query($query);
 $row = mysql_fetch_array($ris);
 $nome_camp = $row['nome'];
 
+
 $regole = array();
 $regole = get_rules($id_camp);
 
@@ -95,7 +96,7 @@ $regole = get_rules($id_camp);
 			    </div>
     </div> 
     
-    <div id = "window-gest"> 
+    <div id = "windows"> 
 
 		<div id="menu">
 			<div class="menu-principale-container">
@@ -170,11 +171,11 @@ $regole = get_rules($id_camp);
 	</div>
 	
 	<div id="regole">
-		<form action = "salva-regole.php?where=1" method = "post" id = "form">
+		<form action = "salva-regole.php?where=1" method = "post" id = "form" class = "gest_camp">
 			<div id = "cont-label-modifica" class = "mod_nome">
 				<label for="nome" class = "crea-camp-title">Nome campionato:</label>
 					<?php
-					echo'<input type = "text" name = "mod_nome" id = "mod_nome" class="modifica-regole-nome"  value = '.$nome_camp.' />';
+					echo' <input type = "text" name = "mod_nome" id = "mod_nome" class="modifica-regole-nome"  value =" '.$nome_camp.'" />';
 					?>
 			</div>
 			
@@ -216,7 +217,7 @@ $regole = get_rules($id_camp);
 				<label for="nome" class = "crea-camp-title">Modificatore difesa<br> Gazzetta</label>				
 				<div id="labels">
 				<?php 
-					if($mod_difesa_gazz == 'si'){
+					if($mod_difesa_gazz){ //sono valori booleani
 						echo'
 							<input type="radio" value="si" name="mod_difesa_gazzetta" id="radio1" checked = "checked"/>
 							<label for="radio1" class = "crea-camp" >Si</label>
@@ -244,7 +245,7 @@ $regole = get_rules($id_camp);
 				<label for="nome" class = "crea-camp-title">Modificatore portiere<br><br></label>				
 				<div id="labels">
 				<?php 
-					if($mod_portiere == 'si'){
+					if($mod_portiere){//sono valori booleani
 						echo'
 							<input type="radio" value="si" name="mod_portiere" id="radio3" checked = "checked" />
 							<label for="radio3" class = "crea-camp" >Si</label>
@@ -269,7 +270,7 @@ $regole = get_rules($id_camp);
 				<label for="nome" class = "crea-camp-title">Modificatore difesa</label>				
 				<div id="labels">
 				<?php 
-				if($mod_difesa == 'si'){
+				if($mod_difesa){//sono valori booleani
 					echo'
 						<input type="radio" value="si" name="mod_difesa" id="radio5" checked = "checked"/>
 						<label for="radio5" class = "crea-camp" >Si</label>
@@ -296,7 +297,7 @@ $regole = get_rules($id_camp);
 				<label for="nome" class = "crea-camp-title">Modificatore centrocampo</label>				
 				<div id="labels">
 				<?php 
-					if($mod_centrocampo == 'si'){
+					if($mod_centrocampo){//sono valori booleani
 						echo'
 							<input type="radio" value="si" name="mod_centrocampo" id="radio7" checked = "checked"/>
 							<label for="radio7" class = "crea-camp" >Si</label>
@@ -323,7 +324,7 @@ $regole = get_rules($id_camp);
 				<label for="nome" class = "crea-camp-title">Modificatore attacco</label>				
 				<div id="labels">
 				<?php 
-					if($mod_attacco == 'si'){
+					if($mod_attacco){//sono valori booleani
 						echo'
 							<input type="radio" value="si" name="mod_attacco" id="radio9" checked = "checked"/>
 							<label for="radio9" class = "crea-camp" >Si</label>
@@ -348,7 +349,7 @@ $regole = get_rules($id_camp);
 				<label for="nome" class = "crea-camp-title">Possibilità di modifca<br> modulo</label>				
 				<div id="labels">
 				<?php 
-					if($mod_modulo == 'si'){
+					if($mod_modulo){//sono valori booleani
 						echo'
 							<input type="radio" value="si" name="mod_modulo" id="radio11" checked = "checked"/>
 							<label for="radio11" class = "crea-camp" >Si</label>
@@ -449,6 +450,122 @@ $regole = get_rules($id_camp);
 				<label for="nome" class = "crea-camp-title">Bonus goal <br>pareggio:<br></label>
 				<input type = "text" name = "bonus_gol_pareggio" id = "mod_n_part" class="modifica-regole-bonus_gol_pareggio" onclick="this.value='';" onfocus="this.select()" onblur="this.value=!this.value?'<?php echo $bonus_gol_pareggio; ?>':this.value;"  value = "<?php echo $bonus_gol_pareggio; ?>"/>
 				<div id="evento" class="bonus_gol_pareggio">Bonus che viene dato in caso che il giocatore segna il gol del pareggio e questa è l'ultima rete dell'incontro</div>
+			</div>
+			
+			<div id = "cont-label-modifica" class = "bonus_capitano">
+			<?php foreach($regole as $value) $bonus_capitano = $value['bonus_capitano']?>
+				<input type="button"  id="info_bonus_capitano">
+				<label id="info" for="info_bonus_capitano" class="info_bonus_capitano"><img width="15px" height="15px" src="../img/info.png"></label>
+				<label for="nome" class = "crea-camp-title">Bonus capitano:<br><br></label>
+				<input type = "text" name = "bonus_capitano" id = "mod_n_part" class="modifica-regole-bonus_capitano" onclick="this.value='';" onfocus="this.select()" onblur="this.value=!this.value?'<?php echo $bonus_capitano; ?>':this.value;"  value = "<?php echo $bonus_capitano; ?>"/>
+				<div id="evento" class="bonus_capitano">Bonus che viene dato al capitano se esso prende 7 o più</div>
+			</div>
+			
+			<div id = "cont-label-modifica" class = "malus_gol_subito">
+			<?php foreach($regole as $value) $malus_gol_subito = $value['malus_gol_subito']?>
+				<label for="nome" class = "crea-camp-title">Malus goal<br> subito:<br></label>
+				<input type = "text" name = "malus_gol_subito" id = "mod_n_part" class="modifica-regole-malus_gol_subito" onclick="this.value='';" onfocus="this.select()" onblur="this.value=!this.value?'<?php echo $malus_gol_subito; ?>':this.value;"  value = "<?php echo $malus_gol_subito; ?>"/>
+			</div>
+			
+			<div id = "cont-label-modifica" class = "ammonizione">
+			<?php foreach($regole as $value) $ammonizione = $value['ammonizione']?>
+				<label for="nome" class = "crea-camp-title">Ammonizione:<br><br></label>
+				<input type = "text" name = "ammonizione" id = "mod_n_part" class="modifica-regole-ammonizione" onclick="this.value='';" onfocus="this.select()" onblur="this.value=!this.value?'<?php echo $ammonizione; ?>':this.value;"  value = "<?php echo $ammonizione; ?>"/>
+			</div>
+			
+			<div id = "cont-label-modifica" class = "espulsione">
+			<?php foreach($regole as $value) $espulsione = $value['espulsione']?>
+				<label for="nome" class = "crea-camp-title">Espulsione:<br><br></label>
+				<input type = "text" name = "espulsione" id = "mod_n_part" class="modifica-regole-espulsione" onclick="this.value='';" onfocus="this.select()" onblur="this.value=!this.value?'<?php echo $espulsione; ?>':this.value;"  value = "<?php echo $espulsione; ?>"/>
+			</div>
+			
+			<div id = "cont-label-modifica" class = "malus_rigore_sbagliato">
+			<?php foreach($regole as $value) $malus_rigore_sbagliato = $value['malus_rigore_sbagliato']?>
+				<label for="nome" class = "crea-camp-title">Malus rigore<br> sbagliato:<br></label>
+				<input type = "text" name = "malus_rigore_sbagliato" id = "mod_n_part" class="modifica-regole-malus_rigore_sbagliato" onclick="this.value='';" onfocus="this.select()" onblur="this.value=!this.value?'<?php echo $malus_rigore_sbagliato; ?>':this.value;"  value = "<?php echo $malus_rigore_sbagliato; ?>"/>
+			</div>
+			
+			<div id = "cont-label-modifica" class = "malus_autogol">
+			<?php foreach($regole as $value) $malus_autogol = $value['malus_autogol']?>
+				<label for="nome" class = "crea-camp-title">Malus autogol:<br><br></label>
+				<input type = "text" name = "malus_autogol" id = "mod_n_part" class="modifica-regole-malus_autogol" onclick="this.value='';" onfocus="this.select()" onblur="this.value=!this.value?'<?php echo $malus_autogol; ?>':this.value;"  value = "<?php echo $malus_autogol; ?>"/>
+			</div>
+			
+			<div id = "cont-label-modifica" class = "voto_giocatore_sv">
+			<?php foreach($regole as $value) $gioc_sv = $value['voto_giocatore_sv']?>
+				<label for="nome" class = "crea-camp-title">Voto giocatore SV:<br><br></label>
+				<input type = "text" name = "voto_giocatore_sv" id = "mod_n_part" class="modifica-regole-voto_giocatore_sv" onclick="this.value='';" onfocus="this.select()" onblur="this.value=!this.value?'<?php echo $gioc_sv; ?>':this.value;"  value = "<?php echo $gioc_sv; ?>"/>
+			</div>
+			
+			<div id = "cont-label-modifica" class = "voto_giocatore_ss">
+			<?php foreach($regole as $value) $gioc_ss = $value['voto_giocatore_ss']?>
+				<label for="nome" class = "crea-camp-title">Voto gioc. <br>se non ha sostituto:<br></label>
+				<input type = "text" name = "voto_giocatore_ss" id = "mod_n_part" class="modifica-regole-voto_giocatore_ss" onclick="this.value='';" onfocus="this.select()" onblur="this.value=!this.value?'<?php echo $gioc_ss; ?>':this.value;"  value = "<?php echo $gioc_ss; ?>"/>
+			</div>
+			
+			<div id = "cont-label-modifica" class = "punti_primo_gol">
+			<?php foreach($regole as $value) $primo_gol = $value['punti_primo_gol']?>
+				<label for="nome" class = "crea-camp-title">Punti per il primo goal:<br><br></label>
+				<input type = "text" name = "punti_primo_gol" id = "mod_n_part" class="modifica-regole-punti_primo_gol" onclick="this.value='';" onfocus="this.select()" onblur="this.value=!this.value?'<?php echo $primo_gol; ?>':this.value;"  value = "<?php echo $primo_gol; ?>"/>
+			</div>
+			
+			<div id = "cont-label-modifica" class = "punti_range_gol">
+			<?php foreach($regole as $value) $range_gol = $value['punti_range_gol']?>
+				<label for="nome" class = "crea-camp-title">Punti per i gol successivi:<br><br></label>
+				<input type = "text" name = "punti_range_gol" id = "mod_n_part" class="modifica-regole-punti_range_gol" onclick="this.value='';" onfocus="this.select()" onblur="this.value=!this.value?'<?php echo $range_gol; ?>':this.value;"  value = "<?php echo $range_gol; ?>"/>
+			</div>
+			
+			<div id = "cont-label-modifica"  class = "moduli_validi">
+				<label for="nome" class = "crea-camp-title">Moduli consentiti:</label>				
+				<div id="labels" class="modulil">
+					<?php foreach($regole as $value) $modulo_343 = $value['modulo_343'];?>
+						<input type="checkbox" name="modulo_343" id="343" class="modifica-regole-moduli_validi" value="343" <?php if($modulo_343)echo"checked"; ?> >
+						<label for="343" class="moduli">3-4-3</label>
+						
+					<?php foreach($regole as $value) $modulo_352 = $value['modulo_352'];?>
+						<input type="checkbox" name="modulo_352" id="352" class="modifica-regole-moduli_validi" value="352" <?php if($modulo_352)echo"checked"; ?>>
+						<label for="352" class = "moduli">3-5-2</label>
+					
+					<?php foreach($regole as $value) $modulo_361 = $value['modulo_361'];?>
+						<input type="checkbox" name="modulo_361" id="361" class="modifica-regole-moduli_validi" value="361"  <?php if($modulo_361)echo"checked"; ?> >
+						<label for="361" class="moduli">3-6-1</label>
+						
+					<?php foreach($regole as $value) $modulo_433 = $value['modulo_433'];?>	
+					<input type="checkbox" name="modulo_433" id="433" class="modifica-regole-moduli_validi" value="433" <?php if($modulo_433)echo"checked"; ?>>
+					<label for="433" class = "moduli">4-3-3</label>
+					
+					<?php foreach($regole as $value) $modulo_442 = $value['modulo_442'];?>
+					<input type="checkbox" name="modulo_442" id="442" class="modifica-regole-moduli_validi" value="442" <?php if($modulo_442)echo"checked"; ?>>
+					<label for="442" class="moduli">4-4-2</label>
+					
+					<?php foreach($regole as $value) $modulo_451 = $value['modulo_451'];?>
+					<input type="checkbox" name="modulo_451" id="451" class="modifica-regole-moduli_validi" value="451" <?php if($modulo_451)echo"checked"; ?>>
+					<label for="451" class = "moduli">4-5-1</label>
+					
+					<?php foreach($regole as $value) $modulo_253 = $value['modulo_253'];?>
+					<input type="checkbox" name="modulo_253" id="253" class="modifica-regole-moduli_validi" value="253"<?php if($modulo_253)echo"checked"; ?> >
+					<label for="253" class="moduli">2-5-3</label>
+					
+					<?php foreach($regole as $value) $modulo_334 = $value['modulo_334'];?>
+					<input type="checkbox" name="modulo_334" id="334" class="modifica-regole-moduli_validi" value="334" <?php if($modulo_334)echo"checked"; ?>>
+					<label for="334" class = "moduli">3-3-4</label>
+					
+					<?php foreach($regole as $value) $modulo_424 = $value['modulo_424'];?>
+					<input type="checkbox" name="modulo_424" id="424" class="modifica-regole-moduli_validi" value="424" <?php if($modulo_424)echo"checked"; ?>>
+					<label for="424" class="moduli">4-2-4</label>
+					
+					<?php foreach($regole as $value) $modulo_352 = $value['modulo_352'];?>
+					<input type="checkbox" name="modulo_532" id="532" class="modifica-regole-moduli_validi" value="532" <?php if($modulo_352)echo"checked"; ?>>
+					<label for="532" class = "moduli">5-3-2</label>
+					
+					<?php foreach($regole as $value) $modulo_541 = $value['modulo_541'];?>
+					<input type="checkbox" name="modulo_541" id="541" class="modifica-regole-moduli_validi" value="541" <?php if($modulo_541)echo"checked"; ?>>
+					<label for="541" class="moduli">5-4-1</label>
+					
+					<?php foreach($regole as $value) $modulo_550 = $value['modulo_550'];?>
+					<input type="checkbox" name="modulo_550" id="550" class="modifica-regole-moduli_validi" value="550" <?php if($modulo_550)echo"checked"; ?>>
+					<label for="550" class = "moduli">5-5-0</label>
+				</div>
 			</div>
 			
 	</div>

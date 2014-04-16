@@ -59,6 +59,7 @@ function get_rules($id_camp){
 				"modulo_352" => $row['modulo_352'],
 				"modulo_361" => $row['modulo_361'],
 				"modulo_433" => $row['modulo_433'],
+				"modulo_442" => $row['modulo_442'],
 				"modulo_451" => $row['modulo_451'],
 				"modulo_253" => $row['modulo_253'],
 				"modulo_334" => $row['modulo_334'],
