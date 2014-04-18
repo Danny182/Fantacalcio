@@ -421,6 +421,29 @@ margin-top:2px;
 position:relative
 }
 
+.gest-regole{
+text-align: center;
+width: 99%;
+height: auto;
+font-size: 16px;
+font-family:'WOL_Reg','Segoe UI',Tahoma,Helvetica,sans-serif;
+margin-top:0%;
+margin-left:0%;
+background-color: #E8E8E9;
+color: #fff;
+font-weight:600;
+cursor: pointer;
+border:1px solid;
+position:relative;
+}
+
+.gest-regole:hover{
+/*-webkit-box-shadow:0px 1px 1px rgba(255,255,255,0.8) inset, 1px 1px 5px rgba(0,0,0,0.4);
+moz-box-shadow:0px 1px 1px rgba(255,255,255,0.8) inset, 1px 1px 5px rgba(0,0,0,0.4);
+box-shadow:0px 1px 1px rgba(255,255,255,0.8) inset, 1px 1px 5px rgba(0,0,0,0.4);*/
+background-color:#D5D5D5
+}
+
 input.crea-camp{
 	background:white;
 	border: 1px solid #CCC;

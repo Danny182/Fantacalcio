@@ -166,12 +166,16 @@ $regole = get_rules($id_camp);
 		</div><!-- ul-notizie -->
 	<div id = "cont-campionati">
 			<div id="tool">
+			
 				<a href = "../home.php?var=0"><div id = "live">Indietro</div></a>
 			</div>
 	</div>
 	
 	<div id="regole">
-		<form action = "salva-regole.php?where=1" method = "post" id = "form" class = "gest_camp">
+	
+		<form action = "salva-regole.php?where=1" method = "POST" id = "form" class = "gest_camp">
+			<input type = "submit" value = "Salva le modifiche" class = "gest-regole" />
+		
 			<div id = "cont-label-modifica" class = "mod_nome">
 				<label for="nome" class = "crea-camp-title">Nome campionato:</label>
 					<?php
@@ -515,7 +519,7 @@ $regole = get_rules($id_camp);
 				<input type = "text" name = "punti_range_gol" id = "mod_n_part" class="modifica-regole-punti_range_gol" onclick="this.value='';" onfocus="this.select()" onblur="this.value=!this.value?'<?php echo $range_gol; ?>':this.value;"  value = "<?php echo $range_gol; ?>"/>
 			</div>
 			
-			<div id = "cont-label-modifica"  class = "moduli_validi">
+			<div id = "cont-label-modifica"  class = "moduli_validi"> <!--  moduli -->
 				<label for="nome" class = "crea-camp-title">Moduli consentiti:</label>				
 				<div id="labels" class="modulil">
 					<?php foreach($regole as $value) $modulo_343 = $value['modulo_343'];?>
