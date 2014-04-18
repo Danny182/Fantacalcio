@@ -139,7 +139,7 @@
 				<label for="nome" class = "crea-camp-title">Utilizzare regole FantaGazzetta?<br><font size="-3"><i>(potrai modificare le regole in seguito)</i></font></label>											
 					<div id="labels">
 						<input type="radio" value="si" name="regole" id="radio1" checked = "true"  />
-						<label for="radio1" class = "crea-camp" >Si</label>
+						<label for="radio1" class = "crea-camp active" >Si</label>
 						<input type="radio" value="no" name="regole" id="radio2"  />
 						<label for="radio2" class = "crea-camp">No</label>
 					</div>
@@ -151,7 +151,7 @@
 				
 				<div id="labels">
 					<input type="radio" value="si" name="formazione_automatica" id="radio10" checked = "checked" onclick="this.form.penalita.disabled=true;"/>
-					<label for="radio10" class = "crea-camp" >Si</label>
+					<label for="radio10" class = "crea-camp active" >Si</label>
 					<input type="radio" value="no" name="formazione_automatica" id="radio11" onclick="this.form.penalita.disabled=false;" />
 					<label for="radio11" class = "crea-camp">No</label>
 				</div>

@@ -48,8 +48,6 @@
 <script type="text/javascript" src="../librerie/jquery.validate.js"></script> 
 <script type="text/javascript" src="../script/validate_campionato.js"></script>
 
-<script type="text/javascript" src="script/menu.js"></script>-->
-<link rel="stylesheet" type="text/css" href="stili/menu2.css" />
 <script>
 $(document).ready(function(){
                   $("#button").click(function(event) {
