@@ -302,7 +302,7 @@ Storia/Caratteristiche
 	<label for="nome" class = "inserire_rosa">Inserire rosa adesso?</label>				
 	<div id="labels">
 		<input type="radio" value="si" name="inserire_rosa" id="radio00" checked = "checked" onclick="this.form.inserire_rosa.disabled=true;"/>
-		<label for="radio00" class = "crea-squadra" >Si</label>
+		<label for="radio00" class = "crea-squadra active" >Si</label>
 		<input type="radio" value="no" name="inserire_rosa" id="radio01" onclick="this.form.inserire_rosa.disabled=false;" />
 		<label for="radio01" class = "crea-squadra">No</label>
 	</div>

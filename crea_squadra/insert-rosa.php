@@ -138,6 +138,9 @@
 			</div>
 		</div>
 		<div id="list">
+			<button class="sort" data-sort="squadra">
+					Ordina per squadra
+			</button>
 			<button class="sort" data-sort="ruolo">
 					Ordina per ruolo
 			</button>
@@ -149,10 +152,10 @@
 			</button>
 			<ul class="list">
 			<?php
-				$query="SELECT ruolo, nome, valore, squadra FROM giocatore";
+				$query="SELECT ruolo, cognome, valore, squadra FROM giocatore";
 				$ris = mysql_query($query);
 				while ($vet = mysql_fetch_array($ris)) {					
-					echo "<li class='player'><span class='ruolo'>$vet[ruolo]</span><span class='squadra'><img width='18px' height='18px' src='../img/logo-squadra/$vet[squadra].png'><span class='nome'> $vet[nome]</span><span class='valore'> $vet[valore]</span></span><span class='team' style='display:none;'>$vet[squadra]</span></li>";					
+					echo "<li class='player'><span class='ruolo'>$vet[ruolo]</span><span class='squadra'><img width='18px' height='18px' src='../img/logo-squadra/$vet[squadra].png'><span class='nome'> $vet[cognome]</span><span class='valore'> $vet[valore]</span></span><span class='team' style='display:none;'>$vet[squadra]</span></li>";					
 				}			
 			?>      
 			</ul>
@@ -166,24 +169,11 @@
 <script>
 $(document).ready(function(){
 	var options = {
-		valueNames: [ 'ruolo', 'nome', 'valore', 'team' ]
+		valueNames: ['squadra', 'ruolo', 'nome', 'valore', 'team' ]
 	};
 
 	var userList = new List('players', options);
-	
-	//filtro su button
-	
-	/*$('#filter-milan').click(function() {
-		console.log('ciao');
-	  userList.filter(function(item) {
-		if (item.values().team == "milan") {
-		  return true;
-		} else {
-		  return false;
-		}
-	  });
-	  return false;
-	});*/
+
 	
 	$('#teams').change(function () {
 		var selection = this.value; 

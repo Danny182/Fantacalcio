@@ -37,6 +37,7 @@ $(document).ready(function() {
                                                                    $('#cont-label-modifica.mod_modulo label').removeClass('active');
                                                                    $(this).next('label').addClass('active');
                                                                    });
+                                                            
                     $('#cont-label-modifica.mod_formazione_automatica input[type=radio]').click(function(){
                                                                    $('#cont-label-modifica.mod_formazione_automatica label').removeClass('active');
 																	});
