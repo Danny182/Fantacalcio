@@ -423,18 +423,19 @@ position:relative
 
 .gest-regole{
 text-align: center;
-width: 99%;
+width: 20%;
 height: auto;
 font-size: 16px;
 font-family:'WOL_Reg','Segoe UI',Tahoma,Helvetica,sans-serif;
 margin-top:0%;
-margin-left:0%;
+margin-left:-20%;
 background-color: #E8E8E9;
 color: #fff;
 font-weight:600;
 cursor: pointer;
 border:1px solid;
-position:relative;
+position:absolute;
+z-index:9999;
 }
 
 .gest-regole:hover{
@@ -1002,6 +1003,11 @@ font-size: 12px;
  }
  
 #cont-label-modifica.mod_difesa_gazzetta input[type=radio]:checked + label {
+background: #8B8989;
+color:white;
+}
+
+#cont-label-modifica.mod_formazione_automatica input[type=radio]:checked + label {
 background: #8B8989;
 color:white;
 }

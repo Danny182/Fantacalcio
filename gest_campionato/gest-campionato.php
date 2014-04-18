@@ -26,6 +26,13 @@
 <script type="text/javascript" src="../script/menu.js"></script>-->
 <link rel="stylesheet" type="text/css" href="../stili/menu2.css" />
 
+<script type="text/javascript">
+function submitform()
+{
+  document.getElementById('gest').submit();
+}
+</script>
+
 </head>
 
 <?php
@@ -168,13 +175,16 @@ $regole = get_rules($id_camp);
 			<div id="tool">
 			
 				<a href = "../home.php?var=0"><div id = "live">Indietro</div></a>
+				<a href = "javascript: submitform()"><div id = "live">Salva le Modifiche</div></a>
 			</div>
 	</div>
 	
 	<div id="regole">
 	
-		<form action = "salva-regole.php?where=1" method = "POST" id = "form" class = "gest_camp">
-			<input type = "submit" value = "Salva le modifiche" class = "gest-regole" />
+		<form action = "salva-gest-regole.php?where=1" method = "POST" id = "gest" class = "gest_camp">
+			
+				<input type = "hidden" name = "id_camp" value = "<?php echo $id_camp; ?>" />
+			
 		
 			<div id = "cont-label-modifica" class = "mod_nome">
 				<label for="nome" class = "crea-camp-title">Nome campionato:</label>
@@ -206,11 +216,12 @@ $regole = get_rules($id_camp);
 				</div>
 			</div>
 			<div id = "cont-label-modifica" class = "mod_penalita">
+			
 			<?php foreach($regole as $value) $penalita = $value['penalita']?>
 				<input type="button"  id="info_mod_penalita">
 				<label id="info" for="info_mod_penalita" class="info_mod_penalita"><img width="15px" height="15px" src="../img/info.png"></label>
 				<label for="nome" class = "crea-camp-title">Punti di penalità per<br> mancato inserimento<br></label>
-				<input type = "text" name = "mod_penalita" id = "penalita" size = "5" class = "crea-camp-penalita"  value = "<?php echo $penalita;?>" />
+				<input type = "text" name = "mod_penalita" id = "penalita" size = "5" class = "crea-camp-penalita"  value = "<?php echo $penalita;?>"onclick="this.value='';" onfocus="this.select()" onblur="this.value=!this.value?'<?php echo $penalita; ?>':this.value;" />
 				<div id="evento" class="penalita">punti che vengono sottratti in caso non venga consegnata la formazione</div>
 			</div>
 			
@@ -523,7 +534,7 @@ $regole = get_rules($id_camp);
 				<label for="nome" class = "crea-camp-title">Moduli consentiti:</label>				
 				<div id="labels" class="modulil">
 					<?php foreach($regole as $value) $modulo_343 = $value['modulo_343'];?>
-						<input type="checkbox" name="modulo_343" id="343" class="modifica-regole-moduli_validi" value="343" <?php if($modulo_343)echo"checked"; ?> >
+						<input type="checkbox" name="modulo_343" id="343" class="modifica-regole-moduli_validi" value="343" <?php if($modulo_343)echo"checked"; else echo""; ?> >
 						<label for="343" class="moduli">3-4-3</label>
 						
 					<?php foreach($regole as $value) $modulo_352 = $value['modulo_352'];?>

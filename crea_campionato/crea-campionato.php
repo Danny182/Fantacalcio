@@ -211,7 +211,7 @@ $(document).ready(function(){
 			</div><!--fine cont-label -->
 
 			<div id = "cont-label" class = "n_part">
-				<label for="citta">Numero dei partecipanti:</label>
+				<label for="n_part">Numero dei partecipanti:</label>
 				<input type = "text" name = "n_part" id = "n_part"  class = "crea-camp-n_part" /><br>
 			</div><!--fine cont-label -->
 

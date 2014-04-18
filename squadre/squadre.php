@@ -69,7 +69,7 @@ $(document).ready(function(){
                        }});
                   $("a.squadra").colorbox({onClosed:function(){
                                         var url = this.href;
-                                        //document.cookie = 'href-stemma='+url;
+                                        document.cookie = 'href-stemma='+url;
                                         document.cookie = 'href-stsquadra='+url + ';expires=0';
                                         location.href="squadre.php";
                                         
@@ -282,13 +282,14 @@ $(document).ready(function(){
 			
 			
 			?>
-				<img src = "<?php  echo $url_stemma;?>" width = "80px" height = "66px">
+				 <img src = "<?php  echo $url_stemma;?>" width = "80px" height = "66px">
+				
 			</div>
 			
 			<div id = "cont-foto" >
 			
-				<a href='../img/logo-squadra/fiorentina.jpg' class = "squadra" title = "Fiorentina" style="color:#9A9A9A;"  >Foto</a>
-				<a href='../img/logo-squadra/milan.jpg' class = "squadra" title = "Milan" style="display:none;"  >Foto</a>
+				<a href='../img/logo-squadra/fiorentina.png' class = "squadra" title = "Fiorentina" style="color:#9A9A9A;"  >Foto</a>
+				<a href='../img/logo-squadra/milan.png' class = "squadra" title = "Milan" style="display:none;"  >Foto</a>
 
             </div>
             

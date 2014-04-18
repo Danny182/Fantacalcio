@@ -40,7 +40,7 @@
     $query = "SELECT count(id_squadra) as num FROM squadra WHERE squadra.nome = '$nome_squadra'";
     $ris = mysql_query($query);
     $row = mysql_fetch_array($ris);
-    if($row['num'] != 0){//c'è almeno una squadra con lo stesso nome
+    if($row['num'] > 1){//c'è almeno una squadra con lo stesso nome
         echo ' <div id = "cont-errore"><div id = "errore"> ATTENZIONE <br> Il nome della squadra è già utilizzato
         <meta http-equiv="Refresh" content="3; URL=squadre.php"> </div></div>' ;
     }
