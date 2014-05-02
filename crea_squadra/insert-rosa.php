@@ -138,25 +138,41 @@
 			</div>
 		</div>
 		<div id="list">
-			<button id="ruolo" class="sort" data-sort="ruolo">
-					Ruolo
-			</button>
-			<button id="squadra" class="sort" data-sort="squadra">
-					Squadra
-			</button>
-			
-			<button id="nome" class="sort" data-sort="nome">
-					Nome
-			</button>
-			<button id="valore" class="sort" data-sort="valore">
-					Valore
-			</button>
+			<div id="button-cont">
+				<button id="ruolo" class="sort" data-sort="ruolo">
+						Ruolo
+				</button>
+				<button id="squadra" class="sort" data-sort="squadra">
+						Squadra
+				</button>
+				
+				<button id="nome" class="sort" data-sort="nome">
+						Nome
+				</button>
+				<button id="valore" class="sort" data-sort="valore">
+						Valore
+				</button>
+			</div>
 			<ul class="list">
 			<?php
 				$query="SELECT ruolo, cognome, valore, squadra FROM giocatore ORDER BY squadra";
 				$ris = mysql_query($query);
 				while ($vet = mysql_fetch_array($ris)) {					
-					echo "<li class='player'><span class='ruolo'>$vet[ruolo]</span><span class='squadra'><img width='18px' height='18px' src='../img/logo-squadra/$vet[squadra].png'><span class='nome'> $vet[cognome]</span><span class='valore'> $vet[valore]</span></span><span class='team' style='display:none;'>$vet[squadra]</span></li>";					
+					echo "<li class='player'>
+								<span class='team' style='display:none;'>$vet[squadra]</span>
+								<span class='ruolo'>
+									$vet[ruolo]
+								</span>
+								<span class='squadra'>
+									<img width='18px' height='18px' src='../img/logo-squadra/$vet[squadra].png'>
+								</span>
+								<span class='nome'>
+									$vet[cognome]
+								</span>
+								<span class='valore'>
+									$vet[valore]
+								</span>								
+							</li>";				
 				}			
 			?>      
 			</ul>
@@ -178,6 +194,7 @@ $(document).ready(function(){
 	
 	$('#teams').change(function () {
 		var selection = this.value; 
+		console.log (selection);
 		if (selection == "tutte") {
 			userList.filter();
 			return false;

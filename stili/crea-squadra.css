@@ -221,8 +221,11 @@ div#your-team {
 	width:25%;
 	height:99%;
 	position:absolute;
-	border:none;
-	background-color:#93E8EE;
+	border:1px solid white;
+	background-color:#8BE6ED;
+	border-radius:2px; 
+	-moz-border-radius:2px; 
+	-webkit-border-radius:2px;
 	}
 	
 div#players {
@@ -231,8 +234,12 @@ div#players {
 	top:0%;
 	height:99%;
 	position:absolute;
-	border:none;
-	background-color:#93E8EE;
+	border:1px solid white;
+	background-color:#8BE6ED;
+	border-radius:2px; 
+	-moz-border-radius:2px; 
+	-webkit-border-radius:2px;
+	
 	}
 	
 div#options {
@@ -245,7 +252,7 @@ div#options {
 	}
 div#list {
 	position:relative;
-	height:93%;
+	height:91.5%;
 	width:100%;
 	overflow:auto;
 	}
@@ -280,15 +287,16 @@ select#teams {
 	
 ul.list {
 	list-style: none;
-	padding:5px;
-	margin:2px;
+	padding:0px;
+	margin:0px;
 	}
 li.player {
-	padding-bottom: 5px;
+	border-bottom:1px solid #E3F8FB;	
+	padding-bottom:3px;
+	padding-top:3px;
+	height:20px;
 	}
-span {
-	padding-left:5px;
-	}
+
 	
 button.sort {
 margin:0;
@@ -297,6 +305,12 @@ background:#7BE1EA;
 border:1px solid white;
 border-right:none;
 border-top:none;
+border-bottom:none;
+border-radius:2px; 
+-moz-border-radius:2px; 
+-webkit-border-radius:2px;
+padding:3px; 
+font-size:11px;
 }
 
 button#valore.sort {
@@ -304,6 +318,47 @@ border-right:1px solid white;
 float:none;
 }
 
+button#ruolo.sort {
+	width:8%;
+	border-left:none;
+	}
+button#squadra.sort {
+	width:11%;
+	}
+button#nome.sort {
+	width:25%;
+	}
+
 button.sort:hover {
 background:#9FEAF0;
 }
+
+span {
+	border-right:1px solid #AFEEF3;
+	padding-bottom:3px;
+	position:relative;
+	float:left;
+	text-align:center;
+	}
+
+span.ruolo {
+	width:8%;
+	}
+	
+span.squadra  {
+	width:11%;
+	}
+	
+span.nome {	
+	width:24.7%;
+	}
+	
+span.valore {
+	border:none;
+	width:5%;
+ }
+div#button-cont {
+	border:none;
+	border-bottom:1px solid white;
+	background:#7BE1EA;
+	}
