@@ -309,8 +309,9 @@ border-bottom:none;
 border-radius:2px; 
 -moz-border-radius:2px; 
 -webkit-border-radius:2px;
-padding:3px; 
+padding:5px; 
 font-size:11px;
+
 }
 
 button#valore.sort {
