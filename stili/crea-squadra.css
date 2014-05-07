@@ -218,7 +218,7 @@ color:white;}
 
 div#your-team {
 	left:16%;
-	width:25%;
+	width:30%;
 	height:99%;
 	position:absolute;
 	border:1px solid white;
@@ -229,8 +229,8 @@ div#your-team {
 	}
 	
 div#players {
-	left:42%;
-	width:57%;
+	left:47%;
+	width:52%;
 	top:0%;
 	height:99%;
 	position:absolute;
@@ -245,10 +245,10 @@ div#players {
 div#options {
 	position:realtive;
 	top:0;
-	width:97.8%;
+	width:96.3%;
 	border-bottom:1px solid #FFFFFF;
 	height:auto;
-	padding:10px 6px;
+	padding:10px;
 	}
 div#list {
 	position:relative;
