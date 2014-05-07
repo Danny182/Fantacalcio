@@ -358,8 +358,16 @@ span.valore {
 	border:none;
 	width:5%;
  }
+ 
+ span.aggiungi {
+	width:8%;
+	}
+	
 div#button-cont {
 	border:none;
 	border-bottom:1px solid white;
 	background:#7BE1EA;
 	}
+button#add {
+margin:0px;
+}

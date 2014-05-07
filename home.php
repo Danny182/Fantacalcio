@@ -12,12 +12,6 @@
 <link rel="stylesheet" href="stili/style-home.css" type="text/css" media="screen" />
 <link rel="stylesheet" href="stili/campo-calcio.css" type="text/css" media="screen" />
 <script src="librerie/jquery-1.11.0.min.js"/></script> 
-<!--
- <script src="librerie/jquery-1.9.1.min.js"/></script> 
-<script src="librerie/jquery-ui-1.10.3.custom.min.js."></script>
-<script type="text/javascript" src="librerie/jquery.easing.1.3.js"></script> 
-<script type = "text/javascript" src = "librerie/jquery.innerfade.js"> </script>-->
-
 
 <script type="text/javascript" src="script/menu.js"></script>-->
 <link rel="stylesheet" type="text/css" href="stili/menu2.css" />

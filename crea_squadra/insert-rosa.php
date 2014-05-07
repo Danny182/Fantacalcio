@@ -38,6 +38,21 @@
 <script src="../librerie/jquery-1.11.0.min.js"></script>
 <script src="../librerie/list.js"></script>
 
+<script src="../librerie/jquery.animate_from_to-1.0.min.js"></script>
+<script src="../script/animation.js"></script>
+<script>
+$(document).ready(function(){
+	$("#button").click(function(event) {
+			event.stopPropagation();
+			
+			$("#dropdown").toggle();
+		});
+	$(document).click( function() {
+			$("#dropdown").hide();
+		});
+
+	});
+</script>
 </head>
 
 <body class="crea-squadra-page">
@@ -159,7 +174,7 @@
 				$ris = mysql_query($query);
 				while ($vet = mysql_fetch_array($ris)) {					
 					echo "<li class='player'>
-								<span class='team' style='display:none;'>$vet[squadra]</span>
+								<div id='a'><span class='team' style='display:none;'>$vet[squadra]</span>
 								<span class='ruolo'>
 									$vet[ruolo]
 								</span>
@@ -171,7 +186,10 @@
 								</span>
 								<span class='valore'>
 									$vet[valore]
-								</span>								
+								</span>
+								<span class='aggiungi'>
+									<div id='a'><button type='submit' id='add'>+</button></div>
+								</span></div>						
 							</li>";				
 				}			
 			?>      
