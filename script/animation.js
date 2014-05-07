@@ -1,8 +1,9 @@
 $(document).ready(function(){
-            $("#add").click(function(){
+            $("button[id^='add-'").click(function(){
 				// Animate one element to another – bare bones version:
-					console.log("entrato");
-				$("#a").animate_from_to("#your-team");
+					var id = this.id;
+					console.log(id);
+				$("li[id='p-"+ id + "'").animate_from_to("#your-team");
 
 				// May also be constructed as:
 

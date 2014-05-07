@@ -170,10 +170,12 @@ $(document).ready(function(){
 			</div>
 			<ul class="list">
 			<?php
+			$i = 0;
 				$query="SELECT ruolo, cognome, valore, squadra FROM giocatore ORDER BY squadra";
 				$ris = mysql_query($query);
+				
 				while ($vet = mysql_fetch_array($ris)) {					
-					echo "<li class='player'>
+					echo "<li id='p-add-$i' class='player'>
 								<div id='a'><span class='team' style='display:none;'>$vet[squadra]</span>
 								<span class='ruolo'>
 									$vet[ruolo]
@@ -188,9 +190,10 @@ $(document).ready(function(){
 									$vet[valore]
 								</span>
 								<span class='aggiungi'>
-									<div id='a'><button type='submit' id='add'>+</button></div>
+									<button type='submit' class='add' id='add-$i'>+</button>
 								</span></div>						
 							</li>";				
+					$i++;
 				}			
 			?>      
 			</ul>

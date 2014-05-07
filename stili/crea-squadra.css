@@ -368,6 +368,6 @@ div#button-cont {
 	border-bottom:1px solid white;
 	background:#7BE1EA;
 	}
-button#add {
+button.add {
 margin:0px;
 }
