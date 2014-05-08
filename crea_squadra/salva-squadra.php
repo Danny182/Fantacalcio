@@ -17,11 +17,11 @@
 <?php
 
 //prendo i dati dal form
-    $nome_squadra = $_GET['nome_squadra'];
-    $nome_stadio = $_GET['stadio'];
-    $storia = $_GET['storia'];
-    $url_stadio = $_GET['url_stadio'];
-    $url_stemma = $_GET['url_stemma'];
+    if(isset($_GET['nome_squadra'])) $nome_squadra = $_GET['nome_squadra'];
+    if(isset($_GET['stadio'])) $nome_stadio = $_GET['stadio'];
+    if(isset($_GET['storia'])) $storia = $_GET['storia'];
+    if(isset($_GET['url_stadio'])) $url_stadio = $_GET['url_stadio'];
+    if(isset($_GET['url_stemma'])) $url_stemma = $_GET['url_stemma'];
     
     //controllo che il nome della squadra non esista già
     $query = "SELECT count(id_squadra) as num FROM squadra WHERE squadra.nome = '$nome_squadra'";

@@ -282,7 +282,7 @@ $(document).ready(function(){
 			
 			
 			?>
-				 <img src = "<?php  echo $url_stemma;?>" width = "80px" height = "66px">
+				   <img src = "<?php echo $url_stemma; ?>" width = "80px" height = "66px">
 				
 			</div>
 			
@@ -377,7 +377,7 @@ $(document).ready(function(){
 
 	</div>
 	
-	<textarea name="storia" value = "<?php foreach($squadre_dates as $value) echo $value['storia'];?>" id = "storia" ><?php foreach($squadre_dates as $value) if(!empty($value['storia']))echo$value['storia']; else echo "Scrivi la storia della tua squadra!";?></textarea>
+	<textarea name="storia" value = "<?php foreach($squadre_dates as $value) echo $value['storia'];?>" id = "storia" ><?php foreach($squadre_dates as $value) if(!empty($value['storia']))echo $value['storia']; else echo "Scrivi la storia della tua squadra!";?></textarea>
 
 
     <input type = "hidden" name = "url_stadio" value = "<?php echo $url_stadio; ?>" />

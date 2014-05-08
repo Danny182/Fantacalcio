@@ -35,7 +35,7 @@ else{
 	$id_user = $vet['id_utente'];
     $nome_squadra = ''.$usern.' Team';
 	//creo una squadra standard per l'utente
-    $query = "INSERT INTO squadra VALUES(NULL, '$nome_squadra', NULL, '$id_user', '1', '0', false, NULL, '../img/logo-squadra/fiorentina.jpg', NULL )";
+    $query = "INSERT INTO squadra VALUES(NULL, '$nome_squadra', NULL, '$id_user', '1', '0', false, NULL, '../img/logo-squadra/fiorentina.png', NULL )";
     $ris = mysql_query($query);
     if($ris){
 	echo "Si e' registrato correttamente <br>";
