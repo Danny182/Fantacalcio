@@ -231,7 +231,7 @@ $(document).ready(function() {
 Generalità
 </div>
 
-<form action = "" method = "post" id = "form">
+<form action = "" method = "post" >
 
 <div id = "cont-input" class = "nome">
 <label for="squadra" class = "label-squadra">Nome</label>
@@ -247,8 +247,8 @@ Generalità
 
        <label for="logo" class = "label-logo">
 
-            <a href='../img/logo-squadra/fiorentina.png' class = "squadra" title = "Fiorentina" style="color:black"  >Cambia</a>
-            <a href='../img/logo-squadra/milan.png' class = "squadra" title = "Milan" style="display:none;"  >Cambia</a>
+            <a href='../img/logo-squadra/fiorentina.png' class = "squadra" title = "Fiorentina" style="color:#9A9A9A;"  >Modifica</a>
+            <a href='../img/logo-squadra/milan.png' class = "squadra" title = "Milan" style="display:none;color:#9A9A9A;"  >Modifica</a>
             
 
         </label>
@@ -279,9 +279,9 @@ Stadio
 
     <label for="nome" class = "label-logo">
 
-        <a href='../img/stadio/stadio1.png' class = "group" title = "Stadio: La fortezza" style="color:black"  >Cambia</a>
-        <a href='../img/stadio/stadio2.png' class = "group" title = "Stadio: L'incandescente" style="display:none;"  >Cambia</a>
-        <a href='../img/stadio/stadio3.png' class = "group" title = "Stadio: L'imperatore" style="display:none;"  >Cambia</a>
+        <a href='../img/stadio/stadio1.png' class = "group" title = "Stadio: La fortezza" style="color:#9A9A9A;"  >Modifica</a>
+        <a href='../img/stadio/stadio2.png' class = "group" title = "Stadio: L'incandescente" style="display:none;color:#9A9A9A;"  >Modifica</a>
+        <a href='../img/stadio/stadio3.png' class = "group" title = "Stadio: L'imperatore" style="display:none;color:#9A9A9A;"  >Modifica</a>
 
 
     </label>
@@ -310,6 +310,7 @@ Storia/Caratteristiche
 <input type = "hidden" name = "url_stadio" value = "<?php echo $url_stadio; ?>" />
 <input type = "hidden" name = "url_stemma" value = "<?php echo $url_stemma; ?>" />
 <input type = "submit" value = "Crea la Squadra!" class = "reg-squadra" />
+
 
 </form>
 

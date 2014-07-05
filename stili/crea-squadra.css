@@ -13,8 +13,10 @@ font-size:18px;
 border-top:none;
 border-right:none;
 border-left:none;
-color:#42B4F0;
+color:rgba(1, 159, 199, 0.61);
 }
+
+
 
 div#divisore.second{
 position:absolute;
@@ -33,7 +35,7 @@ background-color: #E8E8E9;
 border:1px solid;
 float:left;
 border-color:#CECED0;
-color:#000000;
+color:#9A9A9A;
 height: 15%;
 width: 43%;
 color:#000000;
@@ -68,6 +70,7 @@ width:14%;
 height:10%;
 margin-left:2%;
 margin-top:1%;
+color:#9A9A9A;
 
 }
 
@@ -107,7 +110,7 @@ text-align:center;
 -webkit-border-radius:5px 5px 5px 5px;
 border-radius:5px 5px 5px 5px;
 margin-top:0px;
-color:#000;
+color:#9A9A9A;
 
 }
 
@@ -158,7 +161,7 @@ font-size:13px;
 	font-family:'WOL_Reg','Segoe UI',Tahoma,Helvetica,sans-serif;
 	border: none;
 	position: relative;
-	margin-top:3%;
+	margin-top:2%;
 	margin-left:30%;
 	background-color: #00D2FF;
 	color: #fff;
