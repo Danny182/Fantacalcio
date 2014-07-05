@@ -18,14 +18,15 @@ div#windows{
 }
 div#spiegazione {
 position:relative;
-background-color:#0ADB05;
+background-color: #E8E8E9;
 margin-bottom:3%;
 left:9.5%;
 height:auto;
 width:78%;
-color:white;
+color:#CECED0;
 padding:8px;
 font-size:16px;
+border:1px solid white;
 }
 div#spiegazione.mod_regole {
 left:18.5%;
@@ -294,7 +295,7 @@ background-color:#53E1FF;
 	height: 10%;
 	font-size: 16px;
 	font-family:'WOL_Reg','Segoe UI',Tahoma,Helvetica,sans-serif;
-	border: none;
+	border: 1px solid white;
 	position: absolute;
 	margin-left: 0px;
 	margin-top: 31%;
@@ -335,11 +336,11 @@ background-color:#53E1FF;
 }
 .reg-utenti{
 	text-align: center;
-	width: 79%;
+	width: 79.5%;
 	height: 6%;
 	font-size: 16px;
 	font-family:'WOL_Reg','Segoe UI',Tahoma,Helvetica,sans-serif;
-	border: none;
+	border: 1px solid white;
 	position: relative;
 	margin-top: 2%;
     left:10%;

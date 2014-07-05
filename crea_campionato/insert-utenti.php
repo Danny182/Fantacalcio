@@ -34,6 +34,8 @@
 <link rel="stylesheet" href="../stili/campo-calcio.css" type="text/css" media="screen" />
 <link rel="stylesheet" type="text/css" href="../stili/menu2.css" />
 
+<link rel="stylesheet" href="../stili/form.css" type="text/css" media="screen" />
+
 <script type="text/javascript" src="../librerie/jquery.min.js"></script> 
 <script type="text/javascript" src="../librerie/jquery.validate.js"></script> 
 <script type="text/javascript" src="../script/validate_users.js"></script>
@@ -59,30 +61,74 @@
 
 <div id = "windows">
     <div id="menu">
-        <div class="menu-principale-container">
-            <ul id="menu-principale" class="menu">
-                <li id'"item-1" class="style-item-1">
-                    <a href="../home.php">Home</a>
-                </li>
-                <li id'"item-1" class="style-item-2">
-                    <a href="inserisci_formazione.php">Inserisci la formazione</a>
-                </li>
-                <li id'"item-1" class="style-item-3">
-                    <a href="../crea_campionato/crea-campionato.php">Crea un Campionato</a>
-                </li>
-                <li id'"item-1" class="style-item-4">
-                        <a href="crea_squadra.php">Crea una nuova Squadra</a>
-                </li>
+			<div class="menu-principale-container">
+				<ul id="menu-principale" class="menu">
+					<li id'"item-1" class="style-item-1">
+						<a href="../home.php?var=0"><img src="../img/site_logo/fantapv_white2.png" height="22px" width="22px" style="padding-right:2px;">Home</a>
+					</li>
+					<li id'"item-1" class="style-item-2">
+						<a href="inserisci_formazione.php">Inserisci la formazione</a>
+					</li>
+					<li id'"item-1" class="style-item-3">
+						<a href="#">Crea un Campionato</a>
+					</li>
+					<li id'"item-1" class="style-item-4">
+						<a href="../crea_squadra/crea-squadra.php">Crea una nuova Squadra</a>
+					</li>
 
-                <li id'"item-1" class="style-item-6">
-                    <a href="messaggi.php">Messaggi</a>
-                </li>
-                <li id'"item-1" class="style-item-7">
-                    <a href="documenti.php">Documenti di lega</a>
-                </li>
-            </ul>
+					<li id'"item-1" class="style-item-6">
+						<a href="../notifiche.php">Notifiche</a>
+					</li>
+					<li id'"item-1" class="style-item-7">
+						<a href="documenti.php">Documenti di lega</a>
+					</li>
+                    <li id'"item-1" class="style-item-8">
+                        <a href="../squadre/squadre.php?var=0">Le tue squadre</a>
+                    </li>
+				</ul>
+			</div>
+		</div>
+
+<div id = "ul-notizie" class = "camp">
+<div id="campo">	<!--decorazioni -->
+
+    <div id = "porta1">
     </div>
-</div>
+    <div id="traversa">
+    </div>
+    <div id="traversa2">
+    </div>
+    <div id="mezzos">
+    </div>
+    <div id="mezzod">
+    </div>
+    <div id="dischettos">
+    </div>
+    <div id="dischettod">
+    </div>
+    <div id="areas">
+    </div>
+    <div id="areas2">
+    </div>
+    <div id = "linea">
+    </div>
+    <div id="centroc">
+    </div>
+    <div id="centro">
+    </div>
+    <div id = "porta2">
+    </div>
+    <div id = "ca">
+    </div>
+    <div id = "ca" class = "right1">
+    </div>
+    <div id = "ca" class = "left">
+    </div>
+    <div id = "ca" class = "right2">
+    </div>
+
+</div><!--campo-->
+</div><!-- ul-notizie -->
 
 
 
@@ -90,14 +136,12 @@
 
 
 	<div id = "cont-nomi">
-		<div id="spiegazione">
-			Di seguito dovrai inserire l' username dei partecipanti o la loro email per invitarli ad iscriversi al campionato
-	</div>
+		
 		<ul id = "utenti">
 			
 			<?php
 			echo'<li class = "utenti">
-					<label for="nome" class = "crea-camp-title"> Utente 1 </label>
+					<label for="nome" class = "crea-camp-title"> Admin </label>
 					<input type = "text" name = "utente1" id = "utente1" size = "16" class = "utenti" value='.$admin.' disabled = "true"  />
 				</li>';	
 				$i = 2;
@@ -105,7 +149,7 @@
 					
 					echo'
 						<li class = "utenti">
-							 <label for="nome" class = "crea-camp-title"> Utente '.($i).' </label>
+							 <label for="nome" class = "crea-camp-title"> Giocatore n. '.($i).' </label>
 								<input type = "text" name = "utente'.$i.'" id = "utente'.$i.'" size = "16" class = "utenti"  />
 						</li>';
 								$i++;
