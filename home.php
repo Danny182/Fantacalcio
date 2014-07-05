@@ -109,11 +109,12 @@ $(document).ready(function(){
 			</ul>
 		</div>
 			</div>';
-			if($num_notifiche == 0) echo'<div id = "notifiche"><a href="notifiche.php"> Non hai Notifiche</a> </div>';
+			//num notifiche nella variabile $num_notifiche
+			if($num_notifiche == 0) echo'<div id = "notifiche"><a href="notifiche.php"><img src = "img/notifica.gif" /> </a> </div>';
 			
-			else if($num_notifiche == 1) echo'<div id = "notifiche"><a href="notifiche.php"> Hai '.$num_notifiche.' nuova notifica</a> </div>';
+			else echo'<div id = "notifiche" class = "arrivata"><a href="notifiche.php"><img src = "img/notifica-arrivata.png" /> </a> </div>';
 			
-			else echo'<div id = "notifiche"><a href="notifiche.php"> Hai '.$num_notifiche.' nuove notifiche</a> </div>';
+			
 			
 			?>
 			

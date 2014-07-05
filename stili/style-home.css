@@ -21,6 +21,8 @@ div#cont{
 	font-size:13.5px;
 }
 
+
+
 div#top{
 	height:100px;
 	width:100%;
@@ -61,13 +63,20 @@ div#nome-inside {
 }
 
 div#notifiche{
+	height:25px;
+	width:30px;
 	position:relative;
 	color:#D42222;
-	top:68px;
-	right:0px;
+	top:64%;
+	left:-2%;
 	float:right;
-	margin-right:10px;
 	font-size:15px;
+	background-color: #1a1a1a;
+	
+}
+
+div#notifiche.arrivata{
+	top:63%;
 }
 
 div#contatti{
