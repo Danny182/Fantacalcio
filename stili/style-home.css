@@ -67,11 +67,12 @@ div#notifiche{
 	width:30px;
 	position:relative;
 	color:#D42222;
-	top:64%;
-	left:-2%;
+	top:68px;
+	left:0%;
 	float:right;
 	font-size:15px;
 	background-color: #1a1a1a;
+	margin-right:1%;
 	
 }
 
@@ -725,7 +726,7 @@ margin-top: -10px;
 }
 
 
-
+a
 
 
 
