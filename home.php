@@ -131,7 +131,7 @@ $(document).ready(function(){
 						<a href="home.php?var=0"><img src="img/site_logo/fantapv_white2.png" height="22px" width="22px" style="padding-right:2px;">Home</a>
 					</li>
 					<li id'"item-1" class="style-item-2">
-						<a href="inserisci_formazione.php">Inserisci la formazione</a>
+						<a href="inserisci_formazione.php">Inserisci Formazione</a>
 					</li>
 					<li id'"item-1" class="style-item-3">
 						<a href="crea_campionato/crea-campionato.php">Crea un Campionato</a>
@@ -152,13 +152,24 @@ $(document).ready(function(){
 				</ul>
 			</div>
 		</div>
+
 		<div id = "ul-notizie">
+            <div id = "cont-mister">
+            </div>
+            <div class = "cont-notizie cont-notizie-left">
+                <div class = "cont-text">
+                Benvenuto su FaYnt, io sono <b>Gundi!</b> Questa &egrave la home del sito, da qui potrai gestire ogni singola opzione del tuo campionato, crearne di nuovi ed invitare i tuoi amici.
+Potrai creare nuove squadre a tuo piacimento, scegliere lo stadio, la maglia e dare una descrizione. Nella Home visualizzerai sempre la classifica, la giornata successiva e quella precedente del campionato selezionato. Nel Men&uacute interno gestisci tutto ci&ograve che riguarda la lega selezionata, Nel men&ugrave esterno invece tutte le altre opzioni, come l'inserimento della formazione, accesso alle notifiche e ai documenti della lega, beh....<br> <b> Buon Divertimento!</b>
+
+                </div>
+
+            </div>
 			<div id="campo">	<!--decorazioni -->
 				<div id = "porta1">
 				</div>
 				<div id="traversa">
 				</div>
-				<div id="traversa2">
+                <div id="traversa2">
 				</div>
 				<div id="mezzos">
 				</div>
@@ -198,7 +209,7 @@ $(document).ready(function(){
             
 			<div id = "classifica">
 				<div id = "cla-title">
-					<a href = "#">Classifica</a>
+					<a href = "#" style="color:#000;">Classifica</a>
 				</div>
 					<div id="cla-left">
 					<ul class="class">
