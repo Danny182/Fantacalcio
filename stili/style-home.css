@@ -619,7 +619,6 @@ margin-left:49%;
 	cursor: pointer;
 }
 #button:hover {
-    background-color: black;
     opacity: 0.7;
 }
 
@@ -725,11 +724,22 @@ margin-top: -10px;
 
 }
 
+#badge {
+    width: 13px; 
+    height: 13px;
+    border-radius: 50%;
+    background-color:#00DFFF;
+    font-size:11px;
+    text-align:center;
+    color:black;
+    position:absolute;
+    border:none;
+}
 
-a
 
-
-
+#badge:hover {
+ background-color:#00DFFF;
+ }
 
 
 
