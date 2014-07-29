@@ -112,11 +112,11 @@ $id = $_SESSION['id_utente'];
     //num notifiche nella variabile $num_notifiche
     if($num_notifiche == 0) echo'<div id = "notifiche">
     <a href="notifiche.php">
-    <img id="button" width="26px" height="22px" src = "../img/notifica.png" />
+    <img id="button" width="26px" height="22px" src = "img/notifica.png" />
     </a>
     </div>';
     
-    else echo'<div id = "notifiche" class = "arrivata"><a href="notifiche.php"><img id="button" width="26px" height="22px" src = "../img/notifica-arrivata.png" /> </a> </div>';
+    else echo'<div id = "notifiche" class = "arrivata"><a href="notifiche.php"><img id="button" width="26px" height="22px" src = "img/notifica-arrivata.png" /> </a> </div>';
     
     ?>
 
