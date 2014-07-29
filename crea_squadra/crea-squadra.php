@@ -145,9 +145,14 @@ $(document).ready(function() {
             </div>
         </div>';
 
-    if($num_notifiche == 0) echo'<div id = "notifiche"><a href="notifiche.php"><img src = "../img/notifica.gif" /> </a> </div>';
+			if($num_notifiche == 0) echo'<div id = "notifiche">
+											<a href="notifiche.php">
+												<img id="button" width="26px" height="22px" src = "../img/notifica.png" />
+											</a>
+										</div>';
 			
-			else echo'<div id = "notifiche" class = "arrivata"><a href="notifiche.php"><img src = "../img/notifica-arrivata.png" /> </a> </div>';
+			else {echo'<div id = "notifiche" class = "arrivata">
+						<a href="notifiche.php"><div id="badge">'.$num_notifiche.'</div><img id="button" width="26px" height="22px" src = "../img/notifica-arrivata.png"/></a></div>';}
     ?>
 </div>
 </div>
@@ -245,8 +250,8 @@ Generalità
 
        <label for="logo" class = "label-logo">
 
-            <a href='../img/logo-squadra/fiorentina.png' class = "squadra" title = "Fiorentina" style="color:#9A9A9A;"  >Modifica</a>
-            <a href='../img/logo-squadra/milan.png' class = "squadra" title = "Milan" style="display:none;color:#9A9A9A;"  >Modifica</a>
+            <a href='../img/logo-squadra/fiorentina.png' class = "squadra" title = "Fiorentina"  >Modifica</a>
+            <a href='../img/logo-squadra/milan.png' class = "squadra" title = "Milan" style="display:none;"  >Modifica</a>
             
 
         </label>
@@ -277,9 +282,9 @@ Stadio
 
     <label for="nome" class = "label-logo">
 
-        <a href='../img/stadio/stadio1.png' class = "group" title = "Stadio: La fortezza" style="color:#9A9A9A;"  >Modifica</a>
-        <a href='../img/stadio/stadio2.png' class = "group" title = "Stadio: L'incandescente" style="display:none;color:#9A9A9A;"  >Modifica</a>
-        <a href='../img/stadio/stadio3.png' class = "group" title = "Stadio: L'imperatore" style="display:none;color:#9A9A9A;"  >Modifica</a>
+        <a href='../img/stadio/stadio1.png' class = "group" title = "Stadio: La fortezza"  >Modifica</a>
+        <a href='../img/stadio/stadio2.png' class = "group" title = "Stadio: L'incandescente" style="display:none;"  >Modifica</a>
+        <a href='../img/stadio/stadio3.png' class = "group" title = "Stadio: L'imperatore" style="display:none;"  >Modifica</a>
 
 
     </label>

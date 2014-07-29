@@ -35,7 +35,7 @@ background-color: #E8E8E9;
 border:1px solid;
 float:left;
 border-color:#CECED0;
-color:#9A9A9A;
+color:#000;
 height: 15%;
 width: 43%;
 color:#000000;
@@ -70,7 +70,7 @@ width:14%;
 height:10%;
 margin-left:2%;
 margin-top:1%;
-color:#9A9A9A;
+color:#000;
 
 }
 
@@ -110,7 +110,7 @@ text-align:center;
 -webkit-border-radius:5px 5px 5px 5px;
 border-radius:5px 5px 5px 5px;
 margin-top:0px;
-color:#9A9A9A;
+color:#000;
 
 }
 
@@ -125,7 +125,7 @@ text-align:center;
 -webkit-border-radius:5px 5px 5px 5px;
 border-radius:5px 5px 5px 5px;
 margin-top:15px;
-color:#9A9A9A;
+color:#000;
 
 }
 
@@ -374,3 +374,11 @@ div#button-cont {
 button.add {
 margin:0px;
 }
+
+.newbox{
+		padding:8px;
+		border:1px solid red;
+		margin-bottom:8px;
+		width:200px;
+		height:50px;
+	}

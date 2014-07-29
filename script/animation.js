@@ -5,8 +5,10 @@ $(document).ready(function(){
 					console.log(id);
 				$("li[id='p-"+ id + "'").animate_from_to("#your-team");
 
-				// May also be constructed as:
-
-				// $.animate_from_to("#prod_123", "#cart");
             })
+            
+            $("button[id^='add-'").click(function () {
+ 
+				$("<div class='newbox'>I'm new box by appendTo</div>").appendTo("#your-team");
+			})
  });
