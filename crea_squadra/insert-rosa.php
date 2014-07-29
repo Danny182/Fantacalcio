@@ -80,14 +80,16 @@ $(document).ready(function(){
             </div>
         </div>';
 
-    //num notifiche nella variabile $num_notifiche
-    if($num_notifiche == 0) echo'<div id = "notifiche">
-    <a href="notifiche.php">
-    <img id="button" width="26px" height="22px" src = "../img/notifica.png" />
-    </a>
-    </div>';
-    
-    else echo'<div id = "notifiche" class = "arrivata"><a href="notifiche.php"><img id="button" width="26px" height="22px" src = "../img/notifica-arrivata.png" /> </a> </div>';
+        //num notifiche nella variabile $num_notifiche
+		if($num_notifiche == 0) echo'<div id = "notifiche">
+											<a href="notifiche.php">
+												<img id="button" width="26px" height="22px" src = "../img/notifica.png" />
+											</a>
+										</div>';
+			
+			else {echo'<div id = "notifiche" class = "arrivata">
+						<a href="notifiche.php"><div id="badge">'.$num_notifiche.'</div><img id="button" width="26px" height="22px" src = "../img/notifica-arrivata.png"/></a></div>';}
+
     ?>
 </div>
 </div>

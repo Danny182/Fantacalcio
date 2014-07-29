@@ -29,6 +29,7 @@ function get_userdates($id){
         
         return $notifica;
         
-        }
+    }
+
 
 ?>
