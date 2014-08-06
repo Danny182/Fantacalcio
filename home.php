@@ -162,14 +162,16 @@ $(document).ready(function(){
 		<div id = "ul-notizie">
             <div id = "cont-mister">
             </div>
-            <div class = "cont-notizie cont-notizie-left">
-                <div class = "cont-text">
-                Benvenuto su FaYnt, io sono <b>Gundi!</b> Questa &egrave la home del sito, da qui potrai gestire ogni singola opzione del tuo campionato, crearne di nuovi ed invitare i tuoi amici.
-Potrai creare nuove squadre a tuo piacimento, scegliere lo stadio, la maglia e dare una descrizione. Nella Home visualizzerai sempre la classifica, la giornata successiva e quella precedente del campionato selezionato. Nel Men&uacute interno gestisci tutto ci&ograve che riguarda la lega selezionata, Nel men&ugrave esterno invece tutte le altre opzioni, come l'inserimento della formazione, accesso alle notifiche e ai documenti della lega, beh....<br> <b> Buon Divertimento!</b>
-
+            <div class = "rett">
+                <div class = "tria">
                 </div>
 
+                <div class = "cont-text">
+                    Benvenuto su FaYnt, io sono <b>Gundi!</b> Questa &egrave la home del sito, da qui potrai gestire ogni singola opzione del tuo campionato, crearne di nuovi ed invitare i tuoi amici.
+                    Potrai creare nuove squadre a tuo piacimento, scegliere lo stadio, la maglia e dare una descrizione. Nella Home visualizzerai sempre la classifica, la giornata successiva e quella precedente del campionato selezionato. Nel Men&uacute interno gestisci tutto ci&ograve che riguarda la lega selezionata, Nel men&ugrave esterno invece tutte le altre opzioni, come l'inserimento della formazione, accesso alle notifiche e ai documenti della lega, beh....<br> <b> Buon Divertimento!</b>
+                </div>
             </div>
+
 			<div id="campo">	<!--decorazioni -->
 				<div id = "porta1">
 				</div>

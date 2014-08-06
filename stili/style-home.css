@@ -682,12 +682,12 @@ background-image:url('../img/gundi.gif');
 
 /*fumetto delle notizie*/
 
-.cont-notizie{
+.rett{
 position: relative;
 background-color: #EBEBEC;
 opacity:0.8;
 margin-top:2%;
-margin-left:20%;
+margin-left:19.5%;
 width: 600px;
 height: 200px;
 text-align: center;
@@ -696,33 +696,34 @@ color:rgb(50,168,0);
 line-height: 22px;
 padding:5px;
 z-index:9999;
+border-radius: 10px; 
+-moz-border-radius: 10px; /* firefox */
+-webkit-border-radius: 10px; /* safari, chrome */
+
+}
+
+.tria{
+margin-left:-7%;
+margin-top:11.5%;
+width:0; 
+height:0;
+border-right:20px solid #EBEBEC;
+border-top:20px solid transparent;
+border-left:20px solid transparent;
+border-bottom:20px solid #EBEBEC;
+
 }
 
 .cont-text{
 text-align:center;
 font-size:17px;
 color:black;
-
-
+margin-top:-18%;
+font-family:'WOL_Reg','Segoe UI',Tahoma,Helvetica,sans-serif;
 }
 
 
-.cont-notizie:after{
-content: '';
-position: absolute;
-width: 20px;
-height: 0;
-border: 15px solid;
 
-}
-
-.cont-notizie-left:after{
-border-right-color: #000;
-top: 50%;
-right: 100%;
-margin-top: -10px;
-
-}
 
 #badge {
     width: 13px; 
