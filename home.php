@@ -137,7 +137,7 @@ $(document).ready(function(){
 						<a href="home.php?var=0"><img src="img/site_logo/fantapv_white2.png" height="22px" width="22px" style="padding-right:2px;">Home</a>
 					</li>
 					<li id'"item-1" class="style-item-2">
-						<a href="inserisci_formazione.php">Inserisci Formazione</a>
+						<a href="formazione/change_formation.php">Inserisci Formazione</a>
 					</li>
 					<li id'"item-1" class="style-item-3">
 						<a href="crea_campionato/crea-campionato.php">Crea un Campionato</a>
