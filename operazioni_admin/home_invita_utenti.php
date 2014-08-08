@@ -2,6 +2,7 @@
 	include("../session.php");
 	include("../connect_db.php");
     include("../funzioni/home_function.php");
+    include("../funzioni/admin_area_function.php");
 ?>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -181,30 +182,36 @@ foreach($utente as $chiave => $value ){
 <div id = "cont-dati">
 
 <div class = "iscritti">
+<div class = "title-iscritti">
+Iscritti al Campionato
+</div>
+<br>
 
-<i style="font-size:18px;font-weight:500;"><p align="center">Iscritti al Campionato</p> </i>
 <?php
-    /*
+    
     //lista dei giocatori iscritti al campionato selezionato
     //prendo l id del campionato selezionato
-    $query = "SELECT campionato.id_campionato FROM campionato WHERE campionato.nome = '$nome_camp";
+    $query = "SELECT campionato.id_campionato FROM campionato WHERE campionato.nome = '$nome_camp'";
     $ris = mysql_query($query);
     $row = mysql_fetch_array($ris);
     $id_camp = $row['id_campionato'];
     
-    $query = "SELECT squadra.id_utente FROM squadra WHERE squadra.id_campionato = '$id_camp";
-    $ris = mysql_query($query);
-    while($row = mysql_fetch_array($ris)){
-    //prendo
-    
-    
-    
+   //prendo l'array composto così: NomeSquadra - AllenatoreSquadra
+    $array = array();
+    $array = get_user_champion($id_camp);
+    foreach($array as $value){
+        echo '<a href="#">'.$value['nome'].''.$value['cognome'].'</a>    -     <a href="#">'.$value['squadra'].'</a> <br>';
     }
-    */
+    
+    
+    
+    
+    
+    
     
     ?>
-<div class = "barra">
-</div>
+
+
 </div>
 
 
