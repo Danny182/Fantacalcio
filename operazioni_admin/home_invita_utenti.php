@@ -200,7 +200,7 @@ Iscritti al Campionato
     $array = array();
     $array = get_user_champion($id_camp);
     foreach($array as $value){
-        echo '<a href="#">'.$value['nome'].''.$value['cognome'].'</a>    -     <a href="#">'.$value['squadra'].'</a> <br>';
+        echo '<a href="#" class="no-color">'.$value['nome'].''.$value['cognome'].'</a>    -     <a href="#" class="no-color">'.$value['squadra'].'</a> <br>';
     }
     
     
