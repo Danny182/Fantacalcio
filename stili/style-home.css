@@ -171,7 +171,9 @@ div#ul-notizie{
 	z-index:0;
 }
 
-
+div#ul-notizie.admin{ /* pagina operazioni admin */
+left:18%;
+}
 
 
 

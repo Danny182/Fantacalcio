@@ -7,6 +7,10 @@ border-right:1px solid #fff;
 margin-left:2px;
 }
 
+div#menu.admin{
+width:17%;
+}
+
 #menu .menu-principale-container{
 position:relative;
 height:100%;

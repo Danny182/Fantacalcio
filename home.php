@@ -125,7 +125,7 @@ $(document).ready(function(){
 
 
         </div>
-    </div>   
+    </div> <!-- top -->
 
 
 	<div id = "window"> 
@@ -157,7 +157,7 @@ $(document).ready(function(){
                     </li>
 				</ul>
 			</div>
-		</div>
+		</div> <!-- menu -->
 
 		<div id = "ul-notizie">
             <div id = "cont-mister">
@@ -353,7 +353,7 @@ $(document).ready(function(){
  									
  									if($id_admin == $id && $num_camp != 0){ //se è vero l'utente è l'amministratore
  									echo'<a href = "gest_campionato/gest-campionato.php"><div id = "live" class = "gestione">Gestione Regole</div></a>
-                                    <a href = "#"><div id = "live">Operazioni</div></a>
+                                    <a href = "operazioni_admin/home_invita_utenti.php?camp='.$nome_camp.'"><div id = "live">Operazioni</div></a>
 								</div>';
  									}
                            

@@ -1,0 +1,25 @@
+
+.iscritti{
+
+position:relative;
+border:1px solid;
+margin-top:0%;
+margin-left:-24.5%;
+width:80%;
+height:50%;
+font-family:'WOL_Reg','Segoe UI',Tahoma,Helvetica,sans-serif;
+background-color:#E8E8E9;
+border-color:rgba(1, 159, 199, 0.61);
+
+}
+
+.barra{
+
+width:0;
+height:75%;
+position:relative;
+maegin-top:-5%;
+margin-left:50%;
+border:1px solid white;
+
+}
