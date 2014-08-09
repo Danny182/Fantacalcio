@@ -48,7 +48,7 @@ $user = " ";
         $name_user .= ucfirst("$value"); //metodo brutale per prendere solo il nome dell'utente
         break;
     }
-foreach($utente as $chiave => $value ){
+    foreach($utente as $chiave => $value ){
     $user .= ucfirst("$value")." ";
 }
 
@@ -181,6 +181,8 @@ foreach($utente as $chiave => $value ){
 
 <div id = "cont-dati">
 
+
+
 <div class = "iscritti">
 <div class = "title-iscritti">
 Iscritti al Campionato
@@ -200,7 +202,7 @@ Iscritti al Campionato
     $array = array();
     $array = get_user_champion($id_camp);
     foreach($array as $value){
-        echo '<a href="#" class="no-color">'.$value['nome'].''.$value['cognome'].'</a>    -     <a href="#" class="no-color">'.$value['squadra'].'</a> <br>';
+        echo '<a href="#" class="no-color">'.$value['nome'].' '.$value['cognome'].'</a>    -     <a href="#" class="no-color">'.$value['squadra'].'</a> <br>';
     }
     
     
@@ -212,7 +214,51 @@ Iscritti al Campionato
     ?>
 
 
+</div> <!-- iscritti -->
+
+<div class = "iscritti invita-utente">
+
+<div class = "title-iscritti">
+Invita Utenti alla Lega
 </div>
+
+<br>
+<form action = "add_user.php" method = "POST">
+
+    <input type = "submit" class = "invia-notify" value = "Invia Richiesta" >
+    <input type = "text" name = "dest" value = "User Name/E-mail" class = "dest" onclick="this.value='';"/>
+    <input type = "hidden" name = "nomecamp" value = "<?php echo $nome_camp; ?>" >
+    <input type = "hidden" name = "id_mitt" value = "<?php echo $id; ?>" >
+
+
+    <textarea name = "messaggio" id = "messaggio" maxlenght = "50" value = ""onclick="this.value='';" onblur  = "if(this.value == "") this.value = "Scrivi il testo da allegare alla richietsa...">Scrivi il testo da allegare alla richiesta...
+    </textarea>
+
+</form>
+
+</div> <!-- invita utente -->
+
+
+
+
+
+
+
+<div class = "iscritti invia-notifica">
+<form action = "invia_notify_all.php" method = "POST">
+
+<div class = "title-iscritti">
+        Invia una notifica a tutti gli Utenti
+    </div>
+    <input type = "submit" class = "invia-notify all" value = "Invia" >
+    <input type = "hidden" name = "nomecamp" value = "<?php echo $nome_camp; ?>" />
+
+    <textarea name = "messaggio" class = "all" maxlenght = "50" id = "messaggio" value = "Scrivi il testo della notifica..."onclick="this.value='';" onblur  = "if(this.value == "") this.value = "Scrivi il testo della notifica...">Scrivi il testo della notifica...
+    </textarea>
+</form>
+</div> <!-- invia notifica -->
+
+
 
 
 

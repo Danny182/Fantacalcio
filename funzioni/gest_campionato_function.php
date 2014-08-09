@@ -79,7 +79,15 @@ function get_rules($id_camp){
 	
 }
 
-
+    function get_admin($id_camp){
+        
+        $query = "SELECT campionato.admin FROM campionato WHERE campionato.id_campionato = '$id_camp'";
+        $ris = mysql_query($query);
+        $row = mysql_fetch_array($ris);
+        return $row['admin'];
+        
+        
+    }
 
 
 

@@ -6,7 +6,7 @@ border:1px solid;
 margin-top:0%;
 margin-left:-24.5%;
 width:50%;
-height:50%;
+height:60%;
 font-family:'WOL_Reg','Segoe UI',Tahoma,Helvetica,sans-serif;
 background-color:#E8E8E9;
 border-color:rgba(1, 159, 199, 0.61);
@@ -14,7 +14,31 @@ padding:5px;
 text-align:center;
 line-height:25px;
 color:#0098BF;
+
 }
+
+.invita-utente{
+
+margin-left:35%;
+top:0;
+position:absolute;
+width:63%;
+height:25%;
+
+}
+
+.invia-notifica{
+
+position:absolute;
+top:30%;
+margin-left:35%;
+width:63%;
+height:30%;
+
+
+}
+
+
 
 .title-iscritti{
 
@@ -27,8 +51,84 @@ color:black;
 
 }
 
-a.no-color{
+.title-invia-nootify{
+margin-top:50%;
+}
 
+a.no-color{
 color:#0098BF;
+}
+
+input.invia-notify{
+	position:absolute;
+	top:34.5%;
+	left:2%;
+	cursor:pointer;
+	background-color:#34BFE2;
+	height:15%;
+	width:25%;
+	border:none;
+	color: white;
+	padding:0px;
+	margin:0px;
+    font-size:12px;
+}
+
+input.dest{
+	
+	position:absolute;
+	top:70%;
+	left:2%;
+	border:1px solid;
+	background-color:#ededf0;
+	color:rgba(1, 159, 199, 0.61);
+	font-size:10px;
+	height:15%;
+	width:25%;
+	text-align:center;
+}
+
+input.all{
+top:50%;
+}
+
+input.invia-notify:hover{
+	background-color:#68D0EB;
+}
+
+textarea{
+	
+width:270px;
+height:75px;
+border:1px solid;
+border-color:rgba(1, 159, 199, 0.61);
+margin-left:27%;
+margin-top:2%;
+background-color:#E8E8E9;
+color:rgba(1, 159, 199, 0.61);
+font-size:12px;
+padding:5px;
 
 }
+
+textarea.all{
+margin-top:8%;
+height:100px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

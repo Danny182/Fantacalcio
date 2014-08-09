@@ -3,6 +3,7 @@
 	include("../connect_db.php");
     include("../funzioni/notify_function.php");
     
+    
 ?>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -36,7 +37,7 @@
 	}
 	
 	//creo la notifica
-	$query = "INSERT INTO notifica VALUES(NULL, 'Messaggio', '$messaggio', '0', '$id_mittente', '$id_dest')";
+	$query = "INSERT INTO notifica VALUES(NULL, 'Messaggio', '".addslashes($messaggio)."', '0', '$id_mittente', '$id_dest')";
 	$ris = mysql_query($query);
 	if($ris){
 		echo ' <div id = "cont-errore"><div id = "errore"> Messaggio Inviato

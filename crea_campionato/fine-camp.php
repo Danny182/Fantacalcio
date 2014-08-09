@@ -107,7 +107,7 @@
 	$nome_admin=$_COOKIE['crea_camp']['admin'];
     $link = "crea_camp/iscrivi-squadra.php";
     //creo la notifica da inviare al giocatore
-    $notifica = 'Ciao! Sei stato invitato ad unirti al torneo '.$nome_camp.'  dall amministratore della lega <br>'.$nome_admin.'
+    $notifica = 'Sei stato invitato ad unirti al torneo '.$nome_camp.'  dall amministratore della lega <br>'.$nome_admin.'
     Per unirti ai tuoi amici basta cliccare nel link sotto e seguire le indicazioni, in pochi minuti il gioco è fatto!<br>
     Buon divertimento!<br>
     <a href = "crea_campionato/iscrivi-squadra.php?id_camp='.$id_campionato.'&&var=0">Iscrivi la tua squadra al campionato</a>';
