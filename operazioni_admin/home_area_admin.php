@@ -15,11 +15,45 @@
 <link rel="stylesheet" href="../stili/campo-calcio.css" type="text/css" media="screen" />
 <link rel="stylesheet" href="../stili/general-operation-admin.css" type="text/css" media="screen" />
 <script src="../librerie/jquery-1.11.0.min.js"/></script>
+<script type="text/javascript" src="../librerie/jquery.ajax-cross-origin.min.js"></script>
 
 <script type="text/javascript" src="../script/menu.js"></script>-->
 <link rel="stylesheet" type="text/css" href="../stili/menu2.css" />
 <script>
+
+
+
 $(document).ready(function(){
+                 
+     
+    $("a.delete-team").click(function(){
+                             alert("dio boia");
+                     });
+                
+      /*$("a.squadra").click(function(){
+                         var camp = $(this);
+                         var nome_camp = camp.attr("nome_camp");
+                         var team = camp.attr("team");
+                         
+                         var data = 'data=' + nome_camp + '*' + team;
+                         
+                         if(confirm("Confermi l'eliminazione della squadra?"))
+                         {
+                            var request = $.ajax({
+                                   type: "POST",
+                                   url: "delete_team.php",
+                                   data: data,
+                                   dataType: "json",
+                                   success: function() {},
+                                   error:function() {}
+                                   }); //Ajax
+                           
+                         } //if
+                         return false;
+    }); //click*/
+                  
+                  
+                  
 	$("#button").click(function(event) {
 			event.stopPropagation();
 			
@@ -184,9 +218,9 @@ $user = " ";
 
 
 <div class = "iscritti">
-<div class = "title-iscritti">
-Iscritti al Campionato
-</div>
+    <div class = "title-iscritti">
+        Iscritti al Campionato
+    </div>
 <br>
 
 <?php
@@ -202,9 +236,10 @@ Iscritti al Campionato
     $array = array();
     $array = get_user_champion($id_camp);
     foreach($array as $value){
-        echo '<a href="#" class="no-color">'.$value['nome'].' '.$value['cognome'].'</a>    -     <a href="#" class="no-color">'.$value['squadra'].'</a> <br>';
+        $team = $value['squadra'];
+        echo '<div class = "link"><a href="#" class="no-color">'.ucfirst($value['nome']).' '.ucfirst($value['cognome']).'</a>    -     <a href="delete_team.php?nomecamp='.$nome_camp.'&team='.$team.'"" class="squadra">'.$value['squadra'].'</a> <br></div>';
     }
-    
+    //delete_team.php?team='.$team.'&&camp='.$nome_camp.'
     
     
     
@@ -247,9 +282,8 @@ Invita Utenti alla Lega
 <div class = "iscritti invia-notifica">
 <form action = "invia_notify_all.php" method = "POST">
 
-<div class = "title-iscritti">
-        Invia una notifica a tutti gli Utenti
-    </div>
+
+
     <input type = "submit" class = "invia-notify all" value = "Invia" >
     <input type = "hidden" name = "nomecamp" value = "<?php echo $nome_camp; ?>" />
 

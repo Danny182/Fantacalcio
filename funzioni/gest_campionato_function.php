@@ -90,7 +90,13 @@ function get_rules($id_camp){
     }
 
 
-
+    function get_id_champion($name){
+        $query = "SELECT campionato.id_campionato FROM campionato WHERE campionato.nome = '$name'";
+        $ris = mysql_query($query);
+        $row = mysql_fetch_array($ris);
+        return $row['id_campionato'];
+        
+    }
 
 
 

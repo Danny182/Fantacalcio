@@ -18,7 +18,7 @@
 
     function get_datisquadra($nome_squadra){
     
-        $query = "SELECT squadra.nome, squadra.id_stadio, squadra.id_campionato, squadra.iscritta, squadra.storia, squadra.logo, squadra.nome_stadio FROM squadra WHERE squadra.nome = '$nome_squadra'";
+        $query = "SELECT squadra.id_squadra, squadra.nome, squadra.id_stadio, squadra.id_campionato, squadra.iscritta, squadra.storia, squadra.logo, squadra.nome_stadio FROM squadra WHERE squadra.nome = '$nome_squadra'";
         $ris = mysql_query($query);
         $row = mysql_fetch_array($ris);
         
@@ -29,7 +29,8 @@
                 "id_stadio" => $row['id_stadio'],
                 "storia" => $row['storia'],
                 "stadio" => $row['nome_stadio'],
-                "iscritta" => $row['iscritta']
+                "iscritta" => $row['iscritta'],
+                "id_squadra" => $row['id_squadra']
                 
                       );
         return $dati;
@@ -38,7 +39,7 @@
     }
 
     function get_squadradate_first($id){
-        $query = "SELECT squadra.nome, squadra.id_stadio, squadra.id_campionato, squadra.iscritta, squadra.storia, squadra.logo, squadra.nome_stadio FROM squadra WHERE squadra.id_utente = '$id'";
+        $query = "SELECT squadra.id_squadra, squadra.nome, squadra.id_stadio, squadra.id_campionato, squadra.iscritta, squadra.storia, squadra.logo, squadra.nome_stadio FROM squadra WHERE squadra.id_utente = '$id'";
         $ris = mysql_query($query);
         $row = mysql_fetch_array($ris);
         
@@ -49,7 +50,8 @@
                       "id_stadio" => $row['id_stadio'],
                       "storia" => $row['storia'],
                       "stadio" => $row['nome_stadio'],
-                      "iscritta" => $row['iscritta']
+                      "iscritta" => $row['iscritta'],
+                      "id_squadra" => $row['id_squadra']
                       
                       );
         return $dati;

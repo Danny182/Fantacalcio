@@ -49,6 +49,13 @@ div#divisore.third{
 background-color:#D5D5D5;
 }
 
+.delete-squadra{
+margin-left:60%;
+margin-top:1%;
+z-index:999;
+width:20%;
+}
+
 div#cont-input{
 
 background-color: #E8E8E9;

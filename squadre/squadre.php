@@ -251,6 +251,11 @@ $(document).ready(function(){
 
 ?>
     </div>
+<?php
+    foreach ($squadre_dates as $value)
+        $id_team = $value['id_squadra'];
+    echo '<a href = "delete_team.php?idteam='.$id_team.'&iduser='.$id.'"><input type = "submit" value = "Elimina la squadra" class = "reg-squadra delete-squadra" /></a>';
+    ?>
      <form action = "salva-squadra.php" method = "post" id = "form">
      
     <div id = "cont-dati">
@@ -259,6 +264,7 @@ $(document).ready(function(){
     	
 			Generalità
 			<input type = "submit" value = "Salva le modifiche" class = "reg-squadra" />
+
 
 		</div>
 		
