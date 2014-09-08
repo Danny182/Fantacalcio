@@ -8,7 +8,9 @@ $(document).ready(function(){
             })
             
             $("button[id^='add-'").click(function () {
- 
-				$("<div class='newbox'>I'm new box by appendTo</div>").appendTo("#your-team");
+				var id = this.id;
+				$("li[id='p-"+ id + "'").detach().appendTo('#your-team')
+				/*$("li#p-add-6.player").detach().appendTo('#your-team')
+				$("<div class='newbox'>I'm new box by appendTo</div>").appendTo("#your-team");*/
 			})
  });

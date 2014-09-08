@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Mag 07, 2014 alle 19:58
+-- Generation Time: Set 08, 2014 alle 19:35
 -- Versione del server: 5.6.16
 -- PHP Version: 5.5.9
 
@@ -90,7 +90,7 @@ CREATE TABLE IF NOT EXISTS `campionato` (
   `modulo_550` tinyint(1) NOT NULL DEFAULT '0',
   `partecipanti` text COMMENT 'email o username dei partecipanti al campionato',
   PRIMARY KEY (`id_campionato`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=103 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=104 ;
 
 --
 -- Dump dei dati per la tabella `campionato`
@@ -101,7 +101,8 @@ INSERT INTO `campionato` (`id_campionato`, `nome`, `password`, `admin`, `id_admi
 (99, 'pestello league', '', '', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 3, 3, 3, 3, 3, 3, 1, 0, 2, 0, 0, 0, 1, 0.5, 1, 3, 3, 0, 0, 66, 6, 127, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, ''),
 (100, 'sfds', 'das', 'daniel', 33, 4, 0, 0, 0, 0, 0, 0, 0, 0, 3, 3, 3, 3, 3, 3, 3, 1, 0, 2, 0, 0, 0, 1, 0.5, 1, 3, 3, 0, 0, 66, 6, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'gianniÂ£gianniÂ£gianniÂ£'),
 (101, 'sfds', 'das', 'daniel', 33, 4, 0, 0, 0, 0, 0, 0, 0, 0, 3, 3, 3, 3, 3, 3, 3, 1, 0, 2, 0, 0, 0, 1, 0.5, 1, 3, 3, 0, 0, 66, 6, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'gianniÂ£gianniÂ£gianniÂ£'),
-(102, '', '', '', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 3, 3, 3, 3, 3, 3, 1, 0, 2, 0, 0, 0, 1, 0.5, 1, 3, 3, 0, 0, 66, 6, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, '');
+(102, '', '', '', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 3, 3, 3, 3, 3, 3, 1, 0, 2, 0, 0, 0, 1, 0.5, 1, 3, 3, 0, 0, 66, 6, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, ''),
+(103, 'gabri', 'pestello', 'gabri', 30, 3, 0, 0, 0, 0, 0, 0, 0, 0, 3, 3, 3, 3, 3, 3, 3, 1, 0, 2, 0, 0, 0, 1, 0.5, 1, 3, 3, 0, 0, 66, 6, 1, 1, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 'danny.zanchi@gmail.com£daniel£');
 
 -- --------------------------------------------------------
 
@@ -803,7 +804,22 @@ CREATE TABLE IF NOT EXISTS `notifica` (
   `id_utente` int(10) unsigned DEFAULT NULL,
   PRIMARY KEY (`id_notifica`),
   KEY `ind1` (`id_utente`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=10 ;
+
+--
+-- Dump dei dati per la tabella `notifica`
+--
+
+INSERT INTO `notifica` (`id_notifica`, `tipo`, `testo`, `letta`, `id_mittente`, `id_utente`) VALUES
+(1, NULL, 'ciao prova di notifica', 1, 30, 33),
+(2, NULL, 'ciao prova rdi notifica', 1, 30, 33),
+(3, NULL, 'dsdasdasdasdas', 1, 30, 33),
+(4, NULL, 'dsadasdas', 1, 30, 33),
+(5, NULL, 'dsadasdfffffffffas', 1, 30, 33),
+(6, NULL, 'sssssss', 1, 30, 33),
+(7, NULL, 'sssssss', 1, 30, 33),
+(8, NULL, 'ciao prova', 1, 30, 33),
+(9, 'invito al campionato', 'Ciao! Sei stato invitato ad unirti al torneo gabri  dall amministratore della lega <br>gabri\n    Per unirti ai tuoi amici basta cliccare nel link sotto e seguire le indicazioni, in pochi minuti il gioco è fatto!<br>\n    Buon divertimento!<br>\n    <a href = "crea_campionato/iscrivi-squadra.php?id_camp=103&&var=0">Iscrivi la tua squadra al campionato</a>', 0, 30, 33);
 
 -- --------------------------------------------------------
 
@@ -837,7 +853,7 @@ INSERT INTO `squadra` (`id_squadra`, `nome`, `id_campionato`, `id_utente`, `id_s
 (58, 'pestello', 99, 30, NULL, 0, 1, NULL, '', NULL),
 (59, 'daniel Team', 99, 33, NULL, 0, 1, NULL, '', NULL),
 (60, 'gianni Team', NULL, 34, NULL, 0, 0, 'Scrivi la tua storia...', '../img/logo-squadra/es.png', NULL),
-(61, 'Prova', NULL, 30, NULL, 0, 0, NULL, '', NULL),
+(61, 'Prova', 103, 30, NULL, 0, 1, NULL, '', NULL),
 (68, 'la bambola', NULL, 30, 3, 0, 0, 'ssss', '../img/logo-squadra/fiorentina.jpg', NULL),
 (70, 'Fiorentina', NULL, 30, 1, 0, 0, '    Scrivi qualcosa sulla tua squadra...\r\n\r\n', '../img/logo-squadra/fiorentina.png', 'Artemio Franchi'),
 (71, 'squadra_test', 100, 33, NULL, 0, 1, NULL, '', NULL),
