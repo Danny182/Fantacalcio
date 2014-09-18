@@ -195,7 +195,7 @@ $(document).ready(function(){
 									$vet[valore]
 								</span>
 								<span class='aggiungi'>
-									<button type='submit' class='add' id='add-$i'>+</button>
+									<button type='submit' class='add' id='add-$i' >+</button>
 								</span></div>						
 							</li>";				
 					$i++;
@@ -210,7 +210,9 @@ $(document).ready(function(){
 
 </html>
 <script>
+
 $(document).ready(function(){
+
 	var options = {
 		valueNames: ['squadra', 'ruolo', 'nome', 'valore', 'team' ]
 	};

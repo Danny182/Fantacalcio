@@ -1,16 +1,16 @@
 $(document).ready(function(){
-            $("button[id^='add-'").click(function(){
-				// Animate one element to another – bare bones version:
+			
+			/*$('.add').click(function(){
 					var id = this.id;
 					console.log(id);
-				$("li[id='p-"+ id + "'").animate_from_to("#your-team");
+				$("li#p-"+ id + "").animate_from_to("#your-team"); //esegue l'animazione del trasferimento di lista
 
-            })
+            })*/
+
             
-            $("button[id^='add-'").click(function () {
+            $('.add').click(function () {
 				var id = this.id;
-				$("li[id='p-"+ id + "'").detach().appendTo('#your-team')
-				/*$("li#p-add-6.player").detach().appendTo('#your-team')
-				$("<div class='newbox'>I'm new box by appendTo</div>").appendTo("#your-team");*/
+				$("li#p-"+ id + "").detach().appendTo('#your-team'); //stacca l'elemento dalla lista e lo appende all'altra lista (your-team)
+				
 			})
  });
