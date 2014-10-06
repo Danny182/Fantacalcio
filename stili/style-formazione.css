@@ -1,0 +1,22 @@
+div#window.formazione{
+width:100%;
+}
+
+div#prova{
+width:830px;
+height:700px;
+position:absolute;
+left:30%;
+background-image: url('../img/campo5.png');
+border:none;
+}
+
+div#gioc{
+border:none;
+width:100px;
+height:20px;
+margin-top:50%;
+margin-left:45%;
+color:white;
+font-size:20px;
+}

@@ -109,10 +109,12 @@ $(document).ready(function(){
     
     //prendo alcuni dati dell'utente(in questo caso nome e cognome)
     $utente = get_userdates($id);
-    foreach($utente as $chiave => $valore){
-        $user .= ucfirst("$valore")." ";
-    }
-    //prendo la lista delle squadre collegate all'utente
+    foreach($utente as $value){
+        $nome = $value['nome'];
+        $cognome = $value['cognome'];
+        $user .= ucfirst("$nome")." ".ucfirst("$cognome");
+        
+    }    //prendo la lista delle squadre collegate all'utente
     
     
 ?>

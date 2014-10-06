@@ -1,6 +1,6 @@
 <?php
 
-    function get_userdates($id){
+    /*function get_userdates($id){
         $query = "SELECT utente.nome, utente.cognome FROM utente WHERE id_utente = '$id'";
         $ris = mysql_query($query);
         $vet = mysql_fetch_array($ris);
@@ -10,9 +10,9 @@
         $utente = array ('nome'=> "$nome", 'cognome' => "$cognome" );
         
         return $utente;
-    }
+    }*/
     
-    function get_leaguesdates($id_camp){
+          function get_leaguesdates($id_camp){
         
         $query = "SELECT campionato.nome FROM campionato WHERE id_campionato = '$id_camp'";
         $ris = mysql_query($query);
@@ -51,12 +51,14 @@
         //prendo l'id dell'admin
         $query = "SELECT id_utente FROM utente WHERE utente.user = '$admin'";
         $ris = mysql_query($query);
+        if(!$ris) return 0;
         $vet = mysql_fetch_array($ris);
         $id_admin = $vet['id_utente'];
         
         //prendo l'id del campionato corrente
         $query = "SELECT id_campionato FROM campionato WHERE campionato.nome = '$nome'";
         $ris = mysql_query($query);
+        if(!$ris) return 0;
         $vet = mysql_fetch_array($ris);
         $id_camp = $vet['id_campionato'];
         

@@ -414,7 +414,7 @@ width:65%;
 background-color:transparent;
 margin-top:1%;
 -moz-border-radius: 2px 2px 2px 2px;
-	-webkit-border-radius: 2px 2px 2px 2px;
+-webkit-border-radius: 2px 2px 2px 2px;
 }
 
 div#cont-dati.gest-regole{ /* pagina gest-regole */

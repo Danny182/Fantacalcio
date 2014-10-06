@@ -71,7 +71,7 @@
                 <meta http-equiv="Refresh" content="3; URL=home_area_admin.php?camp='.$nome_camp.'"></div></div>';
                 }
             else{
-                echo'<div id="cont-errore"><div id="errore">Richiesta Inviata Correttamente 
+                echo'<div id="cont-errore"><div id="errore"> Richiesta inviata correttamente
                 <meta http-equiv="Refresh" content="3; URL=home_area_admin.php?camp='.$nome_camp.'"></div></div>';
             }
             }

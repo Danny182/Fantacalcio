@@ -14,9 +14,12 @@ font-size:18px;
 border-right:none;
 border-left:none;
 border-top:none;
-
 color:rgba(1, 159, 199, 0.61);
 
+}
+
+div#divisore.infoteam{
+margin-top:-8%;
 }
 
 div#divisore.second{
@@ -43,6 +46,28 @@ div#divisore.third{
 	cursor: pointer;
 	border:none;
 	position:absolute;
+}
+
+.reg-squadra:hover{
+background-color:#D5D5D5;
+}
+
+.cont-mister{
+
+	text-align: left;
+	width: 45%;
+	height: auto;
+	font-size: 16px;
+	font-family:'WOL_Reg','Segoe UI',Tahoma,Helvetica,sans-serif;
+	margin-top:-4.5%;
+	margin-left:50%;
+	background-color: #E8E8E9;
+	color: #fff;
+	font-weight:600;
+	cursor: pointer;
+	border:none;
+	position:absolute;
+    padding:5px;
 }
 
 .reg-squadra:hover{
@@ -184,4 +209,59 @@ textarea{
 	color:rgba(1, 159, 199, 0.61);
 	
 }
+
+.back{
+position:relative;
+width:163px;
+height:30px;
+border:none;
+margin-top:1.5%;
+margin-left:16%;
+background-color:#34BFE2;
+-moz-border-radius: 2px 2px 2px 2px;
+-webkit-border-radius: 2px 2px 2px 2px;
+color:white;
+text-align:center;
+padding-top:6px;
+font-size:16px;
+
+}
+
+.back:hover{
+/*-webkit-box-shadow:0px 1px 1px rgba(255,255,255,0.8) inset, 1px 1px 5px rgba(0,0,0,0.4);
+moz-box-shadow:0px 1px 1px rgba(255,255,255,0.8) inset, 1px 1px 5px rgba(0,0,0,0.4);
+box-shadow:0px 1px 1px rgba(255,255,255,0.8) inset, 1px 1px 5px rgba(0,0,0,0.4);*/
+background-color:#68D0EB;
+cursor:pointer;
+}
+
+div#cont-errore{
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	border: 0px solid;
+	left: 0px;
+	top: 0px;
+	background-color:#1a1a1a;
+	font-family:'WOL_Reg','Segoe UI',Tahoma,Helvetica,sans-serif;
+		
+}
+
+div#errore{
+	height:120px;
+	width:450px;
+	top:20%;
+	border:none;
+	position:relative;
+	text-align:center;
+	background-color:#00CCFF;
+	color:#ffffff;
+	line-height:35px;
+	font-size:15px;
+	padding-top:15px;
+	margin: 0 auto;
+	-moz-border-radius: 2px 2px 2px 2px;
+	-webkit-border-radius: 2px 2px 2px 2px;	
+}
+
 

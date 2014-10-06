@@ -2,6 +2,7 @@
 	include("session.php");
 	include("connect_db.php");
     include("funzioni/notify_function.php");
+    include("funzioni/home_function.php");
    
     
 ?>
@@ -78,10 +79,12 @@ $id = $_SESSION['id_utente'];
     $num_notifiche = 0;
     //prendo alcuni dati dell'utente(in questo caso nome e cognome)
     $utente = get_userdates($id);
-    $user = array();
-    $user = " ";
-    foreach($utente as $chiave => $value ){
-        $user .= ucfirst("$value")." ";
+    
+    foreach($utente as $value){
+        $nome = $value['nome'];
+        $cognome = $value['cognome'];
+        $user .= ucfirst("$nome")." ".ucfirst("$cognome");
+        
     }
 ?>
 
@@ -201,7 +204,7 @@ $id = $_SESSION['id_utente'];
 <?php
     
     //prendo le notifiche dell'utente
-    $notifiche = get_notify($id);
+    $notifiche = get_notifyuser($id);
     if(count($notifiche) == 0){
         echo '<div id = "cont-notify" class = "no"> <br>Non ci sono notifiche </div>';
         }
@@ -210,10 +213,7 @@ $id = $_SESSION['id_utente'];
         foreach($notifiche as $value){
 			
             $id_notifica = $value['id_notifica'];
-            $vet_mittente = get_userdates($value['mitt']);
-            foreach($vet_mittente as $chiave => $valore){
-                @$mittente .= ucfirst("$valore")." ";
-            }
+            $mittente = ucfirst(get_user($value['mitt'])); //prendo l'user del mittente
             
             echo'<div id = "cont-notify" class = "record"><a href = "#" id = "'.$id_notifica.'" class = "link"><div id = "delete"></div></a> <i style="color:#018DB0;">Oggetto</i>: '.$value['tipo'].' &nbsp;&nbsp; <i style="color:#018DB0;">Mittente</i>: '.$mittente.'  <br><br> '.$value['testo'].' </div>';
             $mittente = "";

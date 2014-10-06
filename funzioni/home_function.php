@@ -29,13 +29,17 @@
 
     function get_userdates($id){
         
-        $query = "SELECT utente.nome, utente.cognome FROM utente WHERE utente.id_utente='$id'";
+        $query = "SELECT utente.nome, utente.cognome, utente.email, utente.citta, utente.data_nascita FROM utente WHERE utente.id_utente='$id'";
         $ris = mysql_query($query);
         $vet = mysql_fetch_array($ris);
        
         
-        $utente = array('nome' => $vet['nome'],
-                        'cognome' => $vet['cognome']
+        $utente[] = array(
+                        'nome' => $vet['nome'],
+                        'cognome' => $vet['cognome'],
+                        'citta' => $vet['citta'],
+                        'email' => $vet['email'],
+                        'data_nascita' => $vet['data_nascita']
                         );
         
         return $utente;
@@ -44,7 +48,7 @@
 
     function create_class($id_camp){
         
-        $query = "SELECT squadra.nome, punti FROM squadra WHERE squadra.id_campionato = '$id_camp'";
+        $query = "SELECT squadra.nome, punti, id_squadra FROM squadra WHERE squadra.id_campionato = '$id_camp'";
         $ris = mysql_query($query);
         
         $classifica = array();
@@ -52,7 +56,8 @@
             
             $classifica[] = array(
                         "nome" => $row['nome'],
-                        "punti" => $row['punti']
+                        "punti" => $row['punti'],
+                        "id" => $row['id_squadra']
                                   );
             
             

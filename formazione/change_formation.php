@@ -11,6 +11,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>home</title>
 <link rel="stylesheet" href="../stili/style-home.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../stili/style-formazione.css" type="text/css" media="screen" />
 <link rel="stylesheet" href="../stili/campo-calcio.css" type="text/css" media="screen" />
 <script src="../librerie/jquery-1.11.0.min.js"/></script>
 
@@ -36,10 +37,12 @@ $(document).ready(function(){
     
     //prendo alcuni dati dell'utente(in questo caso nome e cognome)
     $utente = get_userdates($id);
-    $user = array();
-    $user = " ";
-    foreach($utente as $chiave => $value ){
-        $user .= ucfirst("$value")." ";
+    
+    foreach($utente as $value){
+        $nome = $value['nome'];
+        $cognome = $value['cognome'];
+        $user .= ucfirst("$nome")." ".ucfirst("$cognome");
+        
     }
     
 ?>
@@ -87,7 +90,7 @@ $(document).ready(function(){
     </div>
 </div>
 
-<div id = "window">
+<div id = "window" class = "formazione">
 
     <div id="menu">
         <div class="menu-principale-container">
@@ -117,6 +120,13 @@ $(document).ready(function(){
             </ul>
         </div>
 </div><!-- menu -->
+
+    <div id = "prova">
+        <div id = "gioc">
+            Calvetti
+        </div>
+
+    </div> <!-- prova -->
 
 </div><!-- window -->
 

@@ -78,12 +78,13 @@ $(document).ready(function(){
     
    //prendo alcuni dati dell'utente(in questo caso nome e cognome)
     $utente = get_userdates($id);
-    $user = array();
-    $user = " ";
-    foreach($utente as $chiave => $value ){
-        $user .= ucfirst("$value")." ";
-    }
     
+    foreach($utente as $value){
+        $nome = $value['nome'];
+        $cognome = $value['cognome'];
+        $user .= ucfirst("$nome")." ".ucfirst("$cognome");
+        
+    }
 ?>
 <body class="home-page">
 <div id = "cont">
@@ -312,7 +313,7 @@ $(document).ready(function(){
                                     
                 $i = 1;
                 foreach($array_classifica as $value){
-                echo' <li class="classifica"> '.$i.'° <b style="color:0098BF;"><a class="no-color" href = "#">'.$value['nome'].'  </a></b>&nbsp<i style="color:black;"><b>'.$value['punti'].'</b> &nbspPt.</i></li></li>';
+                echo' <li class="classifica"> '.$i.'° <b style="color:0098BF;"><a class="no-color" href = "squadre/info_team.php?id='.$value['id'].'">'.$value['nome'].'  </a></b>&nbsp<i style="color:black;"><b>'.$value['punti'].'</b> &nbspPt.</i></li></li>';
                 $i++;
                 }
                 

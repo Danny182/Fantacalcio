@@ -1,0 +1,233 @@
+.back{
+position:relative;
+width:163px;
+height:30px;
+border:none;
+margin-top:1.5%;
+margin-left:16%;
+background-color:#34BFE2;
+-moz-border-radius: 2px 2px 2px 2px;
+-webkit-border-radius: 2px 2px 2px 2px;
+color:white;
+text-align:center;
+padding-top:6px;
+font-size:16px;
+
+}
+
+.back:hover{
+/*-webkit-box-shadow:0px 1px 1px rgba(255,255,255,0.8) inset, 1px 1px 5px rgba(0,0,0,0.4);
+moz-box-shadow:0px 1px 1px rgba(255,255,255,0.8) inset, 1px 1px 5px rgba(0,0,0,0.4);
+box-shadow:0px 1px 1px rgba(255,255,255,0.8) inset, 1px 1px 5px rgba(0,0,0,0.4);*/
+background-color:#68D0EB;
+cursor:pointer;
+}
+
+
+
+input.notify{
+
+position:relative;
+width:25%;
+height:25px;
+border:none;
+margin-top:-9%;
+margin-left:71%;
+background-color:#34BFE2;
+-moz-border-radius: 2px 2px 2px 2px;
+-webkit-border-radius: 2px 2px 2px 2px;
+color:white;
+text-align:center;
+padding:0px;
+font-size:14px;
+
+}
+
+input.notify:hover{
+background-color:#68D0EB;
+cursor:pointer;
+}
+
+
+div#divisore{
+
+height:4%;
+width:95%;
+border:1px solid;
+margin-top:-8%;
+margin-left:0%;
+border-color:white;
+padding-top:0px;
+padding-left:3px;
+font-size:18px;
+border-right:none;
+border-left:none;
+border-top:none;
+color:rgba(1, 159, 199, 0.61);
+
+}
+
+div#cont-info{
+margin-top:20px;
+background-color: #E8E8E9;
+border:1px solid;
+float:left;
+border-color:#CECED0;
+color:#000000;
+height: 12%;
+width: 30%;
+color:#000000;
+-moz-border-radius:2px 2px 2px 2px;
+-webkit-border-radius:2px 2px 2px 2px;
+border-radius:2px 2px 2px 2px;
+padding:5px;
+
+}
+
+div#cont-info.nomeecog{
+
+	margin-top:2%;
+    margin-left:0%;
+
+}
+
+div#cont-info.nascita{
+
+	margin-top:2%;
+    margin-left:2%;
+}
+
+div#cont-info.data{
+
+	margin-top:2%;
+    margin-left:2%;
+}
+
+div#cont-info.userN{
+
+	margin-top:2%;
+    margin-left:0%;
+
+}
+
+div#cont-info.email{
+
+	margin-top:2%;
+    margin-left:2%;
+
+}
+
+div#cont-info.camp{
+    
+
+	margin-top:2%;
+    margin-left:2%;
+    overflow:auto;
+
+}
+
+div#cont-info.team{
+
+	margin-top:2%;
+    margin-left:0%;
+    overflow:auto;
+
+}
+
+label{
+
+background-color:trasparent;
+width:100%; 
+font-size:15px;
+border:none;
+text-align:center;
+-moz-border-radius:5px 5px 5px 5px;
+-webkit-border-radius:5px 5px 5px 5px;
+border-radius:5px 5px 5px 5px;
+margin-top:0px;
+margin-left:17%;
+color:#9A9A9A;
+}
+
+.nascita{
+margin-left:20%;
+}
+
+.data{
+margin-left:23%;
+}
+
+.userN{
+margin-left:30%;
+}
+
+.email{
+margin-left:38%;
+}
+
+.camp{
+margin-left:32%;
+}
+
+.team{
+margin-left:34%;
+}
+
+
+
+input.nomeecog{
+background:white;
+border: 1px solid #CCC;
+clear: both;
+height: 20px;
+width:90%;
+font-size: 14px;
+text-align:center;
+color:rgba(1, 159, 199, 0.61);
+margin-top:5%;
+margin-left:5%;
+background-color: #E8E8E9;
+}
+
+input.nomeecog.email{
+font-size:11px;
+width:100%;
+margin-left:0;
+
+}
+
+
+ul.userChamp{
+margin-top:5px;
+margin-left:-20%;
+color:rgba(1, 159, 199, 0.61);
+}
+
+li.userChamp{
+list-style:none;
+}
+
+a.no-color{
+color:rgba(1, 159, 199, 0.61);
+
+}
+
+textarea.notify{
+
+height: 14%;
+width: 32%;
+margin-left:2%;
+margin-top:2%;
+border:1px solid;
+border-color:#CECED0;
+padding:5px;
+
+}
+
+
+
+
+
+
+
+

@@ -2,13 +2,17 @@
     include("../session.php");
     include("../connect_db.php");
     include("../funzioni/function_user.php");
+    include("../funzioni/home_function.php");
     $n_part =$_COOKIE['crea_camp']['n_part'];    
     $id = $_SESSION['id_utente'];
     //prendo alcuni dati dell'utente(in questo caso nome e cognome)
     $utente = get_userdates($id);
     
-    foreach($utente as $chiave => $valore){
-        $user .= ucfirst("$valore")." ";
+    foreach($utente as $value){
+        $nome = $value['nome'];
+        $cognome = $value['cognome'];
+        $user .= ucfirst("$nome")." ".ucfirst("$cognome");
+        
     }
     $nome_admin = $user;
     $nome_camp = get_leaguesdates($id_camp);

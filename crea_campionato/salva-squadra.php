@@ -11,11 +11,12 @@
     
     //prendo alcuni dati dell'utente(in questo caso nome e cognome)
     $utente = get_userdates($id);
-    foreach($utente as $chiave => $valore){
-        @$user .= ucfirst("$valore")." ";
+    foreach($utente as $value){
+        $nome = $value['nome'];
+        $cognome = $value['cognome'];
+        $user .= ucfirst("$nome")." ".ucfirst("$cognome");
         
     }
-    
 
 ?>
 

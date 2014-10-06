@@ -25,6 +25,7 @@
 	
 	//prendo l'id del mittente
 	$id_mittente = $_SESSION['id_utente'];
+    if(!is_numeric($dest)){
 	//prendo l'id del destinatario
 	$query = "SELECT utente.id_utente FROM utente WHERE utente.user = '$dest'";
 	$ris = mysql_query($query);
@@ -35,17 +36,18 @@
         <meta http-equiv="Refresh" content="3; URL=../notifiche.php"> </div></div>' ;
 		die;
 	}
-	
+	}
+    else $id_dest = $dest;
 	//creo la notifica
 	$query = "INSERT INTO notifica VALUES(NULL, 'Messaggio', '".addslashes($messaggio)."', '0', '$id_mittente', '$id_dest')";
 	$ris = mysql_query($query);
 	if($ris){
-		echo ' <div id = "cont-errore"><div id = "errore"> Messaggio Inviato
-        <meta http-equiv="Refresh" content="3; URL=../notifiche.php"> </div></div>' ;
+		echo ' <div id = "cont-errore"><div id = "errore"> Messaggio Inviato mex = '.$messaggio.'
+        <meta http-equiv="Refresh" content="3; URL=../home.php"> </div></div>' ;
 	} 
 	else{
 		echo ' <div id = "cont-errore"><div id = "errore"> Si è verificato un problema
-        <meta http-equiv="Refresh" content="3; URL=../notifiche.php"> </div></div>' ;
+        <meta http-equiv="Refresh" content="3; URL=../home.php"> </div></div>' ;
 	}
 
 

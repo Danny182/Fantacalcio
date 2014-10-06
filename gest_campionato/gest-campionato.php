@@ -43,9 +43,12 @@ $id = $_SESSION['id_utente'];
 $utente = get_userdates($id);
 $user = array();
 $user = " ";
-foreach($utente as $chiave => $value ){
-	$user .= ucfirst("$value")." ";
-}
+    foreach($utente as $value){
+        $nome = $value['nome'];
+        $cognome = $value['cognome'];
+        $user .= ucfirst("$nome")." ".ucfirst("$cognome");
+        
+    }
 //prendo le notifiche dell'utente
 $num_notifiche = get_notify($id);
 

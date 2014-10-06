@@ -1,5 +1,5 @@
 <?php
-function get_userdates($id){
+function get_datesuser($id){
     
     $query = "SELECT utente.nome, utente.cognome FROM utente WHERE utente.id_utente='$id'";
     $ris = mysql_query($query);
@@ -13,7 +13,7 @@ function get_userdates($id){
     
 }
 
-    function get_notify($id){
+    function get_notifyuser($id){
         
         $query = "SELECT notifica.testo, notifica.tipo, notifica.id_mittente, notifica.id_notifica FROM notifica, utente WHERE notifica.id_utente = utente.id_utente and notifica.id_utente = '$id' ORDER BY notifica.id_notifica DESC";
         $ris = mysql_query($query);

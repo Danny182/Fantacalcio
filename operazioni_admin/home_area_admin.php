@@ -75,16 +75,20 @@ $num_notifiche = $_SESSION['notifiche'];
 
 //prendo alcuni dati dell'utente(in questo caso nome e cognome)
 $utente = get_userdates($id);
-$user = array();
 
-$user = " ";
+
+
     foreach($utente as $chiave => $value){
         $name_user .= ucfirst("$value"); //metodo brutale per prendere solo il nome dell'utente
         break;
     }
-    foreach($utente as $chiave => $value ){
-    $user .= ucfirst("$value")." ";
-}
+    foreach($utente as $value){
+        $nome = $value['nome'];
+        $cognome = $value['cognome'];
+        $user .= ucfirst("$nome")." ".ucfirst("$cognome");
+        
+    }
+
 
 ?>
 
@@ -237,7 +241,14 @@ $user = " ";
     $array = get_user_champion($id_camp);
     foreach($array as $value){
         $team = $value['squadra'];
-        echo '<div class = "link"><a href="#" class="no-color">'.ucfirst($value['nome']).' '.ucfirst($value['cognome']).'</a>    -     <a href="delete_team.php?nomecamp='.$nome_camp.'&team='.$team.'"" class="squadra">'.$value['squadra'].'</a> <br></div>';
+        //prendo l'user name da inviare alla pagine info_user
+        $nome = $value['nome'];
+        $cognome = $value['cognome'];
+        $query = "SELECT utente.user FROM utente,squadra WHERE squadra.id_utente = utente.id_utente AND utente.nome = '$nome' AND utente.cognome = '$cognome' AND squadra.nome = '$team' ";
+        @$ris = mysql_query($query);
+        @$row = mysql_fetch_array($ris);
+        @$userN = $row['user'];
+        echo '<div class = "link"><a href="../user/info_user.php?user='.$userN.'" class="no-color">'.ucfirst($value['nome']).' '.ucfirst($value['cognome']).'</a>    -     <a href="delete_team.php?nomecamp='.$nome_camp.'&team='.$team.'"" class="squadra">'.$value['squadra'].'</a> <br></div>';
     }
     //delete_team.php?team='.$team.'&&camp='.$nome_camp.'
     
@@ -254,7 +265,7 @@ $user = " ";
 <div class = "iscritti invita-utente">
 
 <div class = "title-iscritti">
-Invita Utenti alla Lega
+Invita utenti alla Lega
 </div>
 
 <br>
@@ -280,6 +291,11 @@ Invita Utenti alla Lega
 
 
 <div class = "iscritti invia-notifica">
+
+<div class = "title-iscritti">
+    Invia una Notifica agli Iscritti
+</div>
+
 <form action = "invia_notify_all.php" method = "POST">
 
 

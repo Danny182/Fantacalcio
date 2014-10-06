@@ -2,6 +2,7 @@
 	include("../session.php");
 	include("../connect_db.php");
     include("../funzioni/notify_function.php");
+    include("../funzioni/home_function.php");
     
 ?>
 
@@ -29,27 +30,29 @@
     
 $id = $_SESSION['id_utente'];
     
-//essendo entrati nella pagine delle notifiche azzero le notifiche non lette, impostando tutti i valori a true
+/*//essendo entrati nella pagine delle notifiche azzero le notifiche non lette, impostando tutti i valori a true
     $query = "UPDATE notifica SET letta = true WHERE id_utente = '$id'";
     @$ris = mysql_query($query);
     $_SESSION['notifiche'] = 0;
-    $num_notifiche = 0;
+   */
     //prendo alcuni dati dell'utente(in questo caso nome e cognome)
+    $num_notifiche = $_SESSION['notifiche'];
     $utente = get_userdates($id);
-    $user = array();
-    $user = " ";
-    foreach($utente as $chiave => $value ){
-        $user .= ucfirst("$value")." ";
-    }
-?>
+    
+    foreach($utente as $value){
+        $nome = $value['nome'];
+        $cognome = $value['cognome'];
+        $user .= ucfirst("$nome")." ".ucfirst("$cognome");
+        
+    }?>
 
 <body>
 <div id = "cont">
-<div id="top">
-<div id="top-insize">
-<div id="top-logo">
-<a href="index.php"><img src="../img/4.png" width="100px" height="75px" /></a>
-</div>
+    <div id="top">
+        <div id="top-insize">
+            <div id="top-logo">
+                <a href="index.php"><img src="../img/4.png" width="100px" height="75px" /></a>
+    </div>
 <?php
     echo'<div id = "nome">'.$user.'</div>';
     //num notifiche nella variabile $num_notifiche
