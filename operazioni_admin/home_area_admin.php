@@ -157,7 +157,7 @@ $utente = get_userdates($id);
             </li>
 
             <li id'"item-1" class="style-item-7">
-                <a href="../home.php?var=0">Cambia Admin</a>
+                <a href="change_admin.php">Cambia Admin</a>
             </li>
 
             <li id'"item-1" class="style-item-8">
