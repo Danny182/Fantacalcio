@@ -174,33 +174,34 @@ $(document).ready(function(){
 				</button>
 			</div>
 			<ul class="list">
-			<?php
-			$i = 0;
-				$query="SELECT ruolo, cognome, valore, squadra FROM giocatore ORDER BY squadra";
-				$ris = mysql_query($query);
-				
-				while ($vet = mysql_fetch_array($ris)) {					
-					echo "<li id='p-add-$i' class='player'>
-								<div id='a'><span class='team' style='display:none;'>$vet[squadra]</span>
-								<span class='ruolo'>
-									$vet[ruolo]
-								</span>
-								<span class='squadra'>
-									<img width='18px' height='18px' src='../img/logo-squadra/$vet[squadra].png'>
-								</span>
-								<span class='nome'>
-									$vet[cognome]
-								</span>
-								<span class='valore'>
-									$vet[valore]
-								</span>
-								<span class='aggiungi'>
-									<button type='submit' class='add' id='add-$i' >+</button>
-								</span></div>						
-							</li>";				
-					$i++;
-				}			
-			?>      
+
+				<?php
+				$i = 0;
+					$query="SELECT ruolo, cognome, valore, squadra FROM giocatore ORDER BY squadra";
+					$ris = mysql_query($query);
+					
+					while ($vet = mysql_fetch_array($ris)) {					
+						echo "<li id='p-add-$i' class='player'>
+									<div id='a'><span class='team' style='display:none;'>$vet[squadra]</span>
+									<span class='ruolo'>
+										$vet[ruolo]
+									</span>
+									<span class='squadra'>
+										<img width='18px' height='18px' src='../img/logo-squadra/$vet[squadra].png'>
+									</span>
+									<span class='nome'>
+										$vet[cognome]
+									</span>
+									<span class='valore'>
+										$vet[valore]
+									</span>
+									<span class='aggiungi'>
+										<button type='submit' class='add' id='add-$i' >+</button>
+									</span></div>						
+								</li>";				
+						$i++;
+					}			
+				?>     
 			</ul>
 		</div>
 	</div>
