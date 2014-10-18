@@ -1,6 +1,7 @@
 //THIS FUNCTION DETACHES THE ELEMENTS FROM LIST A AND IT APPENDS IT TO THE LIST B
 $(document).ready(function(){
 
+
 	$(".player").addClass('ListA');
 
 	$('.add').click(function () {
@@ -9,13 +10,13 @@ $(document).ready(function(){
 		if($("li#p-"+ id + "").hasClass('ListA'))
 		{
 			$("li#p-"+ id + "").removeClass('ListA').addClass('ListB').find('button').html('').html('-');
-			$("li#p-"+ id + "").detach().appendTo('#your-team').animate('slow');
+			$("li#p-"+ id + "").detach().appendTo('#your-team');
 		}
 		else
 		{
 			console.log("else");
 			$("li#p-"+ id + "").removeClass('ListB').addClass('ListA').find('button').html('').html('+');
-			$("li#p-"+ id + "").detach().appendTo('ul.list').animate(slow);
+			$("li#p-"+ id + "").detach().appendTo('ul.list');
 		}
 			
 		$('#teams').change();
