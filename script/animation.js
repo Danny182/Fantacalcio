@@ -1,16 +1,25 @@
+//THIS FUNCTION DETACHES THE ELEMENTS FROM LIST A AND IT APPENDS IT TO THE LIST B
 $(document).ready(function(){
+
+	$(".player").addClass('ListA');
+
+	$('.add').click(function () {
+		var id = this.id;
+		console.log("entrato");
+		if($("li#p-"+ id + "").hasClass('ListA'))
+		{
+			$("li#p-"+ id + "").removeClass('ListA').addClass('ListB').find('button').html('').html('-');
+			$("li#p-"+ id + "").detach().appendTo('#your-team').animate('slow');
+		}
+		else
+		{
+			console.log("else");
+			$("li#p-"+ id + "").removeClass('ListB').addClass('ListA').find('button').html('').html('+');
+			$("li#p-"+ id + "").detach().appendTo('ul.list').animate(slow);
+		}
 			
-			/*$('.add').click(function(){
-					var id = this.id;
-					console.log(id);
-				$("li#p-"+ id + "").animate_from_to("#your-team"); //esegue l'animazione del trasferimento di lista
-
-            })*/
-
-            
-            $('.add').click(function () {
-				var id = this.id;
-				$("li#p-"+ id + "").detach().appendTo('#your-team'); //stacca l'elemento dalla lista e lo appende all'altra lista (your-team)
-				
-			})
- });
+		$('#teams').change();
+		
+			
+	});
+});

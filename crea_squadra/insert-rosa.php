@@ -210,33 +210,4 @@ $(document).ready(function(){
 </body>
 
 </html>
-<script>
 
-$(document).ready(function(){
-
-	var options = {
-		valueNames: ['squadra', 'ruolo', 'nome', 'valore', 'team' ]
-	};
-
-	var userList = new List('players', options);
-
-	
-	$('#teams').change(function () {
-		var selection = this.value; 
-		console.log (selection);
-		if (selection == "tutte") {
-			userList.filter();
-			return false;
-		}
-		userList.filter(function(item) {
-		
-		if (item.values().team == selection) {
-		  return true;
-		} else {
-		  return false;
-		}
-	  });
-	  return false;
-	});
-});
-</script>
