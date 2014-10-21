@@ -254,7 +254,7 @@ div#options {
 	height:auto;
 	padding:10px;
 	}
-div#list {
+div#lista {
 	position:relative;
 	height:91.5%;
 	width:100%;
@@ -272,7 +272,6 @@ input.search {
 	padding-left:25px;
 	position:relative;
 	float:left;
-	background-color:;
 	background:white url(../img/search.png) 5px no-repeat;
 	background-size: 20px 20px;
 	}
@@ -289,11 +288,14 @@ select#teams {
 	background-color:white;
 	}
 	
-ul.list {
+ul.lista {
 	list-style: none;
 	padding:0px;
 	margin:0px;
 	}
+.list-item {
+	list-style: none;
+}
 li.player {
 	border-bottom:1px solid #E3F8FB;	
 	padding-bottom:3px;
@@ -383,3 +385,8 @@ margin:0px;
 		width:200px;
 		height:50px;
 	}
+	
+.jplist-hidden {
+	            display: none
+	        }
+

@@ -35,11 +35,13 @@
 <link rel="stylesheet" href="../stili/form.css" type="text/css" media="screen" />
 
 
+
 <script src="../librerie/jquery-1.11.0.min.js"></script>
 <script src="../librerie/list.js"></script>
 
 <script src="../librerie/jquery.animate_from_to-1.0.min.js"></script>
 <script src="../script/animation.js"></script>
+<script src="../librerie/jplist.min.js"></script>
 <script>
 $(document).ready(function(){
 	$("#button").click(function(event) {
@@ -52,6 +54,25 @@ $(document).ready(function(){
 		});
 
 	});
+</script>
+<script>
+	$('document').ready(function () {
+		console.log('entrato jplist');
+	    $('#players').jplist({
+	    	itemsBox: '.list'
+		    , itemPath: '.list-item'
+		    , panelPath: '.jplist-panel'
+ 
+			//panel controls
+			/*,controlTypes: {
+            
+	            'select':{
+	               className: 'Select'
+	               ,options: {}
+            }
+         }*/
+      });
+   });
 </script>
 </head>
 
@@ -128,61 +149,87 @@ $(document).ready(function(){
 	<div id="your-team">
 		your team
 	</div>
-	<div id="players">
-		<div id="options">
-			<input class="search" placeholder="Cerca"/>
-			<div class="filter">
-					<select id="teams">
-						<option value="tutte" selected>Squadre</option>
-						<option value="atalanta">Atalanta</option>
-						<option value="bologna">Bologna</option>
-						<option value="cagliari">Cagliari</option>
-						<option value="catania">Catania</option>
-						<option value="chievo">Chievo</option>
-						<option value="fiorentina">Fiorentina</option>
-						<option value="genoa">Genoa</option>
-						<option value="verona">Hella Verona</option>
-						<option value="inter">Inter</option>
-						<option value="juventus">Juventus</option>
-						<option value="lazio">Lazio</option>
-						<option value="livorno">Livorno</option>
-						<option value="milan">Milan</option>
-						<option value="napoli">Napoli</option>
-						<option value="parma">Parma</option>
-						<option value="roma">Roma</option>				
-						<option value="sampdoria">Sampdoria</option>
-						<option value="sassuolo">Sassuolo</option>
-						<option value="torino">Torino</option>				
-						<option value="udinese">Udinese</option>
-					</select>
-			</div>
-		</div>
-		<div id="list">
-			<div id="button-cont">
-				<button id="ruolo" class="sort" data-sort="ruolo">
-						Ruolo
-				</button>
-				<button id="squadra" class="sort" data-sort="squadra">
-						Squadra
-				</button>
-				
-				<button id="nome" class="sort" data-sort="nome">
-						Nome
-				</button>
-				<button id="valore" class="sort" data-sort="valore">
-						Valore
-				</button>
-			</div>
-			<ul class="list">
 
-				<?php
-				$i = 0;
-					$query="SELECT ruolo, cognome, valore, squadra FROM giocatore ORDER BY squadra";
-					$ris = mysql_query($query);
+	<div id="players" class="box jplist">
+		<div class="jplist-panel box panel-top">
+			<div id="options">
+
+				<div class="text-filter-box">
+
+					<i class="search  jplist-icon"></i>
+
+					<!--[if lt IE 10]>
+					<div class="jplist-label">Cerca:</div>
+					<![endif]-->
+
+					<input 
+					class="search"
+					data-path=".nome" 
+					type="text" 
+					value="" 
+					placeholder="Cerca" 
+					data-control-type="textbox" 
+					data-control-name="title-filter" 
+					data-control-action="filter"
+					/>
+				</div>
+
+
+				<div class="filter">
+					<select id="teams" class="jplist-select" data-control-type="select" data-control-name="team-filter" data-control-action="filter">
+						<option data-path="default" value="tutte" selected>Squadre</option>
+						<option data-path=".atalanta" value="atalanta">Atalanta</option>
+						<option data-path=".bologna" value="bologna">Bologna</option>
+						<option data-path=".cagliari" value="cagliari">Cagliari</option>
+						<option data-path=".catania" value="catania">Catania</option>
+						<option data-path=".chievo" value="chievo">Chievo</option>
+						<option data-path=".fiorentina" value="fiorentina">Fiorentina</option>
+						<option data-path=".genoa" value="genoa">Genoa</option>
+						<option data-path=".verona" value="verona">Hella Verona</option>
+						<option data-path=".inter" value="inter">Inter</option>
+						<option data-path=".juventus" value="juventus">Juventus</option>
+						<option data-path=".lazio" value="lazio">Lazio</option>
+						<option data-path=".livorno" value="livorno">Livorno</option>
+						<option data-path=".milan" value="milan">Milan</option>
+						<option data-path=".napoli" value="napoli">Napoli</option>
+						<option data-path=".parma" value="parma">Parma</option>
+						<option data-path=".roma" value="roma">Roma</option>				
+						<option data-path=".sampdoria" value="sampdoria">Sampdoria</option>
+						<option data-path=".sassuolo" value="sassuolo">Sassuolo</option>
+						<option data-path=".torino" value="torino">Torino</option>				
+						<option data-path=".udinese" value="udinese">Udinese</option>
+					</select>
+				</div>
+			</div>
+			<div id="lista">
+				<div id="button-cont">
+					<button id="ruolo" class="sort" data-sort="ruolo">
+						Ruolo
+					</button>
+					<button id="squadra" class="sort" data-sort="squadra">
+						Squadra
+					</button>
 					
-					while ($vet = mysql_fetch_array($ris)) {					
-						echo "<li id='p-add-$i' class='player'>
-									<div id='a'><span class='team' style='display:none;'>$vet[squadra]</span>
+					<button id="nome" class="sort" data-sort="nome">
+						Nome
+					</button>
+					<button id="valore" class="sort" data-sort="valore">
+						Valore
+					</button>
+				</div>
+				<div class="list box text-shadow">
+				
+					<ul class="lista">
+
+						<?php
+						$i = 0;
+						$query="SELECT ruolo, cognome, valore, squadra FROM giocatore ORDER BY squadra";
+						$ris = mysql_query($query);
+
+						while ($vet = mysql_fetch_array($ris)) {					
+							echo "<div class='list-item box'>
+							<li id='p-add-$i' class='player'>
+								<div id='a'><span class='$vet[squadra]' style='display:none;'>$vet[squadra]</span>
 									<span class='ruolo'>
 										$vet[ruolo]
 									</span>
@@ -198,13 +245,21 @@ $(document).ready(function(){
 									<span class='aggiungi'>
 										<button type='submit' class='add' id='add-$i' >+</button>
 									</span></div>						
-								</li>";				
-						$i++;
-					}			
-				?>     
-			</ul>
+								</li>
+							</div>
+							";				
+							$i++;
+						}			
+						?>     
+					</ul>
+				</div>
+				<div class="box jplist-no-results text-shadow align-center">
+					<p>Nessun risultato</p>
 		</div>
-	</div>
+			</div>
+
+		</div>
+		
 </div>
 		
 </body>
