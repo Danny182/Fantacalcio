@@ -10,7 +10,7 @@
     foreach($utente as $value){
         $nome = $value['nome'];
         $cognome = $value['cognome'];
-        $user .= ucfirst("$nome")." ".ucfirst("$cognome");
+        @$user .= ucfirst("$nome")." ".ucfirst("$cognome");
         
     }
 	
@@ -40,11 +40,10 @@
 
 
 <script src="../librerie/jquery-1.11.0.min.js"></script>
-<script src="../librerie/list.js"></script>
-
-<script src="../librerie/jquery.animate_from_to-1.0.min.js"></script>
 <script src="../script/animation.js"></script>
 <script src="../librerie/jplist.min.js"></script>
+<script src="../librerie/jquery.tinysort.min.js"></script>
+
 <script>
 $(document).ready(function(){
 	$("#button").click(function(event) {
@@ -60,11 +59,12 @@ $(document).ready(function(){
 </script>
 <script>
 	$('document').ready(function () {
-		console.log('entrato jplist');
+		
 	    $('#players').jplist({
 	    	itemsBox: '.list'
 		    , itemPath: '.list-item'
 		    , panelPath: '.jplist-panel'
+
  
 			//panel controls
 			/*,controlTypes: {
@@ -75,6 +75,8 @@ $(document).ready(function(){
             }
          }*/
       });
+	    
+
    });
 </script>
 </head>
@@ -220,9 +222,19 @@ $(document).ready(function(){
 						Valore
 					</button>
 				</div>
+				<div 
+				   class="hidden" 
+				   data-control-type="default-sort" 
+				   data-control-name="sort" 
+				   data-control-action="sort"
+				   
+				   data-path=".nome" 
+				   data-order="asc" 
+				   data-type="text">
+				</div>	
 				<div class="list box text-shadow">
 				
-					<ul class="lista">
+					<ul id="lista" class="lista">
 
 						<?php
 						$i = 0;
@@ -258,7 +270,8 @@ $(document).ready(function(){
 				</div>
 				<div class="box jplist-no-results text-shadow align-center">
 					<p>Nessun risultato</p>
-		</div>
+				</div>
+				
 			</div>
 
 		</div>
