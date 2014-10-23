@@ -304,7 +304,7 @@ li.player {
 	}
 
 	
-button.sort {
+button#sort {
 margin:0;
 float: left;
 background:#7BE1EA;
@@ -320,19 +320,19 @@ font-size:11px;
 
 }
 
-button#valore.sort {
+button#sort.sortValue {
 border-right:1px solid white;
 float:none;
 }
 
-button#ruolo.sort {
+button#sort.sortRuolo {
 	width:8%;
 	border-left:none;
 	}
-button#squadra.sort {
+button#sort.sortTeam {
 	width:11%;
 	}
-button#nome.sort {
+button#sort.sortName {
 	width:25%;
 	}
 

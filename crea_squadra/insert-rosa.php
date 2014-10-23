@@ -59,22 +59,88 @@ $(document).ready(function(){
 </script>
 <script>
 	$('document').ready(function () {
-		
-	    $('#players').jplist({
-	    	itemsBox: '.list'
-		    , itemPath: '.list-item'
-		    , panelPath: '.jplist-panel'
+		var nameStatus=0;
+		var ruoloStatus=0;
+		var teamStatus=0;
+		var valueStatus=0;
+		$('#players').jplist({
+		    	
 
- 
-			//panel controls
-			/*,controlTypes: {
-            
-	            'select':{
-	               className: 'Select'
-	               ,options: {}
-            }
-         }*/
-      });
+		    	itemsBox: '.list'
+			    , itemPath: '.list-item'
+			    , panelPath: '.jplist-panel'
+
+      		});
+
+		$('.sortName').click(function () {
+	    	if (nameStatus==0) {
+      			$('#sortingOptions').html('<div class="hidden" data-control-type="default-sort" data-control-name="sort" data-control-action="sort" data-path=".nome" data-order="desc" data-type="text"></div>');
+		    	nameStatus=1;
+      		}
+	    		
+		    else {
+		    	$('#sortingOptions').html('<div class="hidden" data-control-type="default-sort" data-control-name="sort" data-control-action="sort" data-path=".nome" data-order="asc" data-type="text"></div>');
+				nameStatus=0;
+		    }
+		    $('#players').jplist({
+		    	itemsBox: '.list'
+			    , itemPath: '.list-item'
+			    , panelPath: '.jplist-panel'
+
+      		});
+      	});
+      	$('.sortTeam').click(function () {
+	    	if (teamStatus==0) {
+      			$('#sortingOptions').html('<div class="hidden" data-control-type="default-sort" data-control-name="sort" data-control-action="sort" data-path="#team" data-order="desc" data-type="text"></div>');
+		    	teamStatus=1;
+      		}
+	    		
+		    else {
+		    	$('#sortingOptions').html('<div class="hidden" data-control-type="default-sort" data-control-name="sort" data-control-action="sort" data-path="#team" data-order="asc" data-type="text"></div>');
+				teamStatus=0;
+		    }
+		    $('#players').jplist({
+		    	itemsBox: '.list'
+			    , itemPath: '.list-item'
+			    , panelPath: '.jplist-panel'
+
+      		});
+      	});
+      	$('.sortRuolo').click(function () {
+	    	if (ruoloStatus==0) {
+      			$('#sortingOptions').html('<div class="hidden" data-control-type="default-sort" data-control-name="sort" data-control-action="sort" data-path=".ruolo" data-order="desc" data-type="text"></div>');
+		    	ruoloStatus=1;
+      		}
+	    		
+		    else {
+		    	$('#sortingOptions').html('<div class="hidden" data-control-type="default-sort" data-control-name="sort" data-control-action="sort" data-path=".ruolo" data-order="asc" data-type="text"></div>');
+				ruoloStatus=0;
+		    }
+		    $('#players').jplist({
+		    	itemsBox: '.list'
+			    , itemPath: '.list-item'
+			    , panelPath: '.jplist-panel'
+
+      		});
+      	});
+      	$('.sortValue').click(function () {
+      		if (valueStatus==0) {
+      			$('#sortingOptions').html('<div class="hidden" data-control-type="default-sort" data-control-name="sort" data-control-action="sort" data-path=".valore" data-order="desc" data-type="text"></div>');
+		    	valueStatus=1;
+      		}
+	    		
+		    else {
+		    	$('#sortingOptions').html('<div class="hidden" data-control-type="default-sort" data-control-name="sort" data-control-action="sort" data-path=".valore" data-order="asc" data-type="text"></div>');
+				valueStatus=0;
+		    }
+		    	
+		    $('#players').jplist({
+		    	itemsBox: '.list'
+			    , itemPath: '.list-item'
+			    , panelPath: '.jplist-panel'
+
+      		});
+      	});
 	    
 
    });
@@ -208,30 +274,26 @@ $(document).ready(function(){
 			</div>
 			<div id="lista">
 				<div id="button-cont">
-					<button id="ruolo" class="sort" data-sort="ruolo">
+					<button id="sort" class="sortRuolo">
 						Ruolo
 					</button>
-					<button id="squadra" class="sort" data-sort="squadra">
+					<button id="sort" class="sortTeam">
 						Squadra
 					</button>
 					
-					<button id="nome" class="sort" data-sort="nome">
+					<button id="sort" class="sortName" >
 						Nome
 					</button>
-					<button id="valore" class="sort" data-sort="valore">
+					<button id="sort" class="sortValue">
 						Valore
 					</button>
 				</div>
-				<div 
-				   class="hidden" 
-				   data-control-type="default-sort" 
-				   data-control-name="sort" 
-				   data-control-action="sort"
-				   
-				   data-path=".nome" 
-				   data-order="asc" 
-				   data-type="text">
+
+				<div id="sortingOptions">
+					
+
 				</div>	
+
 				<div class="list box text-shadow">
 				
 					<ul id="lista" class="lista">
@@ -244,7 +306,7 @@ $(document).ready(function(){
 						while ($vet = mysql_fetch_array($ris)) {					
 							echo "<div class='list-item box'>
 							<li id='p-add-$i' class='player'>
-								<div id='a'><span class='$vet[squadra]' style='display:none;'>$vet[squadra]</span>
+								<div id='a'><span class='$vet[squadra]' id='team' style='display:none;'>$vet[squadra]</span>
 									<span class='ruolo'>
 										$vet[ruolo]
 									</span>
