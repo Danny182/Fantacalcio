@@ -40,9 +40,8 @@
 
 
 <script src="../librerie/jquery-1.11.0.min.js"></script>
-<script src="../script/animation.js"></script>
+<script src="../script/listOptions.js"></script>
 <script src="../librerie/jplist.min.js"></script>
-<script src="../librerie/jquery.tinysort.min.js"></script>
 
 <script>
 $(document).ready(function(){
@@ -56,94 +55,6 @@ $(document).ready(function(){
 		});
 
 	});
-</script>
-<script>
-	$('document').ready(function () {
-		var nameStatus=0;
-		var ruoloStatus=0;
-		var teamStatus=0;
-		var valueStatus=0;
-		$('#players').jplist({
-		    	
-
-		    	itemsBox: '.list'
-			    , itemPath: '.list-item'
-			    , panelPath: '.jplist-panel'
-
-      		});
-
-		$('.sortName').click(function () {
-	    	if (nameStatus==0) {
-      			$('#sortingOptions').html('<div class="hidden" data-control-type="default-sort" data-control-name="sort" data-control-action="sort" data-path=".nome" data-order="desc" data-type="text"></div>');
-		    	nameStatus=1;
-      		}
-	    		
-		    else {
-		    	$('#sortingOptions').html('<div class="hidden" data-control-type="default-sort" data-control-name="sort" data-control-action="sort" data-path=".nome" data-order="asc" data-type="text"></div>');
-				nameStatus=0;
-		    }
-		    $('#players').jplist({
-		    	itemsBox: '.list'
-			    , itemPath: '.list-item'
-			    , panelPath: '.jplist-panel'
-
-      		});
-      	});
-      	$('.sortTeam').click(function () {
-	    	if (teamStatus==0) {
-      			$('#sortingOptions').html('<div class="hidden" data-control-type="default-sort" data-control-name="sort" data-control-action="sort" data-path="#team" data-order="desc" data-type="text"></div>');
-		    	teamStatus=1;
-      		}
-	    		
-		    else {
-		    	$('#sortingOptions').html('<div class="hidden" data-control-type="default-sort" data-control-name="sort" data-control-action="sort" data-path="#team" data-order="asc" data-type="text"></div>');
-				teamStatus=0;
-		    }
-		    $('#players').jplist({
-		    	itemsBox: '.list'
-			    , itemPath: '.list-item'
-			    , panelPath: '.jplist-panel'
-
-      		});
-      	});
-      	$('.sortRuolo').click(function () {
-	    	if (ruoloStatus==0) {
-      			$('#sortingOptions').html('<div class="hidden" data-control-type="default-sort" data-control-name="sort" data-control-action="sort" data-path=".ruolo" data-order="desc" data-type="text"></div>');
-		    	ruoloStatus=1;
-      		}
-	    		
-		    else {
-		    	$('#sortingOptions').html('<div class="hidden" data-control-type="default-sort" data-control-name="sort" data-control-action="sort" data-path=".ruolo" data-order="asc" data-type="text"></div>');
-				ruoloStatus=0;
-		    }
-		    $('#players').jplist({
-		    	itemsBox: '.list'
-			    , itemPath: '.list-item'
-			    , panelPath: '.jplist-panel'
-
-      		});
-      	});
-      	$('.sortValue').click(function () {
-      		if (valueStatus==0) {
-      			$('#sortingOptions').html('<div class="hidden" data-control-type="default-sort" data-control-name="sort" data-control-action="sort" data-path=".valore" data-order="desc" data-type="text"></div>');
-		    	valueStatus=1;
-      		}
-	    		
-		    else {
-		    	$('#sortingOptions').html('<div class="hidden" data-control-type="default-sort" data-control-name="sort" data-control-action="sort" data-path=".valore" data-order="asc" data-type="text"></div>');
-				valueStatus=0;
-		    }
-		    	
-		    $('#players').jplist({
-		    	itemsBox: '.list'
-			    , itemPath: '.list-item'
-			    , panelPath: '.jplist-panel'
-
-      		});
-      	});
-	    
-
-   });
 </script>
 </head>
 
@@ -218,7 +129,10 @@ $(document).ready(function(){
         </div>
     </div>
 	<div id="your-team">
-		your team
+	La tua squadra
+		<ul id="lista" class="your">
+
+		</ul>
 	</div>
 
 	<div id="players" class="box jplist">
@@ -271,6 +185,65 @@ $(document).ready(function(){
 						<option data-path=".udinese" value="udinese">Udinese</option>
 					</select>
 				</div>
+
+				<div id="filterRuolo" class="jplist-group">
+
+				   <input 
+				      data-control-type="radio-buttons-filters"
+				      data-control-action="filter"
+				      data-control-name="Tutti" 
+				      data-path="default" 				      
+				      id="default-radio" 
+				      type="radio" 
+				      name="jplist"
+				      checked="checked"
+				   /> 
+   					<label id="ruolo" class="all active" for="default-radio">Tutti</label>
+
+				   <input 									
+				      data-control-type="radio-buttons-filters"
+				      data-control-action="filter"
+				      data-control-name="P" 
+				      data-path="#P" 			      
+				      id="portiere" 
+				      type="radio" 
+				      name="jplist"
+				   /> 
+				   <label id="ruolo" class="portiere" for="portiere">P</label>
+
+				   <input 									
+				      data-control-type="radio-buttons-filters"
+				      data-control-action="filter"
+				      data-control-name="D" 
+				      data-path="#D"				      
+				      id="difesa" 
+				      type="radio" 
+				      name="jplist"
+				   /> 
+				   <label id="ruolo" class="difesa" for="difesa">D</label>
+
+				   <input 									
+				      data-control-type="radio-buttons-filters"
+				      data-control-action="filter"
+				      data-control-name="C" 
+				      data-path="#C" 				      
+				      id="centrocampo" 
+				      type="radio" 
+				      name="jplist"
+				   /> 
+				   <label id="ruolo" class="centrocampo" for="centrocampo">C</label>
+
+				   <input 									
+				      data-control-type="radio-buttons-filters"
+				      data-control-action="filter"
+				      data-control-name="A" 
+				      data-path=".A" 			      
+				      id="attacco" 
+				      type="radio" 
+				      name="jplist"
+				   /> 
+				   <label id="ruolo" class="attacco" for="attacco">A</label>
+				</div>
 			</div>
 			<div id="lista">
 				<div id="button-cont">
@@ -287,27 +260,32 @@ $(document).ready(function(){
 					<button id="sort" class="sortValue">
 						Valore
 					</button>
+					<button id="sort" class="aggiungi">
+						Aggiungi
+					</button>
 				</div>
 
+
+				
 				<div id="sortingOptions">
 					
 
 				</div>	
 
-				<div class="list box text-shadow">
 				
-					<ul id="lista" class="lista">
+					<ul id="lista" class="players">
 
 						<?php
 						$i = 0;
 						$query="SELECT ruolo, cognome, valore, squadra FROM giocatore ORDER BY squadra";
 						$ris = mysql_query($query);
 
-						while ($vet = mysql_fetch_array($ris)) {					
+						while ($vet = mysql_fetch_array($ris)) {	
+											
 							echo "<div class='list-item box'>
 							<li id='p-add-$i' class='player'>
-								<div id='a'><span class='$vet[squadra]' id='team' style='display:none;'>$vet[squadra]</span>
-									<span class='ruolo'>
+									<span class='$vet[squadra]' id='team' style='display:none;'>$vet[squadra]</span>
+									<span class='ruolo $vet[ruolo]' id='$vet[ruolo]'>
 										$vet[ruolo]
 									</span>
 									<span class='squadra'>
@@ -317,11 +295,11 @@ $(document).ready(function(){
 										$vet[cognome]
 									</span>
 									<span class='valore'>
-										$vet[valore]
+										20
 									</span>
 									<span class='aggiungi'>
 										<button type='submit' class='add' id='add-$i' >+</button>
-									</span></div>						
+									</span>					
 								</li>
 							</div>
 							";				
@@ -329,7 +307,6 @@ $(document).ready(function(){
 						}			
 						?>     
 					</ul>
-				</div>
 				<div class="box jplist-no-results text-shadow align-center">
 					<p>Nessun risultato</p>
 				</div>

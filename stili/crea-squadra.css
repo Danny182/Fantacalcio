@@ -288,7 +288,7 @@ select#teams {
 	background-color:white;
 	}
 	
-ul.lista {
+ul#lista {
 	list-style: none;
 	padding:0px;
 	margin:0px;
@@ -312,18 +312,14 @@ border:1px solid white;
 border-right:none;
 border-top:none;
 border-bottom:none;
-border-radius:2px; 
--moz-border-radius:2px; 
--webkit-border-radius:2px;
+
 padding:5px; 
 font-size:11px;
+cursor:pointer ;
 
 }
 
-button#sort.sortValue {
-border-right:1px solid white;
-float:none;
-}
+
 
 button#sort.sortRuolo {
 	width:8%;
@@ -335,6 +331,19 @@ button#sort.sortTeam {
 button#sort.sortName {
 	width:25%;
 	}
+button#sort.sortValue {
+	width:9%;
+	float:none;
+	border-right:1px solid white;
+}
+button#sort.aggiungi {
+	width:12%;
+	text-align:right;
+	float:right;
+	cursor:default;
+	border-left:none;
+}
+
 
 button.sort:hover {
 background:#9FEAF0;
@@ -342,10 +351,11 @@ background:#9FEAF0;
 
 span {
 	border-right:1px solid #AFEEF3;
-	padding-bottom:3px;
+	padding-bottom:0px;
 	position:relative;
 	float:left;
 	text-align:center;
+
 	}
 
 span.ruolo {
@@ -361,12 +371,13 @@ span.nome {
 	}
 	
 span.valore {
-	border:none;
-	width:5%;
+	
+	width:8.5%;
  }
  
  span.aggiungi {
-	width:8%;
+	width:12%;
+	float:right;
 	}
 	
 div#button-cont {
@@ -375,9 +386,25 @@ div#button-cont {
 	background:#7BE1EA;
 	}
 button.add {
-margin:0px;
-}
+	margin:0px;
+	background: transparent;
+	border:none;
+	font-size: 14px;
+	padding:0px;
+	width:100%;
+	position:relative;
+	font-weight:bold;
 
+}
+button.add:hover {
+	background: #8feef6;
+	cursor:pointer;
+	border-top:1px solid #AFEEF3;
+	border-bottom:1px solid #AFEEF3;
+}
+button.add:active {
+	border:1px solid #fff;
+}
 .newbox{
 		padding:8px;
 		border:1px solid red;
@@ -389,4 +416,44 @@ margin:0px;
 .jplist-hidden {
 	            display: none
 	        }
+div#options {
+	height:25;
+}
 
+div#filterRuolo {
+	float:left;
+	border:none;
+	height:25px;
+	position:relative;
+	margin-left:12px;
+	padding-top:2px;
+}
+
+div.filter {
+	float:left;
+}
+	        
+label#ruolo {
+	color:#000;
+	cursor:pointer;
+	float: left;
+	border:1px solid white;
+	padding:4px;
+	padding-left: 7px;
+	padding-right: 7px;
+	font-size: 11px;
+	border-radius:15px; 
+	-moz-border-radius:15px; 
+	-webkit-border-radius:15px; 
+	margin-left: 5px;
+
+}
+
+
+.active {
+	background-color: #fff;
+}
+
+label#ruolo.active {
+	background-color: #62dfff;
+}
