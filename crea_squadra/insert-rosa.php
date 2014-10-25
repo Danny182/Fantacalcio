@@ -260,6 +260,7 @@ $(document).ready(function(){
 					<button id="sort" class="sortValue">
 						Valore
 					</button>
+					
 					<button id="sort" class="aggiungi">
 						Aggiungi
 					</button>

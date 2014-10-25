@@ -225,7 +225,7 @@ div#your-team {
 	height:99%;
 	position:absolute;
 	border:1px solid white;
-	background-color:#8BE6ED;
+	background-color:#a7f3ff;
 	border-radius:2px; 
 	-moz-border-radius:2px; 
 	-webkit-border-radius:2px;
@@ -238,8 +238,8 @@ div#players {
 	top:0%;
 	height:99%;
 	position:absolute;
-	border:1px solid white;
-	background-color:#8BE6ED;
+	border:1px solid #fff;
+	background-color:#bcf7fe;
 	border-radius:2px; 
 	-moz-border-radius:2px; 
 	-webkit-border-radius:2px;
@@ -301,18 +301,18 @@ li.player {
 	padding-bottom:3px;
 	padding-top:3px;
 	height:20px;
+	font-size: 13px;
 	}
 
 	
 button#sort {
 margin:0;
 float: left;
-background:#7BE1EA;
 border:1px solid white;
 border-right:none;
 border-top:none;
 border-bottom:none;
-
+background-color:#acf6fd;
 padding:5px; 
 font-size:11px;
 cursor:pointer ;
@@ -326,13 +326,13 @@ button#sort.sortRuolo {
 	border-left:none;
 	}
 button#sort.sortTeam {
-	width:11%;
+	width:11.1%;
 	}
 button#sort.sortName {
 	width:25%;
 	}
 button#sort.sortValue {
-	width:9%;
+	width:9,5%;
 	float:none;
 	border-right:1px solid white;
 }
@@ -350,7 +350,7 @@ background:#9FEAF0;
 }
 
 span {
-	border-right:1px solid #AFEEF3;
+	border-right:1px solid #f0ffff;
 	padding-bottom:0px;
 	position:relative;
 	float:left;
@@ -376,31 +376,31 @@ span.valore {
  }
  
  span.aggiungi {
-	width:12%;
+	width:10%;
 	float:right;
+	border:none;
 	}
 	
 div#button-cont {
 	border:none;
-	border-bottom:1px solid white;
-	background:#7BE1EA;
+	border-bottom:1px solid white;	
+	background-color:#acf6fd;
+	
 	}
 button.add {
 	margin:0px;
 	background: transparent;
 	border:none;
 	font-size: 14px;
-	padding:0px;
-	width:100%;
+	padding:1px;
+	width:85%;
 	position:relative;
-	font-weight:bold;
 
 }
 button.add:hover {
-	background: #8feef6;
+	background: #ccfffd;
 	cursor:pointer;
-	border-top:1px solid #AFEEF3;
-	border-bottom:1px solid #AFEEF3;
+	border:none;
 }
 button.add:active {
 	border:1px solid #fff;
@@ -455,5 +455,5 @@ label#ruolo {
 }
 
 label#ruolo.active {
-	background-color: #62dfff;
+	background-color: #97eeff;
 }
