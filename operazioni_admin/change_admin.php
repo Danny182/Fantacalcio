@@ -172,7 +172,7 @@ $utente = get_userdates($id);
 
         <div id = "cont-dati">
             <div class = "iscritti info">
-                <form action = "add_user.php" method = "POST">
+                <form action = "check_newAdmin.php" method = "POST">
                     <div class = "title-iscritti change-admin">
                         User e Password dell'admin
                     </div>
@@ -182,6 +182,14 @@ $utente = get_userdates($id);
                         User nuovo Admin
                     </div>
                     <input type = "text" name = "userNew" value = "User Name" class = "user new" onclick="this.value='';"/>
+                    <input type = "button" name = "inputAdmin" value = "Cambia" class = "invia-notify input-admin" />
+                </form>
+            </div> <!-- iscritti info -->
+            <div class = "iscritti information">
+                <ul>
+                    <li class = "info-admin"> Inserisci i tuoi dati per motivi di sicurezza e successivamente l'user name del nuovo admin, <b>attenzione ai termini maiuscoli</b> </li>
+                    <li class = "info-admin"> L'utente nominato nuovo admin riceverà una notifica e dovrà quindi accettare l'invito </li>
+                    <li class = "info-admin"> Prima del cambio ufficiale riceverai una notifica con l'esito della precedente, accettando a tua volta ufficializzi il cambio </li>
             </div>
 
 

@@ -9,7 +9,7 @@
     <head>
     <link rel="shortcut icon" href="../favicon.ico" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>home</title>
+    <title>Cambia Formazione</title>
     <link rel="stylesheet" href="../stili/style-home.css" type="text/css" media="screen" />
     <link rel="stylesheet" href="../stili/style-formazione.css" type="text/css" media="screen" />
     <link rel="stylesheet" href="../stili/campo-calcio.css" type="text/css" media="screen" />
@@ -121,6 +121,34 @@
             </div>
     </div><!-- menu -->
 
+        <div class = "cont-ruoli">
+            Portieri
+        </div><!-- ruoli -->
+            <ul class = "list-gioc">
+                <?php
+                for($i=1;$i<=3;$i++)
+                    echo '<li class = "gioc"> Giocatore '.$i.'</li>';
+                ?>
+            </ul>
+        <div class = "cont-ruoli dif">
+            Difensori
+        </div>
+        <ul class = "list-gioc dif">
+                <?php
+                for($i=1;$i<=8;$i++)
+                    echo '<li class = "gioc"> Giocatore '.$i.'</li>';
+                ?>
+            </ul>
+        <div class = "cont-ruoli cen">
+            Centrocampisti
+        </div>
+        <ul class = "list-gioc cen">
+                <?php
+                for($i=1;$i<=8;$i++)
+                    echo '<li class = "gioc"> Giocatore '.$i.'</li>';
+                ?>
+            </ul>
+       
         <div id = "cont-campo">
             
             <img src = "../img/campo5.png" />

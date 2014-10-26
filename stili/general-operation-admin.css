@@ -17,6 +17,23 @@ color:#0098BF;
 
 }
 
+.info{
+	position:absolute;
+	margin-left:-25%;
+	height:50%;
+	width:50%;
+	
+}
+
+.information{
+	position:absolute;
+	margin-left:30%;
+	height:50%;
+	width:69.5%;
+}
+
+
+
 .color{
 background-color:black;
 }
@@ -92,6 +109,13 @@ input.invia-notify{
 	padding:0px;
 	margin:0px;
     font-size:12px;
+}
+
+input.input-admin{
+	height:10%;
+	width:40%;
+	top:85%;
+	left:27%;
 }
 
 input.dest{
@@ -183,11 +207,13 @@ display:inline;
 color:blue;
 }
 
-.info{
-	margin-left:-20%;
-	height:50%;
-	width:50%;
+
+
+li.info-admin{
+	margin-top:20px;
+
 }
+
 
 
 
