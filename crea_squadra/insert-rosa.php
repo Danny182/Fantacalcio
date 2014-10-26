@@ -129,8 +129,11 @@ $(document).ready(function(){
         </div>
     </div>
 	<div id="your-team">
-	La tua squadra
 		<ul id="lista" class="your">
+		<?php echo"<div id='teamName'>
+						$_GET[nome_squadra]
+					</div>";
+		?>
 
 		</ul>
 	</div>
