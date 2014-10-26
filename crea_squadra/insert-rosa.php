@@ -129,11 +129,13 @@ $(document).ready(function(){
         </div>
     </div>
 	<div id="your-team">
-		<ul id="lista" class="your">
-		<?php echo"<div id='teamName'>
+		<?php echo"
+					<div id='teamName'>
 						$_GET[nome_squadra]
 					</div>";
 		?>
+		<ul id="lista" class="your">
+		
 
 		</ul>
 	</div>
