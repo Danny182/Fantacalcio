@@ -225,7 +225,7 @@ div#your-team {
 	height:99%;
 	position:absolute;
 	border:1px solid white;
-	background-color:transparent;
+	background-color:#a7f3ff;
 	border-radius:2px; 
 	-moz-border-radius:2px; 
 	-webkit-border-radius:2px;
@@ -239,7 +239,7 @@ div#players {
 	height:99%;
 	position:absolute;
 	border:1px solid #fff;
-	background-color:rgba(85, 83, 89, 0.1);
+	background-color:#bcf7fe;
 	border-radius:2px; 
 	-moz-border-radius:2px; 
 	-webkit-border-radius:2px;
@@ -254,14 +254,6 @@ div#options {
 	height:auto;
 	padding:10px;
 	}
-div#teamName {
-	height:25px;
-	border-bottom:1px solid white;
-	text-align: center;
-	font-size: 18px;
-	padding:10px;
-	background-color: rgba(85, 83, 89, 0.1);
-}
 div#lista {
 	position:relative;
 	height:91.5%;
@@ -305,7 +297,7 @@ ul#lista {
 	list-style: none;
 }
 li.player {
-	border-bottom:1px solid #e7e7e7;	
+	border-bottom:1px solid #E3F8FB;	
 	padding-bottom:3px;
 	padding-top:3px;
 	height:20px;
@@ -320,7 +312,7 @@ border:1px solid white;
 border-right:none;
 border-top:none;
 border-bottom:none;
-background-color:transparent;
+background-color:#acf6fd;
 padding:5px; 
 font-size:11px;
 cursor:pointer ;
@@ -358,7 +350,7 @@ background:#9FEAF0;
 }
 
 span {
-	border-right:1px solid #e5e5e5;
+	border-right:1px solid #f0ffff;
 	padding-bottom:0px;
 	position:relative;
 	float:left;
@@ -392,7 +384,7 @@ span.valore {
 div#button-cont {
 	border:none;
 	border-bottom:1px solid white;	
-	background-color:transparent;
+	background-color:#acf6fd;
 	
 	}
 button.add {
@@ -406,12 +398,12 @@ button.add {
 
 }
 button.add:hover {
-	background: #fff;
+	background: #ccfffd;
 	cursor:pointer;
 	border:none;
 }
 button.add:active {
-	background-color:#fff;
+	border:1px solid #fff;
 }
 .newbox{
 		padding:8px;
@@ -463,5 +455,5 @@ label#ruolo {
 }
 
 label#ruolo.active {
-	background-color: #fff;
+	background-color: #97eeff;
 }
