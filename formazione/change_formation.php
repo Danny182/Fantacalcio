@@ -14,8 +14,10 @@
     <link rel="stylesheet" href="../stili/style-formazione.css" type="text/css" media="screen" />
     <link rel="stylesheet" href="../stili/campo-calcio.css" type="text/css" media="screen" />
     <script src="../librerie/jquery-1.11.0.min.js"/></script>
+    
 
-    <script type="text/javascript" src="../script/menu.js"></script>-->
+    <script type="text/javascript" src="../script/menu.js"></script>
+    <script type="text/javascript" src="../script/menu-formazione.js"></script>
     <link rel="stylesheet" type="text/css" href="../stili/menu2.css" />
     <script>
     $(document).ready(function(){
@@ -120,35 +122,35 @@
                 </ul>
             </div>
     </div><!-- menu -->
-
-        <div class = "cont-ruoli">
-            Portieri
-        </div><!-- ruoli -->
-            <ul class = "list-gioc">
-                <?php
-                for($i=1;$i<=3;$i++)
-                    echo '<li class = "gioc"> Giocatore '.$i.'</li>';
-                ?>
-            </ul>
-        <div class = "cont-ruoli dif">
-            Difensori
-        </div>
-        <ul class = "list-gioc dif">
-                <?php
-                for($i=1;$i<=8;$i++)
-                    echo '<li class = "gioc"> Giocatore '.$i.'</li>';
-                ?>
-            </ul>
-        <div class = "cont-ruoli cen">
-            Centrocampisti
-        </div>
-        <ul class = "list-gioc cen">
-                <?php
-                for($i=1;$i<=8;$i++)
-                    echo '<li class = "gioc"> Giocatore '.$i.'</li>';
-                ?>
-            </ul>
-       
+    <ul id="accordion">
+    <li>Portieri
+        <ul>
+            <li><a href="#">Golf</a></li>
+            <li><a href="#">Cricket</a></li>
+            <li><a href="#">Calcio</a></li>
+        </ul>
+    </li>
+    <li>Difensori
+        <ul>
+            <li><a href="#">Forum</a></li>
+            <li><a href="http://www.facebook.com">Facebook</a></li>
+            <li><a href="http://www.twitter.com">Twitter</a></li>
+        </ul>
+    </li>
+    <li>Centrocampisti
+        <ul>
+            <li><a href="http://maps.google.it">Googlemap</a></li>
+            <li><a href="#">Località</a></li>
+        </ul>
+    </li>
+    <li>Attaccanti
+        <ul>
+            <li><a href="http://maps.google.it">Googlemap</a></li>
+            <li><a href="#">Località</a></li>
+        </ul>
+    </li>
+</ul>
+        
         <div id = "cont-campo">
             
             <img src = "../img/campo5.png" />
@@ -156,8 +158,6 @@
         </div> <!-- cont campo -->
 
     </div><!-- window -->
-
-
 
 
 
