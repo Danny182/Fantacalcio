@@ -57,13 +57,25 @@ $(document).ready(function(){
 		var id = this.id;
 		if($("li#p-"+ id + "").hasClass('ListA'))
 		{
+			$("li#p-"+ id + "").fadeOut(
+				300 
+			,function () {
+                $(this).detach().appendTo('ul#lista.your').fadeIn(1000)});
+
 			$("li#p-"+ id + "").removeClass('ListA').addClass('ListB').find('button').html('').html('-');
-			$("li#p-"+ id + "").detach().appendTo('ul#lista.your');
+			
 		}
 		else
 		{
-			$("li#p-"+ id + "").removeClass('ListB').addClass('ListA').find('button').html('').html('+');
-			$("li#p-"+ id + "").detach().appendTo('ul#lista.players');
+			$("li#p-"+ id + "").fadeOut(
+				300 
+			,function () {
+                $(this).detach().appendTo('ul#lista.players').fadeIn(1000)});
+
+			$("li#p-"+ id + "").removeClass('ListB').addClass('ListB').find('button').html('').html('+');
+
+			//$("li#p-"+ id + "").removeClass('ListB').addClass('ListA').find('button').html('').html('+');
+			//$("li#p-"+ id + "").detach().appendTo('ul#lista.players');
 			jplistf();
 			/*
 			if (sortClass==1)
