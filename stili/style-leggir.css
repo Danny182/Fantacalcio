@@ -42,8 +42,9 @@ div#window1{
 	line-height:35px;
 	font-size:18px;
 	padding-top:15px;
-	line-height:20px;
+	line-height:25px;
 }
+
 
 input{
 background:white;
@@ -53,29 +54,32 @@ height: 20px;
 font-size: 14px;
 border:0;
 text-align:center;
-
-
-
 }
-
-
 .reg{
 	text-align:center;
 	width: 100px;	
 	height: 50px;
-	
 	font-size: 16px;
 	background:#00D2FF;
 	border:1px solid white;
 	color:#fff;
 	font-weight:400;
-	/*cursor: pointer;*/
+	cursor: pointer;
 }
-
 .reg:hover{
 	-webkit-box-shadow:0px 1px 1px rgba(255,255,255,0.8) inset, 1px 1px 5px rgba(0,0,0,0.4);
     -moz-box-shadow:0px 1px 1px rgba(255,255,255,0.8) inset, 1px 1px 5px rgba(0,0,0,0.4);
     box-shadow:0px 1px 1px rgba(255,255,255,0.8) inset, 1px 1px 5px rgba(0,0,0,0.4);
+}
+/*pagina quest admin*/
+.quest_admin{
+	height:30px;
+	width:100px;
+	margin-left:0%;
+	margin-top:10%;
+}
+.acc{
+	margin-left:10%;
 }
 
 

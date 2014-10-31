@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Controllo Login</title>
+<title>FaYnt | Controllo Login</title>
 
 <link rel="stylesheet" href="../stili/style-leggir.css" type="text/css" media="screen" />
 
@@ -23,23 +23,7 @@ session_start();
 		<input type = "text" name = "email" id = "email" size= "40" /><br><br><br>
 		<input type = "submit" name = "invia" value = "Recupera" class = "reg" />
 		</div></div>			';
-		
-		
-		
 		}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 	else{
 	$query = "SELECT user, id_utente FROM utente WHERE user = '$username' AND password = '$password'";
 	$ris = mysql_query($query, $conn) or die (mysql_error());
@@ -62,9 +46,7 @@ session_start();
 	//passo var=0 per capire che si viene dall'index
 	echo '<div id = "cont"> <div id = "window"> Login effettuato
 		<meta http-equiv="Refresh" content="3; URL=../home.php?var=0">';
-	
 	}
-	
 	//altrimenti username e password non corrispondono 
 	else {
 		echo '<div id = "cont"> <div id = "window"> Password e User Name sono errati

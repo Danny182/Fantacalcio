@@ -123,30 +123,36 @@
             </div>
     </div><!-- menu -->
     <ul id="accordion">
-    <li>Portieri
+    <li class = "portieri">Portieri
         <ul>
-            <li><a href="#">Golf</a></li>
-            <li><a href="#">Cricket</a></li>
-            <li><a href="#">Calcio</a></li>
+            <?php
+                for($i=1;$i<=3;$i++)
+                    echo '<li> Giocatore '.$i.' </li>';
+            ?>
         </ul>
     </li>
     <li>Difensori
         <ul>
-            <li><a href="#">Forum</a></li>
-            <li><a href="http://www.facebook.com">Facebook</a></li>
-            <li><a href="http://www.twitter.com">Twitter</a></li>
+            <?php
+                for($i=1;$i<=8;$i++)
+                    echo '<li> Giocatore '.$i.' </li>';
+            ?>
         </ul>
     </li>
     <li>Centrocampisti
         <ul>
-            <li><a href="http://maps.google.it">Googlemap</a></li>
-            <li><a href="#">Località</a></li>
+            <?php
+                for($i=1;$i<=8;$i++)
+                    echo '<li> Giocatore '.$i.' </li>';
+            ?>
         </ul>
     </li>
     <li>Attaccanti
         <ul>
-            <li><a href="http://maps.google.it">Googlemap</a></li>
-            <li><a href="#">Località</a></li>
+            <?php
+                for($i=1;$i<=6;$i++)
+                    echo '<li> Giocatore '.$i.' </li>';
+            ?>
         </ul>
     </li>
 </ul>

@@ -10,7 +10,7 @@
     <head>
     <link rel="shortcut icon" href="../favicon.ico" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Admin Home</title>
+    <title>FaYnt | Admin Home</title>
     <link rel="stylesheet" href="../stili/style-home.css" type="text/css" media="screen" />
     <link rel="stylesheet" href="../stili/campo-calcio.css" type="text/css" media="screen" />
     <link rel="stylesheet" href="../stili/general-operation-admin.css" type="text/css" media="screen" />
@@ -33,11 +33,8 @@
                       });
     </script>
 
-
     <?php
-        
-        
-        $id = $_SESSION['id_utente'];
+$id = $_SESSION['id_utente'];
 $num_notifiche = $_SESSION['notifiche'];
 $current_camp = $_SESSION['currentCamp'];
 //prendo alcuni dati dell'utente(in questo caso nome e cognome)
@@ -172,17 +169,18 @@ $utente = get_userdates($id);
 
         <div id = "cont-dati">
             <div class = "iscritti info">
-                <form action = "check_newAdmin.php" method = "POST">
+                <form action = "check_newadmin.php" method = "POST">
                     <div class = "title-iscritti change-admin">
                         User e Password dell'admin
                     </div>
+                    <input type = "hidden" name = "currCamp" value = "<?php echo $current_camp; ?>"/>
                     <input type = "text" name = "user" value = "User Name" class = "user" onclick="this.value='';"/>
                     <input type = "text" name = "pass" value = "Password" class = "user pass" onclick="this.value='';"/>
                     <div class = "title-iscritti change-admin new-admin">
                         User nuovo Admin
                     </div>
                     <input type = "text" name = "userNew" value = "User Name" class = "user new" onclick="this.value='';"/>
-                    <input type = "button" name = "inputAdmin" value = "Cambia" class = "invia-notify input-admin" />
+                    <input type = "submit" name = "inputAdmin" value = "Cambia" class = "invia-notify input-admin" />
                 </form>
             </div> <!-- iscritti info -->
             <div class = "iscritti information">
@@ -191,36 +189,7 @@ $utente = get_userdates($id);
                     <li class = "info-admin"> L'utente nominato nuovo admin riceverà una notifica e dovrà quindi accettare l'invito </li>
                     <li class = "info-admin"> Prima del cambio ufficiale riceverai una notifica con l'esito della precedente, accettando a tua volta ufficializzi il cambio </li>
             </div>
-
-
-
-       
-
-
         </div><!-- cont-dati -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 </div><!---window -->
 
     

@@ -1,9 +1,11 @@
 <?php
 session_start();
-if (!$_SESSION['login_ok']) {
-  echo '<div id = "cont-error"> <div id = "window"> ATTENZIONE <br> Almeno un Username inserito non esiste				<meta http-equiv="Refresh" content="3; URL=index.php">';
+if (!isset($_SESSION['login_ok'])) 
+	header("location: http://localhost/fantacalcio/index.php");
   
-}
+
+
+
 ?>
 
 

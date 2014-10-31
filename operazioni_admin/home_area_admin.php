@@ -83,7 +83,7 @@
         foreach($utente as $value){
             $nome = $value['nome'];
             $cognome = $value['cognome'];
-            $user .= ucfirst("$nome")." ".ucfirst("$cognome");
+            $user = ucfirst("$nome")." ".ucfirst("$cognome");
             
         }
     ?>
