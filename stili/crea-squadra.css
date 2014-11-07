@@ -225,7 +225,7 @@ div#your-team {
 	height:99%;
 	position:absolute;
 	border:1px solid white;
-	background-color:rgb(200, 243, 255);
+	background-color:transparent;
 	border-radius:2px; 
 	-moz-border-radius:2px; 
 	-webkit-border-radius:2px;
@@ -305,20 +305,12 @@ ul#lista {
 	list-style: none;
 }
 li.player {
-    border-bottom:1px solid #f8f8f8;
-    padding-bottom:3px;
-    padding-top:3px;
-    height:20px;
-    font-size: 13px;
-    
-}
-div.list-item.box:nth-child(even) {
-background-color: #ececec;
-}
-
-div.list-item.box:nth-child(odd) {
-    background-color: #e4e4e4;
-}
+	border-bottom:1px solid #e7e7e7;	
+	padding-bottom:3px;
+	padding-top:3px;
+	height:20px;
+	font-size: 13px;
+	}
 
 	
 button#sort {
@@ -366,7 +358,7 @@ background:#9FEAF0;
 }
 
 span {
-	border-right:1px solid #f4f4f4;
+	border-right:1px solid #e5e5e5;
 	padding-bottom:0px;
 	position:relative;
 	float:left;
@@ -400,7 +392,7 @@ span.valore {
 div#button-cont {
 	border:none;
 	border-bottom:1px solid white;	
-	background-color:#dadada;
+	background-color:transparent;
 	
 	}
 button.add {

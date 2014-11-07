@@ -295,7 +295,7 @@ $(document).ready(function(){
 										$vet[ruolo]
 									</span>
 									<span class='squadra'>
-										<img width='18px' height='18px' src='../img/logo-squadra/$vet[squadra].png'></img>
+										<img width='18px' height='18px' src='../img/logo-squadra/$vet[squadra].png'>
 									</span>
 									<span class='nome'>
 										$vet[cognome]
