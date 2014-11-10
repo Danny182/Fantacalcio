@@ -74,7 +74,7 @@ div#cont-label{
     color:#000000;
     height: 18%;
     width: 27%;
-    color:#000000;
+    color:#93f;
     -moz-border-radius:2px 2px 2px 2px;
     -webkit-border-radius:2px 2px 2px 2px;
     border-radius:2px 2px 2px 2px;
@@ -275,7 +275,7 @@ overflow:auto;
 	position: relative;
 	margin-top:5%;
 	margin-left:20%;
-	background-color: #00D2FF;
+	background-color:#93f;
 	color: #fff;
 	font-weight:600;
 	cursor: pointer;
@@ -286,7 +286,7 @@ overflow:auto;
 /*-webkit-box-shadow:0px 1px 1px rgba(255,255,255,0.8) inset, 1px 1px 5px rgba(0,0,0,0.4);
 moz-box-shadow:0px 1px 1px rgba(255,255,255,0.8) inset, 1px 1px 5px rgba(0,0,0,0.4);
 box-shadow:0px 1px 1px rgba(255,255,255,0.8) inset, 1px 1px 5px rgba(0,0,0,0.4);*/
-background-color:#53E1FF;
+background-color:#93f;
 }
 
 .reg-regole{

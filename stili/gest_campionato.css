@@ -85,7 +85,7 @@ div#cont-label{
 	border:1px solid;
 	float:left;
     border-color:#CECED0;
-    color:#000000;
+    color:#000000;/*#34BFE2*/
     height: 18%;
     width: 27%;
     color:#000000;
@@ -194,7 +194,7 @@ div#cont-label-modifica{
 	border:1px solid;
 	float:left;
     border-color:#CECED0;
-    color:#000000;
+    color:#34BFE2;
     height: 23%;
     width: 30%;
     margin-left:18.5%;
@@ -868,6 +868,7 @@ padding-top:3px;
 
 
 label.crea-camp-title {
+color:#34BFE2;
 background-color:trasparent;
 font-size:13px;
 border:none;

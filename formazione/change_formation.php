@@ -9,7 +9,7 @@
     <head>
     <link rel="shortcut icon" href="../favicon.ico" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Cambia Formazione</title>
+    <title>FaYnt | Formazione</title>
     <link rel="stylesheet" href="../stili/style-home.css" type="text/css" media="screen" />
     <link rel="stylesheet" href="../stili/style-formazione.css" type="text/css" media="screen" />
     <link rel="stylesheet" href="../stili/campo-calcio.css" type="text/css" media="screen" />
@@ -162,6 +162,53 @@
             <img src = "../img/campo5.png" />
 
         </div> <!-- cont campo -->
+        <?php
+        //prendo i moduli consentiti
+        //campionato corrente
+        $camp = $_SESSION['current_camp'];
+        $query = "SELECT modulo_343, modulo_352, modulo_361, modulo_433, modulo_442, modulo_451, modulo_253, modulo_334, modulo_424, modulo_532, modulo_541, modulo_550
+        FROM campionato WHERE campionato.nome = '$camp'";
+        $ris = mysql_query($query);
+        if(!$ris){
+                echo ' <div id = "cont-errore"><div id = "errore"> ATTENZIONE<br><br> SI E\' VERIFICATO UN PROBLEMA
+                <meta http-equiv="Refresh" content="3; URL=home.php?var=0"> </div></div>' ;
+        }
+    
+        $vet = mysql_fetch_array($ris);
+        $array = array(
+                "343" => $vet['modulo_343'], 
+                "352" => $vet['modulo_352'], 
+                "361" => $vet['modulo_361'],
+                "433" => $vet['modulo_433'],
+                "442" => $vet['modulo_442'],
+                "451" => $vet['modulo_451'],
+                "253" => $vet['modulo_253'],
+                "334" => $vet['modulo_334'],
+                "424" => $vet['modulo_424'],
+                "532" => $vet['modulo_532'],
+                "541" => $vet['modulo_541'],
+                "550" => $vet['modulo_550']
+        );
+        
+           /* foreach ($array as $key => $value)
+                echo'<option value = "'.$value.'"> '.$key.' </option>';*/
+        
+        ?>
+        <div class = "modulo">
+            <select>
+                <?php foreach($array as $key => $value){
+                            if($value)
+                            echo ' <option value="'.$value.'"> '.$key.' </option>';
+                    }
+                ?>
+            </select>
+        </div>
+
+
+
+        
+        
+        
 
     </div><!-- window -->
 

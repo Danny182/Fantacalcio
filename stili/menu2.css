@@ -45,13 +45,13 @@ background:#E4E4E4;
 border-bottom:4px solid #00DFFF;
 }
 .home-page #menu .style-item-1 a{
-	border-left:4px solid white;
+	border-left:4px solid #00DFFF;
 	}
 .crea-camp-page #menu .style-item-3 a{
-	border-left:4px solid white;
+	border-left:4px solid #93f;
 	}
 .crea-squadra-page #menu .style-item-4 a{
-	border-left:4px solid white;
+	border-left:4px solid #0C0;
 	}
 .notifiche #menu .style-item-6 a{
 	border-left:4px solid white;
@@ -63,9 +63,9 @@ border-bottom:4px solid #00DFFF;
 #menu   .style-item-2 a:hover{
 border-bottom:4px solid #F96706;}
 #menu   .style-item-3 a:hover{
-border-bottom:4px solid #0c0;}
-#menu   .style-item-4 a:hover{
 border-bottom:4px solid #93f;}
+#menu   .style-item-4 a:hover{
+border-bottom:4px solid  #0C0;}/*#93f*/
 #menu   .style-item-5 a:hover{
 border-bottom:4px solid #0033FF;}
 #menu   .style-item-6 a:hover{

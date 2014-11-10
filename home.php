@@ -36,7 +36,9 @@ $(document).ready(function(){
     $id = $_SESSION['id_utente'];
     
     if($var == 1){
-    $nome_camp = $_GET['camp'];
+   	 	$nome_camp = $_GET['camp'];
+   	 	$_SESSION['current_camp'] = $nome_camp;
+
         //nel vettore sono presenti i nome dei campionati a cui partecipa l'utente
         $leagues = get_leagues($id);
         
@@ -53,6 +55,7 @@ $(document).ready(function(){
         //numero dei campionati
         $num_camp = count($leagues);
         $nome_camp = $leagues[0];
+        $_SESSION['current_camp'] = $nome_camp;
         
         
         

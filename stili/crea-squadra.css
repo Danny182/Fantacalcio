@@ -13,11 +13,8 @@ font-size:18px;
 border-top:none;
 border-right:none;
 border-left:none;
-color:rgba(1, 159, 199, 0.61);
+color:#8B8989;
 }
-
-
-
 div#divisore.second{
 position:absolute;
 margin-left:60%;
@@ -26,11 +23,7 @@ padding-bottom:2px;
 width:38%;
 
 }
-
-
-
 div#cont-input{
-
 background-color: #E8E8E9;
 border:1px solid;
 float:left;
@@ -110,7 +103,7 @@ text-align:center;
 -webkit-border-radius:5px 5px 5px 5px;
 border-radius:5px 5px 5px 5px;
 margin-top:0px;
-color:#000;
+color:#0C0;
 
 }
 
@@ -125,7 +118,7 @@ text-align:center;
 -webkit-border-radius:5px 5px 5px 5px;
 border-radius:5px 5px 5px 5px;
 margin-top:15px;
-color:#000;
+color:#0C0;
 
 }
 
@@ -148,7 +141,7 @@ margin-left:5%;
 margin-top:1%;
 padding:5px;
 background-color:#E8E8E9;
-color:rgba(1, 159, 199, 0.5);
+color:#0C0;
 font-size:13px;
 
 }
@@ -163,7 +156,7 @@ font-size:13px;
 	position: relative;
 	margin-top:2%;
 	margin-left:30%;
-	background-color: #00D2FF;
+	background-color: #0C0;
 	color: #fff;
 	font-weight:600;
 	cursor: pointer;
@@ -174,7 +167,7 @@ font-size:13px;
 /*-webkit-box-shadow:0px 1px 1px rgba(255,255,255,0.8) inset, 1px 1px 5px rgba(0,0,0,0.4);
 moz-box-shadow:0px 1px 1px rgba(255,255,255,0.8) inset, 1px 1px 5px rgba(0,0,0,0.4);
 box-shadow:0px 1px 1px rgba(255,255,255,0.8) inset, 1px 1px 5px rgba(0,0,0,0.4);*/
-background-color:#53E1FF;
+background-color:#A64DFF;
 }
 
 div#inserire_rosa{	
