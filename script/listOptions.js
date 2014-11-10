@@ -68,11 +68,11 @@ $(document).ready(function(){
 		else
 		{
 			$("li#p-"+ id + "").fadeOut(
-				300 
+				1000 
 			,function () {
-                $(this).detach().appendTo('ul#lista.players').fadeIn(1000)});
+                $(this).detach().appendTo('ul#lista.players').fadeIn(300)});
 
-			$("li#p-"+ id + "").removeClass('ListB').addClass('ListB').find('button').html('').html('+');
+			$("li#p-"+ id + "").removeClass('ListB').addClass('ListA').find('button').html('').html('+');
 
 			//$("li#p-"+ id + "").removeClass('ListB').addClass('ListA').find('button').html('').html('+');
 			//$("li#p-"+ id + "").detach().appendTo('ul#lista.players');
@@ -108,7 +108,6 @@ $(document).ready(function(){
 	    	itemsBox: 'ul#lista.players'
 		    , itemPath: '.list-item'
 		    , panelPath: '.jplist-panel'
-
   		});
 	};
 		
