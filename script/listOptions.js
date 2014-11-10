@@ -68,7 +68,7 @@ $(document).ready(function(){
 		else
 		{
 			$("li#p-"+ id + "").fadeOut(
-				1000 
+				600 
 			,function () {
                 $(this).detach().appendTo('ul#lista.players').fadeIn(300)});
 

@@ -250,8 +250,7 @@ $(document).ready(function(){
 				   <label id="ruolo" class="attacco" for="attacco">A</label>
 				</div>
 			</div>
-			<div id="lista">
-				<div id="button-cont">
+			<div id="button-cont">
 					<button id="sort" class="sortRuolo">
 						Ruolo
 					</button>
@@ -270,6 +269,8 @@ $(document).ready(function(){
 						Aggiungi
 					</button>
 				</div>
+			<div id="lista">
+				
 
 
 				

@@ -218,7 +218,6 @@ div#your-team {
 	height:99%;
 	position:absolute;
 	border:1px solid white;
-	background-color:rgb(200, 243, 255);
 	border-radius:2px; 
 	-moz-border-radius:2px; 
 	-webkit-border-radius:2px;
@@ -232,7 +231,6 @@ div#players {
 	height:99%;
 	position:absolute;
 	border:1px solid #fff;
-	background-color:rgba(85, 83, 89, 0.1);
 	border-radius:2px; 
 	-moz-border-radius:2px; 
 	-webkit-border-radius:2px;
@@ -246,6 +244,7 @@ div#options {
 	border-bottom:1px solid #FFFFFF;
 	height:auto;
 	padding:10px;
+	background-color: #0c0;
 	}
 div#teamName {
 	height:25px;
@@ -253,11 +252,11 @@ div#teamName {
 	text-align: center;
 	font-size: 18px;
 	padding:10px;
-	background-color: rgba(85, 83, 89, 0.1);
+	background-color: #0c0;
 }
 div#lista {
 	position:relative;
-	height:91.5%;
+	height:87.1%;
 	width:100%;
 	overflow:auto;
 	}
@@ -298,7 +297,7 @@ ul#lista {
 	list-style: none;
 }
 li.player {
-    border-bottom:1px solid #f8f8f8;
+    border-bottom:1px solid rgba(0, 204, 0, 0.4);
     padding-bottom:3px;
     padding-top:3px;
     height:20px;
@@ -359,7 +358,7 @@ background:#9FEAF0;
 }
 
 span {
-	border-right:1px solid #f4f4f4;
+	border-right:1px solid rgba(0, 225, 0, 0.28);
 	padding-bottom:0px;
 	position:relative;
 	float:left;
@@ -393,7 +392,10 @@ span.valore {
 div#button-cont {
 	border:none;
 	border-bottom:1px solid white;	
-	background-color:#dadada;
+	background-color:#00b900;
+	height:auto;
+	float:left;
+	width:100%;
 	
 	}
 button.add {
