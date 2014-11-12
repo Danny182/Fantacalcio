@@ -51,52 +51,84 @@ $(document).ready(function(){
 	   	$(this).addClass('active');
 	});
 
-	$(".player").addClass('ListA');
-	//funzione per spostare elementi tra una lista e l'altra
-	$('.add').click(function () {
-		var id = this.id;
-		if($("li#p-"+ id + "").hasClass('ListA'))
-		{
-			$("li#p-"+ id + "").fadeOut(
-				300 
-			,function () {
-                $(this).detach().appendTo('ul#lista.your').fadeIn(1000)});
+	sortRuoloDesc();
+	sortTeamAsc();
 
-			$("li#p-"+ id + "").removeClass('ListA').addClass('ListB').find('button').html('').html('-');
-			
+	$(".playerDiv").addClass('ListA');
+	//funzione per spostare elementi tra una lista e l'altra
+	$(document).on("click", '.add', function () {
+		var id = this.id;
+		if($("div#p-"+ id + "").hasClass('ListA'))
+		{	
+			$("div#p-"+ id + "").fadeOut(300 ,function () {
+				$("div#p-"+ id + "").removeClass('ListA').addClass('ListB').find('button').html('').html('-');
+                $(this).clone().appendTo('ul#lista.your').fadeIn(1000);
+                
+                var $deletes = $('#players')
+      				,html
+      				,$el;
+  
+			    var item= (this);			    
+			   	html = item;			   
+			    $el = $(html);
+
+			    $deletes.jplist({
+		     		command: 'del'
+		      		,commandData: {
+		        	 	$item: $el
+		      		}
+				});			
+            });
+            			
 		}
 		else
 		{
-			$("li#p-"+ id + "").fadeOut(
-				600 
-			,function () {
-                $(this).detach().appendTo('ul#lista.players').fadeIn(300)});
+			$("div#p-"+ id + "").show(0, function() {
+				$(this).detach().appendTo('ul#lista.players').show(0 , function () {
+	            	var $addl = $('#your-team')      				
+		  				,html
+		  				,$el;
+	      				
+	  				var item = (this);
+				   	html = item;			   
+				    $el = $(html);
+				    $addl.jplist({
+			     		command: 'add'
+			      		,commandData: {
+			        		 $item: $el
+			      		}
+	  				});
 
-			$("li#p-"+ id + "").removeClass('ListB').addClass('ListA').find('button').html('').html('+');
+            	});
 
-			//$("li#p-"+ id + "").removeClass('ListB').addClass('ListA').find('button').html('').html('+');
-			//$("li#p-"+ id + "").detach().appendTo('ul#lista.players');
-			jplistf();
-			/*
-			if (sortClass==1)
+			}); 
+		    
+
+			$("div#p-"+ id + "").removeClass('ListB').addClass('ListA').find('button').html('').html('+');
+
+
+			//jplistf();		
+			if (sortClass==1) {
 				sortNameAsc();
-			if (sortClass==2)
+			}
+			if (sortClass==2) {
 				sortNameDesc();
+			}
 			if (sortClass==3)
 				sortRuoloAsc();
 			if (sortClass==4)
 				sortRuoloDesc();
-			if (sortClass==5 || sortClass==0)
+			if (sortClass==5) {
 				sortTeamAsc();
+			}
 			if (sortClass==6)
 				sortTeamDesc();
 			if (sortClass==7)
 				sortValueAsc();
 			if (sortClass==8)
-				sortValueDesc();*/
+				sortValueDesc();
 		}
-			
-		$('ul#lista.players').change();
+		
 		
 			
 	});
@@ -105,16 +137,19 @@ $(document).ready(function(){
 	function jplistf () {
 		$('#players').jplist({
 	    	
-	    	itemsBox: 'ul#lista.players'
+	    	itemsBox: '.list'
 		    , itemPath: '.list-item'
 		    , panelPath: '.jplist-panel'
+
   		});
+  		console.log('jplist');
+
+
 	};
-		
-	jplistf();
 
 	function sortNameAsc () {
 		sortClass=1;
+		console.log("sorting");
     	$('#sortingOptions').html('<div class="hidden" data-control-type="default-sort" data-control-name="sort" data-control-action="sort" data-path=".nome" data-order="asc" data-type="text"></div>');
 		jplistf();
 	};

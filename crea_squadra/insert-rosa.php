@@ -41,7 +41,13 @@
 
 <script src="../librerie/jquery-1.11.0.min.js"></script>
 <script src="../script/listOptions.js"></script>
-<script src="../librerie/jplist.min.js"></script>
+<script src="../librerie/jplist-core.min.js"></script>
+<script src="../librerie/jplist.filter-dropdown-bundle.min.js"></script>
+<script src="../librerie/jplist.textbox-control.min.js"></script>
+<script src="../librerie/jplist.filter-toggle-bundle.min.js"></script>
+<script src="../librerie/jplist.sort-bundle.min.js"></script>
+
+
 
 <script>
 $(document).ready(function(){
@@ -134,14 +140,17 @@ $(document).ready(function(){
 						$_GET[nome_squadra]
 					</div>";
 		?>
-		<ul id="lista" class="your">
+		<div id="listBox">
+
+			<ul id="lista" class="your">
 		
 
-		</ul>
+			</ul>
+		</div>
 	</div>
 
-	<div id="players" class="box jplist">
-		<div class="jplist-panel box panel-top">
+	<div id="players">
+		<div class="jplist-panel">
 			<div id="options">
 
 				<div class="text-filter-box">
@@ -166,7 +175,12 @@ $(document).ready(function(){
 
 
 				<div class="filter">
-					<select id="teams" class="jplist-select" data-control-type="select" data-control-name="team-filter" data-control-action="filter">
+					<select id="teams"
+					class="jplist-select"
+					data-control-type="filter-select"
+					data-control-name="team-filter" 
+					data-control-action="filter">
+
 						<option data-path="default" value="tutte" selected>Squadre</option>
 						<option data-path=".atalanta" value="atalanta">Atalanta</option>
 						<option data-path=".bologna" value="bologna">Bologna</option>
@@ -250,6 +264,7 @@ $(document).ready(function(){
 				   <label id="ruolo" class="attacco" for="attacco">A</label>
 				</div>
 			</div>
+
 			<div id="button-cont">
 					<button id="sort" class="sortRuolo">
 						Ruolo
@@ -268,18 +283,14 @@ $(document).ready(function(){
 					<button id="sort" class="aggiungi">
 						Aggiungi
 					</button>
-				</div>
-			<div id="lista">
-				
+			</div>
 
+			<div id="sortingOptions">
 
-				
-				<div id="sortingOptions">
-					
-
-				</div>	
-
-				
+			</div>
+		</div>
+			<div class="list">
+							
 					<ul id="lista" class="players">
 
 						<?php
@@ -289,35 +300,39 @@ $(document).ready(function(){
 
 						while ($vet = mysql_fetch_array($ris)) {	
 											
-							echo "<div class='list-item box'>
-							<li id='p-add-$i' class='player'>
-									<span class='$vet[squadra]' id='team' style='display:none;'>$vet[squadra]</span>
-									<span class='ruolo $vet[ruolo]' id='$vet[ruolo]'>
-										$vet[ruolo]
-									</span>
-									<span class='squadra'>
-										<img width='18px' height='18px' src='../img/logo-squadra/$vet[squadra].png'></img>
-									</span>
-									<span class='nome'>
-										$vet[cognome]
-									</span>
-									<span class='valore'>
-										20
-									</span>
-									<span class='aggiungi'>
-										<button type='submit' class='add' id='add-$i' >+</button>
-									</span>					
-								</li>
-							</div>
-							";				
+							echo "<div class='list-item playerDiv' id='p-add-$i'>
+									<li id='p-add-$i' class='player'>
+										<span class='$vet[squadra]' id='team' style='display:none;'>
+											$vet[squadra]
+										</span>
+										<span class='ruolo $vet[ruolo]' id='$vet[ruolo]'>
+											$vet[ruolo]
+										</span>
+										<span class='squadra'>
+											<img width='18px' height='18px' src='../img/logo-squadra/$vet[squadra].png'></img>
+										</span>
+										<span class='nome'>
+											$vet[cognome]
+										</span>
+										<span class='valore'>
+											20
+										</span>
+										<span class='aggiungi'>
+											<button type='submit' class='add' id='add-$i' >+</button>
+										</span>					
+									</li>
+								</div>
+								";				
 							$i++;
 						}			
 						?>     
 					</ul>
-				<div class="box jplist-no-results text-shadow align-center">
-					<p>Nessun risultato</p>
-				</div>
 				
+				
+			</div>
+
+			<div class="box jplist-no-results text-shadow align-center">
+					<p>Nessun risultato</p>
 			</div>
 
 		</div>

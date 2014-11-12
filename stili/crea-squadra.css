@@ -217,7 +217,7 @@ div#your-team {
 	width:30%;
 	height:99%;
 	position:absolute;
-	border:1px solid white;
+	border:none;
 	border-radius:2px; 
 	-moz-border-radius:2px; 
 	-webkit-border-radius:2px;
@@ -240,23 +240,23 @@ div#players {
 div#options {
 	position:realtive;
 	top:0;
-	width:96.3%;
+	width:auto;
 	border-bottom:1px solid #FFFFFF;
 	height:auto;
 	padding:10px;
-	background-color: #0c0;
+	background-color: #0d0;
 	}
 div#teamName {
 	height:25px;
-	border-bottom:1px solid white;
+	border:1px solid white;
 	text-align: center;
 	font-size: 18px;
 	padding:10px;
 	background-color: #0c0;
 }
-div#lista {
+.list {
 	position:relative;
-	height:87.1%;
+	height:87%;
 	width:100%;
 	overflow:auto;
 	}
@@ -293,6 +293,12 @@ ul#lista {
 	padding:0px;
 	margin:0px;
 	}
+div#listBox {
+	border:1px solid #fff;
+	height:91.2%;
+	position:relative;
+	background-color:#e8e8e8;
+}
 .list-item {
 	list-style: none;
 }
@@ -304,12 +310,16 @@ li.player {
     font-size: 13px;
     
 }
-div.list-item.box:nth-child(even) {
+div.list-item.listA:nth-child(even) {
 background-color: #ececec;
 }
 
-div.list-item.box:nth-child(odd) {
-    background-color: #e4e4e4;
+div.list-item.listA:nth-child(odd) {
+    background-color: #f0f0f0;
+}
+
+div.list-item.listB {
+	background-color:#f3f3f3;
 }
 
 	
@@ -351,14 +361,15 @@ button#sort.aggiungi {
 	cursor:default;
 	border-left:none;
 }
-
-
-button.sort:hover {
-background:#9FEAF0;
+button#sort.aggiungi:hover {
+	background-color: #0c0;
+}
+button#sort:hover {
+background-color:#00d500;
 }
 
 span {
-	border-right:1px solid rgba(0, 225, 0, 0.28);
+	border-right:1px solid rgba(0, 201, 0, 0.66);
 	padding-bottom:0px;
 	position:relative;
 	float:left;
@@ -392,7 +403,7 @@ span.valore {
 div#button-cont {
 	border:none;
 	border-bottom:1px solid white;	
-	background-color:#00b900;
+	background-color:#0c0;
 	height:auto;
 	float:left;
 	width:100%;
@@ -467,4 +478,9 @@ label#ruolo {
 
 label#ruolo.active {
 	background-color: #fff;
+}
+
+div.box.jplist-no-results {
+	padding-left:10px;
+	padding-top:20px;
 }
