@@ -7,7 +7,7 @@ $(document).ready(function(){
 	var valueStatus=0;
 
 	$('label#ruolo.all').click(function(){
-		console.log('entrato ruolo');
+		
 	   	$('label#ruolo.portiere').removeClass('active');
 	   	$('label#ruolo.difesa').removeClass('active');
 	   	$('label#ruolo.centrocampo').removeClass('active');
@@ -16,7 +16,7 @@ $(document).ready(function(){
 	});
 
 	$('label#ruolo.portiere').click(function(){
-		console.log('entrato ruolo');
+		
 	   	$('label#ruolo.all').removeClass('active');
 	   	$('label#ruolo.difesa').removeClass('active');
 	   	$('label#ruolo.centrocampo').removeClass('active');
@@ -25,7 +25,7 @@ $(document).ready(function(){
 	});
 
 	$('label#ruolo.difesa').click(function(){
-		console.log('entrato ruolo');
+		
 	   	$('label#ruolo.portiere').removeClass('active');
 	   	$('label#ruolo.all').removeClass('active');
 	   	$('label#ruolo.centrocampo').removeClass('active');
@@ -34,7 +34,7 @@ $(document).ready(function(){
 	});
 
 	$('label#ruolo.centrocampo').click(function(){
-		console.log('entrato ruolo');
+		
 	   	$('label#ruolo.portiere').removeClass('active');
 	   	$('label#ruolo.difesa').removeClass('active');
 	   	$('label#ruolo.all').removeClass('active');
@@ -43,7 +43,7 @@ $(document).ready(function(){
 	});
 
 	$('label#ruolo.attacco').click(function(){
-		console.log('entrato ruolo');
+		
 	   	$('label#ruolo.portiere').removeClass('active');
 	   	$('label#ruolo.difesa').removeClass('active');
 	   	$('label#ruolo.centrocampo').removeClass('active');
@@ -51,6 +51,12 @@ $(document).ready(function(){
 	   	$(this).addClass('active');
 	});
 
+	var v= [];
+	v[1] = 5;
+	v[2] = 4;
+	v[3] = 4;
+
+	
 	sortRuoloDesc();
 	sortTeamAsc();
 
@@ -62,6 +68,7 @@ $(document).ready(function(){
 		{	
 			$("div#p-"+ id + "").fadeOut(300 ,function () {
 				$("div#p-"+ id + "").removeClass('ListA').addClass('ListB').find('button').html('').html('-');
+				
                 $(this).clone().appendTo('ul#lista.your').fadeIn(1000);
                 
                 var $deletes = $('#players')
@@ -85,7 +92,7 @@ $(document).ready(function(){
 		{
 			$("div#p-"+ id + "").show(0, function() {
 				$(this).detach().appendTo('ul#lista.players').show(0 , function () {
-	            	var $addl = $('#your-team')      				
+	            	/*var $addl = $('#your-team')      				
 		  				,html
 		  				,$el;
 	      				
@@ -97,7 +104,7 @@ $(document).ready(function(){
 			      		,commandData: {
 			        		 $item: $el
 			      		}
-	  				});
+	  				});*/
 
             	});
 
@@ -106,8 +113,9 @@ $(document).ready(function(){
 
 			$("div#p-"+ id + "").removeClass('ListB').addClass('ListA').find('button').html('').html('+');
 
+			checkStatus();
 
-			//jplistf();		
+			/*jplistf();		
 			if (sortClass==1) {
 				sortNameAsc();
 			}
@@ -126,12 +134,20 @@ $(document).ready(function(){
 			if (sortClass==7)
 				sortValueAsc();
 			if (sortClass==8)
-				sortValueDesc();
+				sortValueDesc();*/
 		}
 		
 		
 			
 	});
+	
+	//salva gli id dei giocatori aggiunti alla lista
+	$('button#saveTeam').click( function () {
+		var players = $(".playerDiv.ListB").map(function() {
+        	return $(this).attr('value');
+    	}).get().join(",");
+		console.log(players);
+	})
 
 
 	function jplistf () {
@@ -142,54 +158,149 @@ $(document).ready(function(){
 		    , panelPath: '.jplist-panel'
 
   		});
-  		console.log('jplist');
-
-
 	};
 
+	function updateStatus (lastState) {
+		console.log("updateStatus");
+		console.log(v[3], v[2], v[1]);
+		v[3]=v[2];
+		v[2]=v[1];
+		v[1]=lastState;
+
+	}
+
+	function checkStatus () {
+		console.log("checkStatus");
+		console.log(v[3], v[2], v[1]);
+		switch(v[3]) {
+			case 1:
+				sortNameAsc();
+				break;
+			case 2:
+				sortNameDesc();
+				break;
+			case 3:
+				sortRuoloAsc();
+				break;
+			case 4:
+				sortRuoloDesc();
+				break;
+			case 5:
+				sortTeamAsc();
+				break;
+			case 6:
+				sortTeamDesc();
+				break;
+			case 7:
+				sortValueAsc();
+				break;
+			case 8:
+				sortValueDesc();
+				break;
+
+		}
+
+		switch(v[2]) {
+			case 1:
+				sortNameAsc();
+				break;
+			case 2:
+				sortNameDesc();
+				break;
+			case 3:
+				sortRuoloAsc();
+				break;
+			case 4:
+				sortRuoloDesc();
+				break;
+			case 5:
+				sortTeamAsc();
+				break;
+			case 6:
+				sortTeamDesc();
+				break;
+			case 7:
+				sortValueAsc();
+				break;
+			case 8:
+				sortValueDesc();
+				break;
+
+		}
+
+		switch(v[1]) {
+			case 1:
+				sortNameAsc();
+				break;
+			case 2:
+				sortNameDesc();
+				break;
+			case 3:
+				sortRuoloAsc();
+				break;
+			case 4:
+				sortRuoloDesc();
+				break;
+			case 5:
+				sortTeamAsc();
+				break;
+			case 6:
+				sortTeamDesc();
+				break;
+			case 7:
+				sortValueAsc();
+				break;
+			case 8:
+				sortValueDesc();
+				break;
+
+		}
+	}
+
 	function sortNameAsc () {
-		sortClass=1;
-		console.log("sorting");
+		
     	$('#sortingOptions').html('<div class="hidden" data-control-type="default-sort" data-control-name="sort" data-control-action="sort" data-path=".nome" data-order="asc" data-type="text"></div>');
 		jplistf();
+		console.log('nameAsc');
 	};
 
 	function sortNameDesc () {
-		sortClass=2;
 	    $('#sortingOptions').html('<div class="hidden" data-control-type="default-sort" data-control-name="sort" data-control-action="sort" data-path=".nome" data-order="desc" data-type="text"></div>');
 	    jplistf();
 	};
 
 	function sortRuoloAsc () {
-		sortClass=3;
 		$('#sortingOptions').html('<div class="hidden" data-control-type="default-sort" data-control-name="sort" data-control-action="sort" data-path=".ruolo" data-order="asc" data-type="text"></div>');
 		jplistf();
+		console.log('ruoloAsc');
 	};
 
 	function sortRuoloDesc () {
-		sortClass=4;
+		
 		$('#sortingOptions').html('<div class="hidden" data-control-type="default-sort" data-control-name="sort" data-control-action="sort" data-path=".ruolo" data-order="desc" data-type="text"></div>');
 	    jplistf();	
 	};
 
 	function sortTeamAsc () {
-		sortClass=5;
+		
 		$('#sortingOptions').html('<div class="hidden" data-control-type="default-sort" data-control-name="sort" data-control-action="sort" data-path="#team" data-order="asc" data-type="text"></div>');
 		jplistf();
+
 	};
 	function sortTeamDesc () {
-		sortClass=6;
+		
 		$('#sortingOptions').html('<div class="hidden" data-control-type="default-sort" data-control-name="sort" data-control-action="sort" data-path="#team" data-order="desc" data-type="text"></div>');
 	    jplistf();
+	    console.log('teamDesc');
 	};
 	function sortValueAsc () {
-		sortClass=7;
+		
 		$('#sortingOptions').html('<div class="hidden" data-control-type="default-sort" data-control-name="sort" data-control-action="sort" data-path=".valore" data-order="asc" data-type="text"></div>');
 		jplistf();
 
 	};
 	function sortValueDesc () {
-		sortClass=8;
+		
 		$('#sortingOptions').html('<div class="hidden" data-control-type="default-sort" data-control-name="sort" data-control-action="sort" data-path=".valore" data-order="desc" data-type="text"></div>');
 	    jplistf();
 
@@ -197,10 +308,12 @@ $(document).ready(function(){
 	$('.sortName').click(function  () {
     	if (nameStatus==0) {
     		sortNameAsc();
+    		updateStatus(1);
     		nameStatus=1;
     	}
     	else {
-    		sortNameDesc();
+    		sortNameDesc();    		
+			updateStatus(2);
     		nameStatus=0;
     	}
   	});
@@ -208,22 +321,26 @@ $(document).ready(function(){
   	$('.sortTeam').click(function () {
     	if (teamStatus==0) {
   			sortTeamDesc();
+  			updateStatus(6);
   			teamStatus=1;
   		}
     		
 	    else {
 	    	sortTeamAsc();
+	    	updateStatus(5);
 	    	teamStatus=0;
 	    }
   	});
   	$('.sortRuolo').click(function () {
     	if (ruoloStatus==0) {
   			sortRuoloDesc();
+  			updateStatus(4);
   			ruoloStatus=1;
   		}
     		
 	    else {
-	    	sortRuoloAsc();
+	    	sortRuoloAsc();	    	
+			updateStatus(3);
 	    	ruoloStatus=0;
 	    }
 	    jplistf();
@@ -231,11 +348,13 @@ $(document).ready(function(){
   	$('.sortValue').click(function  () {
   		if (valueStatus==0) {
   			sortValueDesc();
+  			updateStatus(8);
   			valueStatus=1;
   		}
     		
 	    else {
 	    	sortValueAsc();
+	    	updateStatus(7);
 	    	valueStatus=0;
 	    }
   	});

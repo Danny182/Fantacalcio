@@ -135,11 +135,14 @@ $(document).ready(function(){
         </div>
     </div>
 	<div id="your-team">
-		<?php echo"
-					<div id='teamName'>
-						$_GET[nome_squadra]
-					</div>";
-		?>
+		<div id='teamName'>
+			<?php echo"	$_GET[nome_squadra]";					
+			?>
+			<button type="submit" id="saveTeam">
+				Salva!
+			</button>
+		</div>
+		
 		<div id="listBox">
 
 			<ul id="lista" class="your">
@@ -295,13 +298,16 @@ $(document).ready(function(){
 
 						<?php
 						$i = 0;
-						$query="SELECT ruolo, cognome, valore, squadra FROM giocatore ORDER BY squadra";
+						$query="SELECT id_giocatore, ruolo, cognome, valore, squadra FROM giocatore ORDER BY squadra";
 						$ris = mysql_query($query);
 
 						while ($vet = mysql_fetch_array($ris)) {	
 											
-							echo "<div class='list-item playerDiv' id='p-add-$i'>
+							echo "<div class='list-item playerDiv' id='p-add-$i' value='$vet[id_giocatore]'>
 									<li id='p-add-$i' class='player'>
+										<span id='id_player' value='$vet[id_giocatore]' style='display:none;'>
+											$vet[id_giocatore] 
+										</span>
 										<span class='$vet[squadra]' id='team' style='display:none;'>
 											$vet[squadra]
 										</span>
