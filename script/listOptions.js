@@ -1,4 +1,4 @@
-//THIS FUNCTION DETACHES THE ELEMENTS FROM LIST A AND IT APPENDS IT TO THE LIST B
+
 $(document).ready(function(){
 	var sortClass=0;
 	var nameStatus=0;
@@ -146,7 +146,7 @@ $(document).ready(function(){
 		var players = $(".playerDiv.ListB").map(function() {
         	return $(this).attr('value');
     	}).get().join(",");
-		console.log(players);
+    	document.cookie="players=" + players;
 	})
 
 

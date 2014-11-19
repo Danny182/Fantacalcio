@@ -159,7 +159,7 @@
         
         <div id = "cont-campo">
             
-            <img src = "../img/campo5.png" />
+            <img width="880" height"720" src = "../img/campo8.png"/>
 
         </div> <!-- cont campo -->
         <?php

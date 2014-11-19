@@ -38,17 +38,18 @@
 <link rel="stylesheet" href="../stili/form.css" type="text/css" media="screen" />
 
 
-
+<!-- libreria jquery -->
 <script src="../librerie/jquery-1.11.0.min.js"></script>
+<!-- script che gestisce le opzioni sul sorting, sui filtri, e sullo spostamente all'interno della lista -->
 <script src="../script/listOptions.js"></script>
+<!-- libreria e vari bundle per ordinamento e filtri lista -->
 <script src="../librerie/jplist-core.min.js"></script>
 <script src="../librerie/jplist.filter-dropdown-bundle.min.js"></script>
 <script src="../librerie/jplist.textbox-control.min.js"></script>
 <script src="../librerie/jplist.filter-toggle-bundle.min.js"></script>
 <script src="../librerie/jplist.sort-bundle.min.js"></script>
 
-
-
+<!-- script per la comparsa e la scomparsa del menu in alto a destra dell'utente -->
 <script>
 $(document).ready(function(){
 	$("#button").click(function(event) {
@@ -62,6 +63,7 @@ $(document).ready(function(){
 
 	});
 </script>
+
 </head>
 
 <body class="crea-squadra-page">
