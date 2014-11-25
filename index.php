@@ -6,8 +6,8 @@
 <link rel="shortcut icon" href="img/favicon.ico" />
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link rel="stylesheet" href="stili/style-index.css" type="text/css" media="screen" />
-<script src="librerie/jquery-1.9.1.min.js"/></script>
-<script src="librerie/jquery-ui-1.10.3.custom.min.js"></script>
+<script src="librerie/jquery-1.11.0.min.js"/></script>
+<!-- <script src="librerie/jquery-ui-1.10.3.custom.min.js"></script> -->
 <script src="script/wind1-3.js"></script>
 <script type = "text/javascript" src = "librerie/jquery.innerfade.js"> </script>
 <script type = "text/javascript" src = "librerie/jquery.validate.min.js"> </script>
@@ -73,9 +73,9 @@ if ($_SESSION['login_ok'])
 				<br />
 				<form action = "user/ctrl_login.php" method = "GET" align = "center">
 					
-					<input type="text" value="User Name" name="usern" class="user" onclick="this.value=';echo"''";echo';" onblur  = "if(this.value == "") this.value = "User Name" " />
+					<input type="text" value="Username" name="usern" class="user" onclick="this.value=';echo"''";echo'";" onblur  = "if(this.value==';echo"''";echo') this.value=';echo"'Username'";echo'";" />
 					
-					<input type="password" name="password" class = "pass" value="Password" onclick="this.value=';echo"''";echo';"  onblur  = "if(this.value == "") this.value = "Password" " />
+					<input type="password" name="password" class = "pass" value="Password" onclick="this.value=';echo"''";echo'";" onblur  = "if(this.value==';echo"''";echo') this.value=';echo"'Password'";echo'";" />
 					<br /><br />
 					
 					<input  type = "submit" name = "invia" id = "accedi" class = "button" value = "Accedi"  />

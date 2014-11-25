@@ -36,6 +36,12 @@
 		$v['voto_giocatore_ss'] = $_POST['voto_giocatore_ss'];
 		$v['punti_primo_gol'] = $_POST['punti_primo_gol'];
 		$v['punti_range_gol'] = $_POST['punti_range_gol'];
+		$v['malus_autogol'] = $_POST['malus_autogol'];
+		$v['n_portieri'] = $_POST['n_portieri'];
+		$v['n_difensori'] = $_POST['n_difensori'];
+		$v['n_centrocampisti'] = $_POST['n_centrocampisti'];
+		$v['n_attaccanti'] = $_POST['n_attaccanti'];
+
 		$v['modulo_343'] = $_POST['modulo_343'];
 		$v['modulo_352'] = $_POST['modulo_352'];
 		$v['modulo_361'] = $_POST['modulo_361'];

@@ -32,8 +32,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Creazione Campionato</title>
 
-<script type="text/javascript" src="../librerie/jquery-1.9.1.min.js"/></script>
-<script type="text/javascript" src="../librerie/jquery-ui-1.10.3.custom.min.js."/></script>
+<script src="../librerie/jquery-1.11.0.min.js"/></script>
 <script type="text/javascript" src="../script/crea-camp.js"/></script>//script per la grafica dei radio buttons
 
 

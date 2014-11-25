@@ -37,7 +37,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Creazione Campionato</title>
 
-<script type="text/javascript" src="../librerie/jquery-1.9.1.min.js"/></script>
+<script src="../librerie/jquery-1.11.0.min.js"/></script>
 <script type="text/javascript" src="../script/crea-camp.js"/></script>
 
 <link rel="stylesheet" href="../stili/crea_camp.css" type="text/css" media="screen" />
@@ -340,6 +340,22 @@
 			<div id = "cont-label-modifica" class = "punti_range_gol">
 				<label for="nome" class = "crea-camp-title">Punti per i gol successivi:</label>
 				<input type = "text" name = "punti_range_gol" id = "mod_n_part" class="modifica-regole-punti_range_gol" onclick="this.value='';" onfocus="this.select()" onblur="this.value=!this.value?'6':this.value;"  value = "6"/>
+			</div>
+			<div id = "cont-label-modifica" class = "n_portieri">
+				<label for="nome" class = "crea-camp-title">Numero massimo di portieri:</label>
+				<input type = "text" name = "n_portieri" id = "mod_n_part" class="modifica-regole-n_portieri" onclick="this.value='';" onfocus="this.select()" onblur="this.value=!this.value?'3':this.value;"  value = "3"/>
+			</div>
+			<div id = "cont-label-modifica" class = "n_difensori">
+				<label for="nome" class = "crea-camp-title">Numero massimo di difensori:</label>
+				<input type = "text" name = "n_difensori" id = "mod_n_part" class="modifica-regole-n_difensori" onclick="this.value='';" onfocus="this.select()" onblur="this.value=!this.value?'8':this.value;"  value = "8"/>
+			</div>
+			<div id = "cont-label-modifica" class = "n_centrocampisti">
+				<label for="nome" class = "crea-camp-title n_centrocampisti">Numero massimo di centrocampisti:</label>
+				<input type = "text" name = "n_centrocampisti" id = "mod_n_part" class="modifica-regole-n_centrocampisti" onclick="this.value='';" onfocus="this.select()" onblur="this.value=!this.value?'9':this.value;"  value = "9"/>
+			</div>
+			<div id = "cont-label-modifica" class = "n_attaccanti">
+				<label for="nome" class = "crea-camp-title">Numero massimo di attaccanti:</label>
+				<input type = "text" name = "n_attaccanti" id = "mod_n_part" class="modifica-regole-n_attaccanti" onclick="this.value='';" onfocus="this.select()" onblur="this.value=!this.value?'6':this.value;"  value = "6"/>
 			</div>
 			<br>
 			<div id = "cont-label-modifica"  class = "moduli_validi">
