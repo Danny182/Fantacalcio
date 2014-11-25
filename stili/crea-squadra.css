@@ -103,7 +103,7 @@ text-align:center;
 -webkit-border-radius:5px 5px 5px 5px;
 border-radius:5px 5px 5px 5px;
 margin-top:0px;
-color:#0C0;
+color:#000;
 
 }
 
@@ -141,7 +141,7 @@ margin-left:5%;
 margin-top:1%;
 padding:5px;
 background-color:#E8E8E9;
-color:#0C0;
+color:#000;
 font-size:13px;
 
 }
@@ -167,7 +167,7 @@ font-size:13px;
 /*-webkit-box-shadow:0px 1px 1px rgba(255,255,255,0.8) inset, 1px 1px 5px rgba(0,0,0,0.4);
 moz-box-shadow:0px 1px 1px rgba(255,255,255,0.8) inset, 1px 1px 5px rgba(0,0,0,0.4);
 box-shadow:0px 1px 1px rgba(255,255,255,0.8) inset, 1px 1px 5px rgba(0,0,0,0.4);*/
-background-color:#A64DFF;
+background-color:#0d0;
 }
 
 div#inserire_rosa{	
@@ -500,6 +500,7 @@ div.box.jplist-no-results {
 	padding-top:0;
 	width:10%;
 	/*stile da fare */
+<<<<<<< Updated upstream
 }
 
 .back{
@@ -507,6 +508,15 @@ div.box.jplist-no-results {
 	margin-top:10%;
 }
 
+=======
+}
+
+.back{
+	margin-left:65%;
+	margin-top:10%;
+}
+
+>>>>>>> Stashed changes
 .saveTeam:hover {
 	cursor:pointer;
 	background-color: #0c0;
@@ -514,4 +524,7 @@ div.box.jplist-no-results {
 }
 button#saveTeam:active {
 	color:#fff;
+}
+a:hover{
+	color: #686868 !important;
 }
