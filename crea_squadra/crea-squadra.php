@@ -4,6 +4,12 @@
     include("../funzioni/home_function.php");
     $id = $_SESSION['id_utente'];
     $num_notifiche = $_SESSION['notifiche'];
+
+    //se proveniamo da insert rosa, tramite il tasto indietro, riprendo i dati e li risetto
+    if(isset($_POST['nome_squadra']))
+        $team_name = $_POST['nome_squadra'];
+    else 
+        $team_name = '';
     
     //prendo alcuni dati dell'utente(in questo caso nome e cognome)
     $utente = get_userdates($id);
@@ -27,10 +33,21 @@
     }
     else
     $url_stemma = "../img/logo-squadra/fiorentina.png";
-    
-    
-    
-    ?>
+
+    //Controllo se ci sono dati provenienti da insert rosa
+    if(isset($_POST['nome_squadra']))
+        $nameT = $_POST['nome_squadra'];
+    else
+        $nameT = '';
+    if(isset($_POST['nome_stadio']))
+        $nameS = $_POST['nome_stadio'];
+    else
+        $nameS = '';
+    if(isset($_POST['storia']))
+        $story = $_POST['storia'];
+    else
+        $story = 'Scrivi la storia della tua Squadra...';
+?>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -240,11 +257,11 @@ $(document).ready(function() {
 Generalità
 </div>
 
-<form action = "" method = "post" >
+<form action = "insert-rosa.php" method = "post" >
 
 <div id = "cont-input" class = "nome">
 <label for="squadra" class = "label-squadra">Nome</label>
-<input type = "text" name = "nome_squadra" id = "squadra" size = "50" class = "nome-squadra" />
+    <input type = "text" name = "nome_squadra" id = "squadra" size = "50" class = "nome-squadra" value = "<?php echo $nameT; ?>" />
 </div>
 
 <div id = "cont-input" class = "stemma">
@@ -271,7 +288,7 @@ Stadio
 
 <div id = "cont-input" class = "nome-stadio">
     <label for="stadio" class = "label-squadra">Nome dello stadio </label>
-        <input type = "text" name = "stadio" id = "stadio" size = "50" class = "nome-squadra" />
+        <input type = "text" name = "stadio" id = "stadio" size = "50" class = "nome-squadra" value = "<?php echo $nameS; ?>" />
 </div><!--cont input-->
 
 
@@ -302,8 +319,8 @@ Stadio
 Storia/Caratteristiche
 </div>
 
-<textarea name="storia" class = "storia" value = "Scrivi qualcosa sulla tua squadra..."onclick="this.value='';" onblur  = "if(this.value == "") this.value = "Scrivi qualcosa sulla tua squadra...">
-    Scrivi qualcosa sulla tua squadra...
+<textarea name="storia" class = "storia" value = "<?php echo $story; ?>"onclick="this.value='';" onblur  = "if(this.value == "") this.value = "Scrivi qualcosa sulla tua squadra...">
+    <?php echo $story; ?>
 
 </textarea>
 

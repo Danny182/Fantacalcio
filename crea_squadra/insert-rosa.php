@@ -15,11 +15,13 @@
     }
 	
 	//prendo i dati dal form e li metto nei cookie	
-	setcookie("crea_squadra[nome]", $_GET['nome_squadra'], 0);
-	setcookie("crea_squadra[stadio]", $_GET['nome_stadio'], 0);
-	setcookie("crea_squadra[storia]", $_GET['storia'], 0);
-	setcookie("crea_squadra[url_stadio]", $_GET['url_stadio'], 0);
-	setcookie("crea_squadra[url_stemma]", $_GET['url_stemma'], 0);
+	setcookie("crea_squadra_nome", $_POST['nome_squadra'], 0);
+	setcookie("crea_squadra_stadio", $_POST['stadio'], 0);
+	setcookie("crea_squadra_storia", $_POST['storia'], 0);
+	setcookie("crea_squadra_urlStadio", $_POST['url_stadio'], 0);
+	setcookie("crea_squadra_urlStemma", $_POST['url_stemma'], 0);
+
+
 	
 ?>
 
@@ -28,7 +30,7 @@
 <head>
 <link rel="shortcut icon" href="/favicon.ico" />
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Inserimento rosa</title>
+<title>FaYnt | Rosa</title>
 
 
 <link rel="stylesheet" href="../stili/crea-squadra.css" type="text/css" media="screen" />
@@ -48,6 +50,8 @@
 <script src="../librerie/jplist.textbox-control.min.js"></script>
 <script src="../librerie/jplist.filter-toggle-bundle.min.js"></script>
 <script src="../librerie/jplist.sort-bundle.min.js"></script>
+
+
 
 <!-- script per la comparsa e la scomparsa del menu in alto a destra dell'utente -->
 <script>
@@ -104,8 +108,16 @@ $(document).ready(function(){
     ?>
 </div>
 </div>
-
-
+<form action = "salva_squadra_rosa.php" method = "POST" id = "saveTeam">
+	<input type = "submit" value = "Salva" class = "saveTeam" id = "button"/>
+</form>
+<form action = "crea-squadra.php" method = "POST">
+	<?php /* faccio ritornare i dati a crea squadra.php */ ?>
+	<input type = "submit" value = "Indietro" class = "saveTeam back" />
+	<input type = "hidden" name = "nome_squadra" value = "<?php echo $_POST['nome_squadra']; ?>" />
+	<input type = "hidden" name = "nome_stadio" value = "<?php echo $_POST['stadio'];  ?>" />
+	<input type = "hidden" name = "storia" value = "<?php echo $_POST['storia']; ?>" />
+</form>
 <div id = "windows">
 
     <div id="menu">
@@ -138,18 +150,11 @@ $(document).ready(function(){
     </div>
 	<div id="your-team">
 		<div id='teamName'>
-			<?php echo"	$_GET[nome_squadra]";					
+			<?php echo	$_POST['nome_squadra'];					
 			?>
-			<button type="submit" id="saveTeam">
-				Salva!
-			</button>
 		</div>
-		
 		<div id="listBox">
-
 			<ul id="lista" class="your">
-		
-
 			</ul>
 		</div>
 	</div>

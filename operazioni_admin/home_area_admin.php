@@ -24,12 +24,6 @@
 
 
     $(document).ready(function(){
-                     
-         
-        $("a.delete-team").click(function(){
-                                 alert("dio boia");
-                         });
-                    
           /*$("a.squadra").click(function(){
                              var camp = $(this);
                              var nome_camp = camp.attr("nome_camp");
