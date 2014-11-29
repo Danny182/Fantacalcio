@@ -273,7 +273,7 @@ Generalità
 
        <label for="logo" class = "label-logo">
 
-            <a href='../img/logo-squadra/fiorentina.png' class = "squadra" title = "Fiorentina"    >Modifica</a>
+            <a href='../img/logo-squadra/fiorentina.png' class = "squadra" title = "Fiorentina" style="color:#0C0;"  >Modifica</a>
             <a href='../img/logo-squadra/milan.png' class = "squadra" title = "Milan" style="display:none;color:#0C0;"  >Modifica</a>
             
 
@@ -305,9 +305,9 @@ Stadio
 
     <label for="nome" class = "label-logo">
 
-        <a href='../img/stadio/stadio1.png' class = "group" title = "Stadio: La fortezza"    >Modifica</a>
-        <a href='../img/stadio/stadio2.png' class = "group" title = "Stadio: L'incandescente" style="display:none; "  >Modifica</a>
-        <a href='../img/stadio/stadio3.png' class = "group" title = "Stadio: L'imperatore" style="display:none; "  >Modifica</a>
+        <a href='../img/stadio/stadio1.png' class = "group" title = "Stadio: La fortezza" style="color:#0C0;"  >Modifica</a>
+        <a href='../img/stadio/stadio2.png' class = "group" title = "Stadio: L'incandescente" style="display:none;style="color:#0C0;""  >Modifica</a>
+        <a href='../img/stadio/stadio3.png' class = "group" title = "Stadio: L'imperatore" style="display:none;style="color:#0C0;""  >Modifica</a>
 
 
     </label>
@@ -318,25 +318,14 @@ Stadio
 <div id = "divisore" class = "second">
 Storia/Caratteristiche
 </div>
-<<<<<<< Updated upstream
 
 <textarea name="storia" class = "storia" value = "<?php echo $story; ?>"onclick="this.value='';" onblur  = "if(this.value == "") this.value = "Scrivi qualcosa sulla tua squadra...">
     <?php echo $story; ?>
-=======
-<<<<<<< HEAD
-<textarea name="storia" class = "storia" value = "Scrivi qualcosa sulla tua squadra..."onclick="this.value='';" onblur  = "this.value = 'Scrivi qualcosa sulla tua squadra...';">
-    Scrivi qualcosa sulla tua squadra...
-=======
-
-<textarea name="storia" class = "storia" value = "<?php echo $story; ?>"onclick="this.value='';" onblur  = "if(this.value == "") this.value = "Scrivi qualcosa sulla tua squadra...">
-    <?php echo $story; ?>
->>>>>>> FETCH_HEAD
->>>>>>> Stashed changes
 
 </textarea>
 
 <div id = "inserire_rosa" >
-	<label for="nome" class = "inserire_rosa"  >Inserire rosa adesso?</label>				
+	<label for="nome" class = "inserire_rosa" style="color:#0C0;">Inserire rosa adesso?</label>				
 	<div id="labels">
 		<input type="radio" value="si" name="inserire_rosa" id="radio00" checked = "checked" onclick="this.form.inserire_rosa.disabled=true;"/>
 		<label for="radio00" class = "crea-squadra active" >Si</label>
