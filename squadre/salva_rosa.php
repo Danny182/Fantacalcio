@@ -80,6 +80,7 @@ $ris = mysql_query($query);
 if(!$ris){
 	echo ' <div id = "cont-errore"><div id = "errore"> ATTENZIONE <br> SI E\' VERIFICATO UN PROBLEMA (1)
         <meta http-equiv="Refresh" content="3; URL=../home.php?var=0"> </div></div>' ;
+        die();
 }
 //id della nuova squadra
 $query = "SELECT squadra.id_squadra FROM squadra WHERE squadra.nome = '$team_name'";

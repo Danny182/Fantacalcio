@@ -14,6 +14,8 @@
 <link rel="stylesheet" href="../stili/style-home.css" type="text/css" media="screen" />
 <link rel="stylesheet" href="../stili/squadre.css" type="text/css" media="screen" />
 <link rel="stylesheet" href="../stili/campo-calcio.css" type="text/css" media="screen" />
+
+
 <script src="../librerie/jquery-1.9.1.min.js"/></script>
 
 <script type="text/javascript" src="../librerie/jquery.easing.1.3.js"></script>
@@ -320,6 +322,10 @@ $(document).ready(function(){
 
             $query = "SELECT campionato.nome FROM campionato WHERE id_campionato = '$id_camp'";
 			$ris = mysql_query($query);
+            if(!$ris){
+                    echo ' <div id = "cont-errore"><div id = "errore"> ATTENZIONE <br> SI E\' VERIFICATO UN PROBLEMA 
+                    <meta http-equiv="Refresh" content="3; URL=../home.php?var=0"> </div></div>' ;
+            }
 			$row = mysql_fetch_array($ris);
 			$nome_camp = $row['nome'];
 
@@ -360,6 +366,10 @@ $(document).ready(function(){
 				foreach($squadre_dates as $value) $id_stadio = $value['id_stadio'];
 				$query = "SELECT stadio.img FROM stadio WHERE id_stadio = '$id_stadio'";
 				$ris = mysql_query($query);
+                if(!$ris){
+                        echo ' <div id = "cont-errore"><div id = "errore"> ATTENZIONE <br> SI E\' VERIFICATO UN PROBLEMA (1)
+                        <meta http-equiv="Refresh" content="3; URL=../home.php?var=0"> </div></div>' ;
+                }
 				$row = mysql_fetch_array($ris);
 				$url_stadio = $row['img'];
 			}
@@ -390,12 +400,28 @@ $(document).ready(function(){
 	
 	<textarea name="storia" value = "<?php foreach($squadre_dates as $value) echo $value['storia'];?>" id = "storia" ><?php foreach($squadre_dates as $value) if(!empty($value['storia']))echo $value['storia']; else echo "Scrivi la storia della tua squadra!";?></textarea>
 
-    <div id = "divisore" class = "fourthy">
 
-        <label for = "storia">Vedi/Modifica La Rosa</label>
-
-    </div>
-
+    <?php
+    //controllo che la squadra si iscritta al campionato
+    $query = "SELECT squadra.iscritta FROM squadra WHERE squadra.id_utente = '$id'";
+    $ris = mysql_query($query);
+    if(!$ris){
+    echo ' <div id = "cont-errore"><div id = "errore"> ATTENZIONE <br> SI E\' VERIFICATO UN PROBLEMA (1)
+        <meta http-equiv="Refresh" content="3; URL=../home.php?var=0"> </div></div>' ;
+    }
+    $vet = mysql_fetch_array($ris);
+    $iscritta = $vet['iscritta'];
+    if($iscritta){ //appare il link per modificare la rosa
+        echo'<div id = "divisore" class = "fourthy">
+            <label for = "storia">Vedi/Modifica La Rosa</label>
+        </div>';
+    }
+    else{
+        echo'<div id = "divisore" class = "fourthy">
+            <label for = "storia">Iscriviti ad un Campionato!</label>
+        </div>';
+    }
+    ?>
 
     <input type = "hidden" name = "url_stadio" value = "<?php echo $url_stadio; ?>" />
     <input type = "hidden" name = "url_stemma" value = "<?php echo $url_stemma; ?>" />

@@ -2,6 +2,8 @@
     	include("../session.php");
     	include("../connect_db.php");
         include("../funzioni/home_function.php");
+        include("../funzioni/gest_campionato_function.php");
+        include("../funzioni/formazione_functions.php");
     ?>
 
     <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -92,77 +94,7 @@
         </div>
     </div>
 
-    <div id = "window" class = "formazione">
-
-        <div id="menu">
-            <div class="menu-principale-container">
-                <ul id="menu-principale" class="menu">
-                    <li id'"item-1" class="style-item-1" >
-                        <a href="../home.php?var=0"><img src="../img/site_logo/fantapv_white2.png" height="22px" width="22px" style="padding-right:2px;">Home</a>
-                    </li>
-                    <li id'"item-1" class="style-item-2">
-                        <a href="#">Inserisci Formazione</a>
-                    </li>
-                    <li id'"item-1" class="style-item-3">
-                        <a href="../crea_campionato/crea-campionato.php">Crea un Campionato</a>
-                    </li>
-                    <li id'"item-1" class="style-item-4">
-                        <a href="../crea_squadra/crea-squadra.php">Crea una nuova Squadra</a>
-                    </li>
-
-                    <li id'"item-1" class="style-item-6">
-                        <a href="../notifiche.php">Notifiche</a>
-                    </li>
-                    <li id'"item-1" class="style-item-7">
-                        <a href="documenti.php">Documenti di lega</a>
-                    </li>
-                    <li id'"item-1" class="style-item-8">
-                        <a href="../squadre/squadre.php?var=0">Le tue squadre</a>
-                    </li>
-                </ul>
-            </div>
-    </div><!-- menu -->
-    <ul id="accordion">
-    <li class = "portieri">Portieri
-        <ul>
-            <?php
-                for($i=1;$i<=3;$i++)
-                    echo '<li> Giocatore '.$i.' </li>';
-            ?>
-        </ul>
-    </li>
-    <li>Difensori
-        <ul>
-            <?php
-                for($i=1;$i<=8;$i++)
-                    echo '<li> Giocatore '.$i.' </li>';
-            ?>
-        </ul>
-    </li>
-    <li>Centrocampisti
-        <ul>
-            <?php
-                for($i=1;$i<=8;$i++)
-                    echo '<li> Giocatore '.$i.' </li>';
-            ?>
-        </ul>
-    </li>
-    <li>Attaccanti
-        <ul>
-            <?php
-                for($i=1;$i<=6;$i++)
-                    echo '<li> Giocatore '.$i.' </li>';
-            ?>
-        </ul>
-    </li>
-</ul>
-        
-        <div id = "cont-campo">
-            
-            <img width="860" height"680" src = "../img/campo.png"/>
-
-        </div> <!-- cont campo -->
-        <?php
+    <?php
         //prendo i moduli consentiti
         //campionato corrente
         $camp = $_SESSION['current_camp'];
@@ -204,12 +136,98 @@
             </select>
         </div>
 
+    <div id = "window" class = "formazione">
+
+        <div id="menu">
+            <div class="menu-principale-container">
+                <ul id="menu-principale" class="menu">
+                    <li id'"item-1" class="style-item-1" >
+                        <a href="../home.php?var=0"><img src="../img/site_logo/fantapv_white2.png" height="22px" width="22px" style="padding-right:2px;">Home</a>
+                    </li>
+                    <li id'"item-1" class="style-item-2">
+                        <a href="#">Inserisci Formazione</a>
+                    </li>
+                    <li id'"item-1" class="style-item-3">
+                        <a href="../crea_campionato/crea-campionato.php">Crea un Campionato</a>
+                    </li>
+                    <li id'"item-1" class="style-item-4">
+                        <a href="../crea_squadra/crea-squadra.php">Crea una nuova Squadra</a>
+                    </li>
+
+                    <li id'"item-1" class="style-item-6">
+                        <a href="../notifiche.php">Notifiche</a>
+                    </li>
+                    <li id'"item-1" class="style-item-7">
+                        <a href="documenti.php">Documenti di lega</a>
+                    </li>
+                    <li id'"item-1" class="style-item-8">
+                        <a href="../squadre/squadre.php?var=0">Le tue squadre</a>
+                    </li>
+                </ul>
+            </div>
+    </div><!-- menu -->
+    <?php
+    //prendo la lista dei giocatori della squadra
+    //campionato corrente 
+    $current_camp = $_SESSION['current_camp'];
+    //prendo l'id del campionato
+    $id_camp = get_id_champion($current_camp);
+    //prendo l'id della squadra inviando sia l'id del campionato sia l'id del l'utente
+    $id_team = get_team_id_by_team_user($id, $id_camp);
+    //scarico gli id dei giocatori
+    $id_giocs = get_id_gioc($id_team);
 
 
-        
-        
-        
 
+
+
+
+
+
+
+
+
+    ?>
+    <ul id="accordion">
+    <li class = "portieri">Portieri
+        <ul>
+            <?php
+                for($i=1;$i<=3;$i++)
+                    echo '<li> Giocatore '.$i.' </li>';
+            ?>
+        </ul>
+    </li>
+    <li>Difensori
+        <ul>
+            <?php
+                for($i=1;$i<=8;$i++)
+                    echo '<li> Giocatore '.$i.' </li>';
+            ?>
+        </ul>
+    </li>
+    <li>Centrocampisti
+        <ul>
+            <?php
+                for($i=1;$i<=8;$i++)
+                    echo '<li> Giocatore '.$i.' </li>';
+            ?>
+        </ul>
+    </li>
+    <li>Attaccanti
+        <ul>
+            <?php
+                for($i=1;$i<=6;$i++)
+                    echo '<li> Giocatore '.$i.' </li>';
+            ?>
+        </ul>
+    </li>
+</ul>
+        
+        <div id = "cont-campo">
+            
+            <img width="860" height"680" src = "../img/campo.png"/>
+
+        </div> <!-- cont campo -->
     </div><!-- window -->
 
 
