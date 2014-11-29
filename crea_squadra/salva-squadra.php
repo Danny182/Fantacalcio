@@ -17,18 +17,18 @@
 <?php
 
 //prendo i dati dal form
-    if(isset($_GET['nome_squadra'])) $nome_squadra = $_GET['nome_squadra'];
-    if(isset($_GET['stadio'])) $nome_stadio = $_GET['stadio'];
-    if(isset($_GET['storia'])) $storia = $_GET['storia'];
-    if(isset($_GET['url_stadio'])) $url_stadio = $_GET['url_stadio'];
-    if(isset($_GET['url_stemma'])) $url_stemma = $_GET['url_stemma'];
+    if(isset($_POST['nome_squadra'])) $nome_squadra = $_POST['nome_squadra'];
+    if(isset($_POST['stadio'])) $nome_stadio = $_POST['stadio'];
+    if(isset($_POST['storia'])) $storia = $_GET['storia'];
+    if(isset($_POST['url_stadio'])) $url_stadio = $_POST['url_stadio'];
+    if(isset($_POST['url_stemma'])) $url_stemma = $_POST['url_stemma'];
     
     //controllo che il nome della squadra non esista già
     $query = "SELECT count(id_squadra) as num FROM squadra WHERE squadra.nome = '$nome_squadra'";
     $ris = mysql_query($query);
     $row = mysql_fetch_array($ris);
     if($row['num'] != 0){//c'è almeno una squadra con lo stesso nome
-        echo ' <div id = "cont-errore"><div id = "errore"> ATTENZIONE <br> Il nome della squadra è già utilizzato
+        echo ' <div id = "cont-errore"><div id = "errore"> ATTENZIONE <br> IL NOME DELLA SQUADRA E\' GIA\' UTILIZZATO
         <meta http-equiv="Refresh" content="3; URL=crea-squadra.php"> </div></div>' ;
     }
     else{
@@ -43,11 +43,11 @@
     $query = "INSERT INTO squadra VALUES (NULL, '$nome_squadra', NULL, '$id', '$id_stadio', '0' , 'false', '$storia', '$url_stemma', '$nome_stadio')";
     $ris = mysql_query($query);
     if(!$ris){
-        echo ' <div id = "cont-errore"><div id = "errore"> ATTENZIONE <br> Si è verificato un problema
+        echo ' <div id = "cont-errore"><div id = "errore"> ATTENZIONE <br> SI E\' VERIFICATO UN PROBLEMA
         <meta http-equiv="Refresh" content="3; URL=crea-squadra.php"> </div></div>' ;
         }
     else{
-        echo ' <div id = "cont-errore"><div id = "errore"> Procedura eseguita con successo!
+        echo ' <div id = "cont-errore"><div id = "errore"> NUOVA SQUADRA CREATA CON SUCCESSO
         <meta http-equiv="Refresh" content="3; URL=../home.php?var=0"> </div></div>' ;
     }
     }

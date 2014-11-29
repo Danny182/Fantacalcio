@@ -257,7 +257,7 @@ $(document).ready(function() {
 Generalità
 </div>
 
-<form action = "insert-rosa.php" method = "post" >
+<form action = "salva-squadra.php" method = "post" >
 
 <div id = "cont-input" class = "nome">
 <label for="squadra" class = "label-squadra">Nome</label>
@@ -273,8 +273,8 @@ Generalità
 
        <label for="logo" class = "label-logo">
 
-            <a href='../img/logo-squadra/fiorentina.png' class = "squadra" title = "Fiorentina" style="color:#0C0;"  >Modifica</a>
-            <a href='../img/logo-squadra/milan.png' class = "squadra" title = "Milan" style="display:none;color:#0C0;"  >Modifica</a>
+            <a href='../img/logo-squadra/fiorentina.png' class = "squadra" title = "Fiorentina" style="color:#8B8989;"  >Modifica</a>
+            <a href='../img/logo-squadra/milan.png' class = "squadra" title = "Milan" style="display:none;color:#8B8989;"  >Modifica</a>
             
 
         </label>
@@ -305,9 +305,9 @@ Stadio
 
     <label for="nome" class = "label-logo">
 
-        <a href='../img/stadio/stadio1.png' class = "group" title = "Stadio: La fortezza" style="color:#0C0;"  >Modifica</a>
-        <a href='../img/stadio/stadio2.png' class = "group" title = "Stadio: L'incandescente" style="display:none;style="color:#0C0;""  >Modifica</a>
-        <a href='../img/stadio/stadio3.png' class = "group" title = "Stadio: L'imperatore" style="display:none;style="color:#0C0;""  >Modifica</a>
+        <a href='../img/stadio/stadio1.png' class = "group" title = "Stadio: La fortezza" style="color:#8B8989;"  >Modifica</a>
+        <a href='../img/stadio/stadio2.png' class = "group" title = "Stadio: L'incandescente" style="display:none;style="color:#8B8989;""  >Modifica</a>
+        <a href='../img/stadio/stadio3.png' class = "group" title = "Stadio: L'imperatore" style="display:none;style="color:#8B8989;""  >Modifica</a>
 
 
     </label>
@@ -325,13 +325,7 @@ Storia/Caratteristiche
 </textarea>
 
 <div id = "inserire_rosa" >
-	<label for="nome" class = "inserire_rosa" style="color:#0C0;">Inserire rosa adesso?</label>				
-	<div id="labels">
-		<input type="radio" value="si" name="inserire_rosa" id="radio00" checked = "checked" onclick="this.form.inserire_rosa.disabled=true;"/>
-		<label for="radio00" class = "crea-squadra active" >Si</label>
-		<input type="radio" value="no" name="inserire_rosa" id="radio01" onclick="this.form.inserire_rosa.disabled=false;" />
-		<label for="radio01" class = "crea-squadra">No</label>
-	</div>
+	Appena sarai iscritto ad un campionato potrai inserire la rosa della squadra			
 </div>
 <input type = "hidden" name = "url_stadio" value = "<?php echo $url_stadio; ?>" />
 <input type = "hidden" name = "url_stemma" value = "<?php echo $url_stemma; ?>" />
@@ -339,25 +333,7 @@ Storia/Caratteristiche
 
 
 </form>
-
-	<?php
-			$nome_squadra = $_POST['nome_squadra'];
-			$nome_stadio = $_POST['stadio'];
-			$storia = $_POST['storia'];
-			$url_stadio = $_POST['url_stadio'];
-			$url_stemma = $_POST['url_stemma'];
-			@$where=0;
-			//se viene scelto di inserire rosa ora
-			if (@strcmp($_POST['inserire_rosa'],"si")==0)	
-				echo'<meta http-equiv="refresh" content="0;url=insert-rosa.php?nome_squadra='.$nome_squadra.'&nome_stadio='.$nome_stadio.'&storia='.$storia.'&url_stadio='.$url_stadio.'&url_stemma='.$url_stemma.'">';
-			//se viene scelto di inserire rosa in seguito
-			if (@strcmp($_POST['inserire_rosa'],'no')==0)	
-				echo'<meta http-equiv="refresh" content="0; url=salva-squadra.php?nome_squadra='.$nome_squadra.'&nome_stadio='.$nome_stadio.'&storia='.$storia.'&url_stadio='.$url_stadio.'&url_stemma='.$url_stemma.'">';
-		?>
-
 </div><!--window-->
-
-
 
 </div><!-- fine cont-->
 

@@ -390,6 +390,12 @@ $(document).ready(function(){
 	
 	<textarea name="storia" value = "<?php foreach($squadre_dates as $value) echo $value['storia'];?>" id = "storia" ><?php foreach($squadre_dates as $value) if(!empty($value['storia']))echo $value['storia']; else echo "Scrivi la storia della tua squadra!";?></textarea>
 
+    <div id = "divisore" class = "fourthy">
+
+        <label for = "storia">Vedi/Modifica La Rosa</label>
+
+    </div>
+
 
     <input type = "hidden" name = "url_stadio" value = "<?php echo $url_stadio; ?>" />
     <input type = "hidden" name = "url_stemma" value = "<?php echo $url_stemma; ?>" />

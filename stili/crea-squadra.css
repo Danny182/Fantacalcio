@@ -13,7 +13,8 @@ font-size:18px;
 border-top:none;
 border-right:none;
 border-left:none;
-color:#8B8989;
+/*color:#8B8989;*/
+color:rgba(1, 159, 199, 0.61);
 }
 div#divisore.second{
 position:absolute;
@@ -103,7 +104,7 @@ text-align:center;
 -webkit-border-radius:5px 5px 5px 5px;
 border-radius:5px 5px 5px 5px;
 margin-top:0px;
-color:#000;
+color:#8B8989;;
 
 }
 
@@ -118,7 +119,7 @@ text-align:center;
 -webkit-border-radius:5px 5px 5px 5px;
 border-radius:5px 5px 5px 5px;
 margin-top:15px;
-color:#0C0;
+color:#0098BF;
 
 }
 
@@ -141,7 +142,7 @@ margin-left:5%;
 margin-top:1%;
 padding:5px;
 background-color:#E8E8E9;
-color:#000;
+color:#8B8989;;
 font-size:13px;
 
 }
@@ -176,10 +177,9 @@ div#inserire_rosa{
 	border:1px solid;
 	float:left;
     border-color:#CECED0;
-    color:#000000;
+    color:#8B8989;
     height: 10%;
     width: 27%;
-    color:#000000;
     text-align:center;
     -moz-border-radius:2px 2px 2px 2px;
     -webkit-border-radius:2px 2px 2px 2px;
@@ -524,6 +524,9 @@ div.box.jplist-no-results {
 }
 button#saveTeam:active {
 	color:#fff;
+}
+a{
+	color:#0098BF;
 }
 a:hover{
 	color: #686868 !important;
