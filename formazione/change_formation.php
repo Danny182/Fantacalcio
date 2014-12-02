@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="../stili/style-home.css" type="text/css" media="screen" />
     <link rel="stylesheet" href="../stili/style-formazione.css" type="text/css" media="screen" />
     <link rel="stylesheet" href="../stili/campo-calcio.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="../stili/crea_camp.css" type="text/css" media="screen" />
     <script src="../librerie/jquery-1.11.0.min.js"/></script>
     
 
@@ -166,6 +167,11 @@
                 </ul>
             </div>
     </div><!-- menu -->
+    <div id = "cont-campo">
+            
+            <img width="860" height"680" src = "../img/campo.png"/>
+
+        </div> <!-- cont campo -->
     <?php
     //prendo la lista dei giocatori della squadra
     //campionato corrente 
@@ -174,60 +180,18 @@
     $id_camp = get_id_champion($current_camp);
     //prendo l'id della squadra inviando sia l'id del campionato sia l'id del l'utente
     $id_team = get_team_id_by_team_user($id, $id_camp);
-    //scarico gli id dei giocatori
-    $id_giocs = get_id_gioc($id_team);
 
-
-
-
-
-
-
-
-
-
-
+    $query = "SELECT appartiene.id_giocatore FROM appartiene WHERE appartiene.id_squadra = '$id_team'";
+    $ris = mysql_query($query);
+    if(!$ris){
+        echo ' <div id = "cont-errore"><div id = "errore"> ATTENZIONE <br> SI E\' VERIFICATO UN PROBLEMA
+        <meta http-equiv="Refresh" content="3; URL=../home.php"> </div></div>' ;
+        }
+    //setto la rosa della squadra
+    include("set_rosa_team.php");
     ?>
-    <ul id="accordion">
-    <li class = "portieri">Portieri
-        <ul>
-            <?php
-                for($i=1;$i<=3;$i++)
-                    echo '<li> Giocatore '.$i.' </li>';
-            ?>
-        </ul>
-    </li>
-    <li>Difensori
-        <ul>
-            <?php
-                for($i=1;$i<=8;$i++)
-                    echo '<li> Giocatore '.$i.' </li>';
-            ?>
-        </ul>
-    </li>
-    <li>Centrocampisti
-        <ul>
-            <?php
-                for($i=1;$i<=8;$i++)
-                    echo '<li> Giocatore '.$i.' </li>';
-            ?>
-        </ul>
-    </li>
-    <li>Attaccanti
-        <ul>
-            <?php
-                for($i=1;$i<=6;$i++)
-                    echo '<li> Giocatore '.$i.' </li>';
-            ?>
-        </ul>
-    </li>
-</ul>
-        
-        <div id = "cont-campo">
-            
-            <img width="860" height"680" src = "../img/campo.png"/>
 
-        </div> <!-- cont campo -->
+        
     </div><!-- window -->
 
 
