@@ -2,6 +2,7 @@
 	include("../session.php");
 	include("../connect_db.php");
     include("../funzioni/home_function.php");
+    include("../funzioni/gest_campionato_function.php");
     $id = $_SESSION['id_utente'];
     $num_notifiche = $_SESSION['notifiche'];
     
@@ -14,12 +15,29 @@
         
     }
 	
-	//prendo i dati dal form e li metto nei cookie	
+	/*//prendo i dati dal form e li metto nei cookie	
 	setcookie("crea_squadra_nome", $_POST['nome_squadra'], 0);
 	setcookie("crea_squadra_stadio", $_POST['stadio'], 0);
 	setcookie("crea_squadra_storia", $_POST['storia'], 0);
 	setcookie("crea_squadra_urlStadio", $_POST['url_stadio'], 0);
 	setcookie("crea_squadra_urlStemma", $_POST['url_stemma'], 0);
+	*/
+
+	//prendo id squadra e id campionato dalla pagina squadre.php (si arriva solo da li)
+	$id_team = $_GET['id_team'];
+	$id_camp = $_GET['id_camp'];
+	//prendo le regole del campionato dalla funzione get_rules nel file gest_campionato_function (dentro funzioni)
+	$regole = array();
+	$regole = get_rules($id_camp);
+	/*
+		l'array si scorre con il normale foreach
+		EX: Voglio prendere il numero dei partecipanti: foreach($regole as $value) $n_part = $value['n_part'];
+	*/
+
+	
+
+
+
 
 
 	
@@ -50,6 +68,7 @@
 <script src="../librerie/jplist.textbox-control.min.js"></script>
 <script src="../librerie/jplist.filter-toggle-bundle.min.js"></script>
 <script src="../librerie/jplist.sort-bundle.min.js"></script>
+
 
 
 

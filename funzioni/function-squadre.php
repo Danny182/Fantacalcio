@@ -83,3 +83,24 @@
         
         
     }
+    function get_id_camp_by_id_team($id_team){
+        $query = "SELECT squadra.id_campionato FROM squadra WHERE squadra.id_squadra = '$id_team'";
+        $ris = mysql_query($query);
+        $vet = mysql_fetch_array($ris);
+        return $vet['id_campionato'];
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

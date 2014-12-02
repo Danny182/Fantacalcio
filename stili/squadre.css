@@ -35,7 +35,7 @@ div#divisore.third{
 
 div#divisore.fourthy{
 	margin-top:3%;
-	width:40%;
+	width:50%;
 }
 
 .reg-squadra{
@@ -299,6 +299,13 @@ div#errore{
 	margin: 0 auto;
 	-moz-border-radius: 2px 2px 2px 2px;
 	-webkit-border-radius: 2px 2px 2px 2px;	
+}
+
+a{
+	color:rgba(1, 159, 199, 0.61);;
+}
+a:hover{
+	color:black;
 }
 
 

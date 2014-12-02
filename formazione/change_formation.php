@@ -170,6 +170,10 @@
     <div id = "cont-campo">
             
             <img width="860" height"680" src = "../img/campo.png"/>
+            <div id = "ruolo" class = "dif1">
+            </div>
+            <div id = "ruolo" class = "dif2">
+            </div>
 
         </div> <!-- cont campo -->
     <?php
@@ -189,6 +193,7 @@
         }
     //setto la rosa della squadra
     include("set_rosa_team.php");
+    //setto i gli elementi ruolo
     ?>
 
         

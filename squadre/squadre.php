@@ -402,23 +402,29 @@ $(document).ready(function(){
 
 
     <?php
-    //controllo che la squadra si iscritta al campionato
-    $query = "SELECT squadra.iscritta FROM squadra WHERE squadra.id_utente = '$id'";
+    //controllo che la squadra sia iscritta al campionato
+    /*$query = "SELECT squadra.iscritta FROM squadra WHERE squadra.id_utente = '$id'";
     $ris = mysql_query($query);
     if(!$ris){
     echo ' <div id = "cont-errore"><div id = "errore"> ATTENZIONE <br> SI E\' VERIFICATO UN PROBLEMA (1)
         <meta http-equiv="Refresh" content="3; URL=../home.php?var=0"> </div></div>' ;
     }
     $vet = mysql_fetch_array($ris);
-    $iscritta = $vet['iscritta'];
+    $iscritta = $vet['iscritta'];*/
+    foreach($squadre_dates as $value) $iscritta = $value['iscritta'];
     if($iscritta){ //appare il link per modificare la rosa
+        //prendo l'id della squadra da inviare all'insert rosa
+        foreach($squadre_dates as $value)
+            $id_team = $value['id_squadra'];
+        //prendo l'id del campionato a cui partecipa questa squadra (esiste per forza)
+        $id_camp = get_id_camp_by_id_team($id_team);
         echo'<div id = "divisore" class = "fourthy">
-            <label for = "storia">Vedi/Modifica La Rosa</label>
+            <label for = "storia"><a href = "insert-rosa.php?id_team = '.$id_team.'&&id_camp='.$id_camp.'">Vedi/Modifica La Rosa </a></label>
         </div>';
     }
     else{
         echo'<div id = "divisore" class = "fourthy">
-            <label for = "storia">Iscriviti ad un Campionato!</label>
+            <label for = "storia">Non sei iscritti a nessun campionato</label>
         </div>';
     }
     ?>

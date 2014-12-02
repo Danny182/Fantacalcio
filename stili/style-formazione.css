@@ -66,6 +66,23 @@ select:hover{
 	background-color:#dbdbdd;
 }
 
+div#ruolo{
+	position:absolute;
+	border:1px solid;
+	width:100px;
+	height:30px;
+}
+
+.dif1{
+	top:36%;
+	left:23%;
+}
+
+.dif2{
+	top:45%;
+	left:35%;
+}
+
 
 
 
