@@ -1,15 +1,18 @@
 <?php
+
 //portieri
         echo'
         <ul id="accordion">
-            <li class = "portieri">Portieri
+            <li id="title">Portieri
                 <ul>';
-                    /*
-                        La prima volta scorro la query, solo che successivamente non me la fa scorrere di nuovo
-                        Non posso fare il ciclo while($vet = mysql_fet...) più volte nello stesso script quindi
-                        nel primo ciclo mi salvo in un array gli id che prendo dal fetch della query.
-                        Nei cicli successi (Dif, Cen, Att) uso quell'array (array_id_gioc).
-                    */
+                    
+                        /*
+                            La prima volta scorro la query, solo che successivamente non me la fa scorrere di nuovo
+                            Non posso fare il ciclo while($vet = mysql_fet...) più volte nello stesso script quindi
+                            nel primo ciclo mi salvo in un array gli id che prendo dal fetch della query.
+                            Nei cicli successi (Dif, Cen, Att) uso quell'array (array_id_gioc).
+                        */
+                    
                     while($vet = mysql_fetch_array($ris)){
                         //scorro via via gli id dei giocatori
                         //prendo tutti i dati
@@ -71,4 +74,5 @@
                     }
                     echo '</ul></li>';
     //fine degli attaccanti
+    
 ?>

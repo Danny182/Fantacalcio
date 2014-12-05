@@ -170,10 +170,53 @@
     <div id = "cont-campo">
             
             <img width="860" height"680" src = "../img/campo.png"/>
+
+            <div id = "ruolo" class = "port">
+                    Neto
+            </div>
+
             <div id = "ruolo" class = "dif1">
+                Pasqual
             </div>
             <div id = "ruolo" class = "dif2">
+                Savic
             </div>
+            <div id = "ruolo" class = "dif3">
+                Rodriguèz
+            </div>
+            <div id = "ruolo" class = "dif4">
+                Tomovic
+            </div>
+            <div id = "ruolo" class = "dif5">
+                Alonso
+            </div>
+
+            <div id = "ruolo" class = "cen1">
+                Pizarro
+            </div>
+            <div id = "ruolo" class = "cen2">
+                Aquilani
+            </div>
+            <div id = "ruolo" class = "cen3">
+                Borja Valero
+            </div>
+            <div id = "ruolo" class = "cen4">
+                Mati Fernandèz
+            </div>
+            <div id = "ruolo" class = "cen5">
+                Juaquìn
+            </div>
+
+            <div id = "ruolo" class = "att1">
+                Rossi
+            </div>
+            <div id = "ruolo" class = "att2">
+                Gomez
+            </div>
+            <div id = "ruolo" class = "att3">
+                Cuadrado
+            </div>
+            
 
         </div> <!-- cont campo -->
     <?php
