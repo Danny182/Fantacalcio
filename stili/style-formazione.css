@@ -15,14 +15,20 @@ div#cont-campo{
 
 div#ruolo{
 	position:absolute;
-	border:none;
+	border-bottom:1px solid;
 	width:130px;
 	height:30px;
 	font-size:15px;
 	color:black;
 	font-weight: bold;
 	text-align: center;
-	box-shadow: 1px 1px 2px black;
+	
+}
+
+div#ruolo:hover{
+	border-right:1px solid;
+	cursor:pointer;
+	box-shadow: 1px 1px 1px black;
 }
 
 .port{
