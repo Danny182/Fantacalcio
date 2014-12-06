@@ -21,7 +21,9 @@
 
     <script type="text/javascript" src="../script/menu.js"></script>
     <script type="text/javascript" src="../script/menu-formazione.js"></script>
+    <script type="text/javascript" src="../script/change_module.js"></script>
     <link rel="stylesheet" type="text/css" href="../stili/menu2.css" />
+    
     <script>
     $(document).ready(function(){
                       $("#button").click(function(event) {
@@ -32,75 +34,14 @@
                       $(document).click( function() {
                                         $("#dropdown").hide();
                                         });
+                      //setto il 343 come modulo di default
+                        $(".dif1").addClass('non-active');
+                        $(".dif5").addClass('non-active');
+                        $(".cen1").addClass('non-active');
                       
                       });
-    /* cambio modulo */
-    function change_module(value){
-            //riattivo tutti gli elementi
-            active_elements();
-            if(value == '442'){
-                $(".dif3").fadeOut(400);
-                $(".cen1").fadeOut(400);
-                $(".att1").fadeOut(400);
-            }
-            if(value == '343'){
-                $(".dif1").fadeOut(400);
-                $(".dif5").fadeOut(400);
-                $(".cen1").fadeOut(400);
-            }
-            if(value == '352'){
-                $(".dif1").fadeOut(400);
-                $(".dif5").fadeOut(400);
-                $(".att1").fadeOut(400);
-            }
-            if(value == '433'){
-                $(".dif3").fadeOut(400);
-                $(".cen5").fadeOut(400);
-                $(".cen4").fadeOut(400);
-            }
-            if(value == '451'){
-                $(".dif3").fadeOut(400);
-                $(".att2").fadeOut(400);
-                $(".att3").fadeOut(400);
-            }
-            if(value == '253'){
-                $(".dif3").fadeOut(400);
-                $(".dif1").fadeOut(400);
-                $(".dif5").fadeOut(400);
-            }
-            if(value == '532'){
-                $(".cen4").fadeOut(400);
-                $(".cen5").fadeOut(400);
-                $(".att1").fadeOut(400);
-            }
-            if(value == '541'){
-                $(".cen1").fadeOut(400);
-                $(".att2").fadeOut(400);
-                $(".att3").fadeOut(400);
-            }
-            if(value == '550'){
-                $(".att1").fadeOut(400);
-                $(".att2").fadeOut(400);
-                $(".att3").fadeOut(400);
-            }
 
-    }
 
-    function active_elements(){
-        $(".dif1").fadeIn(400);
-        $(".dif2").fadeIn(400);
-        $(".dif3").fadeIn(400);
-        $(".dif4").fadeIn(400);
-        $(".dif5").fadeIn(400);
-        $(".cen1").fadeIn(400);
-        $(".cen2").fadeIn(400);
-        $(".cen3").fadeIn(400);
-        $(".cen4").fadeIn(400);
-        $(".cen5").fadeIn(400);
-        $(".att1").fadeIn(400);
-        $(".att2").fadeIn(400);
-        $(".att3").fadeIn(400);
-    }
     </script>
 
 
@@ -282,7 +223,7 @@
             </div>
             <div id = "ruolo" class = "cen4">
                 <img src="../img/t-shirts formazione/man_cen.png" width="25" height="20" align="center" />
-                Mati Fernandèz
+                Mati 
             </div>
             <div id = "ruolo" class = "cen5">
                 <img src="../img/t-shirts formazione/man_cen.png" width="25" height="20" align="center" />
@@ -290,15 +231,15 @@
             </div>
 
             <div id = "ruolo" class = "att1">
-                <img src="../img/t-shirts formazione/man_att.png" width="20" height="20" align="center" />
+                <img src="../img/t-shirts formazione/man_att.png" width="25" height="20" align="center" />
                 Rossi
             </div>
             <div id = "ruolo" class = "att2">
-                <img src="../img/t-shirts formazione/man_att.png" width="20" height="20" align="center" />
+                <img src="../img/t-shirts formazione/man_att.png" width="25" height="20" align="center" />
                 Gomez
             </div>
             <div id = "ruolo" class = "att3">
-                <img src="../img/t-shirts formazione/man_att.png" width="20" height="20" align="center" />
+                <img src="../img/t-shirts formazione/man_att.png" width="25" height="20" align="center" />
                 Cuadrado
             </div>
             
