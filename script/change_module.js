@@ -1,67 +1,143 @@
 /* cambio modulo */
     function change_module(value){
             //riattivo tutti gli elementi
-            active_elements();
+            var Vout=700;
+            var Vin=700;
             if(value == '442'){
-                $(".dif3").fadeOut(400);
-                $(".cen1").fadeOut(400);
-                $(".att1").fadeOut(400);
+                $(".dif3").fadeOut(Vout);
+                $(".cen1").fadeOut(Vout);
+                $(".att1").fadeOut(Vout);
+        $(".dif1").fadeIn(Vin);
+        $(".dif2").fadeIn(Vin);
+        $(".dif4").fadeIn(Vin);
+        $(".dif5").fadeIn(Vin);
+        $(".cen2").fadeIn(Vin);
+        $(".cen3").fadeIn(Vin);
+        $(".cen4").fadeIn(Vin);
+        $(".cen5").fadeIn(Vin);
+        $(".att2").fadeIn(Vin);
+        $(".att3").fadeIn(Vin);
             }
             if(value == '343'){
-                $(".dif1").fadeOut(400);
-                $(".dif5").fadeOut(400);
-                $(".cen1").fadeOut(400);
+                $(".dif1").fadeOut(Vout);
+                $(".dif5").fadeOut(Vout);
+                $(".cen1").fadeOut(Vout);
+        $(".dif3").fadeIn(Vin);
+        $(".dif2").fadeIn(Vin);
+        $(".dif4").fadeIn(Vin);
+        $(".cen2").fadeIn(Vin);
+        $(".cen3").fadeIn(Vin);
+        $(".cen4").fadeIn(Vin);
+        $(".cen5").fadeIn(Vin);
+        $(".att1").fadeIn(Vin);
+        $(".att2").fadeIn(Vin);
+        $(".att3").fadeIn(Vin);
             }
             if(value == '352'){
-                $(".dif1").fadeOut(400);
-                $(".dif5").fadeOut(400);
-                $(".att1").fadeOut(400);
+                $(".dif1").fadeOut(Vout);
+                $(".dif5").fadeOut(Vout);
+                $(".att1").fadeOut(Vout);
+        $(".dif3").fadeIn(Vin);
+        $(".dif2").fadeIn(Vin);
+        $(".dif4").fadeIn(Vin);
+        $(".cen1").fadeIn(Vin);
+        $(".cen2").fadeIn(Vin);
+        $(".cen3").fadeIn(Vin);
+        $(".cen4").fadeIn(Vin);
+        $(".cen5").fadeIn(Vin);
+        $(".att2").fadeIn(Vin);
+        $(".att3").fadeIn(Vin);
             }
             if(value == '433'){
-                $(".dif3").fadeOut(400);
-                $(".cen5").fadeOut(400);
-                $(".cen4").fadeOut(400);
+                $(".dif3").fadeOut(Vout);
+                $(".cen5").fadeOut(Vout);
+                $(".cen4").fadeOut(Vout);
+        $(".dif1").fadeIn(Vin);
+        $(".dif2").fadeIn(Vin);
+        $(".dif4").fadeIn(Vin);
+        $(".dif5").fadeIn(Vin);
+        $(".cen2").fadeIn(Vin);
+        $(".cen3").fadeIn(Vin);
+        $(".cen1").fadeIn(Vin);
+        $(".att1").fadeIn(Vin);
+        $(".att2").fadeIn(Vin);
+        $(".att3").fadeIn(Vin);
+        
             }
             if(value == '451'){
-                $(".dif3").fadeOut(400);
-                $(".att2").fadeOut(400);
-                $(".att3").fadeOut(400);
+                $(".dif3").fadeOut(Vout);
+                $(".att2").fadeOut(Vout);
+                $(".att3").fadeOut(Vout);
+        $(".dif1").fadeIn(Vin);
+        $(".dif2").fadeIn(Vin);
+        $(".dif4").fadeIn(Vin);
+        $(".dif5").fadeIn(Vin);
+        $(".cen1").fadeIn(Vin);
+        $(".cen2").fadeIn(Vin);
+        $(".cen3").fadeIn(Vin);
+        $(".cen4").fadeIn(Vin);
+        $(".cen5").fadeIn(Vin);
+        $(".att1").fadeIn(Vin);
             }
             if(value == '253'){
-                $(".dif3").fadeOut(400);
-                $(".dif1").fadeOut(400);
-                $(".dif5").fadeOut(400);
+                $(".dif3").fadeOut(Vout);
+                $(".dif1").fadeOut(Vout);
+                $(".dif5").fadeOut(Vout);
+        $(".dif2").fadeIn(Vin);
+        $(".dif4").fadeIn(Vin);
+        $(".cen1").fadeIn(Vin);
+        $(".cen2").fadeIn(Vin);
+        $(".cen3").fadeIn(Vin);
+        $(".cen4").fadeIn(Vin);
+        $(".cen5").fadeIn(Vin);
+        $(".att1").fadeIn(Vin);
+        $(".att2").fadeIn(Vin);
+        $(".att3").fadeIn(Vin);
             }
             if(value == '532'){
-                $(".cen4").fadeOut(400);
-                $(".cen5").fadeOut(400);
-                $(".att1").fadeOut(400);
+                $(".cen4").fadeOut(Vout);
+                $(".cen5").fadeOut(Vout);
+                $(".att1").fadeOut(Vout);
+        $(".dif1").fadeIn(Vin);
+        $(".dif2").fadeIn(Vin);
+        $(".dif3").fadeIn(Vin);
+        $(".dif4").fadeIn(Vin);
+        $(".dif5").fadeIn(Vin);
+        $(".cen2").fadeIn(Vin);
+        $(".cen3").fadeIn(Vin);
+        $(".cen1").fadeIn(Vin);
+        $(".att2").fadeIn(Vin);
+        $(".att3").fadeIn(Vin);
             }
             if(value == '541'){
-                $(".cen1").fadeOut(400);
-                $(".att2").fadeOut(400);
-                $(".att3").fadeOut(400);
+                $(".cen1").fadeOut(Vout);
+                $(".att2").fadeOut(Vout);
+                $(".att3").fadeOut(Vout);
+        $(".dif1").fadeIn(Vin);
+        $(".dif2").fadeIn(Vin);
+        $(".dif3").fadeIn(Vin);
+        $(".dif4").fadeIn(Vin);
+        $(".dif5").fadeIn(Vin);
+        $(".cen2").fadeIn(Vin);
+        $(".cen3").fadeIn(Vin);
+        $(".cen4").fadeIn(Vin);
+        $(".cen5").fadeIn(Vin);
+        $(".att1").fadeIn(Vin);
             }
             if(value == '550'){
-                $(".att1").fadeOut(400);
-                $(".att2").fadeOut(400);
-                $(".att3").fadeOut(400);
+                $(".att1").fadeOut(Vout);
+                $(".att2").fadeOut(Vout);
+                $(".att3").fadeOut(Vout);
+        $(".dif1").fadeIn(Vin);
+        $(".dif2").fadeIn(Vin);
+        $(".dif3").fadeIn(Vin);
+        $(".dif4").fadeIn(Vin);
+        $(".dif5").fadeIn(Vin);
+        $(".cen1").fadeIn(Vin);
+        $(".cen2").fadeIn(Vin);
+        $(".cen3").fadeIn(Vin);
+        $(".cen4").fadeIn(Vin);
+        $(".cen5").fadeIn(Vin);
             }
 
-    }
-
-    function active_elements(){
-        $(".dif1").fadeIn(50);
-        $(".dif2").fadeIn(50);
-        $(".dif3").fadeIn(50);
-        $(".dif4").fadeIn(50);
-        $(".dif5").fadeIn(50);
-        $(".cen1").fadeIn(50);
-        $(".cen2").fadeIn(50);
-        $(".cen3").fadeIn(50);
-        $(".cen4").fadeIn(50);
-        $(".cen5").fadeIn(50);
-        $(".att1").fadeIn(50);
-        $(".att2").fadeIn(50);
-        $(".att3").fadeIn(50);
     }
