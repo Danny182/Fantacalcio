@@ -14,15 +14,23 @@ div#cont-campo{
 /* ruoli */
 
 div#ruolo{
+
 	position:absolute;
 	border-bottom:1px solid;
-	width:130px;
+	width:140px;
 	height:30px;
 	font-size:15px;
 	color:black;
 	font-weight: bold;
 	text-align: center;
-	
+}
+
+.non-active{
+	display: none;
+}
+
+.active{
+	background-color:transparent;
 }
 
 div#ruolo:hover{
@@ -39,11 +47,12 @@ div#ruolo:hover{
 .dif1{ /* terzino sinistro */
 	top:35%;
 	left:22%;
+
 }
 
 .dif2{ /* centrale sinistro */
 	top:43%;
-	left:27%;
+	left:29%;
 }
 
 .dif3{ /* centrale */
@@ -53,7 +62,7 @@ div#ruolo:hover{
 
 .dif4{ /* centrale destro */
 	top:47.5%;
-	left:62%;
+	left:60%;
 }
 
 .dif5{ /* terzino destro */
@@ -67,12 +76,12 @@ div#ruolo:hover{
 }
 
 .cen2{ /* centrocampista centrale sinistro */
-	top:25%;
+	top:29%;
 	left:42%;
 }
 
 .cen3{ /* centrocampista centrale destro */
-	top:27%;
+	top:31%;
 	left:63%;
 }
 

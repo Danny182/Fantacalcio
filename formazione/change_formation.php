@@ -34,7 +34,77 @@
                                         });
                       
                       });
+    /* cambio modulo */
+    function change_module(value){
+            //riattivo tutti gli elementi
+            active_elements();
+            if(value == '442'){
+                $(".dif3").fadeOut(400);
+                $(".cen1").fadeOut(400);
+                $(".att1").fadeOut(400);
+            }
+            if(value == '343'){
+                $(".dif1").fadeOut(400);
+                $(".dif5").fadeOut(400);
+                $(".cen1").fadeOut(400);
+            }
+            if(value == '352'){
+                $(".dif1").fadeOut(400);
+                $(".dif5").fadeOut(400);
+                $(".att1").fadeOut(400);
+            }
+            if(value == '433'){
+                $(".dif3").fadeOut(400);
+                $(".cen5").fadeOut(400);
+                $(".cen4").fadeOut(400);
+            }
+            if(value == '451'){
+                $(".dif3").fadeOut(400);
+                $(".att2").fadeOut(400);
+                $(".att3").fadeOut(400);
+            }
+            if(value == '253'){
+                $(".dif3").fadeOut(400);
+                $(".dif1").fadeOut(400);
+                $(".dif5").fadeOut(400);
+            }
+            if(value == '532'){
+                $(".cen4").fadeOut(400);
+                $(".cen5").fadeOut(400);
+                $(".att1").fadeOut(400);
+            }
+            if(value == '541'){
+                $(".cen1").fadeOut(400);
+                $(".att2").fadeOut(400);
+                $(".att3").fadeOut(400);
+            }
+            if(value == '550'){
+                $(".att1").fadeOut(400);
+                $(".att2").fadeOut(400);
+                $(".att3").fadeOut(400);
+            }
+
+    }
+
+    function active_elements(){
+        $(".dif1").fadeIn(400);
+        $(".dif2").fadeIn(400);
+        $(".dif3").fadeIn(400);
+        $(".dif4").fadeIn(400);
+        $(".dif5").fadeIn(400);
+        $(".cen1").fadeIn(400);
+        $(".cen2").fadeIn(400);
+        $(".cen3").fadeIn(400);
+        $(".cen4").fadeIn(400);
+        $(".cen5").fadeIn(400);
+        $(".att1").fadeIn(400);
+        $(".att2").fadeIn(400);
+        $(".att3").fadeIn(400);
+    }
     </script>
+
+
+    
 
     <?php
         $id = $_SESSION['id_utente'];
@@ -128,10 +198,10 @@
         
         ?>
         <div class = "modulo">
-            <select>
+            <select onchange="change_module(this.value)">
                 <?php foreach($array as $key => $value){
                             if($value)
-                            echo ' <option value="'.$value.'"> '.$key.' </option>';
+                            echo ' <option value="'.$key.'"> '.$key.' </option>';
                     }
                 ?>
             </select>
@@ -171,49 +241,64 @@
             
             <img width="860" height"680" src = "../img/campo.png"/>
 
+
             <div id = "ruolo" class = "port">
+                <img src="../img/t-shirts formazione/man_por.png" width="25" height="20" align="center" />
                     Neto
             </div>
 
             <div id = "ruolo" class = "dif1">
+                <img src="../img/t-shirts formazione/man_dif.png" width="25" height="20" align="center" />
                 Pasqual
             </div>
             <div id = "ruolo" class = "dif2">
+                <img src="../img/t-shirts formazione/man_dif.png" width="25" height="20" align="center" />
                 Savic
             </div>
             <div id = "ruolo" class = "dif3">
+                <img src="../img/t-shirts formazione/man_dif.png" width="25" height="20" align="center" />
                 Rodriguèz
             </div>
             <div id = "ruolo" class = "dif4">
+                <img src="../img/t-shirts formazione/man_dif.png" width="25" height="20" align="center" />
                 Tomovic
             </div>
             <div id = "ruolo" class = "dif5">
+                <img src="../img/t-shirts formazione/man_dif.png" width="25" height="20" align="center" />
                 Alonso
             </div>
 
             <div id = "ruolo" class = "cen1">
+                <img src="../img/t-shirts formazione/man_cen.png" width="25" height="20" align="center" />
                 Pizarro
             </div>
             <div id = "ruolo" class = "cen2">
+                <img src="../img/t-shirts formazione/man_cen.png" width="25" height="20" align="center" />
                 Aquilani
             </div>
             <div id = "ruolo" class = "cen3">
+                <img src="../img/t-shirts formazione/man_cen.png" width="25" height="20" align="center" />
                 Borja Valero
             </div>
             <div id = "ruolo" class = "cen4">
+                <img src="../img/t-shirts formazione/man_cen.png" width="25" height="20" align="center" />
                 Mati Fernandèz
             </div>
             <div id = "ruolo" class = "cen5">
+                <img src="../img/t-shirts formazione/man_cen.png" width="25" height="20" align="center" />
                 Juaquìn
             </div>
 
             <div id = "ruolo" class = "att1">
+                <img src="../img/t-shirts formazione/man_att.png" width="20" height="20" align="center" />
                 Rossi
             </div>
             <div id = "ruolo" class = "att2">
+                <img src="../img/t-shirts formazione/man_att.png" width="20" height="20" align="center" />
                 Gomez
             </div>
             <div id = "ruolo" class = "att3">
+                <img src="../img/t-shirts formazione/man_att.png" width="20" height="20" align="center" />
                 Cuadrado
             </div>
             
