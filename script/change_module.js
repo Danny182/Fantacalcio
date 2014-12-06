@@ -1,8 +1,8 @@
 /* cambio modulo */
     function change_module(value){
             //riattivo tutti gli elementi
-            var Vout=700;
-            var Vin=700;
+            var Vout=500;
+            var Vin=500;
             if(value == '442'){
                 $(".dif3").fadeOut(Vout);
                 $(".cen1").fadeOut(Vout);

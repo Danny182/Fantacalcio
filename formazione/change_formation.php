@@ -16,6 +16,8 @@
     <link rel="stylesheet" href="../stili/style-formazione.css" type="text/css" media="screen" />
     <link rel="stylesheet" href="../stili/campo-calcio.css" type="text/css" media="screen" />
     <link rel="stylesheet" href="../stili/crea_camp.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="../stili/slicknav.css" />
+    <script src="../librerie/jquery.slicknav.min.js" type="text/css" media="screen"></script>
     <script src="../librerie/jquery-1.11.0.min.js"/></script>
     
 
@@ -263,6 +265,7 @@
     //setto la rosa della squadra
     include("set_rosa_team.php");
     //setto i gli elementi ruolo
+       
     ?>
 
         
