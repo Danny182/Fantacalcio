@@ -185,62 +185,62 @@
 
             <div id = "ruolo" class = "port">
                 <img src="../img/t-shirts formazione/man_por.png" width="25" height="20" align="center" />
-                    Neto
+                    Portieri
             </div>
 
             <div id = "ruolo" class = "dif1">
                 <img src="../img/t-shirts formazione/man_dif.png" width="25" height="20" align="center" />
-                Pasqual
+                Difensore
             </div>
             <div id = "ruolo" class = "dif2">
                 <img src="../img/t-shirts formazione/man_dif.png" width="25" height="20" align="center" />
-                Savic
+                Difensore
             </div>
             <div id = "ruolo" class = "dif3">
                 <img src="../img/t-shirts formazione/man_dif.png" width="25" height="20" align="center" />
-                Rodriguèz
+                Difensore
             </div>
             <div id = "ruolo" class = "dif4">
                 <img src="../img/t-shirts formazione/man_dif.png" width="25" height="20" align="center" />
-                Tomovic
+                Difensore
             </div>
             <div id = "ruolo" class = "dif5">
                 <img src="../img/t-shirts formazione/man_dif.png" width="25" height="20" align="center" />
-                Alonso
+                Difensore
             </div>
 
             <div id = "ruolo" class = "cen1">
                 <img src="../img/t-shirts formazione/man_cen.png" width="25" height="20" align="center" />
-                Pizarro
+                Centrocampista
             </div>
             <div id = "ruolo" class = "cen2">
                 <img src="../img/t-shirts formazione/man_cen.png" width="25" height="20" align="center" />
-                Aquilani
+                Centrocampista
             </div>
             <div id = "ruolo" class = "cen3">
                 <img src="../img/t-shirts formazione/man_cen.png" width="25" height="20" align="center" />
-                Borja Valero
+                Centrocampista
             </div>
             <div id = "ruolo" class = "cen4">
                 <img src="../img/t-shirts formazione/man_cen.png" width="25" height="20" align="center" />
-                Mati 
+                Centrocampista 
             </div>
             <div id = "ruolo" class = "cen5">
                 <img src="../img/t-shirts formazione/man_cen.png" width="25" height="20" align="center" />
-                Juaquìn
+                Centrocampista
             </div>
 
             <div id = "ruolo" class = "att1">
                 <img src="../img/t-shirts formazione/man_att.png" width="25" height="20" align="center" />
-                Rossi
+                Attaccante
             </div>
             <div id = "ruolo" class = "att2">
                 <img src="../img/t-shirts formazione/man_att.png" width="25" height="20" align="center" />
-                Gomez
+                Attaccante
             </div>
             <div id = "ruolo" class = "att3">
                 <img src="../img/t-shirts formazione/man_att.png" width="25" height="20" align="center" />
-                Cuadrado
+                Attaccante
             </div>
             
 

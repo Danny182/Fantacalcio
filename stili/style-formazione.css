@@ -17,7 +17,7 @@ div#ruolo{
 
 	position:absolute;
 	border-bottom:1px solid;
-	width:140px;
+	width:150px;
 	height:30px;
 	font-size:15px;
 	color:black;
@@ -87,7 +87,7 @@ div#ruolo:hover{
 
 .cen4{ /* ala destra */
 	top:22%;
-	left:80%;
+	left:78%;
 }
 
 .cen5{ /* ala sinistra */
