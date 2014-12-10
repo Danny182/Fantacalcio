@@ -319,7 +319,7 @@ Stadio
 Storia/Caratteristiche
 </div>
 
-<textarea name="storia" class = "storia" value = "<?php echo $story; ?>"onclick="this.value='';" onblur  = "if(this.value == "") this.value = "Scrivi qualcosa sulla tua squadra...">
+<textarea name="storia" class = "storia" value = "<?php echo $story; ?>"onclick="this.value=''; "onblur  = "if(this.value == '') {this.value = 'Scrivi qualcosa sulla tua squadra...'}";>
     <?php echo $story; ?>
 
 </textarea>

@@ -531,3 +531,7 @@ a{
 a:hover{
 	color: #686868 !important;
 }
+
+textarea {
+	resize: none;
+}
