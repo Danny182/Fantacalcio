@@ -41,8 +41,9 @@ padding-left:5px;}
 
 #menu a:hover{
 color:black;
-background:#E4E4E4;
+background:transparent;
 border-bottom:4px solid #00DFFF;
+transition:.4s;
 }
 .home-page #menu .style-item-1 a{
 	border-left:4px solid #00DFFF;
