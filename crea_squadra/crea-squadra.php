@@ -70,6 +70,9 @@
 <script src="../librerie/jquery.colorbox.js"></script>
 <link rel="stylesheet" type="text/css" href="colorbox.css" />
 
+<script src="../librerie/jssor.js"></script>
+<script src="../librerie/jssor.slider.js"></script>
+
 
 <script>
 $(document).ready(function(){
@@ -85,6 +88,21 @@ $(document).ready(function(){
                   });
 </script>
 
+<script>
+    jQuery(document).ready(function ($) {
+        var options = {
+            $DragOrientation: 3,                                //[Optional] Orientation to drag slide, 0 no drag, 1 horizental, 2 vertical, 3 either, default value is 1 (Note that the $DragOrientation should be the same as $PlayOrientation when $DisplayPieces is greater than 1, or parking position is not 0)
+            $ArrowNavigatorOptions: {                       //[Optional] Options to specify and enable arrow navigator or not
+                $Class: $JssorArrowNavigator$,              //[Requried] Class to create arrow navigator instance
+                $ChanceToShow: 2,                               //[Required] 0 Never, 1 Mouse Over, 2 Always
+                $AutoCenter: 0,                                 //[Optional] Auto center arrows in parent container, 0 No, 1 Horizontal, 2 Vertical, 3 Both, default value is 0
+                $Steps: 1                                       //[Optional] Steps to go for each navigation request, default value is 1
+            }
+        };
+
+        var jssor_slider1 = new $JssorSlider$("stemmi", options);
+    });
+</script>
 
 
 
@@ -264,9 +282,15 @@ Generalità
     <input type = "text" name = "nome_squadra" id = "squadra" size = "50" class = "nome-squadra" value = "<?php echo $nameT; ?>" />
 </div>
 
-<div id = "cont-input" class = "stemma">
+<div id = "stemmi" class = "stemma">
 
-    <div id = "cont-image">
+
+	<div u="slides" style="cursor: move; position: absolute; left: 0px; top: 0px; overflow: hidden;">
+            <div><img u="image" src="../img/logo-squadra/fiorentina.png" /></div>
+            <div><img u="image" src="../img/logo-squadra/milan.png" /></div>
+    </div>
+
+   <!-- <div id = "cont-image">
         <img src = "<?php echo $url_stemma; ?>" width = "60px" height = "50px">
     </div>
 
@@ -278,7 +302,7 @@ Generalità
             
 
         </label>
-
+    -->
 
 </div><!--cont-input stemma -->
 
