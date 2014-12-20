@@ -348,7 +348,7 @@ $(document).ready(function(){
 									<div id = "live">Live del campionato</div>
 									
                                     <div id = "live" >Regole</div>
-                                    <div id = "live" >Giocatori</div>';
+                                    <a href = "gest_campionato/giocatori_svincolati.php"><div id = "live" >Giocatori Svincolati</div></a>';
  									//controllo se l'utente è l'amministratore del campionato corrente
  									$query = "SELECT campionato.id_admin FROM campionato WHERE campionato.nome = '$nome_camp'";
  									$ris = mysql_query($query);
