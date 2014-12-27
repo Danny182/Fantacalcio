@@ -178,6 +178,7 @@ $regole = get_rules($id_camp);
 				<a href = "../home.php?var=0"><div id = "live">Indietro</div></a>
 				<a href = "javascript: submitform()"><div id = "live">Salva le Modifiche</div></a>
 			</div>
+				
 	</div>
 	
 	<div id="regole">
@@ -580,7 +581,7 @@ $regole = get_rules($id_camp);
 					
 					<?php foreach($regole as $value) $modulo_550 = $value['modulo_550'];?>
 					<input type="checkbox" name="modulo_550" id="550" class="modifica-regole-moduli_validi" value="550" <?php if($modulo_550)echo"checked"; ?>>
-					<label for="550" class = "moduli">5-5-0</label>
+					<label for="550" class = "moduli">5-5-0   </label>
 				</div>
 			</div>
 			

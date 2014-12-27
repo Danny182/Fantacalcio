@@ -151,6 +151,39 @@
     
     }
 
+    function get_id_giocs(){
+        //resituisco la lista completa dei giocatori
+        $query = "SELECT giocatore.id_giocatore FROM giocatore";
+        $ris = mysql_query($query);
+        $vet_giocatori = array();
+        while($vet = mysql_fetch_array($ris)){
+            $vet_giocatori[] = $vet['id_giocatore'];
+        }
+        return $vet_giocatori;
+    }
+
+    function get_static_gioc_by_id($id){
+        $query = "SELECT statistica.gol, statistica.assist, statistica.ammonito, statistica.espulso, statistica.presenza, statistica.rig_sbagliato
+, statistica.autogol, statistica.gol_subito, statistica.gol_su_rigore, statistica.rigore_parato FROM statistica WHERE statistica.id_giocatore = '$id' AND statistica.giornata = 33";
+    $ris = mysql_query($query);
+    $row = mysql_fetch_array($ris);
+    $statics = array();
+    $statics = array(
+                        "id_gioc" => $id,
+                        "gol_fatti" => $row['gol'],
+                        "assist" => $row['assist'],
+                        "ammonizioni" => $row['ammonito'],
+                        "esplusioni" => $row['espulso'],
+                        "presenze" => $row['presenza'],
+                        "rigori_sbagliati" => $row['rig_sbagliato'],
+                        "autogol" => $row['autogol'],
+                        "gol_subiti" => $row['gol_subito'],
+                        "gol_rigore" => $row['gol_su_rigore'],
+                        "rigore_parati" => $row['rigore_parato']
+                        );
+    return $statics;
+    }
+
 
 
 

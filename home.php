@@ -8,7 +8,7 @@
 <head>
 <link rel="shortcut icon" href="/favicon.ico" />
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>home</title>
+<title>FaYnt | Home</title>
 <link rel="stylesheet" href="stili/style-home.css" type="text/css" media="screen" />
 <link rel="stylesheet" href="stili/campo-calcio.css" type="text/css" media="screen" />
 <script src="librerie/jquery-1.11.0.min.js"/></script> 

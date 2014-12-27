@@ -2,6 +2,7 @@
 	include("../session.php");
 	include("../connect_db.php");
     include("../funzioni/home_function.php");
+    include("../funzioni/formazione_functions.php");
 ?>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -12,9 +13,11 @@
 <title>FaYnt | Giocatori Svincolati</title>
 <link rel="stylesheet" href="../stili/style-home.css" type="text/css" media="screen" />
 <link rel="stylesheet" href="../stili/campo-calcio.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../stili/crea_camp.css" type="text/css" media="screen" />
 <script src="../librerie/jquery-1.11.0.min.js"/></script> 
 
-<script type="text/javascript" src="../script/menu.js"></script>-->
+<script type="text/javascript" src="../script/menu.js"></script>
+<!--<script type="text/javascript" src="../script/get_gioc_data.js"></script>-->
 <link rel="stylesheet" type="text/css" href="../stili/menu2.css" />
 <script>
 $(document).ready(function(){
@@ -26,11 +29,14 @@ $(document).ready(function(){
 	$(document).click( function() {
 			$("#dropdown").hide();
 		});
-
-	});
+	//prendo l'id del giocatore selezionato
+});
 </script>
 
+
+
 <?php
+
 $id = $_SESSION['id_utente'];
 //prendo le notifiche dell'utente
     $num_notifiche = get_notify($id);
@@ -38,6 +44,15 @@ $id = $_SESSION['id_utente'];
     $utente = get_userdates($id);
 //nome del campionat corrente
 $current_camp = $_SESSION['current_camp'];
+//prendo l'id del campionato
+$query = "SELECT campionato.id_campionato FROM campionato WHERE campionato.nome = '$current_camp'";
+$ris = mysql_query($query);
+if(!$ris){
+        echo ' <div id = "cont-errore"><div id = "errore"> ATTENZIONE <br> SI E\' VERIFICATO UN PROBLEMA (1)
+        <meta http-equiv="Refresh" content="3; URL=../home.php"> </div></div>' ;
+        }
+$vet = mysql_fetch_array($ris);
+$id_current_camp = $vet['id_campionato'];
 //campionati a cui è iscritto l'utente
 $leagues = get_leagues($id);
 
@@ -53,7 +68,7 @@ $num_camp = count($leagues);
 ?>
 
 <body class="home-page">
-<div id = "cont">
+<div id = "cont" class = "svincolati-noscroll">
 	<div id="top">
     	<div id="top-insize">
         	<div id="top-logo">
@@ -89,7 +104,7 @@ $num_camp = count($leagues);
 				</div>
     </div> <!-- top -->
 
-    <div id = "window"> 
+    <div id = "window" class = "svincolati-page"> 
 
 		<div id="menu">
 			<div class="menu-principale-container">
@@ -173,23 +188,105 @@ $num_camp = count($leagues);
 
 		<div id = "cont-dati">
 
-			<div id = "classifica" class = "cla-svincolati">
-				<div id = "cla-title" class = "svincolati">
-                <?php echo $current_camp; echo " : " ?>Giocatori Svincolati
-            	</div>
-            	<div class = "cont-giocatore">
+			<?php
+			$gioc_svincolati = array();
+			//prendo la lista dei giocatori del campionato che non sono stati scelti da nessuna squadra
+			//prendo le squadre che giocano nel campionato 
+			$query = "SELECT squadra.id_squadra FROM squadra WHERE squadra.id_campionato = '$id_current_camp'";
+			$ris = mysql_query($query);
+			if(!$ris){
+        		echo ' <div id = "cont-errore"><div id = "errore"> ATTENZIONE <br> SI E\' VERIFICATO UN PROBLEMA (2)
+        		<meta http-equiv="Refresh" content="3; URL=../home.php"> </div></div>' ;
+        	}
+        	while($vet = mysql_fetch_array($ris)){
+        		$id_team = $vet['id_squadra'];
+        		$vet_giocatori = get_id_giocs();
+        		foreach($vet_giocatori as $id_gioc){
+        			//inserisco nell'array i giocatori che NON sono associati alla squadra attuale
+        			$query = "SELECT id_giocatore FROM appartiene WHERE appartiene.id_squadra = '$id_team' AND appartiene.id_giocatore = '$id_gioc'";
+        			$ris = mysql_query($query);
+        			$vet = mysql_fetch_array($ris);
+        			if(empty($vet['id_giocatore']))
+        				//l'insieme restituito è vuoto quindi il giocatore deve essere visualizzato
+        				//lo aggiungo all'array
+        				$gioc_svincolati[] = $id_gioc;
+        			
+        		}
+        		
+        	}
 
-            		<div class = "general">
-            			<i>Andrea Consigli</i>
-            		</div>
-            		<div class = "general ruolo">
-            			Portiere
-            		</div>
-            		<div class = "general information">
-            			Clicca per avere maggiori informazioni
-            		</div>
-            	</div>
-            </div><!-- classifica -->
+        	
+        	
+			?>
+			<div id = "cla-title" class = "svincolati">
+                <?php echo $current_camp; echo " : " ?>Giocatori Svincolati
+            </div>
+			<div id = "classifica" class = "cla-svincolati">
+				<?php
+					echo'<div class = "cont-giocatore" id_gioc = "-1">';
+            			//nome & cognome
+            			echo '<div class = "general">';
+            				echo '<i style="color:rgba(1, 159, 199, 0.61);"> Nome & Cognome </i>';
+            			echo '</div>';
+            			//ruolo
+            			echo'<div class = "general ruolo">';
+            				echo'<i style="color:rgba(1, 159, 199, 0.61);"> Ruolo </i>';
+            			echo '</div>';
+            			//informazione
+            			echo '<div class = "general information">';
+            				echo '<i style="color:rgba(1, 159, 199, 0.61);"> Clicca per avere maggiori informazioni </i>';
+            			echo '</div>';
+
+            		echo'</div><!--cont-giocatore-->';
+            		?>
+				
+            	<?php
+            	$static_data_gioc = get_static_gioc_by_id(33);
+            	//echo json_encode($static_data_gioc);
+            	/*$ar = array('one', 'two', 'three', 'four');
+            	echo json_encode($ar);*/
+
+				
+            	foreach($gioc_svincolati as $id_gioc){
+            		$data_gioc = get_data_gioc_by_id($id_gioc);
+            		$static_data_gioc = get_static_gioc_by_id($id_gioc);
+            		echo'<div class = "cont-giocatore" id_gioc = "'.$id_gioc.'" >'; 
+            		//l'id serve alla funzione javascript in cima alla pagina
+            			//nome & cognome
+            			echo '<div class = "general">';
+            				echo ''.$data_gioc['nome'].'  '.$data_gioc['cognome'].'';
+            			echo '</div>';
+            			//ruolo
+            			echo'<div class = "general ruolo">';
+            				echo ''.$data_gioc['ruolo'].'';
+            			echo '</div>';
+            			
+            		echo'</div><!--cont-giocatore-->';
+            	}
+            		?>
+            		<?php
+            			/*
+            				//prendo i dati del giocatore dalla funzione get_data_gioc_by_id nel fil formazione_functions
+            				$data_gioc = get_data_gioc_by_id($id_gioc);
+            					//nome e cognome
+            					echo'<div class = "cont-giocatore">';
+            						echo'<div class = "general">';
+            								echo ''.$data_gioc['nome'].' '.$data_gioc['cognome'].'';
+            						echo '</div>';
+            						//ruolo
+            						echo'<div class = "general ruolo">';
+            							echo''.$data_gioc['ruolo'].'';
+            						echo'</div>';
+            						//informazioni
+            						echo'<div class = "general information">
+            							Clicca per avere maggiori informazioni
+            						</div>
+            					</div>';
+            			}*/
+            			
+            			?>
+
+			</div><!-- classifica -->
 		</div> <!-- cont dati -->
 
 		<div id = "cont-campionati">

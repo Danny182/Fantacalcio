@@ -21,6 +21,10 @@ div#cont{
 	font-size:13.5px;
 }
 
+div#cont.svincolati-noscroll{
+	overflow:hidden;
+}
+
 
 
 div#top{
@@ -115,6 +119,11 @@ div#window{
 	overflow-y: auto;
 	z-index:0;
 }
+
+div#window.svincolati-page{
+	overflow-y:hidden;
+}
+
 
 div#gallery{
 	height: 179px;
@@ -417,6 +426,8 @@ margin-top:1%;
 -webkit-border-radius: 2px 2px 2px 2px;
 }
 
+
+
 div#cont-dati.gest-regole{ /* pagina gest-regole */
 	width:100%;
 	left:17%;
@@ -430,15 +441,17 @@ height:46%;
 width:auto;
 top:0;
 margin-left:0%;
-background-color:#E5E5E8;
+/*background-color:#E5E5E8;*/
 -moz-border-radius: 2px 2px 2px 2px;
 -webkit-border-radius: 2px 2px 2px 2px;
 border:1px solid;
 border-color:rgba(1, 159, 199, 0.61);
 }
 
-.cla-svincolati{
-	height:60%;
+div#classifica.cla-svincolati{
+	height:40%;
+	overflow-y: scroll;
+	overflow-x:hidden;
 }
 
 div#cont-squadre{/*nella pagine "iscrivi squadra"*/
@@ -464,17 +477,14 @@ color:#D42222;
 
 
 div#cla-title{
-
-height:20%;
+height:5%;
 width:100%;
 top:0;
 left:0;
 border:none;
 font-size:20px;
 font-weight:bold;
-
 }
-
 .svincolati{
 	text-align:center;
 	font-weight:200;
@@ -744,13 +754,15 @@ font-family:'WOL_Reg','Segoe UI',Tahoma,Helvetica,sans-serif;
 }
 
 .cont-giocatore{
-	height:10%;
+	height:12%;
 	width:101.4%;
 	border:1px solid rgba(1, 159, 199, 0.61);
 	border-right:none;
 	border-left:none;
 	border-top:none;
+	margin-top:0px;
 	margin-left:-1.3%;
+	
 }
 
 .cont-giocatore:hover{
@@ -760,24 +772,28 @@ font-family:'WOL_Reg','Segoe UI',Tahoma,Helvetica,sans-serif;
 
 .general{
 	width: 20%;
-	height:85%;
+	height:87%;
 	border:none;
 	border-right:2px solid rgba(1, 159, 199, 0.61);
 	margin-left:3px;
 	padding:2px;
 	text-align:center;
+	margin-top:0px;
 }
 
 .information{
-	margin-top:-4.2%;
+	margin-top:-4%;
 	margin-left:42%;
-	width:350;
+	width:350px;
 	border:none;
+	padding-top:0px;
 }
 
 .ruolo{
-	margin-top:-4.2%;
-	margin-left:21%;
+	margin-top:-4.6%;
+	margin-left:22%;
+	padding-top:4px;
+	height:84%;
 }
 
 .golFatti{
