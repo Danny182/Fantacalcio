@@ -753,6 +753,7 @@ font-family:'WOL_Reg','Segoe UI',Tahoma,Helvetica,sans-serif;
     border:none;
 }
 
+/* pagina giocatori svincolati */
 .cont-giocatore{
 	height:12%;
 	width:101.4%;
@@ -826,6 +827,60 @@ font-family:'WOL_Reg','Segoe UI',Tahoma,Helvetica,sans-serif;
 	width:8%;
 }
 
+/* statistiche giocatori */
+.static-title{
+	width:100%;
+	height:10%;
+	margin-top:0;
+	margin-left:0;
+	border:none;
+	border-bottom:2px solid rgba(1, 159, 199, 0.61);
+	padding-bottom:5px;
+	font-weight:bold;
+}
+
+.cont-data{
+	width:100%;
+	height:20%;
+	margin-top:2%;
+	margin-left:0;
+	border:none;
+}
+.gioc-general{
+	height:10%;
+	width:20%;
+	border:none;
+	margin-top:3px;
+	margin-left:3px;
+	text-align:left;
+	font-size: 14px;
+	position:absolute;
+}
+.gioc-ruolo{
+	width:10%;
+}
+.gioc-squadra{
+	margin-left:35%;
+	width:25%
+}
+.gioc-nascita{
+	margin-left:12%;
+}
+.gioc-maglia{
+	margin-left:80%;
+	width:18%;
+}
+.gioc-naz{
+	margin-left:59%;
+}
+
+.cont-statics{
+
+}
+
+i{
+	color:rgba(1, 159, 199, 0.61);
+}
 
 
 

@@ -17,7 +17,7 @@
 <script src="../librerie/jquery-1.11.0.min.js"/></script> 
 
 <script type="text/javascript" src="../script/menu.js"></script>
-<!--<script type="text/javascript" src="../script/get_gioc_data.js"></script>-->
+
 <link rel="stylesheet" type="text/css" href="../stili/menu2.css" />
 <script>
 $(document).ready(function(){
@@ -32,6 +32,7 @@ $(document).ready(function(){
 	//prendo l'id del giocatore selezionato
 });
 </script>
+
 
 
 
@@ -109,26 +110,26 @@ $num_camp = count($leagues);
 		<div id="menu">
 			<div class="menu-principale-container">
 				<ul id="menu-principale" class="menu">
-					<li id'"item-1" class="style-item-1" >
+					<li id"item-1" class="style-item-1" >
 						<a href="../home.php?var=0"><img src="../img/site_logo/fantapv_white2.png" height="22px" width="22px" style="padding-right:2px;">Home</a>
 					</li>
-					<li id'"item-1" class="style-item-2">
+					<li id"item-1" class="style-item-2">
 						<a href="../formazione/change_formation.php">Inserisci Formazione</a>
 					</li>
-					<li id'"item-1" class="style-item-3">
+					<li id"item-1" class="style-item-3">
 						<a href="../crea_campionato/crea-campionato.php">Crea un Campionato</a>
 					</li>
-					<li id'"item-1" class="style-item-4">
+					<li id"item-1" class="style-item-4">
 						<a href="../crea_squadra/crea-squadra.php">Crea una nuova Squadra</a>
 					</li>
 
-					<li id'"item-1" class="style-item-6">
+					<li id"item-1" class="style-item-6">
 						<a href="../notifiche.php">Notifiche</a>
 					</li>
-					<li id'"item-1" class="style-item-7">
+					<li id"item-1" class="style-item-7">
 						<a href="../documenti.php">Documenti di lega</a>
 					</li>
-                    <li id'"item-1" class="style-item-8">
+                    <li id"item-1" class="style-item-8">
                         <a href="../squadre/squadre.php?var=0">Le tue squadre</a>
                     </li>
 				</ul>
@@ -137,15 +138,35 @@ $num_camp = count($leagues);
 
 		<div id = "ul-notizie">
             <div id = "cont-mister">
+
             </div>
             <div class = "rett">
                 <div class = "tria">
                 </div>
 
                 <div class = "cont-text">
-                    Benvenuto su FaYnt, io sono <b>Gundi!</b> Questa &egrave la home del sito, da qui potrai gestire ogni singola opzione del tuo campionato, crearne di nuovi ed invitare i tuoi amici.
-                    Potrai creare nuove squadre a tuo piacimento, scegliere lo stadio, la maglia e dare una descrizione. Nella Home visualizzerai sempre la classifica, la giornata successiva e quella precedente del campionato selezionato. Nel Men&uacute interno gestisci tutto ci&ograve che riguarda la lega selezionata, Nel men&ugrave esterno invece tutte le altre opzioni, come l'inserimento della formazione, accesso alle notifiche e ai documenti della lega, beh....<br> <b> Buon Divertimento!</b>
-                </div>
+
+                    <div class = "static-title">
+            		<!-- testo dinamico inserito da javascript -->
+            		</div>
+            		<div class = "cont-data">
+            			<div class = "gioc-general gioc-ruolo">
+            				Ruolo: <i></i>
+            			</div>
+            			<div class = "gioc-general gioc-nascita">
+            				Nato il: <i></i>
+            			</div>
+            			<div class = "gioc-general gioc-squadra">
+            				Squadra: <i></i>
+            			</div>
+            			<div class = "gioc-general gioc-naz">
+            				Nazionalità: <i></i>
+            			</div>
+            			<div class = "gioc-general gioc-maglia">
+            				N° Maglia: <i></i>
+            			</div>
+            		</div> <!-- cont-data -->
+                </div> <!-- cont-text -->
             </div>
 
             <div id="campo">	<!--decorazioni -->
@@ -238,19 +259,20 @@ $num_camp = count($leagues);
             			echo '</div>';
 
             		echo'</div><!--cont-giocatore-->';
-            		?>
-				
-            	<?php
-            	$static_data_gioc = get_static_gioc_by_id(33);
-            	//echo json_encode($static_data_gioc);
-            	/*$ar = array('one', 'two', 'three', 'four');
-            	echo json_encode($ar);*/
 
-				
+            	$struct_data = array();
+            	$struct_statistiche = array();
             	foreach($gioc_svincolati as $id_gioc){
             		$data_gioc = get_data_gioc_by_id($id_gioc);
             		$static_data_gioc = get_static_gioc_by_id($id_gioc);
-            		echo'<div class = "cont-giocatore" id_gioc = "'.$id_gioc.'" >'; 
+
+            		//creo una struttura dati in cui metto tutti i dati dei giocatori che prendo via via
+					array_push($struct_data, $data_gioc);
+					//qui invece la struct delle statistiche
+					array_push($struct_statistiche, $static_data_gioc);
+            		
+ 					
+            		echo'<div class = "cont-giocatore" id_gioc = "'.$id_gioc.'">'; 
             		//l'id serve alla funzione javascript in cima alla pagina
             			//nome & cognome
             			echo '<div class = "general">';
@@ -263,7 +285,38 @@ $num_camp = count($leagues);
             			
             		echo'</div><!--cont-giocatore-->';
             	}
-            		?>
+            	?>
+            	<script type="text/javascript">
+            		$(document).ready(function() {
+            		// setto i dati iniziali della scheda calciatore
+            		$('.static-title').text("Seleziona Un giocatore");
+
+						$(".cont-giocatore").click(function(){
+							var cont = $(this);
+							var id_gioc = cont.attr("id_gioc"); //prendo l id del giocatore cliccato
+							var statics_gioc = <?php echo json_encode($struct_statistiche ); ?>; //prendo le statistiche
+							var data_gioc = <?php echo json_encode($struct_data ); ?>; //prendo i dati generali
+							var i = 0;
+							for(i; i<data_gioc.length; i++)
+							if(id_gioc == data_gioc[i]['id_giocatore']){ 
+								//prendo i dati generali del giocatore selezionato
+								var NameSurname = data_gioc[i]['nome'] + data_gioc[i]['cognome'];
+								$('.static-title').text(NameSurname);
+								$('.gioc-ruolo i').text(data_gioc[i]['ruolo']);
+								$('.gioc-nascita i').text(data_gioc[i]['data_nascita']);
+								$('.gioc-squadra i').text(data_gioc[i]['squadra']);
+								$('.gioc-naz i').text(data_gioc[i]['nazionalita']);
+								$('.gioc-maglia i').text(data_gioc[i]['n_maglia']);
+							}
+							
+							
+							
+
+						}); //click function
+					}); //ready
+            	</script>
+
+            		
             		<?php
             			/*
             				//prendo i dati del giocatore dalla funzione get_data_gioc_by_id nel fil formazione_functions
