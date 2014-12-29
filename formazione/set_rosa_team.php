@@ -10,14 +10,18 @@ echo'
                     while($vet = mysql_fetch_array($ris)){
                         //scorro via via gli id dei giocatori
                         //prendo tutti i dati
+                        
                         $array_id_gioc [] = array(
                                         "id" => $vet['id_giocatore']
                                         ); 
                         $gioc_data = get_data_gioc_by_id($vet['id_giocatore']);
-
+                        
                         if(strcmp($gioc_data['ruolo'], "D") == 0){
                             echo '<li><a href"#"> '.$gioc_data['nome'].' '.$gioc_data['cognome'].'</a></li>';
                         }
+                    
+
+
                     }
                     echo'
                 </ul>
@@ -26,7 +30,7 @@ echo'
             echo'
             <li><a href="#">Centrocampisti</a>
                 <ul>';
-                    foreach($array_id_gioc as $value){
+                        foreach($array_id_gioc as $value){
                         //scorro via via gli id dei giocatori
                         //prendo tutti i dati
                         $gioc_data = get_data_gioc_by_id($value['id']);

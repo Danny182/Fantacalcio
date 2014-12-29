@@ -263,8 +263,17 @@
         <meta http-equiv="Refresh" content="3; URL=../home.php"> </div></div>' ;
         }
     //setto la rosa della squadra
+    $app = mysql_fetch_array($ris);
+    if(!empty($app)) //controllo se l'utente non ha una rosa
     include("set_rosa_team.php");
-    //setto i gli elementi ruolo
+    else {
+        echo' 
+       <ul id="nav">
+
+            <li class = "no-rosa"><a href="#">Non hai creato nessuna rosa</a>
+                <ul>';
+            }
+    
        
     ?>
 
