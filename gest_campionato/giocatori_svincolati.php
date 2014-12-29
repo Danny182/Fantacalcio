@@ -166,6 +166,38 @@ $num_camp = count($leagues);
             				N° Maglia: <i></i>
             			</div>
             		</div> <!-- cont-data -->
+            		<div class = "cont-static">
+            			<div class = "gioc-general gioc-pres">
+            				Presenze: <i></i>
+            			</div>
+            			<div class = "gioc-general gioc-gol-fatti">
+            				Gol Fatti: <i></i>
+            			</div>
+            			<div class = "gioc-general gioc-gol-rigore">
+            				Gol su Rigore: <i></i>
+            			</div>
+            			<div class = "gioc-general gioc-assist">
+            				Assist: <i></i>
+            			</div>
+            			<div class = "gioc-general gioc-rig-parato">
+            				Rigori Parati: <i></i>
+            			</div>
+            			<div class = "gioc-general gioc-amm">
+            				Ammonizioni: <i></i>
+            			</div>
+            			<div class = "gioc-general gioc-esp">
+            				Espulsioni: <i></i>
+            			</div>
+            			<div class = "gioc-general gioc-rig-sbagliato">
+            				Rigori Sbagliati: <i></i>
+            			</div>
+            			<div class = "gioc-general gioc-autogol">
+            				Autogol: <i></i>
+            			</div>
+            			<div class = "gioc-general gioc-gol-subiti">
+            				Gol Subiti: <i></i>
+            			</div>
+            		</div> <!--static -->
                 </div> <!-- cont-text -->
             </div>
 
@@ -262,16 +294,20 @@ $num_camp = count($leagues);
 
             	$struct_data = array();
             	$struct_statistiche = array();
+            	
+
+
             	foreach($gioc_svincolati as $id_gioc){
             		$data_gioc = get_data_gioc_by_id($id_gioc);
             		$static_data_gioc = get_static_gioc_by_id($id_gioc);
-
             		//creo una struttura dati in cui metto tutti i dati dei giocatori che prendo via via
 					array_push($struct_data, $data_gioc);
 					//qui invece la struct delle statistiche
+					//if(!is_empty($static_data_gioc))
+
+					if($static_data_gioc)
 					array_push($struct_statistiche, $static_data_gioc);
-            		
- 					
+
             		echo'<div class = "cont-giocatore" id_gioc = "'.$id_gioc.'">'; 
             		//l'id serve alla funzione javascript in cima alla pagina
             			//nome & cognome
@@ -285,11 +321,33 @@ $num_camp = count($leagues);
             			
             		echo'</div><!--cont-giocatore-->';
             	}
+            	     
             	?>
             	<script type="text/javascript">
             		$(document).ready(function() {
+
             		// setto i dati iniziali della scheda calciatore
+					$('.gioc-general  i').text("--");
             		$('.static-title').text("Seleziona Un giocatore");
+            		/*
+            		$('.gioc-ruolo i').text("--");
+					$('.gioc-nascita i').text("--");
+					$('.gioc-squadra i').text("--");
+					$('.gioc-naz i').text("--");
+					$('.gioc-maglia i').text("--");
+					$('.gioc-pres i').text("--");
+					$('.gioc-gol-fatti i').text("--");*/
+					
+			
+					/*
+					
+					
+					$('.gioc-rig-parato i').text("--");
+					$('.gioc-amm i').text("--");
+					$('.gioc-esp i').text("--");
+					$('.gioc-rig-sbagliato i').text("--");
+					$('.gioc-autogol i').text("--");
+					$('.gioc-gol-subiti i').text("--");*/
 
 						$(".cont-giocatore").click(function(){
 							var cont = $(this);
@@ -297,7 +355,7 @@ $num_camp = count($leagues);
 							var statics_gioc = <?php echo json_encode($struct_statistiche ); ?>; //prendo le statistiche
 							var data_gioc = <?php echo json_encode($struct_data ); ?>; //prendo i dati generali
 							var i = 0;
-							for(i; i<data_gioc.length; i++)
+							for(i; i<data_gioc.length; i++){
 							if(id_gioc == data_gioc[i]['id_giocatore']){ 
 								//prendo i dati generali del giocatore selezionato
 								var NameSurname = data_gioc[i]['nome'] + data_gioc[i]['cognome'];
@@ -307,11 +365,42 @@ $num_camp = count($leagues);
 								$('.gioc-squadra i').text(data_gioc[i]['squadra']);
 								$('.gioc-naz i').text(data_gioc[i]['nazionalita']);
 								$('.gioc-maglia i').text(data_gioc[i]['n_maglia']);
-							}
-							
-							
-							
+							}//if
+						}// 1st for
+						
+						var found = false;
+						for(i = 0; i<statics_gioc.length; i++){
+							if(id_gioc == statics_gioc[i]['id_gioc']){ 
+								$('.gioc-pres i').text(statics_gioc[i]['presenze']);
+								$('.gioc-gol-fatti i').text(statics_gioc[i]['gol_fatti']);
+								$('.gioc-gol-rigore i').text(statics_gioc[i]['gol_rigore']);
+								$('.gioc-assist i').text(statics_gioc[i]['assist']);
+								$('.gioc-rig-parato i').text(statics_gioc[i]['rigore_parati']);
+								$('.gioc-amm i').text(statics_gioc[i]['ammonizioni']);
+								$('.gioc-esp i').text(statics_gioc[i]['espulsioni']);
+								$('.gioc-rig-sbagliato i').text(statics_gioc[i]['rigori_sbagliati']);
 
+								$('.gioc-autogol i').text(statics_gioc[i]['autogol']);
+								$('.gioc-gol-subiti i').text(statics_gioc[i]['gol_subiti']);
+								found = true;
+
+							}
+							/*else{
+								
+							}*/
+						} //2nd for
+						if(!found){
+							$('.gioc-pres i').text("--");
+								$('.gioc-gol-fatti i').text("--");
+								$('.gioc-gol-rigore i').text("--");
+								$('.gioc-assist i').text("--");
+								$('.gioc-rig-parato i').text("--");
+								$('.gioc-amm i').text("--");
+								$('.gioc-esp i').text("--");
+								$('.gioc-rig-sbagliato i').text("--");
+								$('.gioc-autogol i').text("--");
+								$('.gioc-gol-subiti i').text("--");
+						}
 						}); //click function
 					}); //ready
             	</script>

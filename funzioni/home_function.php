@@ -167,13 +167,14 @@
 , statistica.autogol, statistica.gol_subito, statistica.gol_su_rigore, statistica.rigore_parato FROM statistica WHERE statistica.id_giocatore = '$id' AND statistica.giornata = 33";
     $ris = mysql_query($query);
     $row = mysql_fetch_array($ris);
+    if(!empty($row)){
     $statics = array();
     $statics = array(
                         "id_gioc" => $id,
                         "gol_fatti" => $row['gol'],
                         "assist" => $row['assist'],
                         "ammonizioni" => $row['ammonito'],
-                        "esplusioni" => $row['espulso'],
+                        "espulsioni" => $row['espulso'],
                         "presenze" => $row['presenza'],
                         "rigori_sbagliati" => $row['rig_sbagliato'],
                         "autogol" => $row['autogol'],
@@ -183,6 +184,8 @@
                         );
     return $statics;
     }
+    else return null;
+}
 
 
 

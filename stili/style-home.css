@@ -845,6 +845,7 @@ font-family:'WOL_Reg','Segoe UI',Tahoma,Helvetica,sans-serif;
 	margin-top:2%;
 	margin-left:0;
 	border:none;
+	border-bottom:2px solid rgba(1, 159, 199, 0.61);
 }
 .gioc-general{
 	height:10%;
@@ -857,14 +858,14 @@ font-family:'WOL_Reg','Segoe UI',Tahoma,Helvetica,sans-serif;
 	position:absolute;
 }
 .gioc-ruolo{
-	width:10%;
+	width:12%;
 }
 .gioc-squadra{
 	margin-left:35%;
-	width:25%
+	width:22%
 }
 .gioc-nascita{
-	margin-left:12%;
+	margin-left:13%;
 }
 .gioc-maglia{
 	margin-left:80%;
@@ -880,6 +881,68 @@ font-family:'WOL_Reg','Segoe UI',Tahoma,Helvetica,sans-serif;
 
 i{
 	color:rgba(1, 159, 199, 0.61);
+}
+
+.cont-static{
+	width:100%;
+	height:60%;
+	margin-top:0%;
+	margin-left:0;
+	border:none;
+}
+
+.gioc-pres{
+	
+	width:14%;
+}
+
+.gioc-gol-fatti{
+	width:14%;
+	margin-left:16%;
+}
+
+.gioc-gol-rigore{
+	width:19%;
+	margin-left:32%;
+}
+
+.gioc-assist{
+	width:14%;
+	margin-left:53%;
+}
+
+.gioc-rig-parato{
+	width:19%;
+	margin-left:70%;
+}
+
+.gioc-amm{
+	width:18%;
+	margin-top:8%;
+}
+
+.gioc-esp{
+	width:15%;
+	margin-top:8%;
+	margin-left:20%;
+}
+
+.gioc-rig-sbagliato{
+	width:19%;
+	margin-top:8%;
+	margin-left:37%;
+}
+
+.gioc-autogol{
+	width:15%;
+	margin-top:8%;
+	margin-left:57%;
+}
+
+.gioc-gol-subiti{
+	width:15%;
+	margin-top:8%;
+	margin-left:73%;
 }
 
 
