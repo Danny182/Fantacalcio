@@ -329,27 +329,7 @@ $num_camp = count($leagues);
             		// setto i dati iniziali della scheda calciatore
 					$('.gioc-general  i').text("--");
             		$('.static-title').text("Seleziona Un giocatore");
-            		/*
-            		$('.gioc-ruolo i').text("--");
-					$('.gioc-nascita i').text("--");
-					$('.gioc-squadra i').text("--");
-					$('.gioc-naz i').text("--");
-					$('.gioc-maglia i').text("--");
-					$('.gioc-pres i').text("--");
-					$('.gioc-gol-fatti i').text("--");*/
-					
-			
-					/*
-					
-					
-					$('.gioc-rig-parato i').text("--");
-					$('.gioc-amm i').text("--");
-					$('.gioc-esp i').text("--");
-					$('.gioc-rig-sbagliato i').text("--");
-					$('.gioc-autogol i').text("--");
-					$('.gioc-gol-subiti i').text("--");*/
-
-						$(".cont-giocatore").click(function(){
+            		$(".cont-giocatore").click(function(){
 							var cont = $(this);
 							var id_gioc = cont.attr("id_gioc"); //prendo l id del giocatore cliccato
 							var statics_gioc = <?php echo json_encode($struct_statistiche ); ?>; //prendo le statistiche
@@ -385,12 +365,13 @@ $num_camp = count($leagues);
 								found = true;
 
 							}
-							/*else{
-								
-							}*/
+							if(id_gioc == -1){
+								$('.gioc-general  i').text("--");
+            					$('.static-title').text("Seleziona Un giocatore");
+							}
 						} //2nd for
 						if(!found){
-							$('.gioc-pres i').text("--");
+								$('.gioc-pres i').text("--");
 								$('.gioc-gol-fatti i').text("--");
 								$('.gioc-gol-rigore i').text("--");
 								$('.gioc-assist i').text("--");
