@@ -91,7 +91,7 @@ $(document).ready(function(){
 <script>
     jQuery(document).ready(function ($) {
         var options = {
-            $DragOrientation: 3,                                //[Optional] Orientation to drag slide, 0 no drag, 1 horizental, 2 vertical, 3 either, default value is 1 (Note that the $DragOrientation should be the same as $PlayOrientation when $DisplayPieces is greater than 1, or parking position is not 0)
+            $DragOrientation: 0,                                //[Optional] Orientation to drag slide, 0 no drag, 1 horizental, 2 vertical, 3 either, default value is 1 (Note that the $DragOrientation should be the same as $PlayOrientation when $DisplayPieces is greater than 1, or parking position is not 0)
             $ArrowNavigatorOptions: {                       //[Optional] Options to specify and enable arrow navigator or not
                 $Class: $JssorArrowNavigator$,              //[Requried] Class to create arrow navigator instance
                 $ChanceToShow: 2,                               //[Required] 0 Never, 1 Mouse Over, 2 Always
@@ -99,7 +99,7 @@ $(document).ready(function(){
                 $Steps: 1                                       //[Optional] Steps to go for each navigation request, default value is 1
             }
         };
-
+        console.log("entrato in stemmi");
         var jssor_slider1 = new $JssorSlider$("stemmi", options);
     });
 </script>
@@ -285,24 +285,20 @@ Generalità
 <div id = "stemmi" class = "stemma">
 
 
-	<div u="slides" style="cursor: move; position: absolute; left: 0px; top: 0px; overflow: hidden;">
+	<div id="cont-image" u="slides" style="overflow: hidden;">
+			<div><img u="image" src="../img/logo-squadra/atalanta.png" /></div>
             <div><img u="image" src="../img/logo-squadra/fiorentina.png" /></div>
             <div><img u="image" src="../img/logo-squadra/milan.png" /></div>
     </div>
 
-   <!-- <div id = "cont-image">
-        <img src = "<?php echo $url_stemma; ?>" width = "60px" height = "50px">
-    </div>
-
-
-       <label for="logo" class = "label-logo">
-
-            <a href='../img/logo-squadra/fiorentina.png' class = "squadra" title = "Fiorentina" style="color:#8B8989;"  >Modifica</a>
-            <a href='../img/logo-squadra/milan.png' class = "squadra" title = "Milan" style="display:none;color:#8B8989;"  >Modifica</a>
-            
-
-        </label>
-    -->
+	<!-- Arrow Left -->
+    <span id="arrowLeft" u="arrowleft" class="arrowLeft" >
+    <
+    </span>
+    <!-- Arrow Right -->
+    <span id="arrowRight" u="arrowright" class="arrowRight" >
+    >
+    </span>
 
 </div><!--cont-input stemma -->
 

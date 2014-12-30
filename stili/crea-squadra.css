@@ -81,7 +81,14 @@ div#stemmi {
 	margin-left:2%;
 	margin-top:1%;
 	color:#000;
+	position:relative;
 
+}
+
+span.arrowLeft {
+	top:5%;
+	left:2%;
+	position:relative;
 }
 
 div#cont-input.stadio{
@@ -140,14 +147,14 @@ color:#0098BF;
 }
 
 div#cont-image{
-
 width:60px;
 height:50px;
 border:none;
-border-right:1px solid;
 margin-top:-3;
-border-color:#B9B9B9;
+left:25%;
 }
+
+
 
 textarea{
 
@@ -550,4 +557,32 @@ a:hover{
 
 textarea {
 	resize: none;
+}
+
+span#arrowLeft {
+ border:none;
+ top:13px;
+ position:absolute;
+ font-size:22px;
+ cursor:pointer;
+ color:#949494;
+ left:10px;
+}
+
+span#arrowLeft:hover {
+	color:#6d6d6d;
+}
+
+span#arrowRight {
+ border:none;
+ top:13px;
+ right:21px;
+ position:absolute;
+ font-size:22px;
+ cursor:pointer;
+ color:#949494;
+}
+
+span#arrowRight:hover {
+	color:#6d6d6d;
 }
