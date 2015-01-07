@@ -10,7 +10,7 @@ div#windows{
 	border: none;
 	position: relative;
 	margin:0 auto;
-	top:150px;
+	margin-top:160px;
 	padding: 0;
 	color:#000000;
     overflow:hidden;

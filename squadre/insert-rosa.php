@@ -127,16 +127,17 @@ $(document).ready(function(){
     ?>
 </div>
 </div>
-<form action = "salva_squadra_rosa.php" method = "POST" id = "saveTeam">
-	<input type = "submit" value = "Salva" class = "saveTeam" id = "button"/>
-</form>
-<form action = "crea-squadra.php" method = "POST">
+<form id="back" action = "crea-squadra.php" method = "POST">
 	<?php /* faccio ritornare i dati a crea squadra.php */ ?>
-	<input type = "submit" value = "Indietro" class = "saveTeam back" />
+	<input type = "submit" value = "Indietro" class = "back" />
 	<input type = "hidden" name = "nome_squadra" value = "<?php echo $_POST['nome_squadra']; ?>" />
 	<input type = "hidden" name = "nome_stadio" value = "<?php echo $_POST['stadio'];  ?>" />
 	<input type = "hidden" name = "storia" value = "<?php echo $_POST['storia']; ?>" />
 </form>
+<form id="save" action = "salva_squadra_rosa.php" method = "POST" id = "saveTeam">
+	<input type = "submit" value = "Salva" class = "saveTeam" id = "button"/>
+</form>
+
 <div id = "windows">
 
     <div id="menu">

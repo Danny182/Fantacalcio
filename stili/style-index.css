@@ -15,7 +15,6 @@ div#cont{
 	background: -o-linear-gradient(left,  #ededf0 0%,#dbdbdd 30%,#dbdbdd 70%,#ededf0 100%);
 	background: -ms-linear-gradient(left,  #ededf0 0%,#dbdbdd 30%,#dbdbdd 70%,#ededf0 100%);
 	background: linear-gradient(to right,  #ededf0 0%,#dbdbdd 30%,#dbdbdd 70%,#ededf0 100%);
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ededf0', endColorstr='#ededf0',GradientType=1 );
 	font-family:'WOL_Reg','Segoe UI',Tahoma,Helvetica,sans-serif;
 	overflow:auto;
 	font-size:13.5px;
