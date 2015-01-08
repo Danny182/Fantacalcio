@@ -424,7 +424,7 @@ $(document).ready(function(){
     }
     else{
         echo'<div id = "divisore" class = "fourthy">
-            <label for = "storia">Non sei iscritti a nessun campionato</label>
+            <label for = "storia">Iscriviti ad un campionato!</label>
         </div>';
     }
     ?>

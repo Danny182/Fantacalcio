@@ -771,7 +771,11 @@ font-family:'WOL_Reg','Segoe UI',Tahoma,Helvetica,sans-serif;
 	background-color:#dbdbdd;
 }
 
-.general{
+.more{
+	height:17%;
+}
+
+div#general{
 	width: 20%;
 	height:87%;
 	border:none;
@@ -782,7 +786,9 @@ font-family:'WOL_Reg','Segoe UI',Tahoma,Helvetica,sans-serif;
 	margin-top:0px;
 }
 
-.information{
+
+
+div#general.information{
 	margin-top:-4%;
 	margin-left:42%;
 	width:350px;
@@ -790,11 +796,16 @@ font-family:'WOL_Reg','Segoe UI',Tahoma,Helvetica,sans-serif;
 	padding-top:0px;
 }
 
-.ruolo{
+div#general.ruolo{
 	margin-top:-4.6%;
 	margin-left:22%;
 	padding-top:4px;
 	height:84%;
+}
+
+div#general.ruolo-more{
+	margin-top:-6%;
+	padding-top:10px;
 }
 
 .golFatti{

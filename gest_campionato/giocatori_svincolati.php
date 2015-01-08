@@ -278,15 +278,15 @@ $num_camp = count($leagues);
 				<?php
 					echo'<div class = "cont-giocatore" id_gioc = "-1">';
             			//nome & cognome
-            			echo '<div class = "general">';
+            			echo '<div id = "general">';
             				echo '<i style="color:rgba(1, 159, 199, 0.61);"> Nome & Cognome </i>';
             			echo '</div>';
             			//ruolo
-            			echo'<div class = "general ruolo">';
+            			echo'<div id = "general" class =  "ruolo">';
             				echo'<i style="color:rgba(1, 159, 199, 0.61);"> Ruolo </i>';
             			echo '</div>';
             			//informazione
-            			echo '<div class = "general information">';
+            			echo '<div id = "general" class = "information">';
             				echo '<i style="color:rgba(1, 159, 199, 0.61);"> Clicca per avere maggiori informazioni </i>';
             			echo '</div>';
 
@@ -307,17 +307,28 @@ $num_camp = count($leagues);
 
 					if($static_data_gioc)
 					array_push($struct_statistiche, $static_data_gioc);
-
-            		echo'<div class = "cont-giocatore" id_gioc = "'.$id_gioc.'">'; 
+					//controllo se il nome & cognome è troppo lungo
+					$NameSurname = $data_gioc['nome'].$data_gioc['cognome'];
+					if(strlen($NameSurname) < 20)
+            			echo'<div class = "cont-giocatore" id_gioc = "'.$id_gioc.'">'; 
+            		else
+            			echo'<div class = "cont-giocatore more" id_gioc = "'.$id_gioc.'">';
             		//l'id serve alla funzione javascript in cima alla pagina
             			//nome & cognome
-            			echo '<div class = "general">';
-            				echo ''.$data_gioc['nome'].'  '.$data_gioc['cognome'].'';
+            		echo '<div div id = "general">';
+            				echo ''.$NameSurname.'';
             			echo '</div>';
             			//ruolo
-            			echo'<div class = "general ruolo">';
+            			if(strlen($NameSurname) < 20){
+            			echo'<div div id = "general" class = "ruolo">';
             				echo ''.$data_gioc['ruolo'].'';
             			echo '</div>';
+            			}
+            			else{
+            				echo'<div div id = "general" class = "ruolo ruolo-more">';
+            				echo ''.$data_gioc['ruolo'].'';
+            				echo '</div>';
+            			}
             			
             		echo'</div><!--cont-giocatore-->';
             	}
