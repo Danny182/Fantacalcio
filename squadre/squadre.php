@@ -16,7 +16,7 @@
 <link rel="stylesheet" href="../stili/campo-calcio.css" type="text/css" media="screen" />
 
 
-<script src="../librerie/jquery-1.9.1.min.js"/></script>
+<script src="../librerie/jquery-1.11.0.min.js"/></script>
 
 <script type="text/javascript" src="../librerie/jquery.easing.1.3.js"></script>
 <script type = "text/javascript" src = "../librerie/jquery.innerfade.js"> </script>
@@ -419,7 +419,7 @@ $(document).ready(function(){
         //prendo l'id del campionato a cui partecipa questa squadra (esiste per forza)
         $id_camp = get_id_camp_by_id_team($id_team);
         echo'<div id = "divisore" class = "fourthy">
-            <label for = "storia"><a href = "insert-rosa.php?id_team = '.$id_team.'&&id_camp='.$id_camp.'">Vedi/Modifica La Rosa </a></label>
+            <label for = "storia"><a href = "insert-rosa.php?id_team='.$id_team.'&&id_camp='.$id_camp.'">Vedi/Modifica La Rosa </a></label>
         </div>';
     }
     else{

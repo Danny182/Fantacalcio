@@ -26,6 +26,11 @@
 	//prendo id squadra e id campionato dalla pagina squadre.php (si arriva solo da li)
 	$id_team = $_GET['id_team'];
 	$id_camp = $_GET['id_camp'];
+	//prendo il nome della squadra che sto modificando o visualizzando
+	$query = "SELECT nome FROM squadra WHERE id_squadra='$id_team'";
+    $ris = mysql_query($query);
+    $row = mysql_fetch_array($ris);
+	$teamName = $row['nome'];
 	//prendo le regole del campionato dalla funzione get_rules nel file gest_campionato_function (dentro funzioni)
 	$regole = array();
 	$regole = get_rules($id_camp);
@@ -170,7 +175,7 @@ $(document).ready(function(){
     </div>
 	<div id="your-team">
 		<div id='teamName'>
-			<?php echo	$_POST['nome_squadra'];					
+			<?php echo	$teamName;					
 			?>
 		</div>
 		<div id="listBox">
