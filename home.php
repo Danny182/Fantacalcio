@@ -356,7 +356,7 @@ $(document).ready(function(){
  									$id_admin = $row['id_admin'];
  									
  									if($id_admin == $id && $num_camp != 0){ //se è vero l'utente è l'amministratore
- 									echo'<a href = "gest_campionato/gest-campionato.php"><div id = "live" class = "gestione">Gestione Regole</div></a>
+ 									echo'<a href = "gest_campionato/gest-campionato.php?choose=1"><div id = "live" class = "gestione">Gestione Campionato</div></a>
                                     <a href = "operazioni_admin/home_area_admin.php?camp='.$nome_camp.'"><div id = "live">Area Admin</div></a>
 								</div>';
  									}
