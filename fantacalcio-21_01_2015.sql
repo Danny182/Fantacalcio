@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.1.6
+-- version 4.2.7.1
 -- http://www.phpmyadmin.net
 --
--- Host: 127.0.0.1
--- Generation Time: Set 08, 2014 alle 19:35
--- Versione del server: 5.6.16
--- PHP Version: 5.5.9
+-- Host: localhost
+-- Generation Time: Gen 21, 2015 alle 16:08
+-- Versione del server: 5.6.20
+-- PHP Version: 5.5.15
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -28,10 +28,19 @@ SET time_zone = "+00:00";
 
 CREATE TABLE IF NOT EXISTS `appartiene` (
   `id_squadra` int(10) unsigned DEFAULT NULL,
-  `id_giocatore` int(10) unsigned DEFAULT NULL,
-  KEY `ind3` (`id_squadra`),
-  KEY `ind4` (`id_giocatore`)
+  `id_giocatore` int(10) unsigned DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dump dei dati per la tabella `appartiene`
+--
+
+INSERT INTO `appartiene` (`id_squadra`, `id_giocatore`) VALUES
+(82, 35),
+(82, 35),
+(82, 100),
+(82, 100),
+(82, 36);
 
 -- --------------------------------------------------------
 
@@ -40,7 +49,7 @@ CREATE TABLE IF NOT EXISTS `appartiene` (
 --
 
 CREATE TABLE IF NOT EXISTS `campionato` (
-  `id_campionato` int(10) unsigned NOT NULL AUTO_INCREMENT,
+`id_campionato` int(10) unsigned NOT NULL,
   `nome` varchar(30) DEFAULT NULL,
   `password` varchar(30) NOT NULL DEFAULT '',
   `admin` varchar(30) NOT NULL DEFAULT '',
@@ -89,20 +98,26 @@ CREATE TABLE IF NOT EXISTS `campionato` (
   `modulo_541` tinyint(1) NOT NULL DEFAULT '0',
   `modulo_550` tinyint(1) NOT NULL DEFAULT '0',
   `partecipanti` text COMMENT 'email o username dei partecipanti al campionato',
-  PRIMARY KEY (`id_campionato`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=104 ;
+  `n_portieri` int(11) NOT NULL COMMENT 'numeri max portieri',
+  `n_difensori` int(11) NOT NULL COMMENT 'numero max di difensori',
+  `n_centrocampisti` int(11) NOT NULL COMMENT 'numero max di centrocampoisti',
+  `n_attaccanti` int(11) NOT NULL COMMENT 'numero max di attaccanti'
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=107 ;
 
 --
 -- Dump dei dati per la tabella `campionato`
 --
 
-INSERT INTO `campionato` (`id_campionato`, `nome`, `password`, `admin`, `id_admin`, `n_part`, `formazione_automatica`, `penalita`, `mod_difesa_gazzetta`, `mod_portiere`, `mod_difesa`, `mod_centrocampo`, `mod_attacco`, `mod_modulo`, `n_sostituzioni`, `bonus_gol_portiere`, `bonus_gol_difensore`, `bonus_gol_centrocampista`, `bonus_gol_attaccante`, `bonus_gol_rigore`, `bonus_rigore_parato`, `bonus_assist`, `bonus_portiere`, `bonus_casa`, `bonus_gol_vittoria`, `bonus_gol_pareggio`, `bonus_capitano`, `malus_gol_subito`, `ammonizione`, `espulsione`, `malus_rigore_sbagliato`, `malus_autogol`, `voto_giocatore_sv`, `voto_giocatore_ss`, `punti_primo_gol`, `punti_range_gol`, `modulo_343`, `modulo_352`, `modulo_361`, `modulo_433`, `modulo_442`, `modulo_451`, `modulo_253`, `modulo_334`, `modulo_424`, `modulo_532`, `modulo_541`, `modulo_550`, `partecipanti`) VALUES
-(97, 'aa', '', '', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 3, 3, 3, 3, 3, 3, 1, 0, 2, 0, 0, 0, 1, 0.5, 1, 3, 3, 0, 0, 66, 6, 127, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, ''),
-(99, 'pestello league', '', '', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 3, 3, 3, 3, 3, 3, 1, 0, 2, 0, 0, 0, 1, 0.5, 1, 3, 3, 0, 0, 66, 6, 127, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, ''),
-(100, 'sfds', 'das', 'daniel', 33, 4, 0, 0, 0, 0, 0, 0, 0, 0, 3, 3, 3, 3, 3, 3, 3, 1, 0, 2, 0, 0, 0, 1, 0.5, 1, 3, 3, 0, 0, 66, 6, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'gianniÂ£gianniÂ£gianniÂ£'),
-(101, 'sfds', 'das', 'daniel', 33, 4, 0, 0, 0, 0, 0, 0, 0, 0, 3, 3, 3, 3, 3, 3, 3, 1, 0, 2, 0, 0, 0, 1, 0.5, 1, 3, 3, 0, 0, 66, 6, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'gianniÂ£gianniÂ£gianniÂ£'),
-(102, '', '', '', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 3, 3, 3, 3, 3, 3, 1, 0, 2, 0, 0, 0, 1, 0.5, 1, 3, 3, 0, 0, 66, 6, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, ''),
-(103, 'gabri', 'pestello', 'gabri', 30, 3, 0, 0, 0, 0, 0, 0, 0, 0, 3, 3, 3, 3, 3, 3, 3, 1, 0, 2, 0, 0, 0, 1, 0.5, 1, 3, 3, 0, 0, 66, 6, 1, 1, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 'danny.zanchi@gmail.com£daniel£');
+INSERT INTO `campionato` (`id_campionato`, `nome`, `password`, `admin`, `id_admin`, `n_part`, `formazione_automatica`, `penalita`, `mod_difesa_gazzetta`, `mod_portiere`, `mod_difesa`, `mod_centrocampo`, `mod_attacco`, `mod_modulo`, `n_sostituzioni`, `bonus_gol_portiere`, `bonus_gol_difensore`, `bonus_gol_centrocampista`, `bonus_gol_attaccante`, `bonus_gol_rigore`, `bonus_rigore_parato`, `bonus_assist`, `bonus_portiere`, `bonus_casa`, `bonus_gol_vittoria`, `bonus_gol_pareggio`, `bonus_capitano`, `malus_gol_subito`, `ammonizione`, `espulsione`, `malus_rigore_sbagliato`, `malus_autogol`, `voto_giocatore_sv`, `voto_giocatore_ss`, `punti_primo_gol`, `punti_range_gol`, `modulo_343`, `modulo_352`, `modulo_361`, `modulo_433`, `modulo_442`, `modulo_451`, `modulo_253`, `modulo_334`, `modulo_424`, `modulo_532`, `modulo_541`, `modulo_550`, `partecipanti`, `n_portieri`, `n_difensori`, `n_centrocampisti`, `n_attaccanti`) VALUES
+(97, 'aa', '', '', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 3, 3, 3, 3, 3, 3, 1, 0, 2, 0, 0, 0, 1, 0.5, 1, 3, 3, 0, 0, 66, 6, 127, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, '', 0, 0, 0, 0),
+(99, 'pestello league', '', '', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 3, 3, 3, 3, 3, 3, 1, 0, 2, 0, 0, 0, 1, 0.5, 1, 3, 3, 0, 0, 66, 6, 127, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, '', 0, 0, 0, 0),
+(100, 'sfds', 'das', 'daniel', 33, 4, 0, 0, 0, 0, 0, 0, 0, 0, 3, 3, 3, 3, 3, 3, 3, 1, 0, 2, 0, 0, 0, 1, 0.5, 1, 3, 3, 0, 0, 66, 6, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'gianniÂ£gianniÂ£gianniÂ£', 0, 0, 0, 0),
+(101, 'sfds', 'das', 'daniel', 33, 4, 0, 0, 0, 0, 0, 0, 0, 0, 3, 3, 3, 3, 3, 3, 3, 1, 0, 2, 0, 0, 0, 1, 0.5, 1, 3, 3, 0, 0, 66, 6, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'gianniÂ£gianniÂ£gianniÂ£', 0, 0, 0, 0),
+(102, '', '', '', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 3, 3, 3, 3, 3, 3, 1, 0, 2, 0, 0, 0, 1, 0.5, 1, 3, 3, 0, 0, 66, 6, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, '', 0, 0, 0, 0),
+(103, 'gabri', 'pestello', 'gabri', 30, 3, 0, 0, 0, 0, 0, 0, 0, 0, 3, 3, 3, 3, 3, 3, 3, 1, 0, 2, 0, 0, 0, 1, 0.5, 1, 3, 3, 0, 0, 66, 6, 1, 1, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 'danny.zanchi@gmail.com£daniel£', 0, 0, 0, 0),
+(104, 'pernulla', 'pernulla', 'daniel', 33, 2, 0, 0, 0, 0, 0, 0, 0, 0, 3, 3, 3, 3, 3, 3, 3, 1, 0, 2, 0, 0, 0, 1, 0.5, 1, 3, 3, 0, 0, 66, 6, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'gabri£', 0, 0, 0, 0),
+(105, 'nullo', 'nullo', 'daniel', 33, 2, 0, 0, 0, 0, 0, 0, 0, 0, 3, 3, 3, 3, 3, 3, 3, 1, 0, 2, 0, 0, 0, 1, 0.5, 1, 3, 3, 0, 0, 66, 6, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'dd@gmail.com£', 0, 0, 0, 0),
+(106, 'prova', 'provaa', 'daniel', 33, 2, 0, 0, 0, 0, 0, 0, 0, 0, 3, 3, 3, 3, 3, 3, 3, 1, 0, 2, 0, 0, 0, 1, 0.5, 1, 3, 3, 0, 0, 66, 6, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'gabri£', 1, 23, 10, 10);
 
 -- --------------------------------------------------------
 
@@ -111,7 +126,7 @@ INSERT INTO `campionato` (`id_campionato`, `nome`, `password`, `admin`, `id_admi
 --
 
 CREATE TABLE IF NOT EXISTS `giocatore` (
-  `id_giocatore` int(10) unsigned NOT NULL AUTO_INCREMENT,
+`id_giocatore` int(10) unsigned NOT NULL,
   `cognome` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
   `nome` varchar(50) COLLATE utf8_unicode_ci DEFAULT NULL,
   `data_nascita` date DEFAULT NULL,
@@ -120,8 +135,7 @@ CREATE TABLE IF NOT EXISTS `giocatore` (
   `valore` int(11) DEFAULT NULL,
   `squadra` varchar(20) COLLATE utf8_unicode_ci NOT NULL,
   `id_squadra_giocatore` int(11) NOT NULL,
-  `n_maglia` int(5) DEFAULT NULL,
-  PRIMARY KEY (`id_giocatore`)
+  `n_maglia` int(5) DEFAULT NULL
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=721 ;
 
 --
@@ -796,15 +810,13 @@ INSERT INTO `giocatore` (`id_giocatore`, `cognome`, `nome`, `data_nascita`, `naz
 --
 
 CREATE TABLE IF NOT EXISTS `notifica` (
-  `id_notifica` int(10) unsigned NOT NULL AUTO_INCREMENT,
+`id_notifica` int(10) unsigned NOT NULL,
   `tipo` varchar(20) DEFAULT NULL,
   `testo` longtext,
   `letta` tinyint(4) NOT NULL DEFAULT '0',
   `id_mittente` int(10) unsigned DEFAULT NULL,
-  `id_utente` int(10) unsigned DEFAULT NULL,
-  PRIMARY KEY (`id_notifica`),
-  KEY `ind1` (`id_utente`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=10 ;
+  `id_utente` int(10) unsigned DEFAULT NULL
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=12 ;
 
 --
 -- Dump dei dati per la tabella `notifica`
@@ -819,7 +831,9 @@ INSERT INTO `notifica` (`id_notifica`, `tipo`, `testo`, `letta`, `id_mittente`, 
 (6, NULL, 'sssssss', 1, 30, 33),
 (7, NULL, 'sssssss', 1, 30, 33),
 (8, NULL, 'ciao prova', 1, 30, 33),
-(9, 'invito al campionato', 'Ciao! Sei stato invitato ad unirti al torneo gabri  dall amministratore della lega <br>gabri\n    Per unirti ai tuoi amici basta cliccare nel link sotto e seguire le indicazioni, in pochi minuti il gioco è fatto!<br>\n    Buon divertimento!<br>\n    <a href = "crea_campionato/iscrivi-squadra.php?id_camp=103&&var=0">Iscrivi la tua squadra al campionato</a>', 0, 30, 33);
+(9, 'invito al campionato', 'Ciao! Sei stato invitato ad unirti al torneo gabri  dall amministratore della lega <br>gabri\n    Per unirti ai tuoi amici basta cliccare nel link sotto e seguire le indicazioni, in pochi minuti il gioco è fatto!<br>\n    Buon divertimento!<br>\n    <a href = "crea_campionato/iscrivi-squadra.php?id_camp=103&&var=0">Iscrivi la tua squadra al campionato</a>', 1, 30, 33),
+(10, 'invito al campionato', 'Sei stato invitato ad unirti al torneo pernulla  dall amministratore della lega <br>daniel\n    Per unirti ai tuoi amici basta cliccare nel link sotto e seguire le indicazioni, in pochi minuti il gioco è fatto!<br>\n    Buon divertimento!<br>\n    <a href = "crea_campionato/iscrivi-squadra.php?id_camp=104&&var=0">Iscrivi la tua squadra al campionato</a>', 0, 33, 30),
+(11, 'invito al campionato', 'Sei stato invitato ad unirti al torneo prova  dall amministratore della lega <br>daniel\n    Per unirti ai tuoi amici basta cliccare nel link sotto e seguire le indicazioni, in pochi minuti il gioco è fatto!<br>\n    Buon divertimento!<br>\n    <a href = "crea_campionato/iscrivi-squadra.php?id_camp=106&&var=0">Iscrivi la tua squadra al campionato</a>', 0, 33, 30);
 
 -- --------------------------------------------------------
 
@@ -828,7 +842,7 @@ INSERT INTO `notifica` (`id_notifica`, `tipo`, `testo`, `letta`, `id_mittente`, 
 --
 
 CREATE TABLE IF NOT EXISTS `squadra` (
-  `id_squadra` int(10) unsigned NOT NULL AUTO_INCREMENT,
+`id_squadra` int(10) unsigned NOT NULL,
   `nome` varchar(30) DEFAULT NULL,
   `id_campionato` int(10) unsigned DEFAULT NULL,
   `id_utente` int(10) unsigned DEFAULT NULL,
@@ -837,12 +851,8 @@ CREATE TABLE IF NOT EXISTS `squadra` (
   `iscritta` tinyint(1) NOT NULL DEFAULT '0',
   `storia` text,
   `logo` varchar(200) DEFAULT NULL,
-  `nome_stadio` varchar(50) DEFAULT NULL,
-  PRIMARY KEY (`id_squadra`),
-  KEY `ind1` (`id_campionato`),
-  KEY `ind2` (`id_utente`),
-  KEY `id_stadio` (`id_stadio`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=79 ;
+  `nome_stadio` varchar(50) DEFAULT NULL
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=83 ;
 
 --
 -- Dump dei dati per la tabella `squadra`
@@ -858,9 +868,13 @@ INSERT INTO `squadra` (`id_squadra`, `nome`, `id_campionato`, `id_utente`, `id_s
 (70, 'Fiorentina', NULL, 30, 1, 0, 0, '    Scrivi qualcosa sulla tua squadra...\r\n\r\n', '../img/logo-squadra/fiorentina.png', 'Artemio Franchi'),
 (71, 'squadra_test', 100, 33, NULL, 0, 1, NULL, '', NULL),
 (75, ' Team', NULL, 36, 1, 0, 0, NULL, '../img/logo-squadra/fiorentina.jpg', NULL),
-(76, 'dsadasdasdasdasdasdasdasdas', NULL, 33, NULL, 0, 0, NULL, NULL, NULL),
+(76, 'dsadasdasdasdasdasdasdasdas', 104, 33, NULL, 0, 1, NULL, NULL, NULL),
 (77, '', NULL, 33, 1, 0, 0, 'prova di sotria', '../img/logo-squadra/milan.jpg', ''),
-(78, 'dasdasdasdas', NULL, 33, 3, 0, 0, 'dasd', '../img/logo-squadra/milan.jpg', '');
+(78, 'dasdasdasdas', 105, 33, 3, 0, 1, 'dasd', '../img/logo-squadra/milan.jpg', ''),
+(79, 'teamz', 106, 33, NULL, 0, 1, NULL, NULL, NULL),
+(80, 'Daniel', NULL, 33, 1, 0, 0, '', '../img/logo-squadra/fiorentina.png', 'Zanchi'),
+(81, 'ttttttttttttt', NULL, 33, 1, 0, 0, '', '../img/logo-squadra/fiorentina.png', 'dasdada'),
+(82, 'sdasdwdasd', 103, 33, 1, 0, 0, '', '../img/logo-squadra/fiorentina.png', 'dsdaw');
 
 -- --------------------------------------------------------
 
@@ -869,11 +883,9 @@ INSERT INTO `squadra` (`id_squadra`, `nome`, `id_campionato`, `id_utente`, `id_s
 --
 
 CREATE TABLE IF NOT EXISTS `stadio` (
-  `id_stadio` int(10) unsigned NOT NULL AUTO_INCREMENT,
+`id_stadio` int(10) unsigned NOT NULL,
   `nome` varchar(50) DEFAULT NULL,
-  `img` varchar(50) NOT NULL DEFAULT '../img/stadio1.png',
-  PRIMARY KEY (`id_stadio`),
-  KEY `id_stadio` (`id_stadio`)
+  `img` varchar(50) NOT NULL DEFAULT '../img/stadio1.png'
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
 
 --
@@ -892,7 +904,7 @@ INSERT INTO `stadio` (`id_stadio`, `nome`, `img`) VALUES
 --
 
 CREATE TABLE IF NOT EXISTS `statistica` (
-  `id_statistica` int(11) NOT NULL AUTO_INCREMENT,
+`id_statistica` int(11) NOT NULL,
   `id_giocatore` int(11) NOT NULL,
   `anno` year(4) DEFAULT NULL COMMENT 'es. 2013 si riferisce alla stagione 2013/2014',
   `giornata` int(11) DEFAULT NULL,
@@ -908,8 +920,7 @@ CREATE TABLE IF NOT EXISTS `statistica` (
   `gol_pareggio` int(11) DEFAULT NULL,
   `gol_vittoria` int(11) DEFAULT NULL,
   `gol_su_rigore` int(11) DEFAULT NULL,
-  `rigore_parato` int(11) DEFAULT NULL,
-  PRIMARY KEY (`id_statistica`)
+  `rigore_parato` int(11) DEFAULT NULL
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=255 ;
 
 --
@@ -1179,7 +1190,7 @@ INSERT INTO `statistica` (`id_statistica`, `id_giocatore`, `anno`, `giornata`, `
 --
 
 CREATE TABLE IF NOT EXISTS `utente` (
-  `id_utente` int(10) unsigned NOT NULL AUTO_INCREMENT,
+`id_utente` int(10) unsigned NOT NULL,
   `nome` varchar(30) DEFAULT NULL,
   `cognome` varchar(30) DEFAULT NULL,
   `email` varchar(30) DEFAULT NULL,
@@ -1188,8 +1199,7 @@ CREATE TABLE IF NOT EXISTS `utente` (
   `user` varchar(30) DEFAULT NULL,
   `password` varchar(30) DEFAULT NULL,
   `domanda` varchar(50) DEFAULT NULL,
-  `risposta` varchar(20) DEFAULT NULL,
-  PRIMARY KEY (`id_utente`)
+  `risposta` varchar(20) DEFAULT NULL
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=37 ;
 
 --
@@ -1203,6 +1213,97 @@ INSERT INTO `utente` (`id_utente`, `nome`, `cognome`, `email`, `data_nascita`, `
 (36, '', '', '', '0000-00-00', '', '', '', 'Il tuo colore preferito', '');
 
 --
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `appartiene`
+--
+ALTER TABLE `appartiene`
+ ADD KEY `ind3` (`id_squadra`), ADD KEY `ind4` (`id_giocatore`);
+
+--
+-- Indexes for table `campionato`
+--
+ALTER TABLE `campionato`
+ ADD PRIMARY KEY (`id_campionato`);
+
+--
+-- Indexes for table `giocatore`
+--
+ALTER TABLE `giocatore`
+ ADD PRIMARY KEY (`id_giocatore`);
+
+--
+-- Indexes for table `notifica`
+--
+ALTER TABLE `notifica`
+ ADD PRIMARY KEY (`id_notifica`), ADD KEY `ind1` (`id_utente`);
+
+--
+-- Indexes for table `squadra`
+--
+ALTER TABLE `squadra`
+ ADD PRIMARY KEY (`id_squadra`), ADD KEY `ind1` (`id_campionato`), ADD KEY `ind2` (`id_utente`), ADD KEY `id_stadio` (`id_stadio`);
+
+--
+-- Indexes for table `stadio`
+--
+ALTER TABLE `stadio`
+ ADD PRIMARY KEY (`id_stadio`), ADD KEY `id_stadio` (`id_stadio`);
+
+--
+-- Indexes for table `statistica`
+--
+ALTER TABLE `statistica`
+ ADD PRIMARY KEY (`id_statistica`);
+
+--
+-- Indexes for table `utente`
+--
+ALTER TABLE `utente`
+ ADD PRIMARY KEY (`id_utente`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `campionato`
+--
+ALTER TABLE `campionato`
+MODIFY `id_campionato` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=107;
+--
+-- AUTO_INCREMENT for table `giocatore`
+--
+ALTER TABLE `giocatore`
+MODIFY `id_giocatore` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=721;
+--
+-- AUTO_INCREMENT for table `notifica`
+--
+ALTER TABLE `notifica`
+MODIFY `id_notifica` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=12;
+--
+-- AUTO_INCREMENT for table `squadra`
+--
+ALTER TABLE `squadra`
+MODIFY `id_squadra` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=83;
+--
+-- AUTO_INCREMENT for table `stadio`
+--
+ALTER TABLE `stadio`
+MODIFY `id_stadio` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=4;
+--
+-- AUTO_INCREMENT for table `statistica`
+--
+ALTER TABLE `statistica`
+MODIFY `id_statistica` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=255;
+--
+-- AUTO_INCREMENT for table `utente`
+--
+ALTER TABLE `utente`
+MODIFY `id_utente` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=37;
+--
 -- Limiti per le tabelle scaricate
 --
 
@@ -1210,22 +1311,22 @@ INSERT INTO `utente` (`id_utente`, `nome`, `cognome`, `email`, `data_nascita`, `
 -- Limiti per la tabella `appartiene`
 --
 ALTER TABLE `appartiene`
-  ADD CONSTRAINT `appartiene_ibfk_1` FOREIGN KEY (`id_squadra`) REFERENCES `squadra` (`id_squadra`) ON DELETE NO ACTION ON UPDATE CASCADE,
-  ADD CONSTRAINT `appartiene_ibfk_2` FOREIGN KEY (`id_giocatore`) REFERENCES `giocatore` (`id_giocatore`) ON DELETE NO ACTION ON UPDATE CASCADE;
+ADD CONSTRAINT `appartiene_ibfk_1` FOREIGN KEY (`id_squadra`) REFERENCES `squadra` (`id_squadra`) ON DELETE NO ACTION ON UPDATE CASCADE,
+ADD CONSTRAINT `appartiene_ibfk_2` FOREIGN KEY (`id_giocatore`) REFERENCES `giocatore` (`id_giocatore`) ON DELETE NO ACTION ON UPDATE CASCADE;
 
 --
 -- Limiti per la tabella `notifica`
 --
 ALTER TABLE `notifica`
-  ADD CONSTRAINT `notifica_ibfk_1` FOREIGN KEY (`id_utente`) REFERENCES `utente` (`id_utente`) ON DELETE NO ACTION ON UPDATE CASCADE;
+ADD CONSTRAINT `notifica_ibfk_1` FOREIGN KEY (`id_utente`) REFERENCES `utente` (`id_utente`) ON DELETE NO ACTION ON UPDATE CASCADE;
 
 --
 -- Limiti per la tabella `squadra`
 --
 ALTER TABLE `squadra`
-  ADD CONSTRAINT `squadra_ibfk_1` FOREIGN KEY (`id_campionato`) REFERENCES `campionato` (`id_campionato`) ON DELETE NO ACTION ON UPDATE CASCADE,
-  ADD CONSTRAINT `squadra_ibfk_2` FOREIGN KEY (`id_utente`) REFERENCES `utente` (`id_utente`) ON DELETE NO ACTION ON UPDATE CASCADE,
-  ADD CONSTRAINT `squadra_ibfk_3` FOREIGN KEY (`id_stadio`) REFERENCES `stadio` (`id_stadio`) ON DELETE NO ACTION ON UPDATE CASCADE;
+ADD CONSTRAINT `squadra_ibfk_1` FOREIGN KEY (`id_campionato`) REFERENCES `campionato` (`id_campionato`) ON DELETE NO ACTION ON UPDATE CASCADE,
+ADD CONSTRAINT `squadra_ibfk_2` FOREIGN KEY (`id_utente`) REFERENCES `utente` (`id_utente`) ON DELETE NO ACTION ON UPDATE CASCADE,
+ADD CONSTRAINT `squadra_ibfk_3` FOREIGN KEY (`id_stadio`) REFERENCES `stadio` (`id_stadio`) ON DELETE NO ACTION ON UPDATE CASCADE;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
