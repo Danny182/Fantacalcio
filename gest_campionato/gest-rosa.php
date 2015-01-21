@@ -1,57 +1,43 @@
 <?php
-	include("../session.php");
-	include("../connect_db.php");
-    include("../funzioni/home_function.php");
-    include("../funzioni/gest_campionato_function.php");
+echo'
+			<div id="regole">
+				<form action = "salva-gest-regole.php?where=1" method = "POST" id = "gest" class = "gest_camp">
+					<input type = "hidden" name = "id_camp" value = "<?php echo $id_camp; ?>" />
+			
+				<div id = "cont-label-modifica" class = "mod_nome">
+					<label for="nome" class = "crea-camp-title">Numero Portieri in rosa:</label>
+						<input type = "text" name = "n_por" id = "n_por" class="modifica-regole-n_part" value = "" />
+				</div>
+					
+				<div id = "cont-label-modifica" class = "mod_n_part">
+					<label for="nome" class = "crea-camp-title">Numero Difensori in rosa:</label>
+						<input type = "text" name = "n_dif" id = "n_dif" class="modifica-regole-n_part" value = "" />
+				</div>
+
+				<div id = "cont-label-modifica"  class = "mod_formazione_automatica">
+					<label for="nome" class = "crea-camp-title"> Numero Centrocamp. in rosa:</label>	
+						<input type = "text" name = "n_cen" id = "n_cen" class="modifica-regole-n_part" value = "" />
+				</div>
+
+				<div id = "cont-label-modifica" class = "mod_penalita">
+					<label for="nome" class = "crea-camp-title"> Numero Attaccanti in rosa:</label>	
+						<input type = "text" name = "n_att" id = "n_att" class="modifica-regole-n_part" value = "" />
+				</div>
+
+				<div id = "cont-label-modifica"  class = "mod_difesa_gazzetta">
+					<label for="nome" class = "crea-camp-title"> Crediti Iniziali:<br></label>	
+						<input type = "text" name = "crediti" id = "crediti" class="modifica-regole-n_part" value = "" />
+				</div>
+
+				<div id = "cont-label-modifica"  class = "mod_portiere">
+					<label for="nome" class = "crea-camp-title"> Nascondere le rose?<br></label>	
+					<div id = "labels">
+						<input type="radio" value="si" name="nascondi_rose" id="radio9" >
+						<label for="radio9" class = "crea-camp" >Si</label>
+						<input type="radio" value="no" name="nascondi_rose" id="radio10" checked = "checked"//>
+						<label for="radio10" class = "crea-camp">No</label>
+					</div>
+
+				</div>
+			';
 ?>
-
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<link rel="shortcut icon" href="/favicon.ico" />
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Gestione Campionato</title>
-<link rel="stylesheet" href="../stili/style-home.css" type="text/css" media="screen" />
-<link rel="stylesheet" href="../stili/gest_campionato.css" type="text/css" media="screen" />
-<link rel="stylesheet" href="../stili/campo-calcio.css" type="text/css" media="screen" />
-<script src="../librerie/jquery-1.11.0.min.js"/></script> 
-<script type="text/javascript" src="../librerie/jquery-1.9.1.min.js"/></script>
-<script type="text/javascript" src="../script/crea-camp.js"/></script>
-<!--
- <script src="librerie/jquery-1.9.1.min.js"/></script> 
-<script src="librerie/jquery-ui-1.10.3.custom.min.js."></script>
-<script type="text/javascript" src="librerie/jquery.easing.1.3.js"></script> 
-<script type = "text/javascript" src = "librerie/jquery.innerfade.js"> </script>-->
-
-
-<script type="text/javascript" src="../script/menu.js"></script>-->
-<link rel="stylesheet" type="text/css" href="../stili/menu2.css" />
-
-<script type="text/javascript">
-function submitform()
-{
-  document.getElementById('gest').submit();
-}
-</script>
-
-</head>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
