@@ -1,7 +1,6 @@
 <?php
 echo'
-			<div id="regole">
-				<form action = "salva-gest-regole.php?where=1" method = "POST" id = "gest" class = "gest_camp">
+			
 					<input type = "hidden" name = "id_camp" value = "<?php echo $id_camp; ?>" />
 			
 				<div id = "cont-label-modifica" class = "mod_nome">
@@ -38,6 +37,6 @@ echo'
 						<label for="radio10" class = "crea-camp">No</label>
 					</div>
 
-				</div>
+				
 			';
 ?>

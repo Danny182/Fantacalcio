@@ -17,7 +17,12 @@ $check = 0;
 //prendo tutti i dati dal form
 $id_camp = $_POST['id_camp'];
 
+//controllo la variabile choose: zero => regole generali - uno => regole rosa - due => regole formazioni
+
+if($_POST['choose'] == 0){ //salvo le regole generali
+
 //regole
+
 $mod_nome = trim($_POST['mod_nome']);
 if(is_numeric($mod_nome)) $check=1;
 
@@ -141,9 +146,51 @@ if($check == 1){
 	}	
 	else{
 		echo'
-		<div id="cont-errore"><div id="errore">Modifiche Effettuate!
+		<div id="cont-errore"><div id="errore"><b>MODIFICHE EFFETTUATE!</b>
     	<meta http-equiv="Refresh" content="3; URL=../home.php?var=0"></div></div>';
 	}
+
+} //IF
+
+if($_POST['choose'] == 1){ //salvo le regole della rosa
+	
+	if(!isset($_POST['n_port']) || !is_numeric($_POST['n_port']))
+		$check = 1;
+	else 
+		$numero_portieri = $_POST['n_port'];
+
+	if(!isset($_POST['n_dif']) || !is_numeric($_POST['n_dif']))
+		$check = 1;
+	else 
+		$numero_difensori = $_POST['n_dif'];
+
+	if(!isset($_POST['n_cen']) || !is_numeric($_POST['n_cen']))
+		$check = 1;
+	else 
+		$numero_cen = $_POST['n_cen'];
+
+	if(!isset($_POST['n_att']) || !is_numeric($_POST['n_att']))
+		$check = 1;
+	else 
+		$numero_attaccanti = $_POST['n_att'];
+
+	if(!isset($_POST['crediti']) || !is_numeric($_POST['crediti']))
+		$check = 1;
+	else 
+		$crediti = $_POST['crediti'];
+
+	$nascondi_rose = $_POST['nascondi_rose'];
+
+	if($check == 1){
+		echo'
+		<div id="cont-errore"><div id="errore"><b>SI E\' VERIFICATO UN ERRORE!</b>
+    	<meta http-equiv="Refresh" content="3; URL=../home.php?var=0"></div></div>';
+    	die();
+	}
+
+	//Query da fare
+
+}
 		
 
 ?>

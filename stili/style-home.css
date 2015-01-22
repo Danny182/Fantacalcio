@@ -399,6 +399,10 @@ background-color:#34BFE2;
 color:white;
 }
 
+div#live.gest-campionato{
+	text-align: center;
+}
+
 div#live.general{
 	margin-top:10%;
 }
