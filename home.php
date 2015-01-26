@@ -50,12 +50,19 @@ $(document).ready(function(){
         
         //nel vettore sono presenti i nome dei campionati a cui partecipa l'utente
         $leagues = get_leagues($id);
-        
-        
-        //numero dei campionati
+        //controllo qul'è l'ulitmo campionato cliccato
+        if(isset($_SESSION['current_camp'])){
+        	$nome_camp = $_SESSION['current_camp'];
+        	$num_camp = count($leagues);
+        }
+        else{
+        	//numero dei campionati
         $num_camp = count($leagues);
         $nome_camp = $leagues[0];
         $_SESSION['current_camp'] = $nome_camp;
+        }
+        
+        
         
         
         
@@ -341,7 +348,14 @@ $(document).ready(function(){
                        
                         echo'<ul class = "camp">';
                         foreach($leagues as $nome){
-                            echo '<a href = "home.php?var=1&&camp='.$nome.'"><li class = "camp">'.$nome.'</li></a>';
+                        	if(strcmp($nome, $nome_camp) == 0){
+                        		echo '<a href = "home.php?var=1&&camp='.$nome.'"><li class = "camp mark"><i>'.$nome.'</i></li></a>';
+                        	} //evidezio il campionato corrente
+                        	else{
+                        		echo '<a href = "home.php?var=1&&camp='.$nome.'"><li class = "camp">'.$nome.'</li></a>';
+
+                        	}
+                            
                         }
                        echo' </ul>';
                             echo'<div id="tool">

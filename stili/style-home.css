@@ -236,7 +236,10 @@ color:#0098BF;
 a.no-color:hover{
 color:#0098BF;
 color:#000;
+}
 
+a.mark{
+	background-color: #2FB4D5;
 }
 
 /*menu arancione\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\*/
@@ -378,6 +381,11 @@ moz-box-shadow:0px 1px 1px rgba(255,255,255,0.8) inset, 1px 1px 5px rgba(0,0,0,0
 box-shadow:0px 1px 1px rgba(255,255,255,0.8) inset, 1px 1px 5px rgba(0,0,0,0.4);*/
 background-color:#68D0EB;
 }
+.mark{
+	background-color:#FFFFFF;
+	color:#34BFE2;
+}
+
 div#tool{
 position:relative;
 height:200px;
@@ -399,9 +407,14 @@ background-color:#34BFE2;
 color:white;
 }
 
-div#live.gest-campionato{
+div#live.gest-campionato{ /* pagina gest campionato */
 	text-align: center;
-}
+	}
+
+div#live.salva-regole{ /* pagina gest campionato */
+	text-align: center;
+	margin-top:15px;
+	}
 
 div#live.general{
 	margin-top:10%;
@@ -970,6 +983,7 @@ i{
 	margin-top:8%;
 	margin-left:73%;
 }
+
 
 
 

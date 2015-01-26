@@ -202,6 +202,9 @@ $regole = get_rules($id_camp);
 				<a href = "gest-campionato.php?choose=1"><div id = "live" class = "general">Regole Generali</div></a>
 				<a href = "gest-campionato.php?choose=2"><div id = "live" class = "rose">Gestione Rose</div></a>
 				<a href = "gest-campionato.php?choose=3"><div id = "live" class = "formazioni">Gestione Formazioni</div></a>
+
+				<a href = "javascript: submitform()"><div id = "live" class = "salva-regole">Salva le Modifiche</div></a><br>
+
 				 
 			</div>
 				
@@ -209,24 +212,26 @@ $regole = get_rules($id_camp);
 	<?php
 	if($choose == 1){
 	?>
+
 	<div id="regole">
-		<a href = "javascript: submitform()"><div id = "live" class = "gest-campionato"> <b>SALVA LE MODIFICHE </b></div></a><br>
-			<form action = "salva-gest-regole.php?choose=0" method = "POST" id = "gest" class = "gest_camp">
-				<?php include("gest-general-rules.php"); //file nella stessa cartella ?>
-			</form>
+		<form action = "salva-gest-regole.php?choose=0" method = "POST" id = "gest" class = "gest_camp">
+			 <?php include("gest-general-rules.php"); //file nella stessa cartella ?>
+		</form>
 	</div>
+
 	<?php
 	}
 	?>
-
+	<!-- 	 	<a href = "javascript: submitform()"><div id = "live" class = "gest-campionato"> <b>SALVA LE MODIFICHE </b></div></a><br>
+-->
 	<?php
 	if($choose == 2){
 	?>
 	<div id = "regole">
-		<a href = "javascript: submitform()"><div id = "live" class = "gest-campionato"> <b>SALVA LE MODIFICHE </b></div></a><br>
-			<form action = "salva-gest-rose.php?choose=1" method = "POST" id = "gest" class = "gest_camp">
+		<form action = "salva-gest-regole.php?choose=1" method = "POST" id = "gest" class = "gest_camp">
 				<?php include("gest-rosa.php"); ?>
 		</form>
+	</div>
 		<?php
 		}
 		?>
