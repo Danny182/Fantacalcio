@@ -40,7 +40,13 @@
 	*/
 
 	
+	//prendo i giocatori che appartengono a quella squadra e metto i loro iD in un vettore.
+	$query = "SELECT id_giocatore FROM appartiene WHERE id_squadra='$id_team'";
+    $ris = mysql_query($query);
+    $ownedPlayerIdd = mysql_result($ris, 'id_giocatore');
 
+    
+		
 
 
 
@@ -175,7 +181,8 @@ $(document).ready(function(){
     </div>
 	<div id="your-team">
 		<div id='teamName'>
-			<?php echo	$teamName;					
+			<?php echo	$teamName;
+					 echo $ownedPlayerIdd[0];				
 			?>
 		</div>
 		<div id="listBox">
