@@ -60,7 +60,8 @@ $(document).ready(function(){
 	sortRuoloDesc();
 	sortTeamAsc();
 
-	$(".playerDiv").addClass('ListA');
+
+	//$(".playerDiv").addClass('ListA');
 	//funzione per spostare elementi tra una lista e l'altra
 	$(document).on("click", '.add', function () {
 		var id = this.id;

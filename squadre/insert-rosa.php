@@ -41,12 +41,15 @@
 
 	
 	//prendo i giocatori che appartengono a quella squadra e metto i loro iD in un vettore.
-	$query = "SELECT id_giocatore FROM appartiene WHERE id_squadra='$id_team'";
+	/*$query = "SELECT id_giocatore FROM appartiene WHERE id_squadra='$id_team'";
     $ris = mysql_query($query);
-    $ownedPlayerIdd = mysql_result($ris, 'id_giocatore');
-
-    
-		
+    //metto il risultato prima in un array con chiave, poi lo sposto in un array normale per fare l'"implode"
+    while ($myPlayers = mysql_fetch_array($ris)) {
+    	$myPlayersArray[] = $myPlayers['id_giocatore']; 
+    }
+	//eseguo l'implode per avere una variabile con tutti gli id in una variabile
+	$myPlayersId = implode(",", $myPlayersArray);
+	*/
 
 
 
@@ -79,7 +82,6 @@
 <script src="../librerie/jplist.textbox-control.min.js"></script>
 <script src="../librerie/jplist.filter-toggle-bundle.min.js"></script>
 <script src="../librerie/jplist.sort-bundle.min.js"></script>
-
 
 
 
@@ -181,12 +183,56 @@ $(document).ready(function(){
     </div>
 	<div id="your-team">
 		<div id='teamName'>
-			<?php echo	$teamName;
-					 echo $ownedPlayerIdd[0];				
+			<?php echo	$teamName;				
 			?>
 		</div>
 		<div id="listBox">
+
+
 			<ul id="lista" class="your">
+
+				<?php
+					//Carico tutti i giocatori che già sono della mia rosa
+					$query="SELECT id_giocatore, ruolo, cognome, valore, squadra FROM giocatore WHERE id_giocatore IN (SELECT id_giocatore FROM appartiene WHERE id_squadra='59')";
+						$myPlayers = mysql_query($query);
+
+
+						$i = 0;
+						while ($vet = mysql_fetch_array($myPlayers)) {
+								echo "<div class='list-item playerDiv ListB' id='p-add-$i' value='$vet[id_giocatore]'>
+								
+									<li id='p-add-$i' class='player'>
+										<span id='id_player' value='$vet[id_giocatore]' style='display:none;'>
+											$vet[id_giocatore] 
+										</span>
+										<span class='$vet[squadra]' id='team' style='display:none;'>
+											$vet[squadra]
+										</span>
+										<span class='ruolo $vet[ruolo]' id='$vet[ruolo]'>
+											$vet[ruolo]
+										</span>
+										<span class='squadra'>
+											<img width='18px' height='18px' src='../img/logo-squadra/$vet[squadra].png'></img>
+										</span>
+										<span class='nome'>
+											$vet[cognome]
+										</span>
+										<span class='valore'>
+											20
+										</span>
+										<span class='aggiungi'>
+											<button type='submit' class='add' id='add-$i' >-</button>
+										</span>					
+									</li>
+								</div>
+								";				
+							$i++;
+						}
+
+
+
+				?>
+
 			</ul>
 		</div>
 	</div>
@@ -336,13 +382,13 @@ $(document).ready(function(){
 					<ul id="lista" class="players">
 
 						<?php
-						$i = 0;
-						$query="SELECT id_giocatore, ruolo, cognome, valore, squadra FROM giocatore ORDER BY squadra";
-						$ris = mysql_query($query);
+						
+						$query="SELECT id_giocatore, ruolo, cognome, valore, squadra FROM giocatore WHERE id_giocatore NOT IN (SELECT id_giocatore FROM appartiene WHERE id_squadra='59')  ORDER BY squadra";
+						$allPlayers = mysql_query($query);
 
-						while ($vet = mysql_fetch_array($ris)) {	
-											
-							echo "<div class='list-item playerDiv' id='p-add-$i' value='$vet[id_giocatore]'>
+						while ($vet = mysql_fetch_array($allPlayers)) {
+								echo "<div class='list-item playerDiv ListA' id='p-add-$i' value='$vet[id_giocatore]'>
+								
 									<li id='p-add-$i' class='player'>
 										<span id='id_player' value='$vet[id_giocatore]' style='display:none;'>
 											$vet[id_giocatore] 
