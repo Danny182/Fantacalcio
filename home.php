@@ -349,7 +349,7 @@ $(document).ready(function(){
                         echo'<ul class = "camp">';
                         foreach($leagues as $nome){
                         	if(strcmp($nome, $nome_camp) == 0){
-                        		echo '<a href = "home.php?var=1&&camp='.$nome.'"><li class = "camp mark"><i>'.$nome.'</i></li></a>';
+                        		echo '<a href = "home.php?var=1&&camp='.$nome.'"><li class = "camp mark">'.$nome.'</li></a>';
                         	} //evidezio il campionato corrente
                         	else{
                         		echo '<a href = "home.php?var=1&&camp='.$nome.'"><li class = "camp">'.$nome.'</li></a>';

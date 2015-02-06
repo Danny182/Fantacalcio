@@ -42,14 +42,14 @@ if($_GET['choose'] == 0){ //salvo le regole generali
 	if(!$ris){
 		echo'
 		<div id="cont-errore"><div id="errore">OPS! <br> SI &Eacute; VERIFICATO QUALCHE PROBLEMA
-    	<meta http-equiv="Refresh" content="3; URL=gest-campionato.php?choose=0"></div></div>';
+    	<meta http-equiv="Refresh" content="3; URL=gest-campionato.php?choose=1"></div></div>';
 	die();
 			
 	}	
 	else{
 		echo'
 		<div id="cont-errore"><div id="errore"><b>MODIFICHE EFFETTUATE! </b>
-    	<meta http-equiv="Refresh" content="3; URL=gest-campionato.php?choose=0"></div></div>';
+    	<meta http-equiv="Refresh" content="3; URL=gest-campionato.php?choose=1"></div></div>';
 	}
 }
 
@@ -78,7 +78,7 @@ if($_GET['choose'] == 1){ //salvo le regole della rosa
 	else{
 		echo'
 		<div id="cont-errore"><div id="errore"><b>MODIFICHE EFFETTUATE!</b>
-    	<meta http-equiv="Refresh" content="3; URL=../home.php?var=0"></div></div>';
+    	<meta http-equiv="Refresh" content="3; URL=gest-campionato.php?choose=1"></div></div>';
 	}
 
 }

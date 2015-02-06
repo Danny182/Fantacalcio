@@ -36,10 +36,25 @@
 				<div id = "cont-label-modifica"  class = "mod_portiere">
 					<label for="nome" class = "crea-camp-title"> Nascondere le rose?<br></label>	
 					<div id = "labels">
-						<input type="radio" value="si" name="nascondi_rose" id="radio9" >
-						<label for="radio9" class = "crea-camp" >Si</label>
-						<input type="radio" value="no" name="nascondi_rose" id="radio10" checked = "checked"//>
-						<label for="radio10" class = "crea-camp">No</label>
+						<?php foreach($regole as $value) $nascondi_rosa = $value['nascondi_rosa'];
+						if($nascondi_rosa){
+							echo'
+							<input type="radio" value="si" name="nascondi_rose" id="radio9" checked = "checked" />
+							<label for="radio9" class = "crea-camp" >Si</label>
+							<input type="radio" value="no" name="nascondi_rose" id="radio10"/>
+							<label for="radio10" class = "crea-camp">No</label>';
+						}
+
+						else{
+							echo'
+							<input type="radio" value="si" name="nascondi_rose" id="radio9" />
+							<label for="radio9" class = "crea-camp" >Si</label>
+							<input type="radio" value="no" name="nascondi_rose" id="radio10" checked = "checked"/>
+							<label for="radio10" class = "crea-camp">No</label>';
+
+						}
+						?>
+						
 					</div>
 
 				
