@@ -193,7 +193,7 @@ $(document).ready(function(){
 
 				<?php
 					//Carico tutti i giocatori che già sono della mia rosa
-					$query="SELECT id_giocatore, ruolo, cognome, valore, squadra FROM giocatore WHERE id_giocatore IN (SELECT id_giocatore FROM appartiene WHERE id_squadra='59')";
+					$query="SELECT id_giocatore, ruolo, cognome, valore, squadra FROM giocatore WHERE id_giocatore IN (SELECT id_giocatore FROM appartiene WHERE id_squadra='$id_team')";
 						$myPlayers = mysql_query($query);
 
 
@@ -383,7 +383,7 @@ $(document).ready(function(){
 
 						<?php
 						
-						$query="SELECT id_giocatore, ruolo, cognome, valore, squadra FROM giocatore WHERE id_giocatore NOT IN (SELECT id_giocatore FROM appartiene WHERE id_squadra='59')  ORDER BY squadra";
+						$query="SELECT id_giocatore, ruolo, cognome, valore, squadra FROM giocatore WHERE id_giocatore NOT IN (SELECT id_giocatore FROM appartiene WHERE id_squadra='$id_team')  ORDER BY squadra";
 						$allPlayers = mysql_query($query);
 
 						while ($vet = mysql_fetch_array($allPlayers)) {
