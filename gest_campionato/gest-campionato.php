@@ -224,17 +224,27 @@ $regole = get_rules($id_camp);
 	?>
 	<!-- 	 	<a href = "javascript: submitform()"><div id = "live" class = "gest-campionato"> <b>SALVA LE MODIFICHE </b></div></a><br>
 -->
-	<?php
-	if($choose == 2){
-	?>
-	<div id = "regole">
-		<form action = "salva-gest-regole.php?choose=1" method = "POST" id = "gest" class = "gest_camp">
-				<?php include("gest-rosa.php"); ?>
-		</form>
-	</div>
-		<?php
-		}
-		?>
+	
+	<?php if($choose == 2){ ?>
+		
+			<div id = "regole">
+				<form action = "salva-gest-regole.php?choose=1" method = "POST" id = "gest" class = "gest_camp">
+					<?php include("gest-rosa.php"); ?>
+				</form>
+			</div>';
+		<?php } ?>
+		
+	<?php if($choose == 3){ ?>
+		
+			<div id = "regole">
+				<form action = "salva-gest-regole.php?choose=1" method = "POST" id = "gest" class = "gest_camp">
+					<?php include("gest-formazioni.php"); ?>
+				</form>
+			</div>';
+	
+	<?php } ?>
+	
+		
 
 	
 	
