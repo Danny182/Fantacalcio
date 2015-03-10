@@ -19,7 +19,7 @@ $id_camp = $_POST['id_camp'];
 
 //controllo la variabile choose: zero => regole generali - uno => regole rosa - due => regole formazioni
 
-if($_GET['choose'] == 0){ //salvo le regole generali
+if($_GET['choose'] == 1){ //salvo le regole generali
 	include("salva-regole-gen.php");
 	if($check == 1){
 		echo'
@@ -55,12 +55,12 @@ if($_GET['choose'] == 0){ //salvo le regole generali
 
 } //IF
 
-if($_GET['choose'] == 1){ //salvo le regole della rosa
+if($_GET['choose'] == 2){ //salvo le regole della rosa
 		include("salva-regole-rose.php");
 		
 		if($check == 1){
 			echo'
-			<div id="cont-errore"><div id="errore"><b>SI E\' VERIFICATO UN ERRORE!</b>
+			<div id="cont-errore"><div id="errore"><b>OPS! HAI INSERITO QUALCHE VALORE SBAGLIATO</b>
     		<meta http-equiv="Refresh" content="3; URL=gest-campionato.php?choose=2"></div></div>';
     	die();
 	}
@@ -82,6 +82,31 @@ if($_GET['choose'] == 1){ //salvo le regole della rosa
 	}
 
 }
+
+if($_GET['choose'] == 3){ //salvo le regole delle formazioni
+	include("salva-regole-formazioni");
+	if($check == 1){
+		echo'
+			<div id="cont-errore"><div id="errore"><b>OPS! HAI INSERITO QUALCHE VALORE SBAGLIATO</b>
+    		<meta http-equiv="Refresh" content="3; URL=gest-campionato.php?choose=3"></div></div>';
+    	die();
+    }
+    $query = "UPDATE campionato SET n_por_panc = '$numero_portieri', n_dif_panc = '$numero_difensori', n_cen_panc = '$numero_cen', n_att_panc = '$numero_attaccanti', orario_ins_form = '$limite_inserimento_formazione' WHERE id_campionato = '$id_camp'";
+    $ris = mysql_query($query);
+    if(!$ris){
+    	echo'
+			<div id="cont-errore"><div id="errore">OPS! <br> SI &Eacute; VERIFICATO QUALCHE PROBLEMA
+			<meta http-equiv="Refresh" content="3; URL=gest-campionato.php?choose=3"></div></div>';
+    	die;
+    }
+    else{
+    	echo'
+			<div id="cont-errore"><div id="errore"><b>MODIFICHE EFFETTUATE!</b>
+			<meta http-equiv="Refresh" content="3; URL=gest-campionato.php?choose=3"></div></div>';
+    	die;
+    }
+}
+
 		
 ?>
 

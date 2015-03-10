@@ -1,0 +1,28 @@
+<?php
+
+if(!isset($_POST['por_panc']) || !is_numeric($_POST['por_panc']))
+		$check = 1;
+	else 
+		$numero_portieri = $_POST['por_panc'];
+
+	if(!isset($_POST['dif_panc']) || !is_numeric($_POST['dif_panc']))
+		$check = 1;
+	else 
+		$numero_difensori = $_POST['dif_panc'];
+
+	if(!isset($_POST['cen_panc']) || !is_numeric($_POST['cen_panc']))
+		$check = 1;
+	else 
+		$numero_cen = $_POST['cen_panc'];
+
+	if(!isset($_POST['att_panc']) || !is_numeric($_POST['att_panc']))
+		$check = 1;
+	else 
+		$numero_attaccanti = $_POST['att_panc'];
+
+	if(!isset($_POST['ins_form']) || !is_numeric($_POST['ins_form']))
+		$check = 1;
+	else 
+		$limite_inserimento_formazione = $_POST['ins_form'];
+
+	?>

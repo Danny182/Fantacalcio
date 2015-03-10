@@ -13,23 +13,36 @@
 <link rel="stylesheet" href="../stili/style-home.css" type="text/css" media="screen" />
 <link rel="stylesheet" href="../stili/gest_campionato.css" type="text/css" media="screen" />
 <link rel="stylesheet" href="../stili/campo-calcio.css" type="text/css" media="screen" />
+
 <script src="../librerie/jquery-1.11.0.min.js"/></script> 
 <script type="text/javascript" src="../librerie/jquery-1.9.1.min.js"/></script>
 <script type="text/javascript" src="../script/crea-camp.js"/></script>
+<script type="text/javascript" src="../librerie/jquery.validate.js"></script> 
+<script type="text/javascript" src="../script/validate_regole_camp.js"></script>
+<script type="text/javascript" src="../librerie/jquery.cookie.js"></script> 
 <!--
  <script src="librerie/jquery-1.9.1.min.js"/></script> 
 <script src="librerie/jquery-ui-1.10.3.custom.min.js."></script>
 <script type="text/javascript" src="librerie/jquery.easing.1.3.js"></script> 
-<script type = "text/javascript" src = "librerie/jquery.innerfade.js"> </script>-->
+<script type = "text/javascript" src = "librerie/jquery.innerfade.js"> </script>
+-->
 
 
-<script type="text/javascript" src="../script/menu.js"></script>-->
+<script type="text/javascript" src="../script/menu.js"></script>
 <link rel="stylesheet" type="text/css" href="../stili/menu2.css" />
 
 <script type="text/javascript">
 function submitform()
 {
-  document.getElementById('gest').submit();
+	if($('#gest').valid()) {
+		var sum = $('#por_panc').val()*1 + $('#dif_panc').val()*1 + $('#cen_panc').val()*1 + $('#att_panc').val()*1;
+		var tot_panchinari = $('#panchinari').val();
+		if(sum != tot_panchinari)
+			alert("Numero totale dei panchinari non corretto");
+		else 
+			document.getElementById('gest').submit();
+			//Questo pezzo di codice è da rifaree!!!
+	}// if
 }
 </script>
 
@@ -39,8 +52,10 @@ function submitform()
 
 $id = $_SESSION['id_utente'];
 $choose = $_GET['choose']; //scelta di quale menù è stato cliccato. choose = 1 => regole generali, choose = 2 => gestione rose 
-// choose = 3 => gestione formazioni
+// choose = 3 => gestione formazioni choose = 4 => gestione inviti
 //prendo alcuni dati dell'utente(in questo caso nome e cognome)
+//setto un cookie con choose in modo che il validate dei form sappia quale form è presente
+setcookie("choose", $choose, time()+3600);
 $utente = get_userdates($id);
 $user = array();
 $user = " ";
@@ -48,8 +63,7 @@ $user = " ";
         $nome = $value['nome'];
         $cognome = $value['cognome'];
         $user .= ucfirst("$nome")." ".ucfirst("$cognome");
-        
-    }
+     }
 //prendo le notifiche dell'utente
 $num_notifiche = get_notify($id);
 
@@ -72,7 +86,6 @@ $regole = get_rules($id_camp);
 
 
 ?>
-
 <body class="home-page">
 	<div id = "cont" >
 	<div id="top">
@@ -200,47 +213,42 @@ $regole = get_rules($id_camp);
 				<a href = "../home.php?var=0"><div id = "live" class = "back">Indietro</div></a>
 
 				<a href = "gest-campionato.php?choose=1"><div id = "live" class = "general">Regole Generali</div></a>
-				<a href = "gest-campionato.php?choose=2"><div id = "live" class = "rose">Gestione Rose</div></a>
-				<a href = "gest-campionato.php?choose=3"><div id = "live" class = "formazioni">Gestione Formazioni</div></a>
+				<a href = "gest-campionato.php?choose=2"><div id = "live" class = "rose">Rose</div></a>
+				<a href = "gest-campionato.php?choose=3"><div id = "live" class = "formazioni">Formazioni</div></a>
+				
 
 				<a href = "javascript: submitform()"><div id = "live" class = "salva-regole">Salva le Modifiche</div></a><br>
 
-				 
 			</div>
-				
 	</div>
-	<?php
-	if($choose == 1){
-	?>
-
+	
+	<?php if($choose == 1){ ?>
+	
 	<div id="regole">
-		<form action = "salva-gest-regole.php?choose=0" method = "POST" id = "gest" class = "gest_camp">
+		<form action = "salva-gest-regole.php?choose=1" method = "POST" id = "gest" class = "gest_camp">
 			 <?php include("gest-general-rules.php"); //file nella stessa cartella ?>
 		</form>
 	</div>
 
-	<?php
-	}
-	?>
+	<?php } ?>
 	<!-- 	 	<a href = "javascript: submitform()"><div id = "live" class = "gest-campionato"> <b>SALVA LE MODIFICHE </b></div></a><br>
 -->
-	
 	<?php if($choose == 2){ ?>
 		
-			<div id = "regole">
-				<form action = "salva-gest-regole.php?choose=1" method = "POST" id = "gest" class = "gest_camp">
-					<?php include("gest-rosa.php"); ?>
-				</form>
-			</div>';
-		<?php } ?>
+	<div id = "regole">
+		<form action = "salva-gest-regole.php?choose=2" method = "POST" id = "gest" class = "gest_camp">
+			<?php include("gest-rosa.php"); //file nella stessa cartella ?>
+		</form>
+	</div>';
+	<?php } ?>
 		
 	<?php if($choose == 3){ ?>
 		
-			<div id = "regole">
-				<form action = "salva-gest-regole.php?choose=1" method = "POST" id = "gest" class = "gest_camp">
-					<?php include("gest-formazioni.php"); ?>
-				</form>
-			</div>';
+	<div id = "regole">
+		<form action = "salva-gest-regole.php?choose=3" method = "POST" id = "gest" class = "gest_camp">
+			<?php include("gest-formazioni.php"); //file nella stessa cartella ?>
+		</form>
+	</div>';
 	
 	<?php } ?>
 	

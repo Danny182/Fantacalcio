@@ -427,10 +427,15 @@ div#live.general{
 
 div#live.rose{
 	margin-top:2%;
+	width:80%;
+	margin-left:10%;
 }
 
 div#live.formazioni{
 	margin-top:2%;
+	width:80%;
+	margin-left:10%;
+	
 }
 
 div#live.gestione{

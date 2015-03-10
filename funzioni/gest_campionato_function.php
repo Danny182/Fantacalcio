@@ -17,7 +17,7 @@ function get_rules($id_camp){
 			  bonus_gol_rigore, bonus_rigore_parato, bonus_assist, bonus_portiere, bonus_casa, bonus_gol_vittoria, bonus_gol_pareggio, bonus_capitano, malus_gol_subito, ammonizione, 
 			  espulsione, malus_rigore_sbagliato, malus_autogol,
 			  voto_giocatore_sv, voto_giocatore_ss, punti_primo_gol, punti_range_gol, modulo_343, modulo_352, modulo_361, modulo_433, modulo_442, modulo_451, modulo_253,
-			  modulo_334, modulo_424, modulo_532, modulo_541, modulo_550, n_portieri, n_difensori, n_centrocampisti, n_attaccanti, nascondi_rosa, campionato.nome, n_part, crediti, n_por_panc, n_dif_panc, n_cen_panc, n_att_panc, orario_ins_form FROM campionato WHERE campionato.id_campionato = '$id_camp'";
+			  modulo_334, modulo_424, modulo_532, modulo_541, modulo_550, n_portieri, n_difensori, n_centrocampisti, n_attaccanti, nascondi_rosa, campionato.nome, n_part, crediti, n_por_panc, n_dif_panc, n_cen_panc, n_att_panc, orario_ins_form, n_panchinari FROM campionato WHERE campionato.id_campionato = '$id_camp'";
 	$ris = mysql_query($query);
 	if(!$ris) return 0;
 	else{
@@ -80,7 +80,8 @@ function get_rules($id_camp){
 				"n_dif_panc" => $row['n_dif_panc'],
 				"n_cen_panc" => $row['n_cen_panc'],
 				"n_att_panc" => $row['n_att_panc'],
-				"orario_ins_form" => $row['orario_ins_form']
+				"orario_ins_form" => $row['orario_ins_form'],
+				"n_panchinari" => $row['n_panchinari']
 
 			);
 			

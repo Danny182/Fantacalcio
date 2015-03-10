@@ -29,5 +29,29 @@
 <div id = "cont-label-modifica"  class = "mod_difesa_gazzetta">
 	<label for="nome" class = "crea-camp-title"> Limite inserimento formazione:<br></label>	
 		<input type = "text" name = "ins_form" id = "ins_form" class="modifica-regole-n_part" value = "<?php echo $orario_inserimento; ?>" />
+		<i style="color:grey;"> Min. </i>
 </div>
+
+<?php foreach($regole as $value) $panchinari = $value['n_panchinari']?>
+<div id = "cont-label-modifica"  class = "mod_portiere">
+	<label for="nome" class = "crea-camp-title"> Numero panchinari:<br></label>
+		<input type = "text" name = "panchinari" id = "panchinari" class="modifica-regole-n_part" value = "<?php echo $panchinari; ?>" />
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
