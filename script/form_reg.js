@@ -6,25 +6,28 @@ $(document).ready(function(){
 	  rules: {
 		  nome: {
 			required: true
+			
 		  },
 		  
 		  cognome: {
 			required: true
+			
 		  },
 		  
 		  
 		 nascita_giorno: {
 			required: true
 		  },
-		 ascita_mese: {
+		 nascita_mese: {
 			required: true
 		  },
-		 ascita_anno: {
+		 nascita_anno: {
 			required: true
 		  },
 		  
 		   citta: {
 			required: true
+			
 		  },
 		  
 		  email: {
@@ -44,6 +47,7 @@ $(document).ready(function(){
 		  user: {
 		 
 			required: true
+			
 		  },
 		  
 		  risposta: {
@@ -52,16 +56,16 @@ $(document).ready(function(){
 		  }
 	  },
 	  messages:{
-		  	nome:"inserisci il tuo nome",
-			cognome:"inserisci il tuo cognome",
-			nascita_giorno:"inserisci il tuo giorno di nascita",
+		  	nome:required:"Inserisci il tuo nome",
+		  	cognome:required:"Inserisci il tuo cognome",
+			nascita_giorno:required:"inserisci il tuo giorno di nascita",
 			nascita_mese:"inserisci il tuo mese di nascita",
 			nascita_anno:"inserisci il tuo anno di nascita",
 			citta:"inserisci la tua città",
 			email:"inserisci la tua email",
 			password:"inserisci la tua password",
 			password2:"le password non coincidono",
-			user:"inserisci un username",
+			user:required:"inserisci un username",
 			risposta:"inserisci una risposta"
 	  },
 			
