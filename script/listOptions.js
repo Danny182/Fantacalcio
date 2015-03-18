@@ -143,8 +143,7 @@ $(document).ready(function(){
 	});
 	
 	//salva gli id dei giocatori aggiunti alla lista
-	$('#saveTeam #button').click( function () {
-		
+	$('#button.saveteam').click( function () {
 		var players = $(".playerDiv.ListB").map(function() {
         	return $(this).attr('value');
     	}).get().join(",");
