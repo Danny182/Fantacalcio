@@ -969,3 +969,7 @@ font-size: 12px;
  font-size:12px;
  color:red;
  }
+
+ i.description {
+ 	color:gray;
+ }

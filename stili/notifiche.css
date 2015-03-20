@@ -156,17 +156,18 @@ font-size:13px;
 }
 
 div#delete{
-	
-	
 	border:none;
-	width:1.7%;
-	height:8%;
+	width:2%;
+	height:10%;
 	margin-top:0%;
-	margin-left:98%;
-	background-image: url(../img/cancella.png);
+	margin-left:97%;
+	background-image: url(../img/delete.png);
+	background-repeat: no-repeat;
 }
 
-
+div#delete:hover {
+	background-image: url(../img/delete_hover.png);
+}
 
 
 

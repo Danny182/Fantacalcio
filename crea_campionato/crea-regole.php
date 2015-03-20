@@ -141,7 +141,7 @@
 		<form action = "" method = "post" id = "form">			
 
 			<div id="cont-label" class="regole">
-				<label for="nome" class = "crea-camp-title">Utilizzare regole FantaGazzetta?<br><font size="-3"><i>(potrai modificare le regole in seguito)</i></font></label>											
+				<label for="nome" class = "crea-camp-title">Utilizzare regole FantaGazzetta?<br><font size="-3"><i class="description">(potrai modificare le regole in seguito)</i></font></label>											
 					<div id="labels">
 						<input type="radio" value="si" name="regole" id="radio1" checked = "true"  />
 						<label for="radio1" class = "crea-camp active" >Si</label>

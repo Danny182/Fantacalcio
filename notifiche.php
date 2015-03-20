@@ -14,12 +14,10 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Notifiche</title>
 <link rel="stylesheet" href="stili/style-home.css" type="text/css" media="screen" />
-<link rel="stylesheet" href="stili/style-notifiche.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="stili/notifiche.css" type="text/css" media="screen" />
 <link rel="stylesheet" href="stili/campo-calcio.css" type="text/css" media="screen" />
-<script src="librerie/jquery-1.9.1.min.js"/></script>
+<script src="librerie/jquery-1.11.0.min.js"></script>
 
-<script type="text/javascript" src="librerie/jquery.easing.1.3.js"></script>
-<script type = "text/javascript" src = "librerie/jquery.innerfade.js"> </script>
 
 <!-- STILE DEL MENù CON SCORRIMENTO IN VERTICALE
 <script type="text/javascript" src="script/menu.js"></script>-->
